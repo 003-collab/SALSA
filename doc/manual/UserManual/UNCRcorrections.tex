@@ -1,0 +1,168 @@
+\chapter{UNCR Record Corrections}
+\label{chap:UNCRcorrections}
+There are a number of UNCR record corrections implemented in SALSA which may be used to modify the measurement uncertainty data of the user.  For convenience, we have tabulated which corrections apply to which record types in the Table \ref{tab:UNCRcorrections}.  In general, the instrument will be placed at the ``From'' station and the target will be placed at the ``To'' station.  The one exception is HANG, where the instrument is at the ``At'' station and targets are at the ``From'' and ``To'' stations.
+
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|}\hline
+\tiny{\textbf{Record Type}}&\tiny{\textbf{At Cent Err}}&\tiny{\textbf{From Cent Err}}&\tiny{\textbf{To Cent Err}}&\tiny{\textbf{PPM}}&\tiny{\textbf{Sigma}}\\\hline
+\tiny{\textbf{AZIM}}&&\tiny{\textbf{X}}&\tiny{\textbf{X}}&&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{DGRP}}&&\tiny{\textbf{X}}&\tiny{\textbf{X}}&&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{DIST}}&&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{DXYZ}}&&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{HANG}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{HDIF}}&&&&\tiny{\textbf{X}}&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{VANG}}&&\tiny{\textbf{X}}&\tiny{\textbf{X}}&&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{ZANG}}&&\tiny{\textbf{X}}&\tiny{\textbf{X}}&&\tiny{\textbf{X}}\\\hline
+\end{tabular}
+\caption{Table indicating which types of UNCR record corrections may be applied to which type of record.  Note that HDIR Records, while unable to have an UNCR record specified directly, may inherit one from their parent DGRP.}
+\label{tab:UNCRcorrections}
+\end{table}
+
+\section{Centering Errors and PPM}
+Note that centering errors in SALSA are treated as horizontal errors.
+\subsection{AZIM: Azimuthal Angles}
+The error applied to AZIM measurement records due to Centering Errors takes the following form
+\begin{equation}
+\label{Eqn:AZIM_Cent}
+\sigma_{\text{AZIM,Centering}}^2=\left(\f{\sigma_{\text{From Centering Error}}}{\text{D}_{\text{To, From}}}\right)^2+\left(\f{\sigma_{\text{To Centering Error}}}{\text{D}_{\text{To, From}}}\right)^2.
+\end{equation}
+Where $\text{D}$ is the horizontal distance, not the slant distance, between the ``From'' and ``To'' points and can be calculated easily in the ENU reference frame
+\begin{equation}
+    \text{D}_{\text{To, From}}=\sqrt{\left(\Delta E_{\text{To, From}}\right)^2 + \left(\Delta N_{\text{To, From}}\right)^2}
+\end{equation}
+To see Equation \ref{Eqn:AZIM_Cent}, note that we can consider the two errors independently as is depicted in Figure \ref{Fig:AZIM_Cent}.
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+\draw (-0.2,2.2) node{{\color{blue}{\tiny{\textbf{To}}}}};
+\draw (0.22,1) node{{\color{blue}{\tiny{$\delta \alpha$}}}};
+\draw (0.65,0.8) node{{\color{blue}{\tiny{$\delta \alpha$}}}};
+\draw[straight,color=black,line width=0.25mm] (0,2) -- (0,0);
+\draw[straight,color=black,line width=0.25mm] (0.8,0) -- (0.8,0.7);
+\draw[dashed,color=black,line width=0.25mm] (0,2) -- (0.8,0);
+\draw[dashed,color=blue,line width=0.25mm] (0,0) -- (0.8,0);
+\draw (-0.6,-0.2) node{{\color{blue}{\tiny{$\textbf{From}_{\text{Expect}}$}}}};
+\draw (1.1,-0.2) node{{\color{blue}{\tiny{\textbf{From}}}}};
+\draw (0.4,-0.2) node{{\color{blue}{\tiny{$\sigma_{\text{From}}$}}}};
+\end{tikzpicture}~~~~~~~
+\begin{tikzpicture}
+\draw (-0.2,-0.1) node{{\color{blue}{\tiny{\textbf{From}}}}};
+\draw (0.22,1) node{{\color{blue}{\tiny{$\delta \alpha$}}}};
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (0,2);
+\draw[dashed,color=black,line width=0.25mm] (0,0) -- (0.8,2);
+\draw[dashed,color=blue,line width=0.25mm] (0,2) -- (0.8,2);
+\draw (-0.4,2.2) node{{\color{blue}{\tiny{$\textbf{To}_{\text{Expect}}$}}}};
+\draw (0.9,2.2) node{{\color{blue}{\tiny{\textbf{To}}}}};
+\draw (0.4,2.2) node{{\color{blue}{\tiny{$\sigma_{\text{To}}$}}}};
+\end{tikzpicture}
+\caption{The ``From'' centering error is depicted on the left ($\tan\delta\alpha\approx\delta\alpha=\sigma_{\text{From}}/\text{D}_{\text{To,From}}$) and the ``To'' centering error is depicted on the right ($\tan\delta\alpha\approx\delta\alpha=\sigma_{\text{To}}/\text{D}_{\text{To,From}}$).  The expected azimuth is zero.}
+\label{Fig:AZIM_Cent}
+\end{figure}
+
+\subsection{DGRP/HDIR: Horizontal Direction}
+The error is the same as for AZIM records, where the ``From'' position is taken from the DGRP record and the ``To'' position is taken from the HDIR record.
+\subsection{DIST: Distance Measurement}
+The error applied to DIST measurement records due to Centering Errors and PPM takes the following form\footnote{We refer the reader to equation (7.38) of \cite{ghilani} for further details.}
+\begin{equation}
+\sigma_{\text{DIST,Centering\&PPM}}^2=(\sigma_{\text{From Centering Error}}*\cos(\alpha))^2+(\sigma_{\text{To Centering Error}}*\cos(\alpha))^2+\sigma_{\text{PPM}}^2\left(\f{\text{DIST}}{10^6\text{ m}}\right)^2.
+\end{equation}
+Where $\alpha$ is calculated as:
+
+\begin{equation}
+    \alpha=\arctan(\frac{\Delta U}{\sqrt{\Delta E^2 + \Delta N^2}})
+\end{equation}
+
+Where $\Delta E$, $\Delta N$, and $\Delta U$ are the component differences between the ``From'' and ``To'' points in the ENU reference frame.
+
+\subsection{DXYZ: 3-D XYZ Coordinate Difference}
+The error applied to DXYZ measurement records due to Centering Errors and PPM takes the following form
+\begin{eqnarray}
+&\textbf{Cov}_{\text{DXYZ,Centering\&PPM}}=\\\nonumber
+&\textbf{Cov}_{\text{DXYZ,Centering}} + \textbf{Cov}_{\text{PPM}}
+\end{eqnarray}
+
+Where $\textbf{Cov}_{\text{PPM}}$ is defined as:
+
+\begin{eqnarray}
+    &\textbf{Cov}_{\text{DXYZ,PPM}}=\\\nonumber
+    &\sigma_{\text{PPM}}^2\left(\f{\text{DIST}}{10^6\text{ m}}\right)^2\left(\begin{array}{ccc}1&0&0\\0&1&0\\0&0&1\end{array}\right).
+\end{eqnarray}
+
+The error applied to DXYZ measurement records due to centering errors is more complicated than for DIST records. First, define the error vector in the ENU frame:
+\begin{equation}\label{eq:fctcENU} %\label{eq:ResCov}   
+    \text{Fc/TcENU} = \left[ \begin{array}{ccc} \sigma_{\text{Fc/Tc}} & \sigma_{\text{Fc/Tc}} & 0 \\ \end{array} \right]
+\end{equation}
+
+Then, take the outer product of this vector with itself to get the measurement covariance in the ENU frame:
+\begin{equation}\label{eq:fctcXYZ} %\label{eq:ResCov}   
+    \textbf{Cov}_{\text{DXYZ,Fc/Tc,ENU}} =\left[ \begin{array}{c} \sigma_{\text{Fc/Tc}} \\ \sigma_{\text{Fc/Tc}} \\ 0 \\ \end{array} \right] \left[ \begin{array}{ccc} \sigma_{\text{Fc/Tc}} & \sigma_{\text{Fc/Tc}} & 0 \\ \end{array} \right] = \left[ \begin{array}{ccc} \sigma_{\text{Fc/Tc}}^2 & 0 & 0\\ 0 & \sigma_{\text{Fc/Tc}}^2 & 0\\ 0 & 0 & 0 \\ \end{array} \right]
+\end{equation}
+
+Then, rotate the result into the XYZ reference frame to get the final measurement covariance:
+
+\begin{equation}\label{eq:dxyzCenterErr} %\label{eq:ResCov}   
+    \textbf{Cov}_{\text{DXYZ,Fc/Tc,XYZ}} = \sigma_{\text{Fc/Tc}}^2 \text{R}_{ENU2XYZ} \left[ \begin{array}{ccc} 
+                                                                                1 & 0 & 0 \\
+                                                                                0 & 1 & 0 \\
+                                                                                0 & 0 & 0 \\
+                                                                            \end{array} \right] \text{R}_{ENU2XYZ}^{T}
+\end{equation}
+
+
+\subsection{HANG: Horizontal Angle}
+The error applied to HANG measurement records due to Centering Errors takes the following form\footnote{We refer the reader to equations (7.9) and (7.21) of \cite{ghilani} for further details.}
+\begin{eqnarray}
+\sigma_{\text{HANG,Centering\&PPM}}^2=\left(\f{\sigma_{\text{From Centering Error}}}{\text{DIST}_{\text{From,At}}}\right)^2+\left(\f{\sigma_{\text{To Centering Error}}}{\text{DIST}_{\text{To,At}}}\right)^2&\\\nonumber
++\left(\f{\text{DIST}_{\text{To,From}}\hspace*{1mm}\sigma_{\text{At Centering Error}}}{\sqrt{2}\hspace*{1mm}\text{DIST}_{\text{From,At}}\hspace*{1mm}\text{DIST}_{\text{To,At}}}\right)^2.
+\end{eqnarray}
+
+\subsection{HDIF: Height Difference}
+The error applied to HDIF measurement records due to PPM takes the following form
+\begin{equation}
+\sigma_{\text{HDIF,PPM}}^2=\sigma_{\text{PPM}}^2\left(\f{\text{DIST}}{10^6\text{ m}}\right)^2.
+\end{equation}
+
+\subsection{VANG: Vertical Angle}
+The error applied to VANG measurement records due to Centering Errors takes the following form
+\begin{eqnarray}
+\sigma_{\text{VANG,Centering}}^2=\left(\f{\sin(\text{VANG}_{\text{To,From}})\sigma_{\text{From Centering Error}}}{\text{DIST}_{\text{To,From}}-\cos(\text{VANG}_{\text{To,From}})\sigma_{\text{From Centering Error}}}\right)^2&\\\nonumber
++\left(\f{\sin(\text{VANG}_{\text{To,From}})\sigma_{\text{To Centering Error}}}{\text{DIST}_{\text{To,From}}-\cos(\text{VANG}_{\text{To,From}})\sigma_{\text{To Centering Error}}}\right)^2.
+\end{eqnarray}
+
+This result may be found geometrically via Figure \ref{Fig:VANG_Cent}.
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (0,3);
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (3,0);
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (2,2);
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (1.25,2);
+\draw[dashed,color=black,line width=0.25mm] (2,3) -- (1.25,2);
+\draw[dashed,color=blue,line width=0.25mm] (1.25,2) -- (2,2);
+\draw[dashed,color=blue,line width=0.25mm] (1.25,2) -- (1.625,1.7);
+\draw[straight,color=blue,line width=0.15mm] (0.9,1.8) -- (1.4,1.8);
+\draw (0.8,1) node{{\color{red}{\tiny{$\delta \nu$}}}};
+\draw (1.7,2.2) node{{\color{blue}{\tiny{$\sigma$}}}};
+\draw (2.3,1.7) node{{\color{blue}{\tiny{$\sigma\cos\nu$}}}};
+\draw (0.5,1.8) node{{\color{blue}{\tiny{$\sigma\sin\nu$}}}};
+\draw (1.75,1.857) node{{\color{red}{\tiny{$\nu$}}}};
+\draw (1.5,2.1) node{{\color{red}{\tiny{$\nu$}}}};
+\end{tikzpicture}
+\caption{The geometry depicting the correction ($\tan\delta\nu\approx\delta\nu=\sigma\sin\nu/(\text{DIST}-\sigma\cos\nu)$).  The vertical angle is denoted by $\nu$ and the centering error by $\sigma$ in this diagram for brevity.  A similar argument holds for the ``From'' station.}
+\label{Fig:VANG_Cent}
+\end{figure}
+
+\subsection{ZANG: Zenith Angle}
+The error applied to ZANG measurement records due to Centering Errors takes the same form as for the VANG measurement records.
+\section{Sigma}
+The UNCR record provides the capability to add additional uncertainty to whichever measurement record type is of interest.  In particular, the Sigma field will always add to the variance such that
+\begin{equation}
+\sigma^2_{\text{Measurement Record,with additional}}=\sigma^2_{\text{Measurement Record}}+\sigma^2_{\text{additional}}.
+\end{equation}
+For the case of DXYZ records, the correction is of the form
+\begin{equation}
+\textbf{Cov}_{\text{DXYZ,with additional}}=\textbf{Cov}^2_{\text{Measurement Record}}+\sigma^2_{\text{additional}}\left(\begin{array}{ccc}1&0&0\\0&1&0\\0&0&1\end{array}\right).
+\end{equation}
+Note that this uncertainty contribution is accounted for prior to writing the *.dat file.
+

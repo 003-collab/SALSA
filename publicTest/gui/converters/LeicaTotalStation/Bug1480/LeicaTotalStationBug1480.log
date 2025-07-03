@@ -1,0 +1,1395 @@
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 8.02 Logfile
+------------------------------------------------------
+Instrument Type		: TS30 0.5" 
+Instrument Serial No.	: 363906    
+
+Store To Job		: 16133JDF        
+Sets of Angles Start	: 05.12.16, 19:57:56
+
+TPS Station		: RF1A            
+Coordinates		: E=        10114.071	N=        10337.585	H=      -----
+Instrument Height	: hi= 1.5154999495
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   5   Number Of Points:   9
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   DRYDOCK 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.539  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Precise    EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      CM58 
+-------------------
+
+Mean of all Sets (Hz): 41.22409  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      CM56 
+-------------------
+
+Mean of all Sets (Hz): 98.53433  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      CM48 
+-------------------
+
+Mean of all Sets (Hz): 115.14116 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KBFD 
+-------------------
+
+Mean of all Sets (Hz): 120.08411 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     POWER 
+-------------------
+
+Mean of all Sets (Hz): 120.48378 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       ZOE 
+-------------------
+
+Mean of all Sets (Hz): 124.29583 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     EHWNW 
+-------------------
+
+Mean of all Sets (Hz): 130.55078 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    TRFMID 
+-------------------
+
+Mean of all Sets (Hz): 131.10409 
+
+Reflector Height:  1.554  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Precise    EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : DRYDOCK    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : DRYDOCK    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : DRYDOCK    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : DRYDOCK    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : DRYDOCK    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : CM58       
+Reduced Mean: 41.22385     Hz Residuals: 0.00024   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : CM58       
+Reduced Mean: 41.22401     Hz Residuals: 0.00008   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : CM58       
+Reduced Mean: 41.22409     Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : CM58       
+Reduced Mean: 41.22418     Hz Residuals: -0.00008  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : CM58       
+Reduced Mean: 41.22433     Hz Residuals: -0.00023  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : CM56       
+Reduced Mean: 98.53417     Hz Residuals: 0.00016   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : CM56       
+Reduced Mean: 98.53436     Hz Residuals: -0.00003  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : CM56       
+Reduced Mean: 98.53438     Hz Residuals: -0.00005  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : CM56       
+Reduced Mean: 98.53422     Hz Residuals: 0.00010   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : CM56       
+Reduced Mean: 98.53450     Hz Residuals: -0.00018  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : CM48       
+Reduced Mean: 115.14103    Hz Residuals: 0.00013   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : CM48       
+Reduced Mean: 115.14117    Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : CM48       
+Reduced Mean: 115.14117    Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : CM48       
+Reduced Mean: 115.14118    Hz Residuals: -0.00003  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : CM48       
+Reduced Mean: 115.14123    Hz Residuals: -0.00007  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KBFD       
+Reduced Mean: 120.08388    Hz Residuals: 0.00023   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KBFD       
+Reduced Mean: 120.08399    Hz Residuals: 0.00012   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KBFD       
+Reduced Mean: 120.08423    Hz Residuals: -0.00012  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : KBFD       
+Reduced Mean: 120.08417    Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : KBFD       
+Reduced Mean: 120.08427    Hz Residuals: -0.00016  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : POWER      
+Reduced Mean: 120.48358    Hz Residuals: 0.00020   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : POWER      
+Reduced Mean: 120.48375    Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : POWER      
+Reduced Mean: 120.48380    Hz Residuals: -0.00003  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : POWER      
+Reduced Mean: 120.48380    Hz Residuals: -0.00002  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : POWER      
+Reduced Mean: 120.48394    Hz Residuals: -0.00017  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ZOE        
+Reduced Mean: 124.29565    Hz Residuals: 0.00018   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ZOE        
+Reduced Mean: 124.29579    Hz Residuals: 0.00004   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : ZOE        
+Reduced Mean: 124.29590    Hz Residuals: -0.00007  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : ZOE        
+Reduced Mean: 124.29589    Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : ZOE        
+Reduced Mean: 124.29593    Hz Residuals: -0.00010  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : EHWNW      
+Reduced Mean: 130.55061    Hz Residuals: 0.00017   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : EHWNW      
+Reduced Mean: 130.55062    Hz Residuals: 0.00016   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : EHWNW      
+Reduced Mean: 130.55088    Hz Residuals: -0.00010  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : EHWNW      
+Reduced Mean: 130.55077    Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : EHWNW      
+Reduced Mean: 130.55102    Hz Residuals: -0.00024  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TRFMID     
+Reduced Mean: 131.10401    Hz Residuals: 0.00007   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TRFMID     
+Reduced Mean: 131.10401    Hz Residuals: 0.00008   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TRFMID     
+Reduced Mean: 131.10416    Hz Residuals: -0.00007  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : TRFMID     
+Reduced Mean: 131.10408    Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : TRFMID     
+Reduced Mean: 131.10417    Hz Residuals: -0.00008  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   5   Number Of Points:   9
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:   DRYDOCK
+-------------------
+
+Mean of all Sets (V): 89.5952
+
+Reflector Height: 1.539  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Precise    EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      CM58
+-------------------
+
+Mean of all Sets (V): 89.5755
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      CM56
+-------------------
+
+Mean of all Sets (V): 89.5557
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      CM48
+-------------------
+
+Mean of all Sets (V): 89.5920
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      KBFD
+-------------------
+
+Mean of all Sets (V): 90.0208
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     POWER
+-------------------
+
+Mean of all Sets (V): 89.5928
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       ZOE
+-------------------
+
+Mean of all Sets (V): 89.5804
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     EHWNW
+-------------------
+
+Mean of all Sets (V): 87.1501
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    TRFMID
+-------------------
+
+Mean of all Sets (V): 89.5915
+
+Reflector Height: 1.554  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Precise    EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : DRYDOCK   
+Mean Of Face I/II: 89.5953      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : DRYDOCK   
+Mean Of Face I/II: 89.5952      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : DRYDOCK   
+Mean Of Face I/II: 89.5952      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : DRYDOCK   
+Mean Of Face I/II: 89.5952      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : DRYDOCK   
+Mean Of Face I/II: 89.5953      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : CM58      
+Mean Of Face I/II: 89.5754      Residuals V: 0.00010   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : CM58      
+Mean Of Face I/II: 89.5755      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : CM58      
+Mean Of Face I/II: 89.5756      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : CM58      
+Mean Of Face I/II: 89.5755      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : CM58      
+Mean Of Face I/II: 89.5756      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : CM56      
+Mean Of Face I/II: 89.5556      Residuals V: 0.00011   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : CM56      
+Mean Of Face I/II: 89.5557      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : CM56      
+Mean Of Face I/II: 89.5559      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : CM56      
+Mean Of Face I/II: 89.5558      Residuals V: -0.00010  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : CM56      
+Mean Of Face I/II: 89.5557      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : CM48      
+Mean Of Face I/II: 89.5919      Residuals V: 0.00016   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : CM48      
+Mean Of Face I/II: 89.5921      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : CM48      
+Mean Of Face I/II: 89.5919      Residuals V: 0.00008   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : CM48      
+Mean Of Face I/II: 89.5921      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : CM48      
+Mean Of Face I/II: 89.5921      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KBFD      
+Mean Of Face I/II: 90.0208      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KBFD      
+Mean Of Face I/II: 90.0209      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KBFD      
+Mean Of Face I/II: 90.0209      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : KBFD      
+Mean Of Face I/II: 90.0208      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : KBFD      
+Mean Of Face I/II: 90.0208      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : POWER     
+Mean Of Face I/II: 89.5929      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : POWER     
+Mean Of Face I/II: 89.5928      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : POWER     
+Mean Of Face I/II: 89.5929      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : POWER     
+Mean Of Face I/II: 89.5928      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : POWER     
+Mean Of Face I/II: 89.5928      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ZOE       
+Mean Of Face I/II: 89.5804      Residuals V: 0.00003   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ZOE       
+Mean Of Face I/II: 89.5805      Residuals V: -0.00010  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : ZOE       
+Mean Of Face I/II: 89.5804      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : ZOE       
+Mean Of Face I/II: 89.5803      Residuals V: 0.00010   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : ZOE       
+Mean Of Face I/II: 89.5805      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : EHWNW     
+Mean Of Face I/II: 87.1501      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : EHWNW     
+Mean Of Face I/II: 87.1502      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : EHWNW     
+Mean Of Face I/II: 87.1501      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : EHWNW     
+Mean Of Face I/II: 87.1502      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : EHWNW     
+Mean Of Face I/II: 87.1502      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TRFMID    
+Mean Of Face I/II: 89.5915      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TRFMID    
+Mean Of Face I/II: 89.5915      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TRFMID    
+Mean Of Face I/II: 89.5915      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : TRFMID    
+Mean Of Face I/II: 89.5915      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : TRFMID    
+Mean Of Face I/II: 89.5915      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   5    Number of Points:   2
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0000
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:    DRYDOCK
+--------------------
+
+Mean Distance Of All Sets:  356.334
+
+Reflector Height: 1.539  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Precise   :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     TRFMID
+--------------------
+
+Mean Distance Of All Sets:  227.039
+
+Reflector Height: 1.554  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Precise   :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : DRYDOCK   
+Mean Of Face I And II: 356.334       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : DRYDOCK   
+Mean Of Face I And II: 356.334       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : DRYDOCK   
+Mean Of Face I And II: 356.334       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : DRYDOCK   
+Mean Of Face I And II: 356.334       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : DRYDOCK   
+Mean Of Face I And II: 356.334       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : CM58      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : CM58      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : CM58      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : CM58      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : CM58      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : CM56      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : CM56      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : CM56      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : CM56      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : CM56      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : CM48      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : CM48      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : CM48      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : CM48      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : CM48      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KBFD      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KBFD      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KBFD      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : KBFD      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : KBFD      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : POWER     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : POWER     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : POWER     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : POWER     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : POWER     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ZOE       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ZOE       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : ZOE       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : ZOE       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : ZOE       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : EHWNW     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : EHWNW     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : EHWNW     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : EHWNW     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : EHWNW     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TRFMID    
+Mean Of Face I And II: 227.039       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TRFMID    
+Mean Of Face I And II: 227.039       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TRFMID    
+Mean Of Face I And II: 227.039       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : TRFMID    
+Mean Of Face I And II: 227.039       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : TRFMID    
+Mean Of Face I And II: 227.039       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End

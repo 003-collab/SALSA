@@ -1,0 +1,1906 @@
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 4.50 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 2015 KWAJ       
+Sets of Angles Start	: 06.24.15, 15:28:57
+
+TPS Station		: KB03            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 1.3739999533
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   3   Number Of Points:   5
+
+Standard Deviation Of Single Measurement:     0.0004
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB01 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.544  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB02 
+-------------------
+
+Mean of all Sets (Hz): 16.27505  
+
+Reflector Height:  1.471  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    ALCOTL 
+-------------------
+
+Mean of all Sets (Hz): 12.06463  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    ALCOTR 
+-------------------
+
+Mean of all Sets (Hz): 14.14554  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    ALCHRN 
+-------------------
+
+Mean of all Sets (Hz): 14.07183  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB02       
+Reduced Mean: 16.27502     Hz Residuals: 0.00003   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB02       
+Reduced Mean: 16.27501     Hz Residuals: 0.00003   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB02       
+Reduced Mean: 16.27511     Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ALCOTL     
+Reduced Mean: 12.06517     Hz Residuals: -0.00054  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ALCOTL     
+Reduced Mean: 12.06503     Hz Residuals: -0.00040  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : ALCOTL     
+Reduced Mean: 12.06370     Hz Residuals: 0.00094   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ALCOTR     
+Reduced Mean: 14.15007     Hz Residuals: -0.00053  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ALCOTR     
+Reduced Mean: 14.14579     Hz Residuals: -0.00025  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : ALCOTR     
+Reduced Mean: 14.14475     Hz Residuals: 0.00078   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ALCHRN     
+Reduced Mean: 14.07168     Hz Residuals: 0.00015   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ALCHRN     
+Reduced Mean: 14.07220     Hz Residuals: -0.00037  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : ALCHRN     
+Reduced Mean: 14.07161     Hz Residuals: 0.00022   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   3   Number Of Points:   5
+
+Standard Deviation Of Single Measurement:     0.0003
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      KB01
+-------------------
+
+Mean of all Sets (V): 90.0010
+
+Reflector Height: 1.544  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      KB02
+-------------------
+
+Mean of all Sets (V): 89.5218
+
+Reflector Height: 1.471  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    ALCOTL
+-------------------
+
+Mean of all Sets (V): 48.0025
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    ALCOTR
+-------------------
+
+Mean of all Sets (V): 48.0504
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    ALCHRN
+-------------------
+
+Mean of all Sets (V): 49.5759
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB01      
+Mean Of Face I/II: 90.0010      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB01      
+Mean Of Face I/II: 90.0010      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB01      
+Mean Of Face I/II: 90.0009      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB02      
+Mean Of Face I/II: 89.5218      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB02      
+Mean Of Face I/II: 89.5218      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB02      
+Mean Of Face I/II: 89.5218      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ALCOTL    
+Mean Of Face I/II: 48.0026      Residuals V: -0.00012  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ALCOTL    
+Mean Of Face I/II: 48.0023      Residuals V: 0.00022   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : ALCOTL    
+Mean Of Face I/II: 48.0026      Residuals V: -0.00011  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ALCOTR    
+Mean Of Face I/II: 48.0507      Residuals V: -0.00037  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ALCOTR    
+Mean Of Face I/II: 48.0456      Residuals V: 0.00072   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : ALCOTR    
+Mean Of Face I/II: 48.0507      Residuals V: -0.00034  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ALCHRN    
+Mean Of Face I/II: 49.5760      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ALCHRN    
+Mean Of Face I/II: 49.5760      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : ALCHRN    
+Mean Of Face I/II: 49.5758      Residuals V: 0.00013   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   3    Number of Points:   5
+
+Standrad Deviation Of Single Distance:     0.0009
+Standard Deviation Of Mean Distance  :     0.0005
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       KB01
+--------------------
+
+Mean Distance Of All Sets:   67.283
+
+Reflector Height: 1.544  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       KB02
+--------------------
+
+Mean Distance Of All Sets:   57.575
+
+Reflector Height: 1.471  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     ALCOTL
+--------------------
+
+Mean Distance Of All Sets:   53.335
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     ALCOTR
+--------------------
+
+Mean Distance Of All Sets:   53.422
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     ALCHRN
+--------------------
+
+Mean Distance Of All Sets:   51.290
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB01      
+Mean Of Face I And II: 67.283        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB01      
+Mean Of Face I And II: 67.283        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB01      
+Mean Of Face I And II: 67.283        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB02      
+Mean Of Face I And II: 57.575        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB02      
+Mean Of Face I And II: 57.575        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB02      
+Mean Of Face I And II: 57.575        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ALCOTL    
+Mean Of Face I And II: 53.334        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ALCOTL    
+Mean Of Face I And II: 53.335        Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : ALCOTL    
+Mean Of Face I And II: 53.334        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ALCOTR    
+Mean Of Face I And II: 53.421        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ALCOTR    
+Mean Of Face I And II: 53.423        Residuals: -0.002    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : ALCOTR    
+Mean Of Face I And II: 53.421        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ALCHRN    
+Mean Of Face I And II: 51.290        Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ALCHRN    
+Mean Of Face I And II: 51.288        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : ALCHRN    
+Mean Of Face I And II: 51.290        Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 4.50 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 2015 KWAJ       
+Sets of Angles Start	: 06.24.15, 15:47:07
+
+TPS Station		: KB04            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 1.5269999504
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   3   Number Of Points:   5
+
+Standard Deviation Of Single Measurement:     0.0005
+Standard Deviation Of All Measurements  :     0.0003
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB01 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.544  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB02 
+-------------------
+
+Mean of all Sets (Hz): 15.49131  
+
+Reflector Height:  1.471  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    ALCOTL 
+-------------------
+
+Mean of all Sets (Hz): 9.24256   
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    ALCOTR 
+-------------------
+
+Mean of all Sets (Hz): 11.34124  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    ALCHRN 
+-------------------
+
+Mean of all Sets (Hz): 11.22058  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB02       
+Reduced Mean: 15.49123     Hz Residuals: 0.00007   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB02       
+Reduced Mean: 15.49132     Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB02       
+Reduced Mean: 15.49137     Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ALCOTL     
+Reduced Mean: 9.24391      Hz Residuals: -0.00134  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ALCOTL     
+Reduced Mean: 9.24201      Hz Residuals: 0.00055   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : ALCOTL     
+Reduced Mean: 9.24177      Hz Residuals: 0.00080   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ALCOTR     
+Reduced Mean: 11.34197     Hz Residuals: -0.00073  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ALCOTR     
+Reduced Mean: 11.34114     Hz Residuals: 0.00010   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : ALCOTR     
+Reduced Mean: 11.34062     Hz Residuals: 0.00063   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ALCHRN     
+Reduced Mean: 11.22147     Hz Residuals: -0.00089  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ALCHRN     
+Reduced Mean: 11.22034     Hz Residuals: 0.00024   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : ALCHRN     
+Reduced Mean: 11.21593     Hz Residuals: 0.00065   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   3   Number Of Points:   5
+
+Standard Deviation Of Single Measurement:     0.0003
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      KB01
+-------------------
+
+Mean of all Sets (V): 90.0616
+
+Reflector Height: 1.544  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      KB02
+-------------------
+
+Mean of all Sets (V): 89.5930
+
+Reflector Height: 1.471  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    ALCOTL
+-------------------
+
+Mean of all Sets (V): 47.5111
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    ALCOTR
+-------------------
+
+Mean of all Sets (V): 47.4846
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    ALCHRN
+-------------------
+
+Mean of all Sets (V): 49.4228
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB01      
+Mean Of Face I/II: 90.0617      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB01      
+Mean Of Face I/II: 90.0617      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB01      
+Mean Of Face I/II: 90.0616      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB02      
+Mean Of Face I/II: 89.5930      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB02      
+Mean Of Face I/II: 89.5930      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB02      
+Mean Of Face I/II: 89.5930      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ALCOTL    
+Mean Of Face I/II: 47.5113      Residuals V: -0.00019  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ALCOTL    
+Mean Of Face I/II: 47.5115      Residuals V: -0.00039  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : ALCOTL    
+Mean Of Face I/II: 47.5105      Residuals V: 0.00058   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ALCOTR    
+Mean Of Face I/II: 47.4847      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ALCOTR    
+Mean Of Face I/II: 47.4846      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : ALCOTR    
+Mean Of Face I/II: 47.4845      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ALCHRN    
+Mean Of Face I/II: 49.4229      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ALCHRN    
+Mean Of Face I/II: 49.4224      Residuals V: 0.00038   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : ALCHRN    
+Mean Of Face I/II: 49.4231      Residuals V: -0.00030  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   3    Number of Points:   5
+
+Standrad Deviation Of Single Distance:     0.0007
+Standard Deviation Of Mean Distance  :     0.0004
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       KB01
+--------------------
+
+Mean Distance Of All Sets:   67.776
+
+Reflector Height: 1.544  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       KB02
+--------------------
+
+Mean Distance Of All Sets:   56.811
+
+Reflector Height: 1.471  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     ALCOTL
+--------------------
+
+Mean Distance Of All Sets:   52.996
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     ALCOTR
+--------------------
+
+Mean Distance Of All Sets:   52.955
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     ALCHRN
+--------------------
+
+Mean Distance Of All Sets:   50.828
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB01      
+Mean Of Face I And II: 67.776        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB01      
+Mean Of Face I And II: 67.776        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB01      
+Mean Of Face I And II: 67.776        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB02      
+Mean Of Face I And II: 56.811        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB02      
+Mean Of Face I And II: 56.811        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB02      
+Mean Of Face I And II: 56.811        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ALCOTL    
+Mean Of Face I And II: 52.996        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ALCOTL    
+Mean Of Face I And II: 52.995        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : ALCOTL    
+Mean Of Face I And II: 52.997        Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ALCOTR    
+Mean Of Face I And II: 52.955        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ALCOTR    
+Mean Of Face I And II: 52.956        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : ALCOTR    
+Mean Of Face I And II: 52.955        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ALCHRN    
+Mean Of Face I And II: 50.827        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ALCHRN    
+Mean Of Face I And II: 50.829        Residuals: -0.002    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : ALCHRN    
+Mean Of Face I And II: 50.827        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 4.50 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 2015 KWAJ       
+Sets of Angles Start	: 06.24.15, 16:06:60
+
+TPS Station		: KB02            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 1.5599999428
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   3   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB04 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.527  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB03 
+-------------------
+
+Mean of all Sets (Hz): 4.25056   
+
+Reflector Height:  1.471  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB01 
+-------------------
+
+Mean of all Sets (Hz): 114.26310 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB04       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB04       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB04       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB03       
+Reduced Mean: 4.25046      Hz Residuals: 0.00011   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB03       
+Reduced Mean: 4.25071      Hz Residuals: -0.00014  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB03       
+Reduced Mean: 4.25053      Hz Residuals: 0.00004   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB01       
+Reduced Mean: 114.26291    Hz Residuals: 0.00019   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB01       
+Reduced Mean: 114.26315    Hz Residuals: -0.00005  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB01       
+Reduced Mean: 114.26324    Hz Residuals: -0.00014  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   3   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      KB04
+-------------------
+
+Mean of all Sets (V): 90.0529
+
+Reflector Height: 1.527  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      KB03
+-------------------
+
+Mean of all Sets (V): 90.0636
+
+Reflector Height: 1.471  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      KB01
+-------------------
+
+Mean of all Sets (V): 90.5320
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB04      
+Mean Of Face I/II: 90.0530      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB04      
+Mean Of Face I/II: 90.0529      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB04      
+Mean Of Face I/II: 90.0528      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB03      
+Mean Of Face I/II: 90.0637      Residuals V: -0.00012  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB03      
+Mean Of Face I/II: 90.0635      Residuals V: 0.00010   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB03      
+Mean Of Face I/II: 90.0636      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB01      
+Mean Of Face I/II: 90.5320      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB01      
+Mean Of Face I/II: 90.5320      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB01      
+Mean Of Face I/II: 90.5320      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   3    Number of Points:   2
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0001
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       KB04
+--------------------
+
+Mean Distance Of All Sets:   56.811
+
+Reflector Height: 1.527  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       KB03
+--------------------
+
+Mean Distance Of All Sets:   57.576
+
+Reflector Height: 1.471  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB04      
+Mean Of Face I And II: 56.811        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB04      
+Mean Of Face I And II: 56.811        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB04      
+Mean Of Face I And II: 56.811        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB03      
+Mean Of Face I And II: 57.576        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB03      
+Mean Of Face I And II: 57.576        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB03      
+Mean Of Face I And II: 57.576        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB01      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB01      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB01      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 4.50 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 2015 KWAJ       
+Sets of Angles Start	: 06.24.15, 16:20:18
+
+TPS Station		: KB01            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 1.5440000296
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   3   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB04 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.527  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB03 
+-------------------
+
+Mean of all Sets (Hz): 3.46293   
+
+Reflector Height:  1.471  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      KB02 
+-------------------
+
+Mean of all Sets (Hz): 310.15414 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB04       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB04       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB04       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB03       
+Reduced Mean: 3.46299      Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB03       
+Reduced Mean: 3.46299      Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB03       
+Reduced Mean: 3.46281      Hz Residuals: 0.00012   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : KB02       
+Reduced Mean: 310.15403    Hz Residuals: 0.00012   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : KB02       
+Reduced Mean: 310.15410    Hz Residuals: 0.00005   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : KB02       
+Reduced Mean: 310.15431    Hz Residuals: -0.00017  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   3   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      KB04
+-------------------
+
+Mean of all Sets (V): 89.5340
+
+Reflector Height: 1.527  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      KB03
+-------------------
+
+Mean of all Sets (V): 89.5439
+
+Reflector Height: 1.471  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      KB02
+-------------------
+
+Mean of all Sets (V): 89.4022
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB04      
+Mean Of Face I/II: 89.5341      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB04      
+Mean Of Face I/II: 89.5339      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB04      
+Mean Of Face I/II: 89.5339      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB03      
+Mean Of Face I/II: 89.5439      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB03      
+Mean Of Face I/II: 89.5439      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB03      
+Mean Of Face I/II: 89.5439      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : KB02      
+Mean Of Face I/II: 89.4023      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : KB02      
+Mean Of Face I/II: 89.4021      Residuals V: 0.00013   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : KB02      
+Mean Of Face I/II: 89.4023      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   3    Number of Points:   2
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0000
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       KB04
+--------------------
+
+Mean Distance Of All Sets:   67.776
+
+Reflector Height: 1.527  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       KB03
+--------------------
+
+Mean Distance Of All Sets:   67.284
+
+Reflector Height: 1.471  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB04      
+Mean Of Face I And II: 67.776        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB04      
+Mean Of Face I And II: 67.776        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB04      
+Mean Of Face I And II: 67.776        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB03      
+Mean Of Face I And II: 67.284        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB03      
+Mean Of Face I And II: 67.284        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB03      
+Mean Of Face I And II: 67.284        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : KB02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : KB02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : KB02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End

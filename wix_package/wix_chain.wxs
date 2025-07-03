@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+	<Bundle Name="salsa-bundle" Version="0.0.0" Manufacturer="arlut" UpgradeCode="01234567-1234-1234-1234-123456789012" Copyright="placeholder" AboutUrl="http://someurl">
+		<Variable Name="InstallFolder" Type="string" Value="[ProgramFilesFolder]" />
+		<BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+			<bal:WixStandardBootstrapperApplication
+				LicenseFile="fake.rtf"
+				ShowVersion="yes"
+			/>
+		</BootstrapperApplicationRef>
+		<Chain>
+			<MsiPackage ForcePerMachine="yes" Id="SalsaPackage" SourceFile="build/lsa-0.1.1-win64.msi" Vital="yes">
+				<MsiProperty Name="INSTALL_ROOT" Value="[InstallFolder]\lsa" />
+			</MsiPackage>
+			<MsiPackage ForcePerMachine="yes" Id="PythonPackage" SourceFile="C:/Users/jsong/Downloads/python-3.4.3.amd64.msi" Vital="yes">
+				<MsiProperty Name="TARGETDIR" Value="[InstallFolder]\python" />
+			</MsiPackage>
+		</Chain>
+	</Bundle>
+</Wix>

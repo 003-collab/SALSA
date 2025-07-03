@@ -1,0 +1,3225 @@
+
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.61 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 07OCT15         
+Sets of Angles Start	: 10.07.15, 09:08:28
+
+TPS Station		: TP07            
+Coordinates		: E=         5000.000	N=         5000.000	H=      -----
+Instrument Height	: hi= 1.4900000095
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   3   Number Of Points:   7
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP03 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.351  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    STELLA 
+-------------------
+
+Mean of all Sets (Hz): 104.54172 
+
+Reflector Height:  1.665  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT2 
+-------------------
+
+Mean of all Sets (Hz): 126.26590 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TG T3 
+-------------------
+
+Mean of all Sets (Hz): 187.02388 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     TGT4R 
+-------------------
+
+Mean of all Sets (Hz): 306.49414 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT6 
+-------------------
+
+Mean of all Sets (Hz): 328.02174 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT5 
+-------------------
+
+Mean of all Sets (Hz): 359.58405 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP03       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP03       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TP03       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : STELLA     
+Reduced Mean: 104.54189    Hz Residuals: -0.00017  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : STELLA     
+Reduced Mean: 104.54150    Hz Residuals: 0.00022   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : STELLA     
+Reduced Mean: 104.54177    Hz Residuals: -0.00005  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT2       
+Reduced Mean: 126.26584    Hz Residuals: 0.00006   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT2       
+Reduced Mean: 126.26587    Hz Residuals: 0.00003   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT2       
+Reduced Mean: 126.26599    Hz Residuals: -0.00009  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TG T3       
+Reduced Mean: 187.02408    Hz Residuals: -0.00020  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TG T3       
+Reduced Mean: 187.02381    Hz Residuals: 0.00007   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TG T3       
+Reduced Mean: 187.02376    Hz Residuals: 0.00012   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT4R      
+Reduced Mean: 306.49411    Hz Residuals: 0.00004   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT4R      
+Reduced Mean: 306.49412    Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT4R      
+Reduced Mean: 306.49420    Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT6       
+Reduced Mean: 328.02187    Hz Residuals: -0.00013  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT6       
+Reduced Mean: 328.02161    Hz Residuals: 0.00012   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT6       
+Reduced Mean: 328.02173    Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT5       
+Reduced Mean: 359.58409    Hz Residuals: -0.00005  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT5       
+Reduced Mean: 359.58397    Hz Residuals: 0.00008   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT5       
+Reduced Mean: 359.58408    Hz Residuals: -0.00003  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   3   Number Of Points:   7
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      TP03
+-------------------
+
+Mean of all Sets (V): 86.0749
+
+Reflector Height: 1.351  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    STELLA
+-------------------
+
+Mean of all Sets (V): 91.0337
+
+Reflector Height: 1.665  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT2
+-------------------
+
+Mean of all Sets (V): 90.5924
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TG T3
+-------------------
+
+Mean of all Sets (V): 84.2354
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     TGT4R
+-------------------
+
+Mean of all Sets (V): 76.5101
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT6
+-------------------
+
+Mean of all Sets (V): 78.5117
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT5
+-------------------
+
+Mean of all Sets (V): 86.0037
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP03      
+Mean Of Face I/II: 86.0749      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP03      
+Mean Of Face I/II: 86.0749      Residuals V: 0.00010   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TP03      
+Mean Of Face I/II: 86.0751      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : STELLA    
+Mean Of Face I/II: 91.0334      Residuals V: 0.00033   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : STELLA    
+Mean Of Face I/II: 91.0339      Residuals V: -0.00019  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : STELLA    
+Mean Of Face I/II: 91.0338      Residuals V: -0.00014  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT2      
+Mean Of Face I/II: 90.5924      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT2      
+Mean Of Face I/II: 90.5927      Residuals V: -0.00025  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT2      
+Mean Of Face I/II: 90.5922      Residuals V: 0.00025   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TG T3      
+Mean Of Face I/II: 84.2350      Residuals V: 0.00032   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TG T3      
+Mean Of Face I/II: 84.2356      Residuals V: -0.00022  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TG T3      
+Mean Of Face I/II: 84.2355      Residuals V: -0.00010  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT4R     
+Mean Of Face I/II: 76.5103      Residuals V: -0.00020  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT4R     
+Mean Of Face I/II: 76.5059      Residuals V: 0.00020   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT4R     
+Mean Of Face I/II: 76.5101      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT6      
+Mean Of Face I/II: 78.5116      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT6      
+Mean Of Face I/II: 78.5117      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT6      
+Mean Of Face I/II: 78.5117      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT5      
+Mean Of Face I/II: 86.0036      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT5      
+Mean Of Face I/II: 86.0037      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT5      
+Mean Of Face I/II: 86.0037      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   3    Number of Points:   7
+
+Standrad Deviation Of Single Distance:     0.0009
+Standard Deviation Of Mean Distance  :     0.0005
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       TP03
+--------------------
+
+Mean Distance Of All Sets:   65.817
+
+Reflector Height: 1.351  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     STELLA
+--------------------
+
+Mean Distance Of All Sets:  320.588
+
+Reflector Height: 1.665  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT2
+--------------------
+
+Mean Distance Of All Sets:   41.132
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TG T3
+--------------------
+
+Mean Distance Of All Sets:   40.489
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:      TGT4R
+--------------------
+
+Mean Distance Of All Sets:   86.608
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT6
+--------------------
+
+Mean Distance Of All Sets:  171.626
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT5
+--------------------
+
+Mean Distance Of All Sets:  115.463
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP03      
+Mean Of Face I And II: 65.817        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP03      
+Mean Of Face I And II: 65.817        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TP03      
+Mean Of Face I And II: 65.817        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : STELLA    
+Mean Of Face I And II: 320.588       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : STELLA    
+Mean Of Face I And II: 320.588       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : STELLA    
+Mean Of Face I And II: 320.588       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT2      
+Mean Of Face I And II: 41.132        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT2      
+Mean Of Face I And II: 41.132        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT2      
+Mean Of Face I And II: 41.132        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TG T3      
+Mean Of Face I And II: 40.489        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TG T3      
+Mean Of Face I And II: 40.489        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TG T3      
+Mean Of Face I And II: 40.489        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT4R     
+Mean Of Face I And II: 86.608        Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT4R     
+Mean Of Face I And II: 86.607        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT4R     
+Mean Of Face I And II: 86.608        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT6      
+Mean Of Face I And II: 171.628       Residuals: -0.002    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT6      
+Mean Of Face I And II: 171.624       Residuals: 0.002     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT6      
+Mean Of Face I And II: 171.626       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT5      
+Mean Of Face I And II: 115.463       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT5      
+Mean Of Face I And II: 115.463       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT5      
+Mean Of Face I And II: 115.463       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.61 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 07OCT15         
+Sets of Angles Start	: 10.07.15, 09:41:02
+
+TPS Station		: TG T3            
+Coordinates		: E=         5000.000	N=         5000.000	H=      -----
+Instrument Height	: hi= 1.3509999514
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   3   Number Of Points:   8
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    STELLA 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.665  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT1 
+-------------------
+
+Mean of all Sets (Hz): 15.32210  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT2 
+-------------------
+
+Mean of all Sets (Hz): 44.16500  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP07 
+-------------------
+
+Mean of all Sets (Hz): 64.26285  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TG T3 
+-------------------
+
+Mean of all Sets (Hz): 67.07109  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     TGT4R 
+-------------------
+
+Mean of all Sets (Hz): 141.49092 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT6 
+-------------------
+
+Mean of all Sets (Hz): 195.19556 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT5 
+-------------------
+
+Mean of all Sets (Hz): 244.23273 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : STELLA     
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : STELLA     
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : STELLA     
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT1       
+Reduced Mean: 15.32177     Hz Residuals: 0.00033   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT1       
+Reduced Mean: 15.32245     Hz Residuals: -0.00035  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT1       
+Reduced Mean: 15.32207     Hz Residuals: 0.00003   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT2       
+Reduced Mean: 44.16476     Hz Residuals: 0.00023   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT2       
+Reduced Mean: 44.16489     Hz Residuals: 0.00010   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT2       
+Reduced Mean: 44.16533     Hz Residuals: -0.00034  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP07       
+Reduced Mean: 64.26252     Hz Residuals: 0.00033   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP07       
+Reduced Mean: 64.26294     Hz Residuals: -0.00009  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TP07       
+Reduced Mean: 64.26310     Hz Residuals: -0.00025  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TG T3       
+Reduced Mean: 67.07077     Hz Residuals: 0.00032   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TG T3       
+Reduced Mean: 67.07112     Hz Residuals: -0.00003  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TG T3       
+Reduced Mean: 67.07139     Hz Residuals: -0.00030  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT4R      
+Reduced Mean: 141.49085    Hz Residuals: 0.00008   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT4R      
+Reduced Mean: 141.49097    Hz Residuals: -0.00005  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT4R      
+Reduced Mean: 141.49094    Hz Residuals: -0.00002  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT6       
+Reduced Mean: 195.19558    Hz Residuals: -0.00002  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT6       
+Reduced Mean: 195.19549    Hz Residuals: 0.00007   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT6       
+Reduced Mean: 195.19560    Hz Residuals: -0.00004  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT5       
+Reduced Mean: 244.23259    Hz Residuals: 0.00014   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT5       
+Reduced Mean: 244.23296    Hz Residuals: -0.00023  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT5       
+Reduced Mean: 244.23265    Hz Residuals: 0.00009   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   3   Number Of Points:   8
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:    STELLA
+-------------------
+
+Mean of all Sets (V): 91.4351
+
+Reflector Height: 1.665  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT1
+-------------------
+
+Mean of all Sets (V): 99.4050
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT2
+-------------------
+
+Mean of all Sets (V): 93.0425
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TP07
+-------------------
+
+Mean of all Sets (V): 93.5214
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TG T3
+-------------------
+
+Mean of all Sets (V): 90.1557
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     TGT4R
+-------------------
+
+Mean of all Sets (V): 77.3340
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT6
+-------------------
+
+Mean of all Sets (V): 76.1825
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT5
+-------------------
+
+Mean of all Sets (V): 85.5103
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : STELLA    
+Mean Of Face I/II: 91.4349      Residuals V: 0.00027   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : STELLA    
+Mean Of Face I/II: 91.4355      Residuals V: -0.00040  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : STELLA    
+Mean Of Face I/II: 91.4350      Residuals V: 0.00014   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT1      
+Mean Of Face I/II: 99.4051      Residuals V: -0.00019  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT1      
+Mean Of Face I/II: 99.4049      Residuals V: 0.00003   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT1      
+Mean Of Face I/II: 99.4048      Residuals V: 0.00016   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT2      
+Mean Of Face I/II: 93.0426      Residuals V: -0.00012  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT2      
+Mean Of Face I/II: 93.0423      Residuals V: 0.00013   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT2      
+Mean Of Face I/II: 93.0425      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP07      
+Mean Of Face I/II: 93.5214      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP07      
+Mean Of Face I/II: 93.5216      Residuals V: -0.00012  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TP07      
+Mean Of Face I/II: 93.5213      Residuals V: 0.00011   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TG T3      
+Mean Of Face I/II: 90.1556      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TG T3      
+Mean Of Face I/II: 90.1557      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TG T3      
+Mean Of Face I/II: 90.1557      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT4R     
+Mean Of Face I/II: 77.3339      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT4R     
+Mean Of Face I/II: 77.3341      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT4R     
+Mean Of Face I/II: 77.3341      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT6      
+Mean Of Face I/II: 76.1825      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT6      
+Mean Of Face I/II: 76.1823      Residuals V: 0.00015   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT6      
+Mean Of Face I/II: 76.1826      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT5      
+Mean Of Face I/II: 85.5103      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT5      
+Mean Of Face I/II: 85.5102      Residuals V: 0.00008   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT5      
+Mean Of Face I/II: 85.5103      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   3    Number of Points:   8
+
+Standrad Deviation Of Single Distance:     0.0007
+Standard Deviation Of Mean Distance  :     0.0004
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:     STELLA
+--------------------
+
+Mean Distance Of All Sets:  343.496
+
+Reflector Height: 1.665  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT1
+--------------------
+
+Mean Distance Of All Sets:  124.780
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT2
+--------------------
+
+Mean Distance Of All Sets:   96.120
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TP07
+--------------------
+
+Mean Distance Of All Sets:   65.817
+
+Reflector Height: 0.000  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TG T3
+--------------------
+
+Mean Distance Of All Sets:  105.774
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:      TGT4R
+--------------------
+
+Mean Distance Of All Sets:   70.840
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT6
+--------------------
+
+Mean Distance Of All Sets:  121.362
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT5
+--------------------
+
+Mean Distance Of All Sets:   49.646
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : STELLA    
+Mean Of Face I And II: 343.497       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : STELLA    
+Mean Of Face I And II: 343.496       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : STELLA    
+Mean Of Face I And II: 343.496       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT1      
+Mean Of Face I And II: 124.780       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT1      
+Mean Of Face I And II: 124.779       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT1      
+Mean Of Face I And II: 124.779       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT2      
+Mean Of Face I And II: 96.121        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT2      
+Mean Of Face I And II: 96.121        Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT2      
+Mean Of Face I And II: 96.119        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP07      
+Mean Of Face I And II: 65.817        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP07      
+Mean Of Face I And II: 65.817        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TP07      
+Mean Of Face I And II: 65.816        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TG T3      
+Mean Of Face I And II: 105.775       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TG T3      
+Mean Of Face I And II: 105.774       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TG T3      
+Mean Of Face I And II: 105.772       Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT4R     
+Mean Of Face I And II: 70.840        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT4R     
+Mean Of Face I And II: 70.840        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT4R     
+Mean Of Face I And II: 70.840        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT6      
+Mean Of Face I And II: 121.362       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT6      
+Mean Of Face I And II: 121.361       Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT6      
+Mean Of Face I And II: 121.363       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT5      
+Mean Of Face I And II: 49.646        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT5      
+Mean Of Face I And II: 49.646        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT5      
+Mean Of Face I And II: 49.646        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.61 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 07OCT15         
+Sets of Angles Start	: 10.07.15, 10:09:21
+
+TPS Station		: TGT8            
+Coordinates		: E=         5000.000	N=         5000.000	H=      -----
+Instrument Height	: hi= 1.5160000324
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   3   Number Of Points:   6
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    STELLA 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.665  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     TGT1A 
+-------------------
+
+Mean of all Sets (Hz): 56.35285  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT1 
+-------------------
+
+Mean of all Sets (Hz): 56.48366  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TG T3 
+-------------------
+
+Mean of all Sets (Hz): 170.30347 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT6 
+-------------------
+
+Mean of all Sets (Hz): 182.58143 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT5 
+-------------------
+
+Mean of all Sets (Hz): 193.48544 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : STELLA     
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : STELLA     
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : STELLA     
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT1A      
+Reduced Mean: 56.35283     Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT1A      
+Reduced Mean: 56.35276     Hz Residuals: 0.00009   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT1A      
+Reduced Mean: 56.35295     Hz Residuals: -0.00011  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT1       
+Reduced Mean: 56.48365     Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT1       
+Reduced Mean: 56.48364     Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT1       
+Reduced Mean: 56.48367     Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TG T3       
+Reduced Mean: 170.30365    Hz Residuals: -0.00018  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TG T3       
+Reduced Mean: 170.30336    Hz Residuals: 0.00011   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TG T3       
+Reduced Mean: 170.30339    Hz Residuals: 0.00008   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT6       
+Reduced Mean: 182.58167    Hz Residuals: -0.00023  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT6       
+Reduced Mean: 182.58128    Hz Residuals: 0.00015   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT6       
+Reduced Mean: 182.58135    Hz Residuals: 0.00008   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT5       
+Reduced Mean: 193.48589    Hz Residuals: -0.00045  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT5       
+Reduced Mean: 193.48534    Hz Residuals: 0.00010   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT5       
+Reduced Mean: 193.48510    Hz Residuals: 0.00034   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   3   Number Of Points:   6
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:    STELLA
+-------------------
+
+Mean of all Sets (V): 86.5711
+
+Reflector Height: 1.665  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     TGT1A
+-------------------
+
+Mean of all Sets (V): 86.5359
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT1
+-------------------
+
+Mean of all Sets (V): 86.5520
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TG T3
+-------------------
+
+Mean of all Sets (V): 75.4104
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT6
+-------------------
+
+Mean of all Sets (V): 75.4644
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT5
+-------------------
+
+Mean of all Sets (V): 77.0105
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : STELLA    
+Mean Of Face I/II: 86.5713      Residuals V: -0.00011  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : STELLA    
+Mean Of Face I/II: 86.5711      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : STELLA    
+Mean Of Face I/II: 86.5711      Residuals V: 0.00003   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT1A     
+Mean Of Face I/II: 86.5359      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT1A     
+Mean Of Face I/II: 86.5358      Residuals V: 0.00010   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT1A     
+Mean Of Face I/II: 86.5359      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT1      
+Mean Of Face I/II: 86.5520      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT1      
+Mean Of Face I/II: 86.5518      Residuals V: 0.00019   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT1      
+Mean Of Face I/II: 86.5522      Residuals V: -0.00016  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TG T3      
+Mean Of Face I/II: 75.4106      Residuals V: -0.00023  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TG T3      
+Mean Of Face I/II: 75.4103      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TG T3      
+Mean Of Face I/II: 75.4103      Residuals V: 0.00014   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT6      
+Mean Of Face I/II: 75.4645      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT6      
+Mean Of Face I/II: 75.4645      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT6      
+Mean Of Face I/II: 75.4643      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT5      
+Mean Of Face I/II: 77.0103      Residuals V: 0.00023   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT5      
+Mean Of Face I/II: 77.0106      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT5      
+Mean Of Face I/II: 77.0107      Residuals V: -0.00016  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   3    Number of Points:   6
+
+Standrad Deviation Of Single Distance:     0.0004
+Standard Deviation Of Mean Distance  :     0.0002
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:     STELLA
+--------------------
+
+Mean Distance Of All Sets:  251.596
+
+Reflector Height: 1.665  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:      TGT1A
+--------------------
+
+Mean Distance Of All Sets:   51.083
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT1
+--------------------
+
+Mean Distance Of All Sets:   51.416
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TG T3
+--------------------
+
+Mean Distance Of All Sets:   96.009
+
+Reflector Height: 0.000  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT6
+--------------------
+
+Mean Distance Of All Sets:  213.572
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT5
+--------------------
+
+Mean Distance Of All Sets:  121.670
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : STELLA    
+Mean Of Face I And II: 251.596       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : STELLA    
+Mean Of Face I And II: 251.596       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : STELLA    
+Mean Of Face I And II: 251.596       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT1A     
+Mean Of Face I And II: 51.083        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT1A     
+Mean Of Face I And II: 51.083        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT1A     
+Mean Of Face I And II: 51.082        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT1      
+Mean Of Face I And II: 51.417        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT1      
+Mean Of Face I And II: 51.416        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT1      
+Mean Of Face I And II: 51.416        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TG T3      
+Mean Of Face I And II: 96.009        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TG T3      
+Mean Of Face I And II: 96.009        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TG T3      
+Mean Of Face I And II: 96.009        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT6      
+Mean Of Face I And II: 213.573       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT6      
+Mean Of Face I And II: 213.572       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT6      
+Mean Of Face I And II: 213.572       Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT5      
+Mean Of Face I And II: 121.669       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT5      
+Mean Of Face I And II: 121.670       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT5      
+Mean Of Face I And II: 121.670       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.61 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 07OCT15         
+Sets of Angles Start	: 10.07.15, 10:52:08
+
+TPS Station		: STELLA          
+Coordinates		: E=         5000.000	N=         5000.000	H=      -----
+Instrument Height	: hi= 1.6649999619
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   3   Number Of Points:   7
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       TP7 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.459  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     TGT1A 
+-------------------
+
+Mean of all Sets (Hz): 2.24324   
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TG T3 
+-------------------
+
+Mean of all Sets (Hz): 352.46440 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     TGT4R 
+-------------------
+
+Mean of all Sets (Hz): 4.30541   
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       TP3 
+-------------------
+
+Mean of all Sets (Hz): 10.39054  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT6 
+-------------------
+
+Mean of all Sets (Hz): 14.33149  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TGT5 
+-------------------
+
+Mean of all Sets (Hz): 17.37494  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP7        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP7        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TP7        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT1A      
+Reduced Mean: 2.24332      Hz Residuals: -0.00008  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT1A      
+Reduced Mean: 2.24299      Hz Residuals: 0.00025   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT1A      
+Reduced Mean: 2.24340      Hz Residuals: -0.00017  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TG T3       
+Reduced Mean: 352.46482    Hz Residuals: -0.00042  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TG T3       
+Reduced Mean: 352.46409    Hz Residuals: 0.00031   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TG T3       
+Reduced Mean: 352.46429    Hz Residuals: 0.00011   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT4R      
+Reduced Mean: 4.30534      Hz Residuals: 0.00007   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT4R      
+Reduced Mean: 4.30544      Hz Residuals: -0.00003  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT4R      
+Reduced Mean: 4.30545      Hz Residuals: -0.00004  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP3        
+Reduced Mean: 10.39053     Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP3        
+Reduced Mean: 10.39045     Hz Residuals: 0.00009   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TP3        
+Reduced Mean: 10.39064     Hz Residuals: -0.00010  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT6       
+Reduced Mean: 14.33138     Hz Residuals: 0.00011   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT6       
+Reduced Mean: 14.33154     Hz Residuals: -0.00005  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT6       
+Reduced Mean: 14.33154     Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TGT5       
+Reduced Mean: 17.37492     Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TGT5       
+Reduced Mean: 17.37515     Hz Residuals: -0.00021  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : TGT5       
+Reduced Mean: 17.37476     Hz Residuals: 0.00019   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   3   Number Of Points:   7
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:       TP7
+-------------------
+
+Mean of all Sets (V): 88.5656
+
+Reflector Height: 1.459  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     TGT1A
+-------------------
+
+Mean of all Sets (V): 92.4032
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TG T3
+-------------------
+
+Mean of all Sets (V): 88.1311
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     TGT4R
+-------------------
+
+Mean of all Sets (V): 86.2011
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       TP3
+-------------------
+
+Mean of all Sets (V): 88.1620
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT6
+-------------------
+
+Mean of all Sets (V): 85.0725
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TGT5
+-------------------
+
+Mean of all Sets (V): 87.4934
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP7       
+Mean Of Face I/II: 88.5656      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP7       
+Mean Of Face I/II: 88.5656      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TP7       
+Mean Of Face I/II: 88.5655      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT1A     
+Mean Of Face I/II: 92.4031      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT1A     
+Mean Of Face I/II: 92.4031      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT1A     
+Mean Of Face I/II: 92.4033      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TG T3      
+Mean Of Face I/II: 88.1309      Residuals V: 0.00020   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TG T3      
+Mean Of Face I/II: 88.1313      Residuals V: -0.00012  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TG T3      
+Mean Of Face I/II: 88.1312      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT4R     
+Mean Of Face I/II: 86.2007      Residuals V: 0.00032   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT4R     
+Mean Of Face I/II: 86.2012      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT4R     
+Mean Of Face I/II: 86.2012      Residuals V: -0.00019  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP3       
+Mean Of Face I/II: 88.1618      Residuals V: 0.00021   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP3       
+Mean Of Face I/II: 88.1622      Residuals V: -0.00017  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TP3       
+Mean Of Face I/II: 88.1621      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT6      
+Mean Of Face I/II: 85.0725      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT6      
+Mean Of Face I/II: 85.0724      Residuals V: 0.00010   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT6      
+Mean Of Face I/II: 85.0726      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TGT5      
+Mean Of Face I/II: 87.4931      Residuals V: 0.00027   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TGT5      
+Mean Of Face I/II: 87.4936      Residuals V: -0.00022  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : TGT5      
+Mean Of Face I/II: 87.4935      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   3    Number of Points:   7
+
+Standrad Deviation Of Single Distance:     0.0038
+Standard Deviation Of Mean Distance  :     0.0022
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:        TP7
+--------------------
+
+Mean Distance Of All Sets:  320.588
+
+Reflector Height: 1.459  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:      TGT1A
+--------------------
+
+Mean Distance Of All Sets:  227.433
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TG T3
+--------------------
+
+Mean Distance Of All Sets:  317.695
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:      TGT4R
+--------------------
+
+Mean Distance Of All Sets:  400.832
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:        TP3
+--------------------
+
+Mean Distance Of All Sets:  343.496
+
+Reflector Height: 0.000  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT6
+--------------------
+
+Mean Distance Of All Sets:  459.780
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TGT5
+--------------------
+
+Mean Distance Of All Sets:  367.726
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP7       
+Mean Of Face I And II: 320.588       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP7       
+Mean Of Face I And II: 320.588       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TP7       
+Mean Of Face I And II: 320.588       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT1A     
+Mean Of Face I And II: 227.434       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT1A     
+Mean Of Face I And II: 227.425       Residuals: 0.008     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT1A     
+Mean Of Face I And II: 227.440       Residuals: -0.007    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TG T3      
+Mean Of Face I And II: 317.699       Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TG T3      
+Mean Of Face I And II: 317.692       Residuals: 0.003     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TG T3      
+Mean Of Face I And II: 317.693       Residuals: 0.002     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT4R     
+Mean Of Face I And II: 400.828       Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT4R     
+Mean Of Face I And II: 400.835       Residuals: -0.003    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT4R     
+Mean Of Face I And II: 400.833       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP3       
+Mean Of Face I And II: 343.496       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP3       
+Mean Of Face I And II: 343.495       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TP3       
+Mean Of Face I And II: 343.495       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT6      
+Mean Of Face I And II: 459.776       Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT6      
+Mean Of Face I And II: 459.783       Residuals: -0.003    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT6      
+Mean Of Face I And II: 459.781       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TGT5      
+Mean Of Face I And II: 367.729       Residuals: -0.003    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TGT5      
+Mean Of Face I And II: 367.722       Residuals: 0.003     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : TGT5      
+Mean Of Face I And II: 367.725       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End

@@ -1,0 +1,16 @@
+Please reference the instructions in ../StyleGuidance/UserManualStyleGuidance.pdf.
+
+That guidance includes instructions on compiling the PDF document; in short, you just run the Compile.sh script.  This has been tested on our Debian platforms which seem to have all the needed dependencies; we believe those to be:
+
+texlive-latex-base
+texlive-latex-extra
+texlive-latex-recommended
+
+Everything should compile on Windows systems with a Tex Live installation in place.  The short sequence of actions in the Compile.sh script will need to be executed manually, or a batch file created.
+
+Tips:
+* Developers should always use the provided Compile.sh script when building the SALSA User Manual. Most bugs can be fixed by using this script instead of manually running `pdflatex`.
+
+Bugs:
+* Sometimes the headers can appear to be squished together or overlapping. This is caused by running the command `pdflatex` instead of using the provided Compile.sh script. Using the script will fix this issue.
+* When running the provided Compile.sh script on Linux a user may encounter an error that says `bash: ./Compile.sh: /bin/bash^M: bad interpreter: No such file or directory`. The fix is to run the command `sed -i -e 's/\r$//' Compile.sh` in the same directory as Compile.sh. The script will now work as intended.

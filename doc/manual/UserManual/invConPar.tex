@@ -1,0 +1,23 @@
+\chapter{Inverse Configuration Parsing}
+\label{chap:invConPar}
+
+This chapter is meant to serve as an addendum to Chapter \ref{chap:StatInvDat} and provide the user with a more detailed explanation of how Salsa parses the \verb+*Inverses.cfg+ input configuration file. Some examples will also be provided to give the user some additional context into how the parsing works. The input configuration file is a plain text document which has one inverse station pair per file line. The station labels are delimited by space characters. Note that white space at the beginning and end of the lines are not important. If the user wishes to have spaces in the labels themselves they must encase the label string in double quotation marks ("). A table with some example input configuration lines and how they would appear in the Station Data Dialog box table can be seen below (note that \emph{blank} is used to reference an empty string)
+
+\begin{table}[htb]
+\caption{Sample Line Parse Results}
+\label{tab:conParEx}
+\begin{center}
+\begin{tabular}{llp{2.5 in}}
+\hline
+\textbf{Sample Line} & \textbf{Table Output} & \textbf{Notes} \\
+\hline
+oneSite twoSite & [oneSite, twoSite] & \\
+"one Site" "two Site" & [one Site, two Site] & Use of quotations preserves text \\
+oneSite two Site & [oneSite, two] & Not enclosing two Site with parentheses leads to Site getting cut \\
+oneSite twoSite threeSite ... & [oneSite, twoSite] & Everything after second space is ignored \\
+oneSite \emph{blank} & [oneSite, \emph{blank}] & If string data is not provided on a line, empty string will be inserted \\
+\emph{blank} \emph{blank} & [\emph{blank}, \emph{blank}] & \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

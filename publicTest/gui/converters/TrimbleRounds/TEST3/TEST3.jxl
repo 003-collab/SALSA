@@ -1,0 +1,3359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JOBFile jobName="BWB" version="6.11" product="Trimble General Survey" productVersion="19.10" productDBVersion="1900-7" controllerSerialNumber="DAD193500469" TimeStamp="2020-03-11T13:44:23"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.trimble.com/schema/JobXML/6_1 http://www.trimble.com/schema/JobXML/6_1/JobXMLSchema-6.11.xsd">
+    <FieldBook>
+
+        <UnitsRecord ID="00000002" TimeStamp="2020-03-11T13:44:23">
+            <DistanceUnits>Metres</DistanceUnits>
+            <HeightUnits>Metres</HeightUnits>
+            <AngleUnits>DMSDegrees</AngleUnits>
+            <AzimuthFormat>Azimuth</AzimuthFormat>
+            <LatitudeLongitudeUnits>DMSDegrees</LatitudeLongitudeUnits>
+            <CoordinateOrder>North-East-Elevation</CoordinateOrder>
+            <TemperatureUnits>Celsius</TemperatureUnits>
+            <PressureUnits>MilliBar</PressureUnits>
+            <GradeUnits>Percentage</GradeUnits>
+            <AreaUnits>SquareMetres</AreaUnits>
+            <VolumeUnits>CubicMetres</VolumeUnits>
+            <StationingFormat>1+000.0</StationingFormat>
+            <StationIndexIncrement/>
+            <DistanceDisplayDPs>3</DistanceDisplayDPs>
+            <CoordinateDisplayDPs>3</CoordinateDisplayDPs>
+            <AreaDisplayDPs>3</AreaDisplayDPs>
+            <VolumeDisplayDPs>3</VolumeDisplayDPs>
+            <AngleDisplayDPs>0</AngleDisplayDPs>
+            <LaserVADisplay>Inclination</LaserVADisplay>
+            <TimeFormat>Local</TimeFormat>
+        </UnitsRecord>
+
+        <FeatureCodingRecord ID="00000003" TimeStamp="2020-03-11T13:44:23">
+            <LibraryName/>
+            <SourceFilename/>
+            <AttributeCheckSum>0</AttributeCheckSum>
+            <AttributesStored>false</AttributesStored>
+        </FeatureCodingRecord>
+
+        <CorrectionsRecord ID="00000004" TimeStamp="2020-03-11T13:44:23">
+            <SouthAzimuth>false</SouthAzimuth>
+            <GridOrientation>IncreasingNorthEast</GridOrientation>
+            <MagneticDeclination>0</MagneticDeclination>
+            <Distances>GroundDistance</Distances>
+            <ApplySeaLevelCorrection>false</ApplySeaLevelCorrection>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+        </CorrectionsRecord>
+
+        <EllipsoidRecord ID="00000006" TimeStamp="2020-03-11T13:44:23">
+            <EarthRadius/>
+            <Flattening/>
+        </EllipsoidRecord>
+
+        <ProjectionRecord ID="00000007" TimeStamp="2020-03-11T13:44:23">
+            <Projection>
+                <Type>ScaleOnly</Type>
+                <Scale>1</Scale>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight/>
+            </LocalSite>
+        </ProjectionRecord>
+
+        <DatumRecord ID="00000008" TimeStamp="2020-03-11T13:44:23">
+            <Type>NoDatum</Type>
+        </DatumRecord>
+
+        <HorizontalAdjustmentRecord ID="00000009" TimeStamp="2020-03-11T13:44:23">
+            <Type>NoAdjustment</Type>
+        </HorizontalAdjustmentRecord>
+
+        <VerticalAdjustmentRecord ID="0000000a" TimeStamp="2020-03-11T13:44:23">
+            <Type>NoAdjustment</Type>
+        </VerticalAdjustmentRecord>
+
+        <CoordinateSystemRecord ID="0000000b" TimeStamp="2020-03-11T13:44:23">
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+        </CoordinateSystemRecord>
+
+        <JobPropertiesRecord ID="0000000c" TimeStamp="2020-03-11T13:44:23">
+            <Reference/>
+            <Description/>
+            <Operator/>
+            <JobNote/>
+            <TectonicPlate>Unknown</TectonicPlate>
+            <ApplyJobPointNameRange>false</ApplyJobPointNameRange>
+            <MinimumJobPointName/>
+            <MaximumJobPointName/>
+        </JobPropertiesRecord>
+
+        <LinkedFilesRecord ID="0000000e" TimeStamp="2020-03-11T13:44:23"/>
+
+        <ActiveMapFilesRecord ID="0000000f" TimeStamp="2020-03-11T13:44:23"/>
+
+        <TimeZoneRecord ID="0000001f" TimeStamp="2020-03-11T13:44:45">
+            <ZoneName>Eastern Daylight Time</ZoneName>
+            <HoursToUTC>4</HoursToUTC>
+        </TimeZoneRecord>
+
+        <InstrumentTiltCompensatorStatusRecord ID="00000020" TimeStamp="2020-03-11T13:50:01">
+            <Enabled>true</Enabled>
+        </InstrumentTiltCompensatorStatusRecord>
+
+        <InstrumentRecord ID="00000022" TimeStamp="2020-03-11T13:53:24">
+            <Type>TrimbleVXandSSeries</Type>
+            <RefractiveIndex>273.64570458809</RefractiveIndex>
+            <CarrierWavelength>79.170232716506</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>0</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>5</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00027777777778</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00027777777778</VerticalAnglePrecision>
+            <EDMPrecision>0.002</EDMPrecision>
+            <EDMppm>2</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>S7 1 DR Plus</Model>
+            <Serial>37230277</Serial>
+            <FirmwareVersion>H2.7.19</FirmwareVersion>
+            <UserDefinedName>37230277</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient>293.682</AtmosphericCorrectionCoefficient>
+        </InstrumentRecord>
+
+        <PointRecord ID="00000029" TimeStamp="2020-03-11T13:58:44">
+            <Name>T6</Name>
+            <Code>CP</Code>
+            <Method>Coordinates</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Grid>
+                <North>5000</North>
+                <East>5000</East>
+                <Elevation>0</Elevation>
+            </Grid>
+        </PointRecord>
+
+        <InstrumentRecord ID="0000002e" TimeStamp="2020-03-11T14:01:45">
+            <Type>TrimbleVXandSSeries</Type>
+            <RefractiveIndex>273.64570458809</RefractiveIndex>
+            <CarrierWavelength>79.170232716506</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>0</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>5</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00027777777778</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00027777777778</VerticalAnglePrecision>
+            <EDMPrecision>0.002</EDMPrecision>
+            <EDMppm>2</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>S7 1 DR Plus</Model>
+            <Serial>37230277</Serial>
+            <FirmwareVersion>H2.7.19</FirmwareVersion>
+            <UserDefinedName>37230277</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient>293.682</AtmosphericCorrectionCoefficient>
+        </InstrumentRecord>
+
+        <AtmosphereRecord ID="00000035" TimeStamp="2020-03-11T14:03:17">
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+            <PPM>2.7173258631094</PPM>
+            <ApplyEarthCurvatureCorrection>true</ApplyEarthCurvatureCorrection>
+            <ApplyRefractionCorrection>true</ApplyRefractionCorrection>
+            <RefractionCoefficient>0.142</RefractionCoefficient>
+            <PressureInputMethod>ReadFromInstrument</PressureInputMethod>
+            <ApplyPPMToRawDistances>true</ApplyPPMToRawDistances>
+        </AtmosphereRecord>
+
+        <StationRecord ID="00000036" TimeStamp="2020-03-11T14:03:17">
+            <StationName>T6</StationName>
+            <TheodoliteHeight>1.384</TheodoliteHeight>
+            <RawTheodoliteHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.384</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTheodoliteHeight>
+            <InstrumentID>0000002e</InstrumentID>
+            <AtmosphereID>00000035</AtmosphereID>
+            <NumberOfBacksightMeasurements>1</NumberOfBacksightMeasurements>
+            <NumberOfBacksightPoints>1</NumberOfBacksightPoints>
+            <ScaleFactor>1</ScaleFactor>
+            <ScaleType>Fixed</ScaleType>
+            <ScaleFactorStandardError/>
+            <StationType>StationSetup</StationType>
+        </StationRecord>
+
+        <PointRecord ID="00000037" TimeStamp="2020-03-11T14:03:17">
+            <Name>TESTBS</Name>
+            <Code>CP</Code>
+            <Method>AzimuthOnly</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <SourcePoint>T6</SourcePoint>
+            <Azimuth>270</Azimuth>
+            <AzimuthType>Grid</AzimuthType>
+        </PointRecord>
+
+        <BackBearingRecord ID="0000003a" TimeStamp="2020-03-11T14:03:17">
+            <StationRecordID>00000036</StationRecordID>
+            <Station>T6</Station>
+            <BackSight>TESTBS</BackSight>
+            <Face1HorizontalCircle>270</Face1HorizontalCircle>
+            <Face2HorizontalCircle>90.001359</Face2HorizontalCircle>
+            <OrientationCorrection>-0.0006795</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundsRecord ID="00000058" TimeStamp="2020-03-11T14:03:17"/>
+
+        <StartRoundRecord ID="00000059" TimeStamp="2020-03-11T14:03:17">
+            <Round>1</Round>
+        </StartRoundRecord>
+
+        <TargetRecord ID="0000003b" TimeStamp="2020-03-11T14:03:17">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>2</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>2</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="0000003c" TimeStamp="2020-03-11T14:03:17">
+            <Name>TESTBS</Name>
+            <Code>CP</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>270</HorizontalCircle>
+                <VerticalCircle>89.216400480914</VerticalCircle>
+                <EDMDistance>47.517258913744</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00209503456</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.2161531</RawVerticalCircle>
+                <RawEDMDistance>47.51728</RawEDMDistance>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000003a</BackBearingID>
+            <TargetID>0000003b</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.477058797</East>
+                <Elevation>0.03413482757356</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="00000040" TimeStamp="2020-03-11T14:16:37">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000041" TimeStamp="2020-03-11T14:11:24">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>306.6442623</HorizontalCircle>
+                <VerticalCircle>77.5105101</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>77.5105101</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000003a</BackBearingID>
+            <TargetID>00000040</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="00000045" TimeStamp="2020-03-11T14:16:37">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000046" TimeStamp="2020-03-11T14:13:48">
+            <Name>T3</Name>
+            <Code/>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>343.8048942</HorizontalCircle>
+                <VerticalCircle>89.9319537</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.9319537</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000003a</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <PointRecord ID="0000004a" TimeStamp="2020-03-11T14:14:27">
+            <Name>T3</Name>
+            <Code/>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>163.799064</HorizontalCircle>
+                <VerticalCircle>270.0680382</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.0680382</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000003a</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="0000004e" TimeStamp="2020-03-11T14:16:37">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="0000004f" TimeStamp="2020-03-11T14:15:16">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>126.6371253</HorizontalCircle>
+                <VerticalCircle>282.4894827</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>282.4894827</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000003a</BackBearingID>
+            <TargetID>0000004e</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="00000053" TimeStamp="2020-03-11T14:16:37">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>2</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>2</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000054" TimeStamp="2020-03-11T14:15:46">
+            <Name>TESTBS</Name>
+            <Code>CP</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>90.001359</HorizontalCircle>
+                <VerticalCircle>270.78696625952</VerticalCircle>
+                <EDMDistance>47.517878895027</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.0020950358</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.7872147</RawVerticalCircle>
+                <RawEDMDistance>47.5179</RawEDMDistance>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000003a</BackBearingID>
+            <TargetID>00000053</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.476477157</East>
+                <Elevation>0.03693582726545</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <EndRoundRecord ID="0000005a" TimeStamp="2020-03-11T14:16:37"/>
+
+        <BackBearingRecord ID="0000005b" TimeStamp="2020-03-11T14:19:06">
+            <StationRecordID>00000036</StationRecordID>
+            <Station>T6</Station>
+            <BackSight>TESTBS</BackSight>
+            <Face1HorizontalCircle>270</Face1HorizontalCircle>
+            <Face2HorizontalCircle>89.9994294</Face2HorizontalCircle>
+            <OrientationCorrection>0.0002853</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundRecord ID="00000078" TimeStamp="2020-03-11T14:16:57">
+            <Round>2</Round>
+        </StartRoundRecord>
+
+        <PointRecord ID="0000005c" TimeStamp="2020-03-11T14:16:57">
+            <Name>TESTBS</Name>
+            <Code>CP</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>270</HorizontalCircle>
+                <VerticalCircle>89.216100868411</VerticalCircle>
+                <EDMDistance>47.518618912082</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00209503728</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.2158534</RawVerticalCircle>
+                <RawEDMDistance>47.51864</RawEDMDistance>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>00000053</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.4757023227</East>
+                <Elevation>0.03440195084622</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="00000060" TimeStamp="2020-03-11T14:19:06">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000061" TimeStamp="2020-03-11T14:17:15">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>306.6455043</HorizontalCircle>
+                <VerticalCircle>77.5114821</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>77.5114821</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>00000060</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="00000065" TimeStamp="2020-03-11T14:19:06">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000066" TimeStamp="2020-03-11T14:17:31">
+            <Name>T3</Name>
+            <Code/>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>343.7986248</HorizontalCircle>
+                <VerticalCircle>89.9320545</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.9320545</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>00000065</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <PointRecord ID="0000006a" TimeStamp="2020-03-11T14:17:59">
+            <Name>T3</Name>
+            <Code/>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>163.7975565</HorizontalCircle>
+                <VerticalCircle>270.0680382</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.0680382</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>00000065</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="0000006e" TimeStamp="2020-03-11T14:19:06">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="0000006f" TimeStamp="2020-03-11T14:18:17">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>126.6374277</HorizontalCircle>
+                <VerticalCircle>282.4894827</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>282.4894827</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>0000006e</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="00000073" TimeStamp="2020-03-11T14:19:06">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>2</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>2</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000074" TimeStamp="2020-03-11T14:18:29">
+            <Name>TESTBS</Name>
+            <Code>CP</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>89.9994294</HorizontalCircle>
+                <VerticalCircle>270.78701304517</VerticalCircle>
+                <EDMDistance>47.517958894766</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00209503596</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.7872615</RawVerticalCircle>
+                <RawEDMDistance>47.51798</RawEDMDistance>
+            </Circle>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>00000073</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.4763976977</East>
+                <Elevation>0.036975732599</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <EndRoundRecord ID="00000079" TimeStamp="2020-03-11T14:19:06"/>
+
+        <EndRoundsRecord ID="0000007a" TimeStamp="2020-03-11T14:19:06"/>
+
+        <PointRecord ID="0000007b" TimeStamp="2020-03-11T14:19:06">
+            <Name>TESTBS</Name>
+            <Code>CP</Code>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>0</HorizontalCircle>
+                <VerticalCircle>89.214630511159</VerticalCircle>
+                <EDMDistance>47.517928903915</EDMDistance>
+                <HorizontalCircleStandardError>0</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.0001225038746</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00055629657547</EDMDistanceStandardError>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>4</NumberOfDistances>
+            </MTA>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>00000073</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.4764089745</East>
+                <Elevation>0.03561208421851</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="0000007f" TimeStamp="2020-03-11T14:19:06">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000080" TimeStamp="2020-03-11T14:19:06">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>36.6408828</HorizontalCircle>
+                <VerticalCircle>77.5107567</VerticalCircle>
+                <EDMDistance/>
+                <HorizontalCircleStandardError>0.00122824441737</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.0003436563543</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>0</NumberOfDistances>
+            </MTA>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>0000007f</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="00000084" TimeStamp="2020-03-11T14:19:06">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000085" TimeStamp="2020-03-11T14:19:06">
+            <Name>T3</Name>
+            <Code/>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>73.799837775</HorizontalCircle>
+                <VerticalCircle>89.93198295</VerticalCircle>
+                <EDMDistance/>
+                <HorizontalCircleStandardError>0.002067332803</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00003565463422</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>0</NumberOfDistances>
+            </MTA>
+            <StationID>00000036</StationID>
+            <BackBearingID>0000005b</BackBearingID>
+            <TargetID>00000084</TargetID>
+            <Pressure>1022.2</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <RoundsMeanTurnedAngleResiduals ID="00000089" TimeStamp="2020-03-11T14:19:06">
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>0000003c</ObservationID>
+                <PointName>TESTBS</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00177052499999</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00067</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>00000041</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>0.00337950000002</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00024659999998</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>00000046</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>0.00505642500001</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00002924999998</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>0000004a</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>-0.00213277499999</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00002115</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>0000004f</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>-0.00511649999999</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00023939999999</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>00000054</ObservationID>
+                <PointName>TESTBS</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00159727500002</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00005</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000005c</ObservationID>
+                <PointName>TESTBS</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00147082499999</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00069</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>00000061</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>0.00462149999999</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00072540000001</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>00000066</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>-0.00121297500001</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00007155000001</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000006a</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>-0.001710675</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00002115</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000006f</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>-0.00288450000002</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00023939999999</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>00000074</ObservationID>
+                <PointName>TESTBS</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00164407499998</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00003</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+        </RoundsMeanTurnedAngleResiduals>
+
+        <InstrumentRecord ID="00000098" TimeStamp="2020-03-11T14:20:48">
+            <Type>TrimbleVXandSSeries</Type>
+            <RefractiveIndex>273.64570458809</RefractiveIndex>
+            <CarrierWavelength>79.170232716506</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>0</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>5</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00027777777778</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00027777777778</VerticalAnglePrecision>
+            <EDMPrecision>0.002</EDMPrecision>
+            <EDMppm>2</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>S7 1 DR Plus</Model>
+            <Serial>37230277</Serial>
+            <FirmwareVersion>H2.7.19</FirmwareVersion>
+            <UserDefinedName>37230277</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient>293.682</AtmosphericCorrectionCoefficient>
+        </InstrumentRecord>
+
+        <PointRecord ID="0000009f" TimeStamp="2020-03-11T14:21:34">
+            <Name>T6-D</Name>
+            <Code/>
+            <Method>Coordinates</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Grid>
+                <North>5000</North>
+                <East>5000</East>
+                <Elevation>100</Elevation>
+            </Grid>
+        </PointRecord>
+
+        <AtmosphereRecord ID="000000a3" TimeStamp="2020-03-11T14:28:32">
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+            <PPM>2.7703347417486</PPM>
+            <ApplyEarthCurvatureCorrection>true</ApplyEarthCurvatureCorrection>
+            <ApplyRefractionCorrection>true</ApplyRefractionCorrection>
+            <RefractionCoefficient>0.142</RefractionCoefficient>
+            <PressureInputMethod>ReadFromInstrument</PressureInputMethod>
+            <ApplyPPMToRawDistances>true</ApplyPPMToRawDistances>
+        </AtmosphereRecord>
+
+        <StationRecord ID="000000a4" TimeStamp="2020-03-11T14:28:32">
+            <StationName>T6-D</StationName>
+            <TheodoliteHeight>1.384</TheodoliteHeight>
+            <RawTheodoliteHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.384</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTheodoliteHeight>
+            <InstrumentID>00000098</InstrumentID>
+            <AtmosphereID>000000a3</AtmosphereID>
+            <NumberOfBacksightMeasurements>1</NumberOfBacksightMeasurements>
+            <NumberOfBacksightPoints>1</NumberOfBacksightPoints>
+            <ScaleFactor>1</ScaleFactor>
+            <ScaleType>Fixed</ScaleType>
+            <ScaleFactorStandardError/>
+            <StationType>StationSetup</StationType>
+        </StationRecord>
+
+        <PointRecord ID="000000a5" TimeStamp="2020-03-11T14:28:32">
+            <Name>T5</Name>
+            <Code/>
+            <Method>AzimuthOnly</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <SourcePoint>T6-D</SourcePoint>
+            <Azimuth>270</Azimuth>
+            <AzimuthType>Grid</AzimuthType>
+        </PointRecord>
+
+        <BackBearingRecord ID="000000a8" TimeStamp="2020-03-11T14:28:32">
+            <StationRecordID>000000a4</StationRecordID>
+            <Station>T6-D</Station>
+            <BackSight>T5</BackSight>
+            <Face1HorizontalCircle>270</Face1HorizontalCircle>
+            <Face2HorizontalCircle>89.999649</Face2HorizontalCircle>
+            <OrientationCorrection>0.00017549999999</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundsRecord ID="000000c6" TimeStamp="2020-03-11T14:28:32"/>
+
+        <StartRoundRecord ID="000000c7" TimeStamp="2020-03-11T14:28:32">
+            <Round>1</Round>
+        </StartRoundRecord>
+
+        <TargetRecord ID="000000a9" TimeStamp="2020-03-11T14:28:32">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>2</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>2</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="000000aa" TimeStamp="2020-03-11T14:28:32">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>270</HorizontalCircle>
+                <VerticalCircle>89.216784654226</VerticalCircle>
+                <EDMDistance>47.518298915875</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00209503664</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.2165374</RawVerticalCircle>
+                <RawEDMDistance>47.51832</RawEDMDistance>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000a8</BackBearingID>
+            <TargetID>000000a9</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.4760120119</East>
+                <Elevation>100.0338304392</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <CameraRecord ID="000000ae" TimeStamp="2020-03-11T14:39:42">
+            <X0>0.00006083072899</X0>
+            <Y0>0.00013254178027</Y0>
+            <CK>-0.02312488753282</CK>
+            <Kappa>-0.1132293050975</Kappa>
+            <Phi>-0.08896400916488</Phi>
+            <Omega>-0.0471749276089</Omega>
+            <S0>0.08026674816309</S0>
+            <C0>0.05906839122659</C0>
+            <Z0>26.559392118275</Z0>
+            <I>0</I>
+            <K1>145</K1>
+            <P1>0</P1>
+            <P2>0</P2>
+            <PixelSizeX>0.0000032</PixelSizeX>
+            <PixelSizeY>0.0000032</PixelSizeY>
+            <PixelCountX>2048</PixelCountX>
+            <PixelCountY>1536</PixelCountY>
+        </CameraRecord>
+
+        <ImageRecord ID="000000af" TimeStamp="2020-03-11T14:39:42">
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000a8</BackBearingID>
+            <CameraID>000000ae</CameraID>
+            <PointRecordID/>
+            <PanoramaID/>
+            <FileName>BWB Files\TWR.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>306.7218243</HorizontalAngle>
+            <VerticalAngle>77.5189764</VerticalAngle>
+            <Width>2048</Width>
+            <Height>1536</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2048</SourceWidth>
+            <SourceHeight>1536</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+        </ImageRecord>
+
+        <TargetRecord ID="000000b0" TimeStamp="2020-03-11T14:41:34">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="000000b1" TimeStamp="2020-03-11T14:35:35">
+            <Name>T3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>343.7968113</HorizontalCircle>
+                <VerticalCircle>89.9349489</VerticalCircle>
+                <EDMDistance>81.79322</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00416358644</EDMDistanceStandardError>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000a8</BackBearingID>
+            <TargetID>000000b0</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5078.5107992626</North>
+                <East>4977.1857660062</East>
+                <Elevation>100.11927451497</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="000000b5" TimeStamp="2020-03-11T14:41:34">
+            <PrismType>DRTarget</PrismType>
+            <PrismConstant>0</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="000000b6" TimeStamp="2020-03-11T14:37:17">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>306.7218486</HorizontalCircle>
+                <VerticalCircle>77.5189728</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000a8</BackBearingID>
+            <TargetID>000000b5</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <PointRecord ID="000000ba" TimeStamp="2020-03-11T14:40:45">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>126.7177662</HorizontalCircle>
+                <VerticalCircle>282.4810722</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000a8</BackBearingID>
+            <TargetID>000000b5</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="000000b0" TimeStamp="2020-03-11T14:41:34">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="000000be" TimeStamp="2020-03-11T14:41:14">
+            <Name>T3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>163.7959977</HorizontalCircle>
+                <VerticalCircle>270.0688455</VerticalCircle>
+                <EDMDistance>81.79431</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00416358862</EDMDistanceStandardError>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000a8</BackBearingID>
+            <TargetID>000000b0</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5078.5116556593</North>
+                <East>4977.1848297253</East>
+                <Elevation>100.12469026752</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="000000a9" TimeStamp="2020-03-11T14:28:32">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>2</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>2</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="000000c2" TimeStamp="2020-03-11T14:41:26">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>89.999649</HorizontalCircle>
+                <VerticalCircle>270.78605214892</VerticalCircle>
+                <EDMDistance>47.518038900117</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00409503612</EDMDistanceStandardError>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+                <RawVerticalCircle>270.7863003</RawVerticalCircle>
+                <RawEDMDistance>47.51806</RawEDMDistance>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000a8</BackBearingID>
+            <TargetID>000000a9</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.4763042363</East>
+                <Elevation>100.03617985619</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <EndRoundRecord ID="000000c8" TimeStamp="2020-03-11T14:41:34"/>
+
+        <BackBearingRecord ID="000000c9" TimeStamp="2020-03-11T14:46:24">
+            <StationRecordID>000000a4</StationRecordID>
+            <Station>T6-D</Station>
+            <BackSight>T5</BackSight>
+            <Face1HorizontalCircle>270</Face1HorizontalCircle>
+            <Face2HorizontalCircle>89.9999811</Face2HorizontalCircle>
+            <OrientationCorrection>0.00000945</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundRecord ID="000000e2" TimeStamp="2020-03-11T14:43:01">
+            <Round>2</Round>
+        </StartRoundRecord>
+
+        <PointRecord ID="000000ca" TimeStamp="2020-03-11T14:43:01">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>270</HorizontalCircle>
+                <VerticalCircle>89.217947990112</VerticalCircle>
+                <EDMDistance>47.51769892232</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00409503544</EDMDistanceStandardError>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+                <RawVerticalCircle>89.2177011</RawVerticalCircle>
+                <RawEDMDistance>47.51772</RawEDMDistance>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000a9</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.4765987668</East>
+                <Elevation>100.0328573169</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="000000b0" TimeStamp="2020-03-11T14:41:34">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="000000ce" TimeStamp="2020-03-11T14:43:14">
+            <Name>T3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>343.7959257</HorizontalCircle>
+                <VerticalCircle>89.9352162</VerticalCircle>
+                <EDMDistance>81.7935</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.004163587</EDMDistanceStandardError>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000b0</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5078.5107159161</North>
+                <East>4977.1844742381</East>
+                <Elevation>100.11889341006</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="000000b5" TimeStamp="2020-03-11T14:41:34">
+            <PrismType>DRTarget</PrismType>
+            <PrismConstant>0</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="000000d2" TimeStamp="2020-03-11T14:43:32">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>306.7212897</HorizontalCircle>
+                <VerticalCircle>77.518872</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000b5</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <PointRecord ID="000000d6" TimeStamp="2020-03-11T14:43:47">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>126.7185348</HorizontalCircle>
+                <VerticalCircle>282.4810029</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000b5</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="000000b0" TimeStamp="2020-03-11T14:41:34">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="000000da" TimeStamp="2020-03-11T14:44:29">
+            <Name>T3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>163.7960526</HorizontalCircle>
+                <VerticalCircle>270.069246</VerticalCircle>
+                <EDMDistance>81.79439</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00416358878</EDMDistanceStandardError>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000b0</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5078.5116214352</North>
+                <East>4977.1844277505</East>
+                <Elevation>100.1252618674</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="000000a9" TimeStamp="2020-03-11T14:28:32">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>2</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>2</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="000000de" TimeStamp="2020-03-11T14:44:45">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>89.9999811</HorizontalCircle>
+                <VerticalCircle>270.78620330209</VerticalCircle>
+                <EDMDistance>47.518208899276</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00409503646</EDMDistanceStandardError>
+                <EDMMeasurementMode>Track</EDMMeasurementMode>
+                <RawVerticalCircle>270.7864515</RawVerticalCircle>
+                <RawEDMDistance>47.51823</RawEDMDistance>
+            </Circle>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000a9</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.4761359734</East>
+                <Elevation>100.03630756314</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <EndRoundRecord ID="000000e3" TimeStamp="2020-03-11T14:46:24"/>
+
+        <EndRoundsRecord ID="000000e4" TimeStamp="2020-03-11T14:46:24"/>
+
+        <PointRecord ID="000000e5" TimeStamp="2020-03-11T14:46:24">
+            <Name>T5</Name>
+            <Code/>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>0</HorizontalCircle>
+                <VerticalCircle>89.215619298334</VerticalCircle>
+                <EDMDistance>47.518061409409</EDMDistance>
+                <HorizontalCircleStandardError>0</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00035797050111</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00026462242675</EDMDistanceStandardError>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>4</NumberOfDistances>
+            </MTA>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000a9</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5000</North>
+                <East>4952.4762627237</East>
+                <Elevation>100.03479379069</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="000000b0" TimeStamp="2020-03-11T14:41:34">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="000000e9" TimeStamp="2020-03-11T14:46:24">
+            <Name>T3</Name>
+            <Code/>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>73.7962893</HorizontalCircle>
+                <VerticalCircle>89.9330184</VerticalCircle>
+                <EDMDistance>81.793855</EDMDistance>
+                <HorizontalCircleStandardError>0.00041111129327</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.0000471047897</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.0005838086443</EDMDistanceStandardError>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>4</NumberOfDistances>
+            </MTA>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000b0</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5078.5111981213</North>
+                <East>4977.1848744159</East>
+                <Elevation>100.12202999731</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="000000b5" TimeStamp="2020-03-11T14:41:34">
+            <PrismType>DRTarget</PrismType>
+            <PrismConstant>0</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="000000ed" TimeStamp="2020-03-11T14:46:24">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>36.7199523</HorizontalCircle>
+                <VerticalCircle>77.518942425</VerticalCircle>
+                <EDMDistance/>
+                <HorizontalCircleStandardError>0.0000432779874</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00001126204788</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>0</NumberOfDistances>
+            </MTA>
+            <StationID>000000a4</StationID>
+            <BackBearingID>000000c9</BackBearingID>
+            <TargetID>000000b5</TargetID>
+            <Pressure>1022</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <RoundsMeanTurnedAngleResiduals ID="000000f1" TimeStamp="2020-03-11T14:46:24">
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>000000aa</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.001165725</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.0002375</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>000000b1</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>0.00052200000002</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00193049999999</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.000635</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>000000b6</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>0.00189629999998</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00003037500001</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>000000ba</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>-0.00183509999998</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00001462499999</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>000000be</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>0.00005939999998</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00186389999998</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.000455</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>000000c2</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00167197500002</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.0000225</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>000000ca</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.002329425</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.0003625</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>000000ce</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>-0.00036359999998</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00219779999999</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.000355</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>000000d2</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>0.00133739999999</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00007042499999</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>000000d6</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>-0.00139859999999</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.000054675</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>000000da</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>-0.00021780000001</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00226440000002</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.000535</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>000000de</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00182317499998</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.0001475</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+        </RoundsMeanTurnedAngleResiduals>
+
+        <InstrumentRecord ID="00000100" TimeStamp="2020-03-11T14:47:18">
+            <Type>TrimbleVXandSSeries</Type>
+            <RefractiveIndex>273.64570458809</RefractiveIndex>
+            <CarrierWavelength>79.170232716506</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>0</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>5</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00027777777778</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00027777777778</VerticalAnglePrecision>
+            <EDMPrecision>0.002</EDMPrecision>
+            <EDMppm>2</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>S7 1 DR Plus</Model>
+            <Serial>37230277</Serial>
+            <FirmwareVersion>H2.7.19</FirmwareVersion>
+            <UserDefinedName>37230277</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient>293.682</AtmosphericCorrectionCoefficient>
+        </InstrumentRecord>
+
+        <AtmosphereRecord ID="00000107" TimeStamp="2020-03-11T14:51:53">
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+            <PPM>2.9028569383466</PPM>
+            <ApplyEarthCurvatureCorrection>true</ApplyEarthCurvatureCorrection>
+            <ApplyRefractionCorrection>true</ApplyRefractionCorrection>
+            <RefractionCoefficient>0.142</RefractionCoefficient>
+            <PressureInputMethod>ReadFromInstrument</PressureInputMethod>
+            <ApplyPPMToRawDistances>true</ApplyPPMToRawDistances>
+        </AtmosphereRecord>
+
+        <StationRecord ID="00000108" TimeStamp="2020-03-11T14:51:53">
+            <StationName>T6-D</StationName>
+            <TheodoliteHeight>1.5390050687814</TheodoliteHeight>
+            <RawTheodoliteHeight>
+                <MeasurementMethod>BottomNotch</MeasurementMethod>
+                <MeasuredHeight>1.384</MeasuredHeight>
+                <HorizontalOffset>0.091</HorizontalOffset>
+                <VerticalOffset>0.158</VerticalOffset>
+            </RawTheodoliteHeight>
+            <InstrumentID>00000100</InstrumentID>
+            <AtmosphereID>00000107</AtmosphereID>
+            <NumberOfBacksightMeasurements>1</NumberOfBacksightMeasurements>
+            <NumberOfBacksightPoints>1</NumberOfBacksightPoints>
+            <ScaleFactor>1</ScaleFactor>
+            <ScaleType>Fixed</ScaleType>
+            <ScaleFactorStandardError/>
+            <StationType>StationSetup</StationType>
+        </StationRecord>
+
+        <PointRecord ID="00000109" TimeStamp="2020-03-11T14:51:53">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AzimuthOnly</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <SourcePoint>T6-D</SourcePoint>
+            <Azimuth>290</Azimuth>
+            <AzimuthType>Grid</AzimuthType>
+        </PointRecord>
+
+        <BackBearingRecord ID="0000010c" TimeStamp="2020-03-11T14:51:53">
+            <StationRecordID>00000108</StationRecordID>
+            <Station>T6-D</Station>
+            <BackSight>TWR</BackSight>
+            <Face1HorizontalCircle>290</Face1HorizontalCircle>
+            <Face2HorizontalCircle>109.9999377</Face2HorizontalCircle>
+            <OrientationCorrection>0.00003115000002</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundsRecord ID="00000127" TimeStamp="2020-03-11T14:51:53"/>
+
+        <StartRoundRecord ID="00000128" TimeStamp="2020-03-11T14:51:53">
+            <Round>1</Round>
+        </StartRoundRecord>
+
+        <TargetRecord ID="0000010d" TimeStamp="2020-03-11T14:51:53">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="0000010e" TimeStamp="2020-03-11T14:51:53">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>290</HorizontalCircle>
+                <VerticalCircle>77.5240884</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>77.5240884</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000010c</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="00000112" TimeStamp="2020-03-11T14:56:58">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="00000113" TimeStamp="2020-03-11T14:54:19">
+            <Name>T3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>327.0849867</HorizontalCircle>
+                <VerticalCircle>89.9348877</VerticalCircle>
+                <EDMDistance>81.79393</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00216358786</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000010c</BackBearingID>
+            <TargetID>00000112</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5068.6349372095</North>
+                <East>4955.5725521677</East>
+                <Elevation>100.27436774039</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="0000010d" TimeStamp="2020-03-11T14:51:53">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000117" TimeStamp="2020-03-11T14:56:03">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>253.2886164</HorizontalCircle>
+                <VerticalCircle>89.21615665351</VerticalCircle>
+                <EDMDistance>47.518098912392</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00209503624</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.2159092</RawVerticalCircle>
+                <RawEDMDistance>47.51812</RawEDMDistance>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000010c</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>4986.3344962375</North>
+                <East>4954.483361785</East>
+                <Elevation>102.18935375201</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="0000011b" TimeStamp="2020-03-11T14:56:28">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>73.2884823</HorizontalCircle>
+                <VerticalCircle>270.78627977435</VerticalCircle>
+                <EDMDistance>47.51751889885</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00209503508</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.786528</RawVerticalCircle>
+                <RawEDMDistance>47.51754</RawEDMDistance>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000010c</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>4986.334613932</North>
+                <East>4954.4839609042</East>
+                <Elevation>102.19136667501</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="00000112" TimeStamp="2020-03-11T14:56:58">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="0000011f" TimeStamp="2020-03-11T14:56:40">
+            <Name>T3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>147.0850497</HorizontalCircle>
+                <VerticalCircle>270.0684108</VerticalCircle>
+                <EDMDistance>81.79384</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00216358768</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000010c</BackBearingID>
+            <TargetID>00000112</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5068.6349541885</North>
+                <East>4955.5727541651</East>
+                <Elevation>100.27907447825</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="0000010d" TimeStamp="2020-03-11T14:51:53">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000123" TimeStamp="2020-03-11T14:56:54">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>109.9999377</HorizontalCircle>
+                <VerticalCircle>282.4759035</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>282.4759035</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000010c</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <EndRoundRecord ID="00000129" TimeStamp="2020-03-11T14:56:58"/>
+
+        <BackBearingRecord ID="0000012a" TimeStamp="2020-03-11T14:58:22">
+            <StationRecordID>00000108</StationRecordID>
+            <Station>T6-D</Station>
+            <BackSight>TWR</BackSight>
+            <Face1HorizontalCircle>290</Face1HorizontalCircle>
+            <Face2HorizontalCircle>109.9999368</Face2HorizontalCircle>
+            <OrientationCorrection>0.00003160000001</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundRecord ID="00000143" TimeStamp="2020-03-11T14:57:05">
+            <Round>2</Round>
+        </StartRoundRecord>
+
+        <PointRecord ID="0000012b" TimeStamp="2020-03-11T14:57:05">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>290</HorizontalCircle>
+                <VerticalCircle>77.5240218</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>77.5240218</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="00000112" TimeStamp="2020-03-11T14:56:58">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="0000012f" TimeStamp="2020-03-11T14:57:16">
+            <Name>T3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>327.0853233</HorizontalCircle>
+                <VerticalCircle>89.9353854</VerticalCircle>
+                <EDMDistance>81.79405</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.0021635881</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>00000112</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5068.6352996258</North>
+                <East>4955.5728897376</East>
+                <Elevation>100.27365767619</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="0000010d" TimeStamp="2020-03-11T14:51:53">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000133" TimeStamp="2020-03-11T14:57:29">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>253.2889665</HorizontalCircle>
+                <VerticalCircle>89.216337495746</VerticalCircle>
+                <EDMDistance>47.518228913395</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.0020950365</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.2160901</RawVerticalCircle>
+                <RawEDMDistance>47.51825</RawEDMDistance>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>4986.3347363946</North>
+                <East>4954.483151819</East>
+                <Elevation>102.1892055319</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000137" TimeStamp="2020-03-11T14:57:40">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>73.2886902</HorizontalCircle>
+                <VerticalCircle>270.78669093734</VerticalCircle>
+                <EDMDistance>47.516138896561</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00209503232</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.7869393</RawVerticalCircle>
+                <RawEDMDistance>47.51616</RawEDMDistance>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>4986.3351779317</North>
+                <East>4954.4852371878</East>
+                <Elevation>102.19168875217</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="00000112" TimeStamp="2020-03-11T14:56:58">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="0000013b" TimeStamp="2020-03-11T14:57:52">
+            <Name>T3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>147.0856005</HorizontalCircle>
+                <VerticalCircle>270.0682164</VerticalCircle>
+                <EDMDistance>81.79453</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00216358906</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>00000112</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5068.6359614986</North>
+                <East>4955.5730399352</East>
+                <Elevation>100.27879790554</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="0000010d" TimeStamp="2020-03-11T14:51:53">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="0000013f" TimeStamp="2020-03-11T14:58:10">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>AngleOnly</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>109.9999368</HorizontalCircle>
+                <VerticalCircle>282.4759035</VerticalCircle>
+                <EDMDistance/>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>282.4759035</RawVerticalCircle>
+                <RawEDMDistance/>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <EndRoundRecord ID="00000144" TimeStamp="2020-03-11T14:58:22"/>
+
+        <EndRoundsRecord ID="00000145" TimeStamp="2020-03-11T14:58:22"/>
+
+        <PointRecord ID="00000146" TimeStamp="2020-03-11T14:58:22">
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>0</HorizontalCircle>
+                <VerticalCircle>77.5240758</VerticalCircle>
+                <EDMDistance/>
+                <HorizontalCircleStandardError>0</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00002353691513</VerticalCircleStandardError>
+                <EDMDistanceStandardError/>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>0</NumberOfDistances>
+            </MTA>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+        </PointRecord>
+
+        <TargetRecord ID="00000112" TimeStamp="2020-03-11T14:56:58">
+            <PrismType>SSeriesTraversePrism</PrismType>
+            <PrismConstant>-0.035</PrismConstant>
+            <TargetHeight>1.358</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.358</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="0000014a" TimeStamp="2020-03-11T14:58:22">
+            <Name>T3</Name>
+            <Code/>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>37.085271425</HorizontalCircle>
+                <VerticalCircle>89.933411475</VerticalCircle>
+                <EDMDistance>81.7940875</EDMDistance>
+                <HorizontalCircleStandardError>0.0003140616541</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00024469814025</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00030728840729</EDMDistanceStandardError>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>4</NumberOfDistances>
+            </MTA>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>00000112</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5068.6352881622</North>
+                <East>4955.5728089797</East>
+                <Elevation>100.27647444762</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <TargetRecord ID="0000010d" TimeStamp="2020-03-11T14:51:53">
+            <PrismType>VXSSeriesMultiTrack</PrismType>
+            <PrismConstant>0.01</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>1</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="0000014e" TimeStamp="2020-03-11T14:58:22">
+            <Name>T5</Name>
+            <Code/>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>323.288720225</HorizontalCircle>
+                <VerticalCircle>89.214880859386</VerticalCircle>
+                <EDMDistance>47.517496405306</EDMDistance>
+                <HorizontalCircleStandardError>0.00019760111031</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00008146271302</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00095618584848</EDMDistanceStandardError>
+                <NumberOfHorizontalAngles>2</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>2</NumberOfVerticalAngles>
+                <NumberOfDistances>4</NumberOfDistances>
+            </MTA>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000010d</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>4986.3347561197</North>
+                <East>4954.483927911</East>
+                <Elevation>102.19040369517</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <RoundsMeanTurnedAngleResiduals ID="00000152" TimeStamp="2020-03-11T14:58:22">
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>0000010e</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.0000126</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>00000113</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>-0.000284725</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.001476225</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.0001575</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>00000117</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>-0.00010382500003</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.0012762</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.0006025</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>0000011b</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>-0.00017562499997</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00116100000001</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.0000225</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>0000011f</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>-0.000159425</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.001822275</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.0002475</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>00000123</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00002070000001</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000012b</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.000054</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000012f</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>0.00005187499999</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00197392500001</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00003749999999</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>00000133</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0.00024627499997</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00145710000001</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.0007325</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>00000137</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0.00003317499997</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00157229999998</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.0013575</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000013b</ObservationID>
+                <PointName>T3</PointName>
+                <HorizontalAngleResidual>0.000392275</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.001627875</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00044250000001</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000013f</ObservationID>
+                <PointName>TWR</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00002070000001</VerticalAngleResidual>
+                <SlopeDistanceResidual/>
+            </MeanTurnedAngleResiduals>
+        </RoundsMeanTurnedAngleResiduals>
+
+        <InstrumentRecord ID="00000162" TimeStamp="2020-03-11T15:10:17">
+            <Type>TrimbleVXandSSeries</Type>
+            <RefractiveIndex>273.64570458809</RefractiveIndex>
+            <CarrierWavelength>79.170232716506</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>0</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>5</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00027777777778</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00027777777778</VerticalAnglePrecision>
+            <EDMPrecision>0.002</EDMPrecision>
+            <EDMppm>2</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>S7 1 DR Plus</Model>
+            <Serial>37230277</Serial>
+            <FirmwareVersion>H2.7.19</FirmwareVersion>
+            <UserDefinedName>37230277</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient>293.682</AtmosphericCorrectionCoefficient>
+        </InstrumentRecord>
+
+        <NoteRecord ID="00000169" TimeStamp="2020-03-11T15:10:17">
+            <Notes>
+                <Note>Used last station setup</Note>
+            </Notes>
+        </NoteRecord>
+
+        <TargetRecord ID="0000016a" TimeStamp="2020-03-11T15:10:41">
+            <PrismType>DRTarget</PrismType>
+            <PrismConstant>0</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="0000016b" TimeStamp="2020-03-11T15:10:43">
+            <Name>1</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>60.6933216</HorizontalCircle>
+                <VerticalCircle>83.4351237</VerticalCircle>
+                <EDMDistance>21.88425</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.0020437685</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000016a</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5010.6417833113</North>
+                <East>5018.9582566468</East>
+                <Elevation>104.04103053029</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="0000016f" TimeStamp="2020-03-11T15:10:50">
+            <Name>2</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>55.7991216</HorizontalCircle>
+                <VerticalCircle>84.9362508</VerticalCircle>
+                <EDMDistance>22.30991</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00204461982</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000016a</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5012.4914035877</North>
+                <East>5018.3799360758</East>
+                <Elevation>103.50820799424</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000173" TimeStamp="2020-03-11T15:10:58">
+            <Name>3</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>55.5152652</HorizontalCircle>
+                <VerticalCircle>86.3661519</VerticalCircle>
+                <EDMDistance>22.41674</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00204483348</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000016a</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5012.6665765123</North>
+                <East>5018.4405064759</East>
+                <Elevation>102.95981822819</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000177" TimeStamp="2020-03-11T15:11:29">
+            <Name>4</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>59.3126496</HorizontalCircle>
+                <VerticalCircle>86.5752354</VerticalCircle>
+                <EDMDistance>21.96617</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00204393234</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000016a</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5011.1905129602</North>
+                <East>5018.8564538511</East>
+                <Elevation>102.85125262657</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="0000017b" TimeStamp="2020-03-11T15:12:27">
+            <Name>5</Name>
+            <Code>P1</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>325.8604386</HorizontalCircle>
+                <VerticalCircle>86.2927587</VerticalCircle>
+                <EDMDistance>92.84065</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.0021856813</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000016a</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5076.6810988117</North>
+                <East>4948.0057398506</East>
+                <Elevation>107.54253159383</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <InstrumentRecord ID="00000180" TimeStamp="2020-03-11T15:14:59">
+            <Type>TrimbleVXandSSeries</Type>
+            <RefractiveIndex>273.64570458809</RefractiveIndex>
+            <CarrierWavelength>79.170232716506</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>0</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>5</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00027777777778</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00027777777778</VerticalAnglePrecision>
+            <EDMPrecision>0.002</EDMPrecision>
+            <EDMppm>2</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>S7 1 DR Plus</Model>
+            <Serial>37230277</Serial>
+            <FirmwareVersion>H2.7.19</FirmwareVersion>
+            <UserDefinedName>37230277</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient>293.682</AtmosphericCorrectionCoefficient>
+        </InstrumentRecord>
+
+        <NoteRecord ID="00000187" TimeStamp="2020-03-11T15:14:59">
+            <Notes>
+                <Note>Used last station setup</Note>
+            </Notes>
+        </NoteRecord>
+
+        <TargetRecord ID="00000188" TimeStamp="2020-03-11T15:16:37">
+            <PrismType>DRTarget</PrismType>
+            <PrismConstant>0</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="00000189" TimeStamp="2020-03-11T15:16:42">
+            <Name>6</Name>
+            <Code>P6</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>326.1819501</HorizontalCircle>
+                <VerticalCircle>86.2643142</VerticalCircle>
+                <EDMDistance>92.68582</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00218537164</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>00000188</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5076.8408055744</North>
+                <East>4948.5245011469</East>
+                <Elevation>107.57843555223</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PlaneDefinitionRecord ID="0000018d" TimeStamp="2020-03-11T15:17:14">
+            <PlaneA>1</PlaneA>
+            <PlaneB>-3.2482113905294</PlaneB>
+            <PlaneC>0</PlaneC>
+            <PlaneD>11542.12763141</PlaneD>
+            <PlaneResiduals>
+                <PlaneResidual>
+                    <PointName>5</PointName>
+                    <Delta>0.00000000435606</Delta>
+                </PlaneResidual>
+                <PlaneResidual>
+                    <PointName>6</PointName>
+                    <Delta>-0.00000000435713</Delta>
+                </PlaneResidual>
+            </PlaneResiduals>
+        </PlaneDefinitionRecord>
+
+        <TargetRecord ID="0000018e" TimeStamp="2020-03-11T15:17:48">
+            <PrismType>UnknownPrism</PrismType>
+            <PrismConstant>0</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="0000018f" TimeStamp="2020-03-11T15:17:48">
+            <Name>BLDG CORNER</Name>
+            <Code/>
+            <Method>PointOnPlane</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>325.6923681</HorizontalCircle>
+                <VerticalCircle>86.258185158529</VerticalCircle>
+                <EDMDistance>92.928182882362</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError/>
+                <VerticalCircleStandardError/>
+                <EDMDistanceStandardError/>
+                <EDMMeasurementMode>Default</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>0000018e</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5076.597393886</North>
+                <East>4947.7338485427</East>
+                <Elevation>107.60414906567</Elevation>
+            </ComputedGrid>
+            <PointOnPlane>
+                <PerpendicularDelta/>
+                <IntersectionWithPlane>true</IntersectionWithPlane>
+            </PointOnPlane>
+        </PointRecord>
+
+        <TargetRecord ID="00000188" TimeStamp="2020-03-11T15:16:37">
+            <PrismType>DRTarget</PrismType>
+            <PrismConstant>0</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="00000194" TimeStamp="2020-03-11T15:20:18">
+            <Name>BLDG CORNES</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>325.6889247</HorizontalCircle>
+                <VerticalCircle>86.2601742</VerticalCircle>
+                <EDMDistance>92.92106</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00218584212</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>00000188</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5076.5885555817</North>
+                <East>4947.7331331067</East>
+                <Elevation>107.60046521235</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000198" TimeStamp="2020-03-11T15:22:02">
+            <Name>BLDG CORNET</Name>
+            <Code/>
+            <Method>HorizontalAngleOffset</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>325.6919541</HorizontalCircle>
+                <VerticalCircle>86.2700031</VerticalCircle>
+                <EDMDistance>92.91699</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00218583398</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <TargetID>00000188</TargetID>
+            <Pressure>1021.5</Pressure>
+            <Temperature>25.555555555556</Temperature>
+
+            <ComputedGrid>
+                <North>5076.5888219845</North>
+                <East>4947.7388864962</East>
+                <Elevation>107.58429390559</Elevation>
+            </ComputedGrid>
+            <AngleOffset>
+                <FirstRawObservation>
+                    <HorizontalCircle>325.7061327</HorizontalCircle>
+                    <VerticalCircle>86.2700031</VerticalCircle>
+                    <EDMDistance>92.91699</EDMDistance>
+                    <Face>Face1</Face>
+                    <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                    <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                    <EDMDistanceStandardError>0.00218583398</EDMDistanceStandardError>
+                    <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                </FirstRawObservation>
+                <SecondRawObservation>
+                    <HorizontalCircle>325.6919541</HorizontalCircle>
+                    <VerticalCircle>86.2598088</VerticalCircle>
+                    <EDMDistance/>
+                    <Face>Face1</Face>
+                    <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                    <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                    <EDMDistanceStandardError/>
+                    <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                </SecondRawObservation>
+            </AngleOffset>
+        </PointRecord>
+
+        <ScanningRecord ID="0000019d" TimeStamp="2020-03-11T15:24:36">
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <Type>ScanPolygon</Type>
+            <FileName>BWB Files\SCAN0001.TSF</FileName>
+            <Name>Scan 1</Name>
+            <NumberOfPoints>1692</NumberOfPoints>
+            <HorizontalStep>0.03107921384597</HorizontalStep>
+            <VerticalStep>0.03107921384597</VerticalStep>
+            <PPM>2.9028569383466</PPM>
+            <TiltChange/>
+            <Deleted>false</Deleted>
+            <TiltChangeWarningGiven>false</TiltChangeWarningGiven>
+        </ScanningRecord>
+
+        <ScanningRecord ID="0000019e" TimeStamp="2020-03-11T15:32:24">
+            <StationID>00000108</StationID>
+            <BackBearingID>0000012a</BackBearingID>
+            <Type>ScanPolygon</Type>
+            <FileName>BWB Files\SCAN0002.TSF</FileName>
+            <Name>Scan 2</Name>
+            <NumberOfPoints>54</NumberOfPoints>
+            <HorizontalStep>0.02643281760853</HorizontalStep>
+            <VerticalStep>0.02643281760853</VerticalStep>
+            <PPM>2.9028569383466</PPM>
+            <TiltChange/>
+            <Deleted>false</Deleted>
+            <TiltChangeWarningGiven>false</TiltChangeWarningGiven>
+        </ScanningRecord>
+    </FieldBook>
+
+    <Reductions>
+
+        <Point>
+            <ID>00000029</ID>
+            <Name>T6</Name>
+            <Code>CP</Code>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5000</North>
+                <East>5000</East>
+                <Elevation>0</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>0000007b</ID>
+            <Name>TESTBS</Name>
+            <Code>CP</Code>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+
+            <Grid>
+                <North>5000</North>
+                <East>4952.4764089745</East>
+                <Elevation>0.03561208421851</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000080</ID>
+            <Name>TWR</Name>
+            <Code>OBS</Code>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+
+            <Grid>
+                <North/>
+                <East/>
+                <Elevation/>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>0000009f</ID>
+            <Name>T6-D</Name>
+            <Code/>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5000</North>
+                <East>5000</East>
+                <Elevation>100</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>000000e5</ID>
+            <Name>T5</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+
+            <Grid>
+                <North>5000</North>
+                <East>4952.4762627237</East>
+                <Elevation>100.03479379069</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>000000e9</ID>
+            <Name>T3</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+
+            <Grid>
+                <North>5078.5111981213</North>
+                <East>4977.1848744159</East>
+                <Elevation>100.12202999731</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>0000016b</ID>
+            <Name>1</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5010.6417833113</North>
+                <East>5018.9582566468</East>
+                <Elevation>104.04103053029</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>0000016f</ID>
+            <Name>2</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5012.4914035877</North>
+                <East>5018.3799360758</East>
+                <Elevation>103.50820799424</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000173</ID>
+            <Name>3</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5012.6665765123</North>
+                <East>5018.4405064759</East>
+                <Elevation>102.95981822819</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000177</ID>
+            <Name>4</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5011.1905129602</North>
+                <East>5018.8564538511</East>
+                <Elevation>102.85125262657</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>0000017b</ID>
+            <Name>5</Name>
+            <Code>P1</Code>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5076.6810988117</North>
+                <East>4948.0057398506</East>
+                <Elevation>107.54253159383</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000189</ID>
+            <Name>6</Name>
+            <Code>P6</Code>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5076.8408055744</North>
+                <East>4948.5245011469</East>
+                <Elevation>107.57843555223</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>0000018f</ID>
+            <Name>BLDG CORNER</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5076.597393886</North>
+                <East>4947.7338485427</East>
+                <Elevation>107.60414906567</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000194</ID>
+            <Name>BLDG CORNES</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5076.5885555817</North>
+                <East>4947.7331331067</East>
+                <Elevation>107.60046521235</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000198</ID>
+            <Name>BLDG CORNET</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>5076.5888219845</North>
+                <East>4947.7388864962</East>
+                <Elevation>107.58429390559</Elevation>
+            </Grid>
+        </Point>
+    </Reductions>
+
+    <Environment>
+
+        <DisplaySettings>
+            <DistanceUnits>Metres</DistanceUnits>
+            <HeightUnits>Metres</HeightUnits>
+            <AngleUnits>DMSDegrees</AngleUnits>
+            <AzimuthFormat>Azimuth</AzimuthFormat>
+            <LatitudeLongitudeUnits>DMSDegrees</LatitudeLongitudeUnits>
+            <CoordinateOrder>North-East-Elevation</CoordinateOrder>
+            <TemperatureUnits>Celsius</TemperatureUnits>
+            <PressureUnits>MilliBar</PressureUnits>
+            <GradeUnits>Percentage</GradeUnits>
+            <AreaUnits>SquareMetres</AreaUnits>
+            <VolumeUnits>CubicMetres</VolumeUnits>
+            <StationingFormat>1+000.0</StationingFormat>
+            <StationIndexIncrement/>
+            <DistanceDisplayDPs>3</DistanceDisplayDPs>
+            <CoordinateDisplayDPs>3</CoordinateDisplayDPs>
+            <AreaDisplayDPs>3</AreaDisplayDPs>
+            <VolumeDisplayDPs>3</VolumeDisplayDPs>
+            <AngleDisplayDPs>0</AngleDisplayDPs>
+            <LaserVADisplay>Inclination</LaserVADisplay>
+            <TimeFormat>Local</TimeFormat>
+        </DisplaySettings>
+
+        <CoordinateSystem>
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+            <Ellipsoid>
+                <EarthRadius/>
+                <Flattening/>
+            </Ellipsoid>
+            <Projection>
+                <Type>ScaleOnly</Type>
+                <Scale>1</Scale>
+                <SouthAzimuth>false</SouthAzimuth>
+                <GridOrientation>IncreasingNorthEast</GridOrientation>
+                <ApplySeaLevelCorrection>false</ApplySeaLevelCorrection>
+                <MagneticDeclination>0</MagneticDeclination>
+                <Distances>GroundDistance</Distances>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight/>
+            </LocalSite>
+            <Datum>
+                <Type>NoDatum</Type>
+            </Datum>
+            <HorizontalAdjustment>
+                <Type>NoAdjustment</Type>
+            </HorizontalAdjustment>
+            <VerticalAdjustment>
+                <Type>NoAdjustment</Type>
+            </VerticalAdjustment>
+            <CombinedScaleFactor>
+                <Location>
+                    <Latitude/>
+                    <Longitude/>
+                    <Height/>
+                </Location>
+                <Scale>1</Scale>
+            </CombinedScaleFactor>
+            <TectonicPlate>
+                <Name>Unknown</Name>
+            </TectonicPlate>
+        </CoordinateSystem>
+
+        <JobProperties>
+            <Reference/>
+            <Description/>
+            <Operator/>
+            <JobNote/>
+            <TectonicPlate>Unknown</TectonicPlate>
+            <ApplyJobPointNameRange>false</ApplyJobPointNameRange>
+            <MinimumJobPointName/>
+            <MaximumJobPointName/>
+        </JobProperties>
+
+        <JobSettings>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+            <Averaging>Weighted</Averaging>
+            <UseAttributesOfBaseCode>true</UseAttributesOfBaseCode>
+        </JobSettings>
+
+        <TimeZone>
+            <ZoneName>Eastern Daylight Time</ZoneName>
+            <HoursToUTC>4</HoursToUTC>
+        </TimeZone>
+    </Environment>
+</JOBFile>

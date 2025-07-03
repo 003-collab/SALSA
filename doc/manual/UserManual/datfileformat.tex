@@ -1,0 +1,192 @@
+\chapter{The DAT File Format Specification}
+\label{chap:datref}
+
+The solver input data is contained in a flat text file (the ``DAT file,'' usually with extension \verb+.dat+) with its own format as documented here.
+
+Notes on the format:
+\begin{Snippet}
+# DAT files are ASCII and whitespace-delimited with one record per line
+# Labels (From, At, To) denote positions (Points or POS records)
+# Each POS record (Point) must have a unique label;
+#    but not all labels need have a POS record.
+# keywords are in ALL CAPS
+# POS ... CONS c[c'] constrain the position solution to a plane[line]
+#    using c,c' = one of{XYZ} OR {NEU} and c != c'
+# Note that covariance is required for POS with ADJ
+# FIX : Point is constant (not adjusted);
+# ADJ : use position as a priori information and adjust control point;
+# EST or blank: use position only as a priori.
+# LUNIT means linear unit MM|M|CM|KM|FT
+# AUNIT means angular unit RAD|DEG|SOA but not DMS
+# DMS denotes 'deg/min/sec' (int/int/float) and follows angle given by deg min sec
+# NB in the angle records "angle sig AUNIT" means angle and sigma
+#   both have unit AUNIT; consider "angle AUNIT sig AUNIT"
+# fcsig acsig and tcsig are centering errors on From, At and To stations in LUNITs
+# CORR is optional but must be followed by corrections in the order shown;
+#   use zero placeholders.
+# ht[f|t] is height at From|To; target height diff. is implemented using From+To
+# refract is a float refraction, and CURV, OHC and GEOID are keywords meaning
+#    apply curvature, orthometric height and (DOV, undulation) corrections,
+#    respectively.
+# Title is for output only
+# comment lines begin with '#' and are ignored; also #-to-EOL is ignored
+#
+# Tags: each measurement record (all measurements+DirSet+Dir+POS ADJ)
+#   can be given an optional tag with the field tag=TAG
+#  where TAG is the user's tag. This field MUST BE THE LAST FIELD on the line.
+#   This tag will be used in generating
+#  "data names" in the solver, rather than simply numbering them;
+#   the number will be used when a tag is not found.
+#  The user MUST use unique tags; failure to do so will cause the solver
+#   to throw an exception.
+\end{Snippet}
+
+The records are defined as follows, each a single line (even though some lines here are wrapped), beginning with a keyword.
+
+Configuration records.
+\begin{Snippet}
+# Configuration: output precision; problem dimension (2D is XY);
+#   convergence criteria
+TITLE title # quotes optional
+PREC  eps UNIT [eps UNIT] # output precision; linear and/or angular units
+DIM 2|3  # dimension of the problem; 2D is XY only, i.e. Z's ignored
+CONV [n ITER] [d CONV] # convergence criteria; either or both
+CONFIDENCE alpha       # confidence for Chi squ test (0 < alpha < 1)
+OUT [NOAPV] [APQUIT]   # output NOAPV = do not scale covariance with APV
+OUT [NOAPV] [APQUIT]   # output APQUIT = quit after ComputeAPriori()
+GEOIDFILE filename     # Filename for the gridded EGM08 geoid file
+INTERPOLATION method   # Geoid Interpolation method (bicubic, bilinear)
+HASH string            # GUI may want to pass hash through solver to binary file
+COMMENT ...            # comment that is echoed in output file
+GEOID <file>           # geoid file
+\end{Snippet}
+
+Position (site or Point) record.
+\begin{Snippet}
+# no corrections; constraints c one[two] of XYZ|NEU
+POS label X Y Z [covxx xy xz yy yz zz] LUNIT [FIX|ADJ|EST] [CONS c[c]]
+# undocumented
+POS label D M S N|S D M S E|W Ht LUNIT [covxx xy xz yy yz zz [NEU] LUNIT]
+         [FIX|ADJ|EST] [CONS c[c]]
+
+POS label X Y Z covxx xy xz yy yz zz LUNIT FIX|ADJ|EST CONS c[c]
+POS label X Y Z covxx xy xz yy yz zz LUNIT FIX|ADJ|EST
+POS label X Y Z covxx xy xz yy yz zz LUNIT             CONS c[c]
+POS label X Y Z LUNIT                      FIX|EST     CONS c[c]
+POS label X Y Z LUNIT                      FIX|EST
+POS label X Y Z LUNIT                                  CONS c[c]
+POS label D M S N|S D M S E|W Ht LUNIT covxx xy xz yy yz zz NEU LUNIT FIX|ADJ|EST
+         CONS c[c]
+POS label D M S N|S D M S E|W Ht LUNIT covxx xy xz yy yz zz NEU LUNIT FIX|ADJ|EST
+POS label D M S N|S D M S E|W Ht LUNIT covxx xy xz yy yz zz NEU LUNIT            
+         CONS c[c]
+POS label D M S N|S D M S E|W Ht LUNIT covxx xy xz yy yz zz     LUNIT FIX|ADJ|EST
+         CONS c[c]
+POS label D M S N|S D M S E|W Ht LUNIT covxx xy xz yy yz zz     LUNIT FIX|ADJ|EST
+POS label D M S N|S D M S E|W Ht LUNIT covxx xy xz yy yz zz     LUNIT            
+         CONS c[c]
+POS label D M S N|S D M S E|W Ht LUNIT                                FIX|EST    
+         CONS c[c]
+POS label D M S N|S D M S E|W Ht LUNIT                                FIX|EST
+POS label D M S N|S D M S E|W Ht LUNIT                                           
+         CONS c[c]
+\end{Snippet}
+
+Measurement records (again, one per line even though some are wrapped here).
+\begin{Snippet}
+# 3-D delta XYZ (Delta)
+DEL labFr labTo dX dY dZ covxx xy xz yy yz zz [asig [PPM]] [fcsig tcsig] LUNIT
+        [CORR htf htt [LUNIT]]
+
+# Distance (Dist)
+DIS labFr labTo distance sig [asig [PPM]] [fcsig tcsig] LUNIT
+        [CORR htf htt [LUNIT] [refract]]
+
+# height (Height) GEOID if orthometric and undulation correction must be applied
+HGT labFr labTo height sig [asig [PPM]] LUNIT [CORR [refract]
+        [CURV] [GEOID]]
+
+# Azimuth (Azimuth)
+AZM labFr labTo angle [min sec DMS|AUNIT] sig [asig] AUNIT [fcsig tcsig LUNIT]
+        [CORR htf htt [LUNIT] [GEOID]]
+
+# Horizonal angle (HAngle)
+HAN labFr labAt labTo angle [min sec DMS|AUNIT] sig [asig] AUNIT [fc ac tc LUNIT]
+        [CORR htf htt [LUNIT] [GEOID]]
+
+# Direction set and Direction (each complete set used to create set of HANs)
+# Set = { One DIRSET + >1 DIR with one "group" string};
+#   group for each set must be unique and identical throughout set
+# Zero or one DIR in a set -> set is ignored - no HANs can be constructed
+# DIRs where group does not appear in a DIRSET are ignored
+DIRSET group labAt [ac LUNIT] [CORR GEOID]
+DIR group labTo angle [min sec DMS|AUNIT] sig [asig] AUNIT [tc LUNIT]
+        [CORR htt [LUNIT]]
+
+# Vertical angle (VAngle)
+VAN labFr labTo angle [min sec DMS|AUNIT] sig [asig] AUNIT [fc tc LUNIT]
+        [CORR htf htt [LUNIT] [refract] [GEOID]]
+
+# Zenith angle (ZAngle)
+ZAN labFr labTo angle [min sec DMS|AUNIT] sig [asig] AUNIT [ac tc LUNIT]
+        [CORR htf htt [LUNIT] [refract] [GEOID]]
+\end{Snippet}
+
+A table showing which records have centering, sigma, PPM and various corrections.
+\begin{Snippet}
+      centering    --sigs--   -------corrections---------  notes
+      FC  AC  TC   sig  PPM   HI/HT DOV Undul Refrac Curv
+
+POS    -   -   -    y    -      -    -    -     -     -    also constraints
+
+DEL    y   -   y    y    y      y    -    -     -     -    GNSS relative position
+
+DIS    y   -   y    y    y      y    -    -     y     -
+
+HGT    -   -   -    y    y      -    y    y     y     y    Orthometric/ellipsoid
+                                                             as [GEOID]
+
+AZM    y   -   y    y    -      y    y    -     -     -
+
+HAN    y   y   y    y    -      y    y    -     -     -
+
+VAN    y   -   y    y    -      y    y    y     y     -    keyword GEOID:
+                                                             geodetic or not
+
+ZAN    y   -   y    y    -      y    y    y     y     -    keyword GEOID:
+                                                             geodetic or not
+\end{Snippet}
+
+Examples.
+\begin{Snippet}
+# example
+DIRSET A00 TOWER1 0.001 M
+DIR A00 TOWER2  0  0   0.0 DMS 15 SOA 0.001 M      # no heights
+DIR A00 TOWER3 62 41  38.2 DMS 15 SOA 0.001 M      # no ht
+DIR A00 TOWER    95 57  16.0 DMS 15 SOA 0.001 M      # no ht
+
+DIRSET A01 TOWER2 0.001 M
+DIR A01 TOWER1   0  0  0.0 DMS 15 SOA 0.001 M CORR 1.508 M
+DIR A01 TOWER3 311 46 17.9 DMS 15 SOA 0.001 M CORR 1.407 M
+DIR A01 TOWER    314 29 32.2 DMS 15 SOA 0.001 M CORR 0.000 M
+
+DIRSET A02 TOWER3 0.001 M
+DIR A02 TOWER1   0  0  0.0 DMS 15 SOA 0.001 M CORR 1.508 M
+DIR A02 TOWER2  69  4 34.5 DMS 15 SOA 0.001 M CORR 1.449 M
+DIR A02 TOWER    255 47 15.4 DMS 15 SOA 0.001 M CORR 0.000 M
+DIR A02 TOWERB    255 59 27.0 DMS 60 SOA 0.001 M CORR 0.000 M
+
+# Extraction. block string creates groups, groups are extracted with
+#    final nominal value and full covariance.
+# Option to store solution in binary file, reload just for extraction.
+# Does not apply to data, as such, b/c measurements of same thing can be repeated.
+EXTR blk POS label (3)
+EXTR blk DEL labFr labTo (3)
+EXTR blk DIS labFr labTo
+EXTR blk HGT labFr labTo
+EXTR blk AZM labFr labTo
+EXTR blk HAN labFr labAt labTo
+EXTR blk VAN labFr labTo
+EXTR blk ZAN labFr labTo
+EXTR blk DIRSET group
+\end{Snippet}

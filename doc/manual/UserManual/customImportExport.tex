@@ -1,0 +1,56 @@
+\chapter{Custom Import and Export Scripts}
+\label{chap:customImportExport}
+
+SALSA supports the importing of instrument files into a project through Import menu actions.  Furthermore, various output formats are available through Export menu actions.  Selecting these menu actions causes SALSA to initiate a python script which has been bundled with SALSA.  This section will explain how the user may write their own custom import and export scripts which populate these menus.
+
+\section{Discoverable Scripts}\label{sec:discoverableScripts}
+
+SALSA will auto-populate the Import and Export menus with scripts which are located in special folders within the project directory.  The scripts which the user would like to populate the Import menu should be placed within a customImport folder within the project directory.  The scripts which the user would like to populate the Export menu should be placed within a customExport folder within the project directory.  In Figure \ref{Fig:customImportExport} we demonstrate a typical file structure.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=1\textwidth]{customImportExport_fileStructure.png}\\
+\includegraphics[width=1\textwidth]{customImport_fileStructure.png}\\
+\includegraphics[width=1\textwidth]{customExport_fileStructure.png}
+\caption{To be discoverable by SALSA, custom import scripts must be placed in the customImport folder and custom export scripts must be placed in the customExport folder.}
+\label{Fig:customImportExport}
+\end{figure}
+
+The custom scripts populate SALSA in the manner depicted in Figure \ref{Fig:customImportExportGUI}.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=1\textwidth]{customImport.png}\\
+\includegraphics[width=1\textwidth]{customExport.png}
+\caption{Scripts placed in discoverable directories will auto-populate as menu actions.}
+\label{Fig:customImportExportGUI}
+\end{figure}
+
+\section{Writing Custom Import Scripts}
+
+To assist you in writing your own importing scripts, we have provided an example import script, called SampleCustomImport.py.  This file demonstrates how to accept the arguments passed to import scripts from SALSA, manipulate data in an instrument file (such as systematically altering a naming convention) and finally convert it to lsa format.  The arguments passed to these scripts include the path of the general converting tool used by SALSA which currently support Leica GSI, WIPPS PPP, Leica sets of angles (.log), and Trimble Data Exchange Format for GPS, level, total station measurements (.asc).  Users do not need to use these arguments if they prefer to write their own script from scratch.  In the custom import script, the ``Parse'' section shows how to accept the arguments passed by SALSA to the script and should not be heavily modified.  The section ``converterlauncher.py'' shows how to call the usual SALSA import tool with your modified instrument files.  Note that one of the arguments is "type" of the instrument files which may be needed to be modified by the user.
+
+\section{Writing Custom Export Scripts}
+
+To assist you in writing your own reporting scripts, we have provided an example reporting script called SampleCustomExport.py.  This file demonstrates how to use the hdf file which SALSA passes to all reporting scripts to perform manipulations to your output and write out a new file.  The different sections of the scripts are clearly labelled allowing you to only re-use the parts which are relevant for your application.  In particular, the ``Parse'' section, which shows how to accept the hdf file from SALSA, should not be greatly modified.  Furthermore, the ``ReadHDF'' section provides a quick reference for how to extract information from the hdf file and store it into memory.
+\section{Obtaining Custom Scripts}
+
+The user is most likely to obtain a custom script either from colleagues or from making it on their own for their special application.  However, there will be a small number of custom scripts which are included in the SALSA release and have been subject to our testing.  The custom export scripts may typically be found in\\
+\begin{center}\verb+C:\Program Files\SALSA\reporting\extras+\end{center}
+and the custom import scripts may typically be found in\\
+\begin{center}\verb+C:\Program Files\SALSA\converters\extras+.\end{center}
+To utilize these scripts, they must be copy and pasted in the relevant folders described in \ref{sec:discoverableScripts}.
+
+\section{Facilitating Custom Import and Export File Copies}
+
+If a custom import or export script becomes a common part of the user's workflow, it may become tedious to create subdirectories and copy over the necessary files for each new project. SALSA provides users with a straightforward mechanism to specify files that are automatically added to any newly created project's customImport or customExport folder. Users can accomplish this by completing the following steps.
+
+\begin{enumerate}
+	\item Navigate to the \verb+data+ folder in SALSA's installation directory. See Figure \ref{fig:InstallLocations}
+	\item Open default.cfg in a text editor. This may require elevated permissions.
+	\item Add a new line with the tag \verb+--customExportCopy+ followed by a space and the file name you wish to add to your project's customExport folder. Create a new line for each file you wish to copy into customExport. Note if a file name has a space in it, please enclose in quotes.
+	\item Add a new line with the tag \verb+--customImportCopy+ followed by a space and the file name you wish to add to your project's customImport folder. Create a new line for each file you wish to copy into customImport. Note if a file name has a space in it, please enclose in quotes.
+	\item Save the modified default.cfg file when finished.
+\end{enumerate}
+
+If one or more files are tagged with customExportCopy, a customExport folder is generated when creating a new SALSA project, and the relevant files are copied into that folder. The same paradigm holds for customImport. Note that only new projects will employ these tags in the default.cfg file to automatically copy the files. Users with prior existing projects who wish to employ custom export or custom import scripts must add them manually as described in \ref{sec:discoverableScripts}.

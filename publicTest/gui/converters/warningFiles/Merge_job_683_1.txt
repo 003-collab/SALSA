@@ -1,0 +1,152 @@
+Read 4 files.
+
+MERGEDCDF Chi-squared CDF of most discrepant solution (0.7555) below threshold (0.99).
+
+MERGEDSOL ECEF XYZ position         ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+MERGEDSOL                          -15754.2525    -4984937.2613     3965601.8752
+MERGEDSIG ECEF XYZ sigma            ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+MERGEDSIG                               0.0135           0.0147           0.0124
+MERGEDCOV ECEF XYZ covariance       ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+MERGEDCOV          ECEF X (m)        1.833e-04        8.613e-08       -3.670e-07
+MERGEDCOV          ECEF Y (m)        8.613e-08        2.154e-04       -1.398e-04
+MERGEDCOV          ECEF Z (m)       -3.670e-07       -1.398e-04        1.527e-04
+
+MERGEDGDP Geodetic position       Lat N (d)     Lon E (d)        Ht (m)
+MERGEDGDP                      38.690337111 269.818924668       93.9202
+
+MERGEDGDP Geodetic position       Lat N (d)     Lon W (d)        Ht (m)
+MERGEDGDP                      38.690337111  90.181075332       93.9202
+
+MERGEDGDP          Lat N (dms)      Lon E (dms)       Lon W (dms)
+MERGEDGDP       38 41 25.21360  269 49  8.12880    90 10 51.87120
+
+MERGEDTOP Topocentric offset    North (m)    East (m)      Ht (m)
+MERGEDTOP                          0.0000      0.0000      0.0000
+MERGEDGDS Topocentric sigma     North (m)    East (m)      Ht (m)
+MERGEDGDS                          0.0064      0.0135      0.0181
+
+MERGEDGDC GD/NEU covariance     North (m)    East (m)      Ht (m)
+MERGEDGDC           North (m)   4.082e-05   4.869e-08  -6.162e-08
+MERGEDGDC            East (m)   4.869e-08   1.833e-04   5.864e-08
+MERGEDGDC              Ht (m)  -6.162e-08   5.864e-08   3.273ee-04
+
+FILE01 Name: "/webPPP/Merge/merge683/job8385.txt"
+FILE01HTO The Height Offset is 1.433 (m)
+FILE01SOL ECEF XYZ position         ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE01SOL                          -15754.2486    -4984937.3164     3965601.9127
+FILE01SIG ECEF XYZ sigma            ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE01SIG                               0.0240           0.0271           0.0228
+FILE01COV ECEF XYZ covariance       ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE01COV          ECEF X (m)        5.766e-04        8.471e-07       -1.599e-06
+FILE01COV          ECEF Y (m)        8.471e-07        7.362e-04       -4.787e-04
+FILE01COV          ECEF Z (m)       -1.599e-06       -4.787e-04        5.218e-04
+
+FILE01GDP Geodetic position       Lat N (d)     Lon E (d)        Ht (m)
+FILE01GDP                      38.690337064 269.818924714       93.9867
+
+FILE01GDP Geodetic position       Lat N (d)     Lon W (d)        Ht (m)
+FILE01GDP                      38.690337064  90.181075286       93.9867
+
+FILE01GDP          Lat N (dms)      Lon E (dms)       Lon W (dms)
+FILE01GDP       38 41 25.21343  269 49  8.12897    90 10 51.87103
+
+FILE01TOP Topocentric offset    North (m)    East (m)      Ht (m)
+FILE01TOP                         -0.0051      0.0040      0.0665
+FILE01GDS Topocentric sigma     North (m)    East (m)      Ht (m)
+FILE01GDS                          0.0118      0.0240      0.0335
+
+FILE01GDC GD/NEU covariance     North (m)    East (m)      Ht (m)
+FILE01GDC           North (m)   1.384e-04   1.470e-07  -2.890e-08
+FILE01GDC            East (m)   1.470e-07   5.766e-04  -3.213e-07
+FILE01GDC              Ht (m)  -2.890e-08  -3.213e-07   1.120e-03
+
+FILE02 Name: "/webPPP/Merge/merge683/job8387.txt"
+FILE02HTO The Height Offset is 1.651 (m)
+FILE02SOL ECEF XYZ position         ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE02SOL                          -15754.2327    -4984937.2294     3965601.8657
+FILE02SIG ECEF XYZ sigma            ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE02SIG                               0.0323           0.0326           0.0274
+FILE02COV ECEF XYZ covariance       ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE02COV          ECEF X (m)        1.042e-03        4.449e-06       -3.748e-06
+FILE02COV          ECEF Y (m)        4.449e-06        1.060e-03       -6.849e-04
+FILE02COV          ECEF Z (m)       -3.748e-06       -6.849e-04        7.517e-04
+
+FILE02GDP Geodetic position       Lat N (d)     Lon E (d)        Ht (m)
+FILE02GDP                      38.690337224 269.818924894       93.8894
+
+FILE02GDP Geodetic position       Lat N (d)     Lon W (d)        Ht (m)
+FILE02GDP                      38.690337224  90.181075106       93.8894
+
+FILE02GDP          Lat N (dms)      Lon E (dms)       Lon W (dms)
+FILE02GDP       38 41 25.21401  269 49  8.12962    90 10 51.87038
+
+FILE02TOP Topocentric offset    North (m)    East (m)      Ht (m)
+FILE02TOP                          0.0126      0.0197     -0.0309
+FILE02GDS Topocentric sigma     North (m)    East (m)      Ht (m)
+FILE02GDS                          0.0143      0.0323      0.0401
+
+FILE02GDC GD/NEU covariance     North (m)    East (m)      Ht (m)
+FILE02GDC           North (m)   2.038e-04   1.510e-06  -8.063e-07
+FILE02GDC            East (m)   1.510e-06   1.042e-03  -4.418e-06
+FILE02GDC              Ht (m)  -8.063e-07  -4.418e-06   1.608e-03
+
+FILE03 Name: "/webPPP/Merge/merge683/job8388.txt"
+FILE03HTO The Height Offset is 1.6 (m)
+FILE03SOL ECEF XYZ position         ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE03SOL                          -15754.2688    -4984937.2363     3965601.8542
+FILE03SIG ECEF XYZ sigma            ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE03SIG                               0.0242           0.0272           0.0229
+FILE03COV ECEF XYZ covariance       ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE03COV          ECEF X (m)        5.835e-04       -4.264e-07       -9.926e-07
+FILE03COV          ECEF Y (m)       -4.264e-07        7.410e-04       -4.820e-04
+FILE03COV          ECEF Z (m)       -9.926e-07       -4.820e-04        5.253e-04
+
+FILE03GDP Geodetic position       Lat N (d)     Lon E (d)        Ht (m)
+FILE03GDP                      38.690337104 269.818924479       93.8876
+
+FILE03GDP Geodetic position       Lat N (d)     Lon W (d)        Ht (m)
+FILE03GDP                      38.690337104  90.181075521       93.8876
+
+FILE03GDP          Lat N (dms)      Lon E (dms)       Lon W (dms)
+FILE03GDP       38 41 25.21357  269 49  8.12813    90 10 51.87187
+
+FILE03TOP Topocentric offset    North (m)    East (m)      Ht (m)
+FILE03TOP                         -0.0007     -0.0164     -0.0326
+FILE03GDS Topocentric sigma     North (m)    East (m)      Ht (m)
+FILE03GDS                          0.0118      0.0242      0.0336
+
+FILE03GDC GD/NEU covariance     North (m)    East (m)      Ht (m)
+FILE03GDC           North (m)   1.392e-04  -1.635e-07   6.126e-08
+FILE03GDC            East (m)  -1.635e-07   5.835e-04   1.053e-06
+FILE03GDC              Ht (m)   6.126e-08   1.053e-06   1.127e-03
+
+FILE04 Name: "/webPPP/Merge/merge683/job8389.txt"
+FILE04HTO The Height Offset is 1.612 (m)
+FILE04SOL ECEF XYZ position         ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE04SOL                          -15754.2502    -4984937.2501     3965601.8614
+FILE04SIG ECEF XYZ sigma            ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE04SIG                               0.0309           0.0318           0.0267
+FILE04COV ECEF XYZ covariance       ECEF X (m)       ECEF Y (m)       ECEF Z (m)
+FILE04COV          ECEF X (m)        9.545e-04       -2.739e-06        1.674e-07
+FILE04COV          ECEF Y (m)       -2.739e-06        1.009e-03       -6.529e-04
+FILE04COV          ECEF Z (m)        1.674e-07       -6.529e-04        7.152e-04
+
+FILE04GDP Geodetic position       Lat N (d)     Lon E (d)        Ht (m)
+FILE04GDP                      38.690337077 269.818924693       93.9029
+
+FILE04GDP Geodetic position       Lat N (d)     Lon W (d)        Ht (m)
+FILE04GDP                      38.690337077  90.181075307       93.9029
+
+FILE04GDP          Lat N (dms)      Lon E (dms)       Lon W (dms)
+FILE04GDP       38 41 25.21348  269 49  8.12890    90 10 51.87110
+
+FILE04TOP Topocentric offset    North (m)    East (m)      Ht (m)
+FILE04TOP                         -0.0037      0.0022     -0.0174
+FILE04GDS Topocentric sigma     North (m)    East (m)      Ht (m)
+FILE04GDS                          0.0139      0.0309      0.0391
+
+FILE04GDC GD/NEU covariance     North (m)    East (m)      Ht (m)
+FILE04GDC           North (m)   1.929e-04  -7.860e-08  -7.028e-07
+FILE04GDC            East (m)  -7.860e-08   9.545e-04   3.667e-06
+FILE04GDC              Ht (m)  -7.028e-07   3.667e-06   1.531e-03
+

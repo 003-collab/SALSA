@@ -1,0 +1,15 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v5.00 converter from C:/Users/cawalker/projects/lsa/publicTestOutput/gui/converters/LeicaTotalStation/Bug1533/LeicaTotalStationBug1533.log on 12:14:06 Aug 11, 2022
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_RED [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_JM09 1.63800 m 0.00000 m
+HGHT HGHT#1_JM08 1.67800 m 0.00000 m
+HGHT HGHT#1_JM07 1.66700 m 0.00000 m
+
+--include LeicaTotalStationBug1533_JM09.lsa
+--include LeicaTotalStationBug1533_JM08.lsa
+--include LeicaTotalStationBug1533_JM07.lsa

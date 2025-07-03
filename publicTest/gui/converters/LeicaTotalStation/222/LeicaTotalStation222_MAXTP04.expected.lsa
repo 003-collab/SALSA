@@ -1,0 +1,16 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v2.22 converter from /home/rmilburn/projects/lsa/test/converters/LeicaTotalStation/222/LeicaTotalStation222.log on 11:09:28 Apr 01, 2019
+
+#Leica VIP Sets of Angles V 2.22
+#Instrument    : TCA2003, Serial 439415, TCA2003
+#User Templ.   : Polar(Standard)
+#Program Start : 09/28/2011 at 01:04
+
+DGRP DGRP#3 MAXTP04 UNCR UNCR#1_HDIR
+HDIR DGRP#3 MAXTP05 0 0 0.0 DMS 5.0 soa
+HDIR DGRP#3 TACANOBS 344 54 55.7 DMS 5.0 soa
+HDIR DGRP#3 MAXTP06 27 15 53.0 DMS 5.0 soa
+
+ZANG MAXTP04 MAXTP05 90 24 34.2 DMS 10.0 soa HFROM HGHT#1_MAXTP04 UNCR UNCR#1_ZANG
+ZANG MAXTP04 TACANOBS 71 15 39.2 DMS 10.0 soa HFROM HGHT#1_MAXTP04 UNCR UNCR#1_ZANG
+ZANG MAXTP04 MAXTP06 90 35 5.6 DMS 10.0 soa HFROM HGHT#1_MAXTP04 UNCR UNCR#1_ZANG

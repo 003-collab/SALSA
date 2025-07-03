@@ -1,0 +1,91 @@
+\begin{landscape}
+\chapter{The LSA File Format Specification}
+\label{chap:LsaFormat}
+
+Note: Legal limits for the strings and numeric values composing LSA records are listed in \verb+lsaValidationSpec.xlsx+,
+which is installed along-side this User Manual, in the SALSA documentation folder. The output decimal precision for these values are defined there as well. LSA records that contain
+values not conforming to these limits or are otherwise malformed will yield parse warnings in SALSA.
+
+\begin{Snippet}
+### Whitespace Delimited ### 
+- In general, this syntax is space-delimited.
+- Any number of adjacent white space characters (spaces and tabs) will be treated as a single delimiter.
+- Any labels or filenames containing spaces must be enclosed in double quotes.
+- Blank lines are preserved by the .lsa file parser but not displayed in the salsa gui.
+- An exception to this is the text notes field, delimited by its <TXNS> </TXNS> tags.
+
+### Comments and Disabled Records ###
+- Any line starting with a # is either a comment or a disabled record.  
+- The parser will attempt to parse any line that begins with a # as a record. 
+    - If the line parses successfully, the line is stored as a disabled record.  
+    - If the parse fails, the line is stored as a comment.
+
+### LSA Record Specifications ###
+- In general, one line of the file corresponds to one record.  
+- If the parser encounters a record ending with "...", it will continue parsing the record on the next line.
+- Each record begins with a unique 4 letter designation for the record type.
+- Fields enclosed in <angled braces> are required.
+- Fields enclosed in [brackets] are optional.
+- The OR symbol (|) indicates a number valid values for a location.
+- All records (except comments) having associated General Notes gain the notes field [<TXNS></TXNS>] on save.
+
+### Positions ###
+POSG <sta_name> [Flt|Con|Fix][N|E|U] <degrees | D M S> <N|S> <degrees | D M S> <E|W> <Height> <cm|m|ft> [ortho]
+[CovNN CovNE CovNU CovEE CovEU CovUU][VSCA<VALUE val>|<label>][AUTOGEN] [<TXNS></TXNS>]
+
+POSC <sta_name> [Flt|Con|Fix][N|E|U] <X Y Z m|km|ft>
+[CovXX CovXY CovXZ CovYY CovYZ CovZZ][VSCA<VALUE val>|<label>][AUTOGEN] [<TXNS></TXNS>]
+
+NOTE: the Flt|Con|Fix and N|E|U options for POSG and POSC store the values displayed in the gui. Logically 
+incompatible parameter combinations such as 'NE + Fix' are valid and should be fully supported as part 
+of the LSA file spec. These inconsistencies are resolved when flattening the LSA tree to the .dat file.
+
+### Measurements ###
+DXYZ <FROM> <TO> <dX dY dZ m|km|ft> <cxx cxy cxz cyy cyz czz> 
+[HFROM<label>|<ht cm|m|ft hts cm|m|ft>][HTO<label>|<ht cm|m|ft hts cm|m|ft>][UNCR label]
+[VSCA<VALUE val>|<label>] [<TXNS></TXNS>]
+
+DIST <FROM> <TO> <distance> <sigma cm|km|m|ft> 
+[HFROM<label>|<ht cm|m|ft hts cm|m|ft>][HTO<label>|<ht cm|m|ft hts cm|m|ft>][UNCR label]
+[VSCA<VALUE val>|<label>] [<TXNS></TXNS>]
+
+HANG <FROM> <AT> <TO> <degrees> [min sec DMS] <sigma rad|deg|soa> 
+[HFROM<label>|<ht cm|m|ft hts cm|m|ft>][HTO<label>|<ht cm|m|ft hts cm|m|ft>][UNCR label][REDUCED]
+[VSCA<VALUE val>|<label>] [<TXNS></TXNS>]
+
+ZANG <FROM> <TO> <degrees> [min sec DMS] <sigma rad|deg|soa> 
+[HFROM<label>|<ht cm|m|ft hts cm|m|ft>][HTO<label>|<ht cm|m|ft hts cm|m|ft>][UNCR label][REFRACT coeff][REDUCED]
+[VSCA<VALUE val>|<label>] 
+[<TXNS></TXNS>]
+
+VANG <FROM> <TO> <degrees> [min sec DMS] <sigma rad|deg|soa> 
+[HFROM<label>|<ht cm|m|ft hts cm|m|ft>][HTO<label>|<ht cm|m|ft hts cm|m|ft>][UNCR label][REFRACT coeff][REDUCED]
+[VSCA<VALUE val>|<label>] 
+[<TXNS></TXNS>]
+
+AZIM <FROM> <TO> <N|S> <degrees> [min sec DMS] <sigma rad|deg|soa> 
+[HFROM<label>|<ht cm|m|ft hts cm|m|ft>][HTO<label>|<ht cm|m|ft hts cm|m|ft>][UNCR label][REDUCED]
+[VSCA<VALUE val>|<label>] [<TXNS></TXNS>]
+
+HDIF <FROM> <TO> <ht diff> <sigma cm|m|ft> 
+[UNCR label][REFRACT coeff][REDUCED][VSCA VALUE value | label][CURV] [OHC] [<TXNS></TXNS>]
+
+### Directions and Direction Groups ###
+DGRP <dir_group> <AT> [UNCR label][REDUCED][VSCA VALUE value | label] [<TXNS></TXNS>]
+HDIR <dir_group> <TO> [*+*|-]<degrees> [min sec DMS] <sigma rad|deg|soa> [HTO <label>|<ht cm|m|ft hts cm|m|ft>]
+[<TXNS></TXNS>]
+
+## Modifiers
+UNCR <tag> <sigma> <cm|m|ft|rad|deg|soa> <PPM> <AT cent error> <FROM cent error> <TO cent error> <cm|m|ft>
+[<TXNS></TXNS>]
+VSCA <tag> <scale factor> [TOPARENT] [<TXNS></TXNS>]
+HGHT <tag> <height> <cm|m|ft> <heightSigma> <cm|m|ft> [<TXNS></TXNS>]
+
+## Derived Measurements
+MEAN <NEW_POINT> <sigma cm|km|m|ft> [POINT] [POINT] [POINT] ... [<TXNS></TXNS>]
+ENUO <FROM> <NEW_POINT> <dE dN dU m|km|ft> <se sn su> [<TXNS></TXNS>]
+\end{Snippet}
+\end{landscape}
+
+
+

@@ -1,0 +1,7 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with TrimbleToLSA.py converter from B412HeightUncertainty.asc on 20:56:54 Aug 31, 2022
+
+UNCR UNCR#1_HDIF [] m [] [] 0.00000 0.00000 m
+
+#--include B412HeightUncertainty.pos.lsa
+--include B412HeightUncertainty.lvl.lsa

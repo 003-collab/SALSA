@@ -1,0 +1,27 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v5.05 converter from /home/rmilburn/projects/lsa/test/converters/LeicaTotalStation/505/LeicaTotalStation505.log on 11:09:29 Apr 01, 2019
+
+#Leica System 1200 Sets of Angles, Version 5.05 Logfile
+#Instrument Type		: TS15 I 1" 
+#Instrument Serial No.	: 1611820   
+#Sets of Angles Start	: 06.21.16, 14:11:32
+
+#Leica System 1200 Sets of Angles, Version 5.05 Logfile
+#Instrument Type		: TS15 I 1" 
+#Instrument Serial No.	: 1611820   
+#Sets of Angles Start	: 06.21.16, 14:14:52
+
+DGRP DGRP#3 TP03 UNCR UNCR#1_HDIR
+HDIR DGRP#3 TP01 0 0 0.0 DMS 5.0 soa HTO HGHT#2_TP01
+HDIR DGRP#3 POLE1 38 27 32.8 DMS 5.0 soa
+HDIR DGRP#3 CT1 45 3 20.3 DMS 5.0 soa
+HDIR DGRP#3 WT1 43 40 4.6 DMS 5.0 soa
+HDIR DGRP#3 TP02 310 9 56.4 DMS 5.0 soa
+
+ZANG TP03 TP01 89 41 58.0 DMS 10.0 soa HFROM HGHT#1_TP03 HTO HGHT#2_TP01 UNCR UNCR#1_ZANG
+ZANG TP03 POLE1 82 21 16.0 DMS 10.0 soa HFROM HGHT#1_TP03 UNCR UNCR#1_ZANG
+ZANG TP03 CT1 79 23 2.0 DMS 10.0 soa HFROM HGHT#1_TP03 UNCR UNCR#1_ZANG
+ZANG TP03 WT1 66 59 6.0 DMS 10.0 soa HFROM HGHT#1_TP03 UNCR UNCR#1_ZANG
+ZANG TP03 TP02 89 45 23.0 DMS 10.0 soa HFROM HGHT#1_TP03 UNCR UNCR#1_ZANG
+
+DIST TP03 TP01 229.24400 0.00000 m HFROM HGHT#1_TP03 HTO HGHT#2_TP01 UNCR UNCR#1_DIST_IR

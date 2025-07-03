@@ -1,0 +1,12 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with TrimbleToLSA.py converter from 200226_SX10_INST.asc on 13:46:20 May 29, 2020
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_MD3 1.39230 m 0.00000 m
+HGHT HGHT#1_MD2 1.46280 m 0.00000 m
+HGHT HGHT#1_8305 0.28600 m 0.00000 m
+
+--include 200226_SX10_INST_MD3.rnd.lsa

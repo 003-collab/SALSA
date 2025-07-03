@@ -1,0 +1,16 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Trimble Rounds Converter converter from C:/Users/dtucker/projects/lsa/publicTestOutput/gui/converters/TrimbleRounds/TEST1/TEST1.jxl on 14:22:49 May 07, 2020
+#Instrument Type			: TrimbleSX10
+#Instrument Serial No.		: 30415688
+#Instrument Firmware Ver.	: S2.2.25
+#Rounds Collection Start		: 2020/02/26 10:45:37
+
+DGRP DGRP#1 MD3 UNCR UNCR#1_HDIR
+HDIR DGRP#1 MD2 99 59 56.0 DMS 5.0 soa HTO HGHT#1_MD2
+HDIR DGRP#1 8305 154 56 52.5 DMS 5.0 soa HTO HGHT#1_8305
+
+ZANG MD3 MD2 90 11 29.0 DMS 10.0 soa HFROM HGHT#1_MD3 HTO HGHT#1_MD2 UNCR UNCR#1_ZANG
+ZANG MD3 8305 91 11 13.0 DMS 10.0 soa HFROM HGHT#1_MD3 HTO HGHT#1_8305 UNCR UNCR#1_ZANG
+
+DIST MD3 MD2 61.88681 0.00100 m HFROM HGHT#1_MD3 HTO HGHT#1_MD2 UNCR UNCR#1_DIST_IR
+DIST MD3 8305 28.26837 0.00100 m HFROM HGHT#1_MD3 HTO HGHT#1_8305 UNCR UNCR#1_DIST_IR

@@ -1,0 +1,5 @@
+This software is provided "as is" without warranty of any kind, either expressed or implied, including,
+but not limited to the implied warranties of merchantability, fitness for a particular purpose, or
+noninfringement.
+In no event will ARL:UT be liable for any damages whatsoever arising out of the use or inability to
+use this software, even if ARL:UT has been advised of the possibility of such damages.

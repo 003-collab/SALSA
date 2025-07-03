@@ -1,0 +1,4 @@
+Created by SALSA version 1.14.0 -- Backward compatible to 1.1.0
+# New .lsa file created 2019-08-14 11:22:19
+--include hdiffsAB.lsa
+--include hdiffsBA.lsa

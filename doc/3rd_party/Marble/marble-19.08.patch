@@ -1,0 +1,1069 @@
+diff -ruN marble-Applications-19.08/CMakeLists.txt marble-Applications-19.08-modified/CMakeLists.txt
+--- marble-Applications-19.08/CMakeLists.txt	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/CMakeLists.txt	2022-05-09 10:07:09.041070622 -0500
+@@ -31,9 +31,9 @@
+     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
+ endif()
+ # Default to hidden visibility for symbols
+-set(CMAKE_C_VISIBILITY_PRESET hidden)
+-set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+-set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
++#set(CMAKE_C_VISIBILITY_PRESET hidden)
++#set(CMAKE_CXX_VISIBILITY_PRESET hidden)
++#set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
+ if (POLICY CMP0063)
+     cmake_policy(SET CMP0063 NEW)
+ endif()
+@@ -56,6 +56,8 @@
+     set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+ endif (UNIX)
+ 
++set(CMAKE_INSTALL_RPATH "$ORIGIN:$ENV{CMAKE_PREFIX_PATH}/lib")
++
+ ####################################################
+ # Where to look first for cmake modules,
+ # before ${CMAKE_ROOT}/Modules/ is checked
+@@ -80,12 +82,13 @@
+ ####################################################
+ # Build a D-Bus interface for the Marble widget
+ # This is disabled by default for all win32, apple and Android
+-if(WIN32 OR APPLE OR CMAKE_SYSTEM_NAME STREQUAL Android)
+-    option(BUILD_WITH_DBUS "Build the D-Bus interface for the Marble widget" OFF)
+-else()
+-    option(BUILD_WITH_DBUS "Build the D-Bus interface for the Marble widget" ON)
+-endif()
++#if(WIN32 OR APPLE OR CMAKE_SYSTEM_NAME STREQUAL Android)
++#    option(BUILD_WITH_DBUS "Build the D-Bus interface for the Marble widget" OFF)
++#else()
++#    option(BUILD_WITH_DBUS "Build the D-Bus interface for the Marble widget" ON)
++#endif()
+ 
++option(BUILD_WITH_DBUS "Build the D-Bus interface for the Marble widget" OFF)
+ 
+ #######################################################
+ # Specific options for building for different platforms
+@@ -129,9 +132,9 @@
+     find_package(Qt5WebEngine ${REQUIRED_QT_VERSION})
+     find_package(Qt5WebEngineWidgets ${REQUIRED_QT_VERSION})
+ 
+-   if ( NOT Qt5WebEngineWidgets_FOUND )
++#   if ( NOT Qt5WebEngineWidgets_FOUND )
+      set ( MARBLE_NO_WEBKITWIDGETS TRUE )
+-   endif()
++#   endif()
+ endif()
+ 
+ if (BUILD_WITH_DBUS)
+diff -ruN marble-Applications-19.08/MarbleMacros.cmake marble-Applications-19.08-modified/MarbleMacros.cmake
+--- marble-Applications-19.08/MarbleMacros.cmake	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/MarbleMacros.cmake	2022-05-09 10:06:48.216924063 -0500
+@@ -52,7 +52,11 @@
+ add_library( ${_target_name} MODULE ${_src} )
+ target_link_libraries( ${_target_name} ${${_target_name}_LIBS}
+                                        marblewidget )
+-install( TARGETS ${_target_name} DESTINATION ${QT_PLUGINS_DIR}/designer )
++if (WIN32)
++    #install( TARGETS ${_target_name} DESTINATION ${QT_PLUGINS_DIR}/designer )
++else (WIN32)
++    install( TARGETS ${_target_name} DESTINATION ${QT_PLUGINS_DIR}/designer )
++endif(WIN32)
+ 
+ endmacro( marble_add_designer_plugin _target_name )
+ 
+diff -ruN marble-Applications-19.08/src/CMakeLists.txt marble-Applications-19.08-modified/src/CMakeLists.txt
+--- marble-Applications-19.08/src/CMakeLists.txt	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/CMakeLists.txt	2022-05-09 10:06:48.220924091 -0500
+@@ -22,6 +22,8 @@
+   STRING(LENGTH "${MARBLE_QT_IMPORTS_DIR}" _MARBLE_QT_IMPORTS_DIR_LEN)
+   IF(NOT ${CMAKE_INSTALL_PREFIX} STREQUAL /usr/local)
+     IF(NOT ${_MARBLE_QT_IMPORTS_DIR_LEN} LESS ${_MARBLE_CMAKE_INSTALL_PREFIX_LEN})
++      message(STATUS "QT_IMPORTS_DIR: ${QT_IMPORTS_DIR}")
++      message(STATUS "MARBLE_QT_IMPORTS_DIR: ${MARBLE_QT_IMPORTS_DIR}")
+       STRING(SUBSTRING ${MARBLE_QT_IMPORTS_DIR} 0 ${_MARBLE_CMAKE_INSTALL_PREFIX_LEN} _MARBLE_QT_IMPORTS_DIR_START)
+       IF(NOT ${CMAKE_INSTALL_PREFIX} STREQUAL ${_MARBLE_QT_IMPORTS_DIR_START})
+         IF(NOT ${IGNORE_CMAKE_INSTALL_PREFIX_FOR_DECLARATIVE_PLUGINS})
+diff -ruN marble-Applications-19.08/src/lib/astro/CMakeLists.txt marble-Applications-19.08-modified/src/lib/astro/CMakeLists.txt
+--- marble-Applications-19.08/src/lib/astro/CMakeLists.txt	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/astro/CMakeLists.txt	2022-05-09 10:06:48.220924091 -0500
+@@ -50,7 +50,11 @@
+ 
+ # choose the correct target install library path
+ if(WIN32)
+-  INSTALL(TARGETS astro EXPORT AstroTargets RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX} ARCHIVE DESTINATION lib)
++  # INSTALL(TARGETS astro RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX} ARCHIVE DESTINATION lib)
++  install(TARGETS astro
++              FRAMEWORK DESTINATION ${CMAKE_INSTALL_PREFIX}
++              RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
++              ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+ elseif(APPLE)
+   INSTALL(TARGETS astro LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/Marble.app/Contents/MacOS/lib)
+ else()
+diff -ruN marble-Applications-19.08/src/lib/marble/CMakeLists.txt marble-Applications-19.08-modified/src/lib/marble/CMakeLists.txt
+--- marble-Applications-19.08/src/lib/marble/CMakeLists.txt	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/CMakeLists.txt	2022-05-09 10:06:48.220924091 -0500
+@@ -446,7 +446,8 @@
+ 
+ # choose the correct target install library path
+ if(WIN32)
+-  install(TARGETS marblewidget EXPORT MarbleTargets RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX} ARCHIVE DESTINATION lib)
++  #install(TARGETS marblewidget EXPORT MarbleTargets RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX} ARCHIVE DESTINATION lib)
++  install(TARGETS ${MARBLEWIDGET} FRAMEWORK DESTINATION ${CMAKE_INSTALL_PREFIX} RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/lib ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib )
+ elseif(APPLE)
+   install(TARGETS marblewidget LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/Marble.app/Contents/MacOS/lib)
+ else()
+@@ -628,6 +629,8 @@
+ 
+     OsmcSymbol.h
+ 
++    RemoteIconLoader.h
++    FileManager.h
+     DESTINATION ${INCLUDE_INSTALL_DIR}/marble
+ )
+ 
+diff -ruN marble-Applications-19.08/src/lib/marble/EquirectScanlineTextureMapper.h marble-Applications-19.08-modified/src/lib/marble/EquirectScanlineTextureMapper.h
+--- marble-Applications-19.08/src/lib/marble/EquirectScanlineTextureMapper.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/EquirectScanlineTextureMapper.h	2022-05-09 10:06:48.220924091 -0500
+@@ -44,7 +44,7 @@
+     class RenderJob;
+ 
+     StackedTileLoader *const m_tileLoader;
+-    int m_radius;
++    long long m_radius;
+     QImage m_canvasImage;
+     int    m_oldYPaintedTop;
+     QThreadPool m_threadPool;
+diff -ruN marble-Applications-19.08/src/lib/marble/FileManager.cpp marble-Applications-19.08-modified/src/lib/marble/FileManager.cpp
+--- marble-Applications-19.08/src/lib/marble/FileManager.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/FileManager.cpp	2022-05-09 10:06:48.220924091 -0500
+@@ -23,7 +23,8 @@
+ #include "GeoDataDocument.h"
+ #include "GeoDataLatLonAltBox.h"
+ #include "GeoDataStyle.h"
+-
++#include "GeoWriter.h"
++#include <KmlElementDictionary.h>
+ 
+ using namespace Marble;
+ 
+@@ -139,6 +140,20 @@
+     }
+ }
+ 
++void FileManager::saveFile( const QString &fileName, const GeoDataDocument *document )
++{
++    GeoWriter writer;
++    writer.setDocumentType( kml::kmlTag_nameSpaceOgc22 );
++
++    QFile file( fileName );
++    if ( !file.open( QIODevice::WriteOnly | QIODevice::Truncate ) ) {
++        return;
++    }
++
++    writer.write( &file, document );
++    file.close();
++}
++
+ void FileManager::closeFile( const GeoDataDocument *document )
+ {
+     QHash < QString, GeoDataDocument* >::iterator itpoint = d->m_fileItemHash.begin();
+diff -ruN marble-Applications-19.08/src/lib/marble/FileManager.h marble-Applications-19.08-modified/src/lib/marble/FileManager.h
+--- marble-Applications-19.08/src/lib/marble/FileManager.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/FileManager.h	2022-05-09 10:06:48.220924091 -0500
+@@ -71,6 +71,13 @@
+ 
+     void closeFile( const GeoDataDocument *document );
+ 
++    #ifdef WIN32
++        __declspec( dllexport ) void saveFile( const QString &fileName, const GeoDataDocument *document );
++    #else
++	void saveFile( const QString &fileName, const GeoDataDocument *document );
++    #endif
++
++
+     int size() const;
+     GeoDataDocument *at( const QString &key );
+ 
+diff -ruN marble-Applications-19.08/src/lib/marble/GenericScanlineTextureMapper.h marble-Applications-19.08-modified/src/lib/marble/GenericScanlineTextureMapper.h
+--- marble-Applications-19.08/src/lib/marble/GenericScanlineTextureMapper.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/GenericScanlineTextureMapper.h	2022-05-09 10:06:48.224924119 -0500
+@@ -42,7 +42,7 @@
+     void mapTexture( const ViewportParams *viewport, int tileZoomLevel, MapQuality mapQuality );
+ 
+     StackedTileLoader *const m_tileLoader;
+-    int m_radius;
++    long long m_radius;
+     QImage m_canvasImage;
+     QThreadPool m_threadPool;
+ };
+diff -ruN marble-Applications-19.08/src/lib/marble/graphicsview/FrameGraphicsItem.cpp marble-Applications-19.08-modified/src/lib/marble/graphicsview/FrameGraphicsItem.cpp
+--- marble-Applications-19.08/src/lib/marble/graphicsview/FrameGraphicsItem.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/graphicsview/FrameGraphicsItem.cpp	2022-05-09 10:06:48.232924175 -0500
+@@ -18,6 +18,7 @@
+ // Qt
+ #include <QSizeF>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QPixmapCache>
+ #include <QMargins>
+ #include <qdrawutil.h>
+diff -ruN marble-Applications-19.08/src/lib/marble/layers/FogLayer.cpp marble-Applications-19.08-modified/src/lib/marble/layers/FogLayer.cpp
+--- marble-Applications-19.08/src/lib/marble/layers/FogLayer.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/layers/FogLayer.cpp	2022-05-09 10:06:48.232924175 -0500
+@@ -49,7 +49,7 @@
+     int imgWidth2  = viewParams->width() / 2;
+     int imgHeight2 = viewParams->height() / 2;
+ 
+-    int radius = viewParams->radius();
++    long long radius = viewParams->radius();
+ 
+     // Recalculate the atmosphere effect and paint it to canvasImage.
+     QRadialGradient grad1( QPointF( imgWidth2, imgHeight2 ), radius );
+diff -ruN marble-Applications-19.08/src/lib/marble/layers/GroundLayer.h marble-Applications-19.08-modified/src/lib/marble/layers/GroundLayer.h
+--- marble-Applications-19.08/src/lib/marble/layers/GroundLayer.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/layers/GroundLayer.h	2022-05-09 10:06:48.232924175 -0500
+@@ -14,6 +14,7 @@
+ #include "LayerInterface.h"
+ 
+ #include <QColor>
++#include <QPainterPath>
+ 
+ namespace Marble
+ {
+diff -ruN marble-Applications-19.08/src/lib/marble/layers/TextureLayer.cpp marble-Applications-19.08-modified/src/lib/marble/layers/TextureLayer.cpp
+--- marble-Applications-19.08/src/lib/marble/layers/TextureLayer.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/layers/TextureLayer.cpp	2022-05-09 10:06:48.236924203 -0500
+@@ -518,7 +518,7 @@
+     return d->m_tileLoader.volatileCacheLimit();
+ }
+ 
+-int TextureLayer::preferredRadiusCeil( int radius ) const
++long long TextureLayer::preferredRadiusCeil( int radius ) const
+ {
+     if (!d->m_layerDecorator.hasTextureLayer()) {
+         return radius;
+@@ -535,7 +535,7 @@
+     return ( tileWidth * levelZeroColumns / 4 ) << tileLevel;
+ }
+ 
+-int TextureLayer::preferredRadiusFloor( int radius ) const
++long long TextureLayer::preferredRadiusFloor( int radius ) const
+ {
+     if (!d->m_layerDecorator.hasTextureLayer()) {
+         return radius;
+diff -ruN marble-Applications-19.08/src/lib/marble/layers/TextureLayer.h marble-Applications-19.08-modified/src/lib/marble/layers/TextureLayer.h
+--- marble-Applications-19.08/src/lib/marble/layers/TextureLayer.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/layers/TextureLayer.h	2022-05-09 10:06:48.236924203 -0500
+@@ -87,8 +87,8 @@
+ 
+     quint64 volatileCacheLimit() const;
+ 
+-    int preferredRadiusCeil( int radius ) const;
+-    int preferredRadiusFloor( int radius ) const;
++    long long preferredRadiusCeil( int radius ) const;
++    long long preferredRadiusFloor( int radius ) const;
+ 
+     RenderState renderState() const override;
+ 
+diff -ruN marble-Applications-19.08/src/lib/marble/MarbleAbstractPresenter.cpp marble-Applications-19.08-modified/src/lib/marble/MarbleAbstractPresenter.cpp
+--- marble-Applications-19.08/src/lib/marble/MarbleAbstractPresenter.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MarbleAbstractPresenter.cpp	2022-05-09 10:06:48.224924119 -0500
+@@ -76,7 +76,7 @@
+     {
+         if (!m_animationsEnabled || mode == Instant)
+         {
+-            const int radius = qRound(radiusFromDistance(newLookAt.range() * METER2KM));
++            const long long radius = qRound(radiusFromDistance(newLookAt.range() * METER2KM));
+             qreal const zoomVal = zoom(radius);
+ 
+             // Prevent exceeding zoom range. Note: Bounding to range is not useful here
+@@ -307,12 +307,12 @@
+                          / (qreal)(2 * radius())) * 0.2;
+     }
+ 
+-    int MarbleAbstractPresenter::radius() const
++    long long MarbleAbstractPresenter::radius() const
+     {
+         return map()->radius();
+     }
+ 
+-    void MarbleAbstractPresenter::setRadius(int radiusVal)
++    void MarbleAbstractPresenter::setRadius(long long radiusVal)
+     {
+         Q_ASSERT(radiusVal >= 0);
+         bool adjustRadius = radiusVal != map()->radius();
+diff -ruN marble-Applications-19.08/src/lib/marble/MarbleAbstractPresenter.h marble-Applications-19.08-modified/src/lib/marble/MarbleAbstractPresenter.h
+--- marble-Applications-19.08/src/lib/marble/MarbleAbstractPresenter.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MarbleAbstractPresenter.h	2022-05-09 10:06:48.224924119 -0500
+@@ -48,7 +48,7 @@
+         ~MarbleAbstractPresenter() override;
+ 
+         qreal moveStep() const;
+-        int radius() const;
++        long long radius() const;
+ 
+         GeoDataLookAt lookAt() const;
+ 
+@@ -137,7 +137,7 @@
+         void setCenterLongitude(qreal lon, FlyToMode mode);
+ 
+         void setAnimationsEnabled(bool enabled);
+-        void setRadius(int radius);
++        void setRadius(long long radius);
+         void setDistance(qreal newDistance);
+         void setSelection(const QRect& region);
+ 
+diff -ruN marble-Applications-19.08/src/lib/marble/MarbleDirs.cpp marble-Applications-19.08-modified/src/lib/marble/MarbleDirs.cpp
+--- marble-Applications-19.08/src/lib/marble/MarbleDirs.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MarbleDirs.cpp	2022-05-09 10:06:48.224924119 -0500
+@@ -127,9 +127,6 @@
+ 
+     QString systempath;
+ 
+-#ifdef Q_OS_WIN
+-	return QCoreApplication::applicationDirPath() + QDir::separator() + QLatin1String("data");
+-#endif
+ 
+ #ifdef Q_OS_MACX
+     //
+@@ -207,9 +204,6 @@
+     }
+ #endif   // mac bundle
+ 
+-#ifdef Q_OS_WIN
+-	return QCoreApplication::applicationDirPath() + QDir::separator() + QLatin1String("plugins");
+-#endif
+ 
+ #ifdef Q_OS_ANDROID
+     return "assets:/plugins";
+diff -ruN marble-Applications-19.08/src/lib/marble/MarbleInputHandler.cpp marble-Applications-19.08-modified/src/lib/marble/MarbleInputHandler.cpp
+--- marble-Applications-19.08/src/lib/marble/MarbleInputHandler.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MarbleInputHandler.cpp	2022-05-09 10:06:48.224924119 -0500
+@@ -158,7 +158,7 @@
+     int m_leftPressedY;
+     // The mouse pointer y position when the middle mouse button has been pressed.
+     int m_midPressedY;
+-    int m_startingRadius;
++    long long m_startingRadius;
+ 
+     // Indicates if the right mouse button has been pressed already.
+     bool m_rightPressed;
+diff -ruN marble-Applications-19.08/src/lib/marble/MarbleMap.cpp marble-Applications-19.08-modified/src/lib/marble/MarbleMap.cpp
+--- marble-Applications-19.08/src/lib/marble/MarbleMap.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MarbleMap.cpp	2022-05-09 10:06:48.224924119 -0500
+@@ -433,14 +433,14 @@
+     return d->m_viewport.height();
+ }
+ 
+-int MarbleMap::radius() const
++long long MarbleMap::radius() const
+ {
+     return d->m_viewport.radius();
+ }
+ 
+-void MarbleMap::setRadius( int radius )
++void MarbleMap::setRadius( long long radius )
+ {
+-    const int oldRadius = d->m_viewport.radius();
++    const long long oldRadius = d->m_viewport.radius();
+ 
+     d->m_viewport.setRadius( radius );
+ 
+@@ -451,13 +451,13 @@
+ }
+ 
+ 
+-int MarbleMap::preferredRadiusCeil(int radius) const
++long long MarbleMap::preferredRadiusCeil(long long radius) const
+ {
+     return d->m_textureLayer.preferredRadiusCeil( radius );
+ }
+ 
+ 
+-int MarbleMap::preferredRadiusFloor(int radius) const
++long long MarbleMap::preferredRadiusFloor(long long radius) const
+ {
+     return d->m_textureLayer.preferredRadiusFloor( radius );
+ }
+diff -ruN marble-Applications-19.08/src/lib/marble/MarbleMap.h marble-Applications-19.08-modified/src/lib/marble/MarbleMap.h
+--- marble-Applications-19.08/src/lib/marble/MarbleMap.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MarbleMap.h	2022-05-09 10:06:48.224924119 -0500
+@@ -164,10 +164,10 @@
+     /**
+      * @brief  Return the radius of the globe in pixels.
+      */
+-    int radius() const;
++    long long radius() const;
+ 
+-    int preferredRadiusCeil(int radius) const;
+-    int preferredRadiusFloor(int radius) const;
++    long long preferredRadiusCeil(long long radius) const;
++    long long preferredRadiusFloor(long long radius) const;
+ 
+     int tileZoomLevel() const;
+ 
+@@ -446,7 +446,7 @@
+      * @brief  Set the radius of the globe in pixels.
+      * @param  radius  The new globe radius value in pixels.
+      */
+-    void setRadius( int radius );
++    void setRadius( long long radius );
+ 
+     void setHeading( qreal heading );
+ 
+diff -ruN marble-Applications-19.08/src/lib/marble/MarbleWidget.cpp marble-Applications-19.08-modified/src/lib/marble/MarbleWidget.cpp
+--- marble-Applications-19.08/src/lib/marble/MarbleWidget.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MarbleWidget.cpp	2022-05-09 10:06:48.228924147 -0500
+@@ -323,12 +323,12 @@
+   return d->m_inputhandler;
+ }
+ 
+-int MarbleWidget::radius() const
++long long MarbleWidget::radius() const
+ {
+     return d->m_map.radius();
+ }
+ 
+-void MarbleWidget::setRadius( int radius )
++void MarbleWidget::setRadius( long long radius )
+ {
+     d->m_map.setRadius( radius );
+ }
+diff -ruN marble-Applications-19.08/src/lib/marble/MarbleWidget.h marble-Applications-19.08-modified/src/lib/marble/MarbleWidget.h
+--- marble-Applications-19.08/src/lib/marble/MarbleWidget.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MarbleWidget.h	2022-05-09 10:06:48.228924147 -0500
+@@ -286,7 +286,7 @@
+     /**
+      * @brief  Return the radius of the globe in pixels.
+      */
+-    int radius() const;
++    long long radius() const;
+ 
+     /**
+      * @brief Return the current zoom amount.
+@@ -621,7 +621,7 @@
+      * @brief  Set the radius of the globe in pixels.
+      * @param  radius  The new globe radius value in pixels.
+      */
+-    void setRadius( int radius );
++    void setRadius( long long radius );
+ 
+     /**
+      * @brief  Zoom the view to a certain zoomlevel
+diff -ruN marble-Applications-19.08/src/lib/marble/MercatorScanlineTextureMapper.h marble-Applications-19.08-modified/src/lib/marble/MercatorScanlineTextureMapper.h
+--- marble-Applications-19.08/src/lib/marble/MercatorScanlineTextureMapper.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MercatorScanlineTextureMapper.h	2022-05-09 10:06:48.228924147 -0500
+@@ -45,7 +45,7 @@
+     class RenderJob;
+ 
+     StackedTileLoader *const m_tileLoader;
+-    int m_radius;
++    long long m_radius;
+     QImage m_canvasImage;
+     int    m_oldYPaintedTop;
+     QThreadPool m_threadPool;
+diff -ruN marble-Applications-19.08/src/lib/marble/MergedLayerDecorator.cpp marble-Applications-19.08-modified/src/lib/marble/MergedLayerDecorator.cpp
+--- marble-Applications-19.08/src/lib/marble/MergedLayerDecorator.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/MergedLayerDecorator.cpp	2022-05-09 10:06:48.228924147 -0500
+@@ -36,6 +36,7 @@
+ 
+ #include <QPointer>
+ #include <QPainter>
++#include <QPainterPath>
+ 
+ using namespace Marble;
+ 
+diff -ruN marble-Applications-19.08/src/lib/marble/PlacemarkLayout.cpp marble-Applications-19.08-modified/src/lib/marble/PlacemarkLayout.cpp
+--- marble-Applications-19.08/src/lib/marble/PlacemarkLayout.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/PlacemarkLayout.cpp	2022-05-09 10:06:48.228924147 -0500
+@@ -254,7 +254,7 @@
+                 }
+             }
+ 
+-            int zoomLevel = placemark->zoomLevel();
++            long long zoomLevel = placemark->zoomLevel();
+             TileId key = TileId::fromCoordinates( coordinates, zoomLevel );
+             m_placemarkCache[key].append( placemark );
+         }
+diff -ruN marble-Applications-19.08/src/lib/marble/PluginManager.cpp marble-Applications-19.08-modified/src/lib/marble/PluginManager.cpp
+--- marble-Applications-19.08/src/lib/marble/PluginManager.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/PluginManager.cpp	2022-05-09 10:06:48.228924147 -0500
+@@ -276,8 +276,10 @@
+                 foundPlugin = true;
+             }
+         } else {
++            /*
+             qWarning() << "Ignoring to load the following file since it doesn't look like a valid Marble plugin:" << path << endl
+                        << "Reason:" << loader->errorString();
++            */
+             delete loader;
+         }
+     }
+diff -ruN marble-Applications-19.08/src/lib/marble/projections/AzimuthalProjection.cpp marble-Applications-19.08-modified/src/lib/marble/projections/AzimuthalProjection.cpp
+--- marble-Applications-19.08/src/lib/marble/projections/AzimuthalProjection.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/projections/AzimuthalProjection.cpp	2022-05-09 10:06:48.236924203 -0500
+@@ -209,7 +209,7 @@
+     {
+ #endif
+         int maxTessellationFactor = viewport->radius() < 20000 ? 10 : 20;
+-        int const finalTessellationPrecision = qBound(2, viewport->radius()/200, maxTessellationFactor) * tessellationPrecision;
++        int const finalTessellationPrecision = qBound(2, int(viewport->radius()/200), maxTessellationFactor) * tessellationPrecision;
+ 
+         // Let the line segment follow the spherical surface
+         // if the distance between the previous point and the current point
+diff -ruN marble-Applications-19.08/src/lib/marble/projections/CylindricalProjection.cpp marble-Applications-19.08-modified/src/lib/marble/projections/CylindricalProjection.cpp
+--- marble-Applications-19.08/src/lib/marble/projections/CylindricalProjection.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/projections/CylindricalProjection.cpp	2022-05-09 10:06:48.236924203 -0500
+@@ -130,7 +130,7 @@
+     {
+ #endif
+         int maxTessellationFactor = viewport->radius() < 20000 ? 10 : 20;
+-        int const finalTessellationPrecision = qBound(2, viewport->radius()/200, maxTessellationFactor) * tessellationPrecision;
++        int const finalTessellationPrecision = qBound(2, int(viewport->radius()/200), maxTessellationFactor) * tessellationPrecision;
+ 
+         // Let the line segment follow the spherical surface
+         // if the distance between the previous point and the current point
+diff -ruN marble-Applications-19.08/src/lib/marble/projections/EquirectProjection.cpp marble-Applications-19.08-modified/src/lib/marble/projections/EquirectProjection.cpp
+--- marble-Applications-19.08/src/lib/marble/projections/EquirectProjection.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/projections/EquirectProjection.cpp	2022-05-09 10:06:48.236924203 -0500
+@@ -67,7 +67,7 @@
+     globeHidesPoint = false;
+ 
+     // Convenience variables
+-    int  radius = viewport->radius();
++    long long  radius = viewport->radius();
+     int  width  = viewport->width();
+     int  height = viewport->height();
+ 
+@@ -105,7 +105,7 @@
+     globeHidesPoint = false;
+ 
+     // Convenience variables
+-    int  radius = viewport->radius();
++    long long  radius = viewport->radius();
+     qreal  width  = (qreal)(viewport->width());
+     qreal  height = (qreal)(viewport->height());
+ 
+@@ -118,7 +118,7 @@
+         // For the repetition case the same geopoint gets displayed on 
+         // the map many times.across the longitude.
+ 
+-        int xRepeatDistance = 4 * radius;
++        long long xRepeatDistance = 4 * radius;
+ 
+         // Finding the leftmost positive x value
+         if ( itX + size.width() > xRepeatDistance ) {
+@@ -158,7 +158,7 @@
+                                          qreal& lon, qreal& lat,
+                                          GeoDataCoordinates::Unit unit ) const
+ {
+-    const int radius = viewport->radius();
++    const long long radius = viewport->radius();
+     const qreal pixel2Rad = M_PI / (2.0 * radius);
+ 
+     // Get the Lat and Lon of the center point of the screen.
+diff -ruN marble-Applications-19.08/src/lib/marble/projections/MercatorProjection.cpp marble-Applications-19.08-modified/src/lib/marble/projections/MercatorProjection.cpp
+--- marble-Applications-19.08/src/lib/marble/projections/MercatorProjection.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/projections/MercatorProjection.cpp	2022-05-09 10:06:48.236924203 -0500
+@@ -80,7 +80,7 @@
+     const bool isLatValid = lat == originalLat;
+ 
+     // Convenience variables
+-    int  radius = viewport->radius();
++    long long  radius = viewport->radius();
+     qreal  width  = (qreal)(viewport->width());
+     qreal  height = (qreal)(viewport->height());
+ 
+@@ -117,7 +117,7 @@
+     globeHidesPoint = false;
+ 
+     // Convenience variables
+-    int  radius = viewport->radius();
++    long long  radius = viewport->radius();
+     qreal  width  = (qreal)(viewport->width());
+     qreal  height = (qreal)(viewport->height());
+ 
+@@ -130,7 +130,7 @@
+         // For the repetition case the same geopoint gets displayed on 
+         // the map many times.across the longitude.
+ 
+-        int xRepeatDistance = 4 * radius;
++        long long xRepeatDistance = 4 * radius;
+ 
+         // Finding the leftmost positive x value
+         if ( itX + size.width() / 2.0 >= xRepeatDistance ) {
+@@ -170,7 +170,7 @@
+                                          qreal& lon, qreal& lat,
+                                          GeoDataCoordinates::Unit unit ) const
+ {
+-    const int radius = viewport->radius();
++    const long long radius = viewport->radius();
+     Q_ASSERT( radius > 0 );
+ 
+     // Calculate translation of center point
+@@ -243,7 +243,7 @@
+     // analytically the lon-/lat- range.
+     // qreal pitch = GeoDataPoint::normalizeLat( viewport->planetAxis().pitch() );
+ 
+-    int xRepeatDistance = 4 * viewport->radius();
++    long long xRepeatDistance = 4 * viewport->radius();
+     if ( viewport->width() >= xRepeatDistance ) {
+         latLonAltBox.setWest( -M_PI );
+         latLonAltBox.setEast( +M_PI );
+@@ -255,7 +255,7 @@
+ 
+ bool MercatorProjection::mapCoversViewport( const ViewportParams *viewport ) const
+ {
+-    int           radius = viewport->radius();
++    long long           radius = viewport->radius();
+     int           height = viewport->height();
+ 
+     // Calculate translation of center point
+diff -ruN marble-Applications-19.08/src/lib/marble/RemoteIconLoader.h marble-Applications-19.08-modified/src/lib/marble/RemoteIconLoader.h
+--- marble-Applications-19.08/src/lib/marble/RemoteIconLoader.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/RemoteIconLoader.h	2022-05-09 10:06:48.228924147 -0500
+@@ -40,7 +40,11 @@
+         * Signal to indicate that image has been downloaded
+         * and is ready to be display now
+         */
+-    void iconReady();
++    #ifdef WIN32
++        __declspec( dllexport ) void iconReady();
++    #else
++        void iconReady();
++    #endif
+ 
+ private Q_SLOTS:
+     void storeIcon( const QByteArray&, const QString& );
+diff -ruN marble-Applications-19.08/src/lib/marble/ScanlineTextureMapperContext.cpp marble-Applications-19.08-modified/src/lib/marble/ScanlineTextureMapperContext.cpp
+--- marble-Applications-19.08/src/lib/marble/ScanlineTextureMapperContext.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/ScanlineTextureMapperContext.cpp	2022-05-09 10:06:48.228924147 -0500
+@@ -304,8 +304,11 @@
+             for ( int j = 1; j < n; ++j ) {
+                 iPosXf += itStepLon;
+                 iPosYf += itStepLat;
+-                *scanLine = m_tile->pixel( iPosXf >> 7, iPosYf >> 7 );
+-                ++scanLine;
++                if(m_tile)
++                {
++                    *scanLine = m_tile->pixel( iPosXf >> 7, iPosYf >> 7 );
++                    ++scanLine;
++                }
+             }
+         }        
+         else {
+@@ -324,9 +327,13 @@
+                     iPosX = ( itLon + itStepLon * j ) >> 7;
+                     iPosY = ( itLat + itStepLat * j ) >> 7;
+                 }
++                if(m_tile)
++                {
++		    *scanLine = m_tile->pixel( iPosX, iPosY );
++                    ++scanLine;
++                }
++
+ 
+-                *scanLine = m_tile->pixel( iPosX, iPosY );
+-                ++scanLine;
+             }
+         }
+     }
+diff -ruN marble-Applications-19.08/src/lib/marble/SphericalScanlineTextureMapper.cpp marble-Applications-19.08-modified/src/lib/marble/SphericalScanlineTextureMapper.cpp
+--- marble-Applications-19.08/src/lib/marble/SphericalScanlineTextureMapper.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/SphericalScanlineTextureMapper.cpp	2022-05-09 10:06:48.232924175 -0500
+@@ -99,7 +99,7 @@
+         m_repaintNeeded = false;
+     }
+ 
+-    const int radius = viewport->radius();
++    const long long radius = viewport->radius();
+ 
+     QRect rect( viewport->width() / 2 - radius, viewport->height() / 2 - radius,
+                 2 * radius, 2 * radius);
+diff -ruN marble-Applications-19.08/src/lib/marble/SphericalScanlineTextureMapper.h marble-Applications-19.08-modified/src/lib/marble/SphericalScanlineTextureMapper.h
+--- marble-Applications-19.08/src/lib/marble/SphericalScanlineTextureMapper.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/SphericalScanlineTextureMapper.h	2022-05-09 10:06:48.232924175 -0500
+@@ -53,7 +53,7 @@
+  private:
+     class RenderJob;
+     StackedTileLoader *const m_tileLoader;
+-    int m_radius;
++    long long m_radius;
+     QImage m_canvasImage;
+     QThreadPool m_threadPool;
+ };
+diff -ruN marble-Applications-19.08/src/lib/marble/TileScalingTextureMapper.h marble-Applications-19.08-modified/src/lib/marble/TileScalingTextureMapper.h
+--- marble-Applications-19.08/src/lib/marble/TileScalingTextureMapper.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/TileScalingTextureMapper.h	2022-05-09 10:06:48.232924175 -0500
+@@ -53,7 +53,7 @@
+     StackedTileLoader *const m_tileLoader;
+     QCache<TileId, const QPixmap> m_cache;
+     QImage m_canvasImage;
+-    int    m_radius;
++    long long    m_radius;
+ };
+ 
+ }
+diff -ruN marble-Applications-19.08/src/lib/marble/ViewportParams.cpp marble-Applications-19.08-modified/src/lib/marble/ViewportParams.cpp
+--- marble-Applications-19.08/src/lib/marble/ViewportParams.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/ViewportParams.cpp	2022-05-09 10:06:48.232924175 -0500
+@@ -38,7 +38,7 @@
+ public:
+     ViewportParamsPrivate( Projection projection,
+                            qreal centerLongitude, qreal centerLatitude,
+-                           int radius,
++                           long long radius,
+                            const QSize &size );
+ 
+     static const AbstractProjection *abstractProjection( Projection projection );
+@@ -54,7 +54,7 @@
+     qreal                m_heading;
+     Quaternion           m_planetAxis;   // Position, coded in a quaternion
+     matrix               m_planetAxisMatrix;
+-    int                  m_radius;       // Zoom level (pixels / globe radius)
++    long long                  m_radius;       // Zoom level (pixels / globe radius)
+     qreal                m_angularResolution;
+ 
+     QSize                m_size;         // width, height
+@@ -86,7 +86,7 @@
+ 
+ ViewportParamsPrivate::ViewportParamsPrivate( Projection projection,
+                                               qreal centerLongitude, qreal centerLatitude,
+-                                              int radius,
++                                              long long radius,
+                                               const QSize &size )
+     : m_projection( projection ),
+       m_currentProjection( abstractProjection( projection ) ),
+@@ -136,7 +136,7 @@
+ 
+ ViewportParams::ViewportParams( Projection projection,
+                                 qreal centerLongitude, qreal centerLatitude,
+-                                int radius,
++                                long long radius,
+                                 const QSize &size )
+     : d( new ViewportParamsPrivate( projection, centerLongitude, centerLatitude, radius, size ) )
+ {
+@@ -219,12 +219,12 @@
+     return polarity;
+ }
+ 
+-int ViewportParams::radius() const
++long long ViewportParams::radius() const
+ {
+     return d->m_radius;
+ }
+ 
+-void ViewportParams::setRadius(int newRadius)
++void ViewportParams::setRadius(long long newRadius)
+ {
+     if ( newRadius > 0 ) {
+         d->m_dirtyBox = true;
+diff -ruN marble-Applications-19.08/src/lib/marble/ViewportParams.h marble-Applications-19.08-modified/src/lib/marble/ViewportParams.h
+--- marble-Applications-19.08/src/lib/marble/ViewportParams.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/ViewportParams.h	2022-05-09 10:06:48.232924175 -0500
+@@ -49,7 +49,7 @@
+     ViewportParams( );
+     explicit ViewportParams( Projection projection,
+                              qreal centerLongitude = 0, qreal centerLatitude = 0,
+-                             int radius = 2000,
++                             long long radius = 2000,
+                              const QSize &size = QSize( 100, 100 ) );
+     ~ViewportParams();
+ 
+@@ -89,13 +89,13 @@
+     
+     bool resolves ( const GeoDataCoordinates &coord1, const GeoDataCoordinates &coord2 ) const;
+ 
+-    int  radius() const;
++    long long  radius() const;
+ 
+     /**
+      * @brief Change the radius of the planet
+      * @param radius Size of the planet radius in pixel. Non-positive values are ignored.
+      */
+-    void setRadius(int radius);
++    void setRadius(long long radius);
+ 
+     void centerOn( qreal lon, qreal lat );
+     void setHeading( qreal heading );
+diff -ruN marble-Applications-19.08/src/lib/marble/VisiblePlacemark.cpp marble-Applications-19.08-modified/src/lib/marble/VisiblePlacemark.cpp
+--- marble-Applications-19.08/src/lib/marble/VisiblePlacemark.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/lib/marble/VisiblePlacemark.cpp	2022-05-09 10:06:48.232924175 -0500
+@@ -22,6 +22,7 @@
+ 
+ #include <QApplication>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QPalette>
+ #include <QPixmapCache>
+ 
+diff -ruN marble-Applications-19.08/src/plugins/render/compass/CompassFloatItem.cpp marble-Applications-19.08-modified/src/plugins/render/compass/CompassFloatItem.cpp
+--- marble-Applications-19.08/src/plugins/render/compass/CompassFloatItem.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/compass/CompassFloatItem.cpp	2022-05-09 10:06:48.236924203 -0500
+@@ -19,6 +19,7 @@
+ #include <QRect>
+ #include <QColor>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QPushButton>
+ #include <QSvgRenderer>
+ 
+diff -ruN marble-Applications-19.08/src/plugins/render/elevationprofilefloatitem/ElevationProfileFloatItem.cpp marble-Applications-19.08-modified/src/plugins/render/elevationprofilefloatitem/ElevationProfileFloatItem.cpp
+--- marble-Applications-19.08/src/plugins/render/elevationprofilefloatitem/ElevationProfileFloatItem.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/elevationprofilefloatitem/ElevationProfileFloatItem.cpp	2022-05-09 10:06:48.240924232 -0500
+@@ -31,6 +31,7 @@
+ #include <QContextMenuEvent>
+ #include <QRect>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QPushButton>
+ #include <QMenu>
+ #include <QMouseEvent>
+diff -ruN marble-Applications-19.08/src/plugins/render/foursquare/FoursquareItem.cpp marble-Applications-19.08-modified/src/plugins/render/foursquare/FoursquareItem.cpp
+--- marble-Applications-19.08/src/plugins/render/foursquare/FoursquareItem.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/foursquare/FoursquareItem.cpp	2022-05-09 10:06:48.240924232 -0500
+@@ -13,6 +13,7 @@
+ #include "ViewportParams.h"
+ 
+ #include <QFontMetrics>
++#include <QPainterPath>
+  
+ namespace Marble
+ {
+diff -ruN marble-Applications-19.08/src/plugins/render/license/License.cpp marble-Applications-19.08-modified/src/plugins/render/license/License.cpp
+--- marble-Applications-19.08/src/plugins/render/license/License.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/license/License.cpp	2022-05-09 10:06:48.240924232 -0500
+@@ -23,6 +23,7 @@
+ #include <QCommonStyle>
+ #include <QContextMenuEvent>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QLabel>
+ #include <QMenu>
+ #include <QMouseEvent>
+diff -ruN marble-Applications-19.08/src/plugins/render/mapscale/MapScaleFloatItem.cpp marble-Applications-19.08-modified/src/plugins/render/mapscale/MapScaleFloatItem.cpp
+--- marble-Applications-19.08/src/plugins/render/mapscale/MapScaleFloatItem.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/mapscale/MapScaleFloatItem.cpp	2022-05-09 10:06:48.240924232 -0500
+@@ -195,7 +195,7 @@
+     //round ratio to 3 most significant digits, assume that ratio >= 1, otherwise it may display "1 : 0"
+     //i made this assumption because as the primary use case we do not need to zoom in that much
+     qreal power = 1;
+-    int iRatio = (int)(ratio + 0.5); //round ratio to the nearest integer
++    qreal iRatio = (int)(ratio + 0.5); //round ratio to the nearest integer
+     while (iRatio >= 1000) {
+         iRatio /= 10;
+         power *= 10;
+@@ -204,6 +204,18 @@
+     m_ratioString.setNum(iRatio);
+     m_ratioString = QLatin1String("1 : ") + m_ratioString;
+ 
++    if(iRatio > 1.0)
++    {
++        m_ratioString.setNum(iRatio);
++        m_ratioString = m_ratioString = "1 : " + m_ratioString;
++    }
++    else
++    {
++        m_ratioString.setNum(1/iRatio);
++        m_ratioString = m_ratioString = m_ratioString + " : 1";
++    }
++
++
+     painter->setPen(   QColor( Qt::darkGray ) );
+     painter->setBrush( QColor( Qt::darkGray ) );
+     painter->drawRect( m_leftBarMargin, fontHeight + 3,
+@@ -313,7 +325,7 @@
+ 
+     // First we calculate the exact length of the whole area that is possibly
+     // available to the scalebar in kilometers
+-    int  magValue = (int)( m_scaleBarDistance );
++    float  magValue = m_scaleBarDistance;
+ 
+     // We calculate the two most significant digits of the km-scalebar-length
+     // and store them in magValue.
+@@ -323,32 +335,47 @@
+     }
+ 
+     m_bestDivisor = 4;
+-    int  bestMagValue = 1;
+-
+-    for ( int i = 0; i < magValue; i++ ) {
+-        // We try to find the lowest divisor between 4 and 8 that
+-        // divides magValue without remainder.
+-        for ( int j = 4; j < 9; j++ ) {
+-            if ( ( magValue - i ) % j == 0 ) {
+-                // We store the very first result we find and store
+-                // m_bestDivisor and bestMagValue as a final result.
+-                m_bestDivisor = j;
+-                bestMagValue  = magValue - i;
++    qreal bestMagValue = 1;
++    
++    if(m_scaleBarDistance > (qreal)m_bestDivisor)
++    {
++        for ( int i = 0; i < (int)magValue; i++ ) {
++            // We try to find the lowest divisor between 4 and 8 that
++            // divides magValue without remainder.
++            for ( int j = m_bestDivisor; j < 9; j++ ) {
++                if ( ( (int)magValue - i ) % j == 0 ) {
++                    // We store the very first result we find and store
++                    // m_bestDivisor and bestMagValue as a final result.
++                    m_bestDivisor = j;
++                    bestMagValue  = (int)magValue - i;
++
++                    // Stop all for loops and end search
++                    i = magValue;
++                    j = 9;
++                }
++            }
++
++            // If magValue doesn't divide through values between 4 and 8
++            // (e.g. because it's a prime number) try again with magValue
++            // decreased by i.
+ 
+-                // Stop all for loops and end search
+-                i = magValue;
+-                j = 9;
+-            }
+         }
+ 
+-        // If magValue doesn't divide through values between 4 and 8
+-        // (e.g. because it's a prime number) try again with magValue
+-        // decreased by i.
++        magValue = (int) floorf(magValue + 0.5);
++        bestMagValue = (int) floorf(bestMagValue + 0.5);
++
+     }
++    else
++    {
++        m_bestDivisor = 6;
++        magValue  = floorf(magValue * 100) / 100;
++        bestMagValue = magValue;
++    }
++
++    m_pixelInterval = (qreal)( m_scaleBarWidth * (qreal)( bestMagValue )
++                              / (qreal)( magValue ) / m_bestDivisor );
++    m_valueInterval = (qreal)( bestMagValue * magnitude / m_bestDivisor );
+ 
+-    m_pixelInterval = (int)( m_scaleBarWidth * (qreal)( bestMagValue )
+-                             / (qreal)( magValue ) / m_bestDivisor );
+-    m_valueInterval = (int)( bestMagValue * magnitude / m_bestDivisor );
+ }
+ 
+ QDialog *MapScaleFloatItem::configDialog()
+diff -ruN marble-Applications-19.08/src/plugins/render/mapscale/MapScaleFloatItem.h marble-Applications-19.08-modified/src/plugins/render/mapscale/MapScaleFloatItem.h
+--- marble-Applications-19.08/src/plugins/render/mapscale/MapScaleFloatItem.h	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/mapscale/MapScaleFloatItem.h	2022-05-09 10:06:48.240924232 -0500
+@@ -84,7 +84,7 @@
+     QDialog *m_configDialog;
+     Ui::MapScaleConfigWidget *ui_configWidget;
+ 
+-    int      m_radius;
++    long long      m_radius;
+ 
+     QString  m_target;
+ 
+@@ -97,8 +97,8 @@
+ 
+     qreal    m_pixel2Length;
+     int      m_bestDivisor;
+-    int      m_pixelInterval;
+-    int      m_valueInterval;
++    qreal      m_pixelInterval;
++    qreal      m_valueInterval;
+ 
+     QString m_ratioString;
+ 
+diff -ruN marble-Applications-19.08/src/plugins/render/navigation/navigation.ui marble-Applications-19.08-modified/src/plugins/render/navigation/navigation.ui
+--- marble-Applications-19.08/src/plugins/render/navigation/navigation.ui	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/navigation/navigation.ui	2022-05-09 10:06:48.240924232 -0500
+@@ -27,7 +27,7 @@
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+-     <y>70</y>
++     <y>301</y>
+      <width>34</width>
+      <height>40</height>
+     </rect>
+@@ -55,7 +55,7 @@
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+-     <y>109</y>
++     <y>70</y>
+      <width>34</width>
+      <height>36</height>
+     </rect>
+@@ -81,7 +81,7 @@
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+-     <y>305</y>
++     <y>266</y>
+      <width>34</width>
+      <height>36</height>
+     </rect>
+@@ -107,7 +107,7 @@
+    <property name="geometry">
+     <rect>
+      <x>18</x>
+-     <y>145</y>
++     <y>106</y>
+      <width>34</width>
+      <height>160</height>
+     </rect>
+diff -ruN marble-Applications-19.08/src/plugins/render/notes/NotesItem.cpp marble-Applications-19.08-modified/src/plugins/render/notes/NotesItem.cpp
+--- marble-Applications-19.08/src/plugins/render/notes/NotesItem.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/notes/NotesItem.cpp	2022-05-09 10:06:48.240924232 -0500
+@@ -9,6 +9,7 @@
+ #include "MarbleDirs.h"
+ 
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QRect>
+ 
+ using namespace Marble;
+diff -ruN marble-Applications-19.08/src/plugins/render/postalcode/PostalCodeItem.cpp marble-Applications-19.08-modified/src/plugins/render/postalcode/PostalCodeItem.cpp
+--- marble-Applications-19.08/src/plugins/render/postalcode/PostalCodeItem.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/postalcode/PostalCodeItem.cpp	2022-05-09 10:06:48.240924232 -0500
+@@ -17,6 +17,7 @@
+ // Qt
+ #include <QFontMetrics>
+ #include <QPainter>
++#include <QPainterPath>
+ 
+ using namespace Marble;
+ 
+diff -ruN marble-Applications-19.08/src/plugins/render/progress/ProgressFloatItem.cpp marble-Applications-19.08-modified/src/plugins/render/progress/ProgressFloatItem.cpp
+--- marble-Applications-19.08/src/plugins/render/progress/ProgressFloatItem.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/progress/ProgressFloatItem.cpp	2022-05-09 10:06:48.244924260 -0500
+@@ -22,6 +22,7 @@
+ #include <QColor>
+ #include <QPaintDevice>
+ #include <QPainter>
++#include <QPainterPath>
+ 
+ namespace Marble
+ {
+diff -ruN marble-Applications-19.08/src/plugins/render/stars/StarsPlugin.cpp marble-Applications-19.08-modified/src/plugins/render/stars/StarsPlugin.cpp
+--- marble-Applications-19.08/src/plugins/render/stars/StarsPlugin.cpp	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/render/stars/StarsPlugin.cpp	2022-05-09 10:06:48.244924260 -0500
+@@ -19,6 +19,7 @@
+ #include <QContextMenuEvent>
+ #include <QMenu>
+ #include <QColorDialog>
++#include <QPainterPath>
+ #include <qmath.h>
+ 
+ #include "MarbleClock.h"
+diff -ruN marble-Applications-19.08/src/plugins/runner/CMakeLists.txt marble-Applications-19.08-modified/src/plugins/runner/CMakeLists.txt
+--- marble-Applications-19.08/src/plugins/runner/CMakeLists.txt	2019-11-04 00:55:40.000000000 -0600
++++ marble-Applications-19.08-modified/src/plugins/runner/CMakeLists.txt	2022-05-09 10:06:48.244924260 -0500
+@@ -22,7 +22,7 @@
+ #add_subdirectory( traveling-salesman )
+ 
+ #Parsing
+-add_subdirectory( cache )
++#add_subdirectory( cache )
+ add_subdirectory( gpx )
+ add_subdirectory( json )
+ add_subdirectory( kml )

@@ -1,0 +1,19 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v2.04 converter from C:/Users/cawalker/projects/lsa/publicTestOutput/gui/converters/LeicaTotalStation/204HeightUncertainty/LeicaTotalStation204HeightUncertainty.log on 20:45:05 Aug 31, 2022
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_BEN09 1.53800 m 0.10000 m
+HGHT HGHT#1_BEN08 1.61200 m 0.10000 m
+HGHT HGHT#1_BEN10 1.55100 m 0.10000 m
+HGHT HGHT#1_BEN13 1.61100 m 0.10000 m
+HGHT HGHT#1_BEN11 1.60600 m 0.10000 m
+HGHT HGHT#1_BEN12 1.59100 m 0.10000 m
+
+--include LeicaTotalStation204HeightUncertainty_BEN09.lsa
+--include LeicaTotalStation204HeightUncertainty_BEN08.lsa
+--include LeicaTotalStation204HeightUncertainty_BEN10.lsa
+--include LeicaTotalStation204HeightUncertainty_BEN13.lsa
+--include LeicaTotalStation204HeightUncertainty_BEN11.lsa
+--include LeicaTotalStation204HeightUncertainty_BEN12.lsa

@@ -1,0 +1,46 @@
+\chapter{Conversion of Instrumentation Output}
+\label{chap:converters} % <-- I don't think this reference works since this is an appendix...
+
+\section*{Instrument and File Types Supported}
+At time of writing, \textsf{salsa} can import from the following instrument or file types; each of these converters is available under the Import menu:
+\begin{itemize}
+\item GeoLab format, typically \verb+.iob+
+\item Leica Sets of Angles format, typically \verb+.log+ or \verb+.txt+
+\item Trimble Data Exchange Format, typically \verb+.asc+
+\item grape/merge Precise Point Positioning format, typically \verb+.log+
+\item OPUS Precise Point Positioning format, typically \verb+.opus+
+\item Leica Levels data, typically \verb+.gsi+. Both GSI-8 and GSI-16 data formats are supported.  Only BF and BFFB line leveling methods are currently supported.
+\item Leica Geo Office ASCII exports, typically \verb+.asc+
+\end{itemize}
+
+\section*{Metadata}
+When converting third-party instrument output files into \textsf{salsa}'s \verb+.lsa+ format, a comment will be placed at the top of the resulting \verb+.lsa+ file that indicates what converter was used to convert the file, what the source file was, and when the conversion took place.
+
+Any information contained in the third-party output files that provides additional background on how that file was generated, such as the instrument type used, the instrument serial number, what version of software generated the output, when the file was generated, etc., will also pass through to the resulting \verb+.lsa+ file as a comment.
+
+\section*{Order Preservation}
+To the extent possible, records in the \verb+.lsa+ file will appear in the order that the information appears in the third-party instrument output file.  The order may not be exactly the same because some \verb+.lsa+ records require information that may be scattered throughout the instrument output file.  For instance, a ZANG record contains, in addition to the zenith angle measurement, the name of the From site, the instrument height offset at that site, the name of the To site, and the target height offset at that site.  This information may be scattered throughout the instrument output file, and it isn't until it has all been collected that the ZANG record can be written to the \verb+.lsa+ file.
+
+\section*{Auto-generated Labels}
+Some \verb+.lsa+ records are referred to by measurement records by their labels.  Examples of these records are instrument/target height offset records (HGHT), records describing the error model, including the centering errors, for a type of measurement (UNCR), and records that indicate of which set a particular set of directions are part (DGRP).  When created within \textsf{salsa}, using the Record Editor, the user may chose whatever descriptive label they wish for their referent records.  However, when converting from third-party instrument output files, these labels are auto-generated.  The scheme for generating these labels is as follows:
+
+\begin{enumerate}
+\item DGRP labels will appear in the \verb+.lsa+ as \emph{DGRP\#1}, \emph{DGRP\#2}, etc., in the order that sets of directions appear in the instrument output file.
+\item HGHT labels will appear in the \verb+.lsa+ as \emph{HGHT\#1\_StationName},\\ \emph{HGHT\#1\_DifferentStationName}, \emph{HGHT\#2\_StationName}, etc.  The label will contain the station name, and the number will be incremented in the \verb+.lsa+ file depending upon how many times the instrument/target height offset at that station has been redefined.
+\item UNCR labels will appear in the \verb+.lsa+ as \emph{UNCR\#1\_MeasurementType}, including the type of measurement in the label.  These labels are primiarily placeholders for the user to add additional information based upon their understanding of the instrument/target setup or measurement conditions.  As this information is not available during conversion, only one uncertainty record for a given measurement type will appear in each resulting \verb+.lsa+ file.  The default centering error for the At/From/To stations is set at 1 mm.
+\end{enumerate}
+
+\section*{Importing Into SALSA}
+When inserting instrumentation output files into a \textsf{salsa} project via the Record $\to$ Insert $\to$ Include from... feature, \textsf{salsa} will automatically attempt to make the auto-generated labels unique to avoid duplication of labels throughout the project.  Therefore, if two instrument output files containing a single set of horizontal directions are inserted into a project, the first Include record in the project would contain an uncertainty record with a label of UNCR\#1\_HDIR, and a direction group label of DGRP\#1, while the second Include record in the project would contain an uncertainty record with a label of UNCR\#2\_HDIR, and a direction group label of DGRP\#2.
+
+\section*{Leica Sets of Angles Measurement Uncertainties}
+The user can configure the conversion process to assign default measurement uncertainties to the measurements in a \verb+.log+ or \verb+.txt+ file, or to accept the instrument-assigned uncertainties on the measurements (see Section \ref{subsect:convert_config}).  If the user opts to accept the instrument-assigned uncertainties, the following procedure is followed to derive the standard deviations of each measurement.  For a given \verb+Set Results+ section of the file (e.g. \verb+Horizontal Set Results+, \verb+Vertical Set Results+, and \verb+Distance Results+), containing some number of sets, \verb+N+, and some number of points:
+\begin{enumerate}
+\item The mean value of each measurement, $\overline{M}$, to a point is taken as the \verb+Mean of all Sets+ value for Vertical and Horizontal Sets, and the \verb+Mean Distance Of All Sets+ for Distances.
+\item The individual measurements to each point, $M_{i}$, are taken as the \verb+Reduced Mean+ values for \verb+Hz Results Of Single Sets+, the \verb+Mean Of Face I/II+ values for \verb+V Results Of Single Sets+, and the \verb+Mean Of Face I and II+ values for \verb+Distance+ \verb+Results Of Single Sets+.
+\item The standard deviation over N sets for measurement M to a point is then $\sigma=\sqrt{\frac{\sum_{i=1}^{N}\left(\overline{M}-M_{i}\right)^2}{N}}$.
+\item If the calculated standard deviation for a direction happens to be less than 1 second of arc, then the standard deviation for that direction is set to the \verb+Standard Deviation Of Single Measurement+.  This covers the case when there is only one set, or when the reduced mean of a single set is 0 for all sets (which seems to be the case for the starting direction).
+\item If the \verb+Mean Of Face I and II+ value for a distance measurement is zero, it is treated as the mean value when computing the standard deviation.
+\end{enumerate}
+
+

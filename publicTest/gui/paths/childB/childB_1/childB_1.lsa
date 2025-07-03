@@ -1,0 +1,2 @@
+COMMENT This is the childB_1 file.
+--include ../../childC/childC.lsa

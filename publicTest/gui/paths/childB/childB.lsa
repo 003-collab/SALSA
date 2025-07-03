@@ -1,0 +1,2 @@
+#This is the childB file.
+--include childB_1/childB_1.lsa

@@ -1,0 +1,443 @@
+\chapter{Examples}
+\label{chap:examples}
+
+Perhaps the best way to gain familiarity with the SALSA suite is to build and execute a least squares adjustment for a real-world survey.  Chapter \ref{chap:UnderstandingSolver} contained a preliminary example whose purpose was to introduce the user to the formulae used to obtain the output.  This chapter walks the reader through an example problem that highlights the key elements of the \textsf{salsa} interface and outlines the authors' vision of the typical work-flow for a geodetic survey LSA solution.  After introducing \textsf{salsa} through this first complete and detailed example (Example 1), we provide another example that highlights specific features in \textsf{salsa}; these too are important because they show how \textsf{salsa} can shed light on - and help the user address - common problems in geodetic survey networks.  
+
+\section{Example 1: Combined GPS and conventional adjustment}
+The first example we'll introduce is a combined GPS and conventional observations survey that will illustrate most of the key aspects of the \textsf{salsa} interface and serves as a model for building and executing a least squares adjustment in \textsf{salsa}.  Credit Mr. Bradley Beal of NGA for providing these example data \cite{ExampleData}.  We will also leverage variants of this example elsewhere in this user manual to illustrate other \textsf{salsa} features and LSA principles.
+
+Our example survey design is depicted in Figure \ref{fig:ex01networkdesign}.  The objective of the survey is to determine the position (including height) of an inaccessible target, designated as POLE.  The survey design involves establishing a small network of temporary points (TPs) using GPS vectors (shown in blue) from several established control sites.  Then, conventional observations (orange) between the TPs and the target allow us to estimate the target's position.
+
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{example01/networkdesign}
+\end{center}
+\caption{Portion of Example 1 network.}
+\label{fig:ex01networkdesign}
+\end{figure}
+
+We will build this example in several stages, and we will execute least squares adjustments at each stage.  This incremental approach is good practice, in that by solving several small problems we are better positioned to isolate and resolve errors than when we attempt one larger complex adjustment.
+
+As we introduce each measurement type, we will show, via the Record Editor, how a user would manually create the measurements using the \textsf{salsa} interface.  However, we have also provided the measurement files in .lsa format so that the reader need not manually enter all these data.  Typically, we expect that users will have access to measurement files in .lsa format or in some other format that is easily converted to .lsa, such as GeoLab .iob files.
+
+\subsection{Create New Project}
+As a general rule, the authors recommend organizing a project's data within a common folder.  Although SALSA can read data files located outside the project folder, keeping all the project data together keeps the organization simple for the user and simplifies subsequent transfer or archival of the project.
+
+We'll create a new project called \verb+example01+ in a folder by the same name on our Desktop.  Launch \textsf{salsa}, then use the menu action Project $\to$ New... and browse to the \verb+Desktop/example01+ folder (creating it if necessary), and specify the project file name \verb+example01.proj+.  (We could use any file extension we want, but \verb+.proj+ is a convenient convention for \textsf{salsa} project files.)
+
+Upon creating a new project in this fashion, \textsf{salsa} will generate the new file \\\verb+example01.proj+, a nearly empty file containing only a single comment record that indicates the date and time of project creation.  \textsf{salsa} will also copy the default configuration file from the \textsf{salsa} installation directory into the project directory, giving it the name \verb+example01.cfg+.  The \textsf{salsa} interface will look like Figure \ref{fig:ex01newproj} at this point.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{example01/newproj}
+\end{center}
+\caption{The Salsa interface upon creating our new project.}
+\label{fig:ex01newproj}
+\end{figure}
+
+
+\subsection{Introduce Control Points}
+
+Our control network includes the sites listed in Table \ref{tab:ex1control}.
+
+\begin{table}[htb]
+\caption{Example 1 Control Network}
+\label{tab:ex1control}
+\begin{center}
+\begin{tabular}{lrrr}
+\hline
+\textbf{Site} & \textbf{X Coordinate} & \textbf{Y Coordinate} & \textbf{Z Coordinate} \\
+\hline
+VNDP & -2678090.4859 m & -4525437.0277 m & 3597431.9403 m \\
+P513 & -2669569.2656 m & -4504986.4064 m & 3629597.4450 m \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+We could at this point start keying in records representing our control sites, but in the interest of developing good habits, we will instead organize these position records in their own dedicated file which is to be included in our main project.  To do so, we need to insert an empty `include' record referencing the new file we wish to create.
+
+Note that in \textsf{salsa}, when we insert a record, the new record will be inserted after the currently-selected record \emph{at the same hierarchy level} (i.e., in the same file as the selected record).  In the case of inserting a new project-level include, either the Project Include record or any record directly within the project level may be selected.
+
+Therefore, select either the Project Include record or the comment record, then use the menu action Record $\to$ Insert $\to$ New Include to include our new file.  When prompted by the file explorer, provide a name such as \verb+control.lsa+.  Now the \textsf{salsa} Project Navigator shows \verb+control.lsa+ within our project, and if we click the little triangle next to this Include record, we see that this new included file is empty except for a single comment.
+
+Now we'll insert our position records.  Since we want our new position records to be \emph{inside} the \verb+control.lsa+ file, we need to select a record within that file, i.e., the comment record.  Figure \ref{fig:ex01treewithnewinclude} shows the Project Navigator at this state, with the comment record selected.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{example01/treewithnewinclude}
+\end{center}
+\caption{The Salsa Project Navigator after inserting a new Include record to contain position records for a control network.  Note the currently selected record (a comment record) is inside \texttt{control.lsa}; therefore a subsequent Record $\to$ Insert operation will yield a new record inside \texttt{control.lsa} as desired.}
+\label{fig:ex01treewithnewinclude}
+\end{figure}
+
+Therefore, select the comment within \verb+control.lsa+ and proceed with menu action Record $\to$ Insert $\to$ POSC (Station Position Cartesian).  This will result in a new, selected, POSC record with its attributes available for editing in the Record Editor.  Now we can key in the first station name and coordinates as listed in Table \ref{tab:ex1control}.  Since these are control sites, set the position's Type to Fixed.
+
+We could now proceed with menu action Record $\to$ Insert $\to$ POSC to create a record for site P513 as well.  However, entering all of the associated data (and all the measurements we'll get to momentarily) is very tedious, so the authors have provided input files that can be imported into this project.  Let's take advantage of those!
+
+Example data are included in the SALSA installation directory; on Windows systems this will typically be \verb+C:\Program Files\SALSA\examples\+.  Copy the contents of the \verb+example01+ directory into the \verb+example01+ folder you already created on your Desktop. (Note: Please utilize the examples directory only for copying data as some user permissions may not allow writing to this directory.)
+
+Now, in \textsf{salsa}, delete the \verb+control.lsa+ Include record by selecting the record and pressing the delete key or by menu action Record $\to$ Delete.  Replace the deleted record by inserting \verb+ctrl_sites.lsa+ (which we just copied into our project folder) via the menu option Import $\to$ Include from LSA\ldots (or F6); when prompted, select the file \verb+ctrl_sites.lsa+.
+
+Figure \ref{fig:ex01withcontrol} shows the \textsf{salsa} interface after the two control sites have been introduced to the project.  (The Include record has been expanded and the first POSC record selected.)
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{example01/withcontrol}
+\end{center}
+\caption{The Salsa interface after inserting an Include record containing a small network of control sites.}
+\label{fig:ex01withcontrol}
+\end{figure}
+
+
+\subsection{Execute GPS-only Adjustment}
+
+Next, we will introduce GPS vector estimates to the project; these will be used to determine positions for the TPs.  These GPS vectors will share an uncertainty model (UNCR record).  Thus, we could proceed manually by creating a UNCR record and then keying in all the GPS vectors and covariance matrices, each time specifying that UNCR record.  Instead, we will take advantage of an lsa-formatted file already prepared in this way.
+
+Ensure that the existing Include record in the measurement tree is selected, so that the next Include record we insert will be inserted at that same level of the hierarchy.  Then use the menu option Import $\to$ Include from LSA\ldots and when prompted, select the file \verb+gpsMeasurements.lsa+.
+
+Expand the \verb+gpsMeasurements.lsa+ Include record and take a moment to review the contents.  We see the UNCR record and six GPS vectors (DXYZ) relating the TPs to control sites VNDP and P513.  The Details column of the Project Navigator shows the lengths of each vector.  Select the UNCR record and look at the attributes shown in the Record Editor.  It's been given a meaningful label `UNCR\_DXYZ\_STATIC' and contains two non-zero components, a to-station centering error and a from-station centering error. Both errors have a value of 1.0 mm.  These error terms will be combined with the uncertainty (covariance matrix) specified with any measurements referencing this UNCR record; each of the GPS vectors reference this UNCR so any uncertainties specified by their individual measurements will consider the aforementioned error terms.
+
+Select one of the DXYZ records and review its attributes in the Record Editor.  We see the From and To sites specified, the X/Y/Z vector components, and the upper triangular covariance matrix components.  We see that the `UNCR\_DXYZ\_STATIC` uncertainty model has been specified.
+
+Note that the Scaling for each measurement is set to None, for an effective value of 1.00. This is also a good time to point out the Scale column in the Project Navigator. Each Include record includes a scale term. By default, this is set to None (1.000), however the user may specify a VSCA label or numeric value and this value will be propagated to each of the child records associated with the Include. Later in this example we will use this field to manipulate the scaling of the uncertainty in our observations to achieve a properly balanced observation set.
+
+Also note that our map looks pretty plain; we don't see the GPS vectors we just added, nor do we see the TPs.  This is because \textsf{salsa} doesn't yet know the location of the TPs\ldots
+
+We can now proceed with a least squares adjustment of these GPS vectors.  If we were to select the menu action Project $\to$ Calculate Adjustment, initial coordinates for the TPs would be determined, and the least squares solution would commence.  But instead of jumping right to the network adjustment, let's take advantage of \textsf{salsa}'s menu action Project $\to$ Generate Initial Positions (do save when prompted).  This action actually initiates a solution (using \textsf{lsasolver} behind the scenes) but aborts immediately after determining the initial coordinates of any unknown points, such as our TPs.  This action can be useful to users in that it facilitates rendering of the measurement network in the map, and the user has an opportunity to `sanity check' the problem before commencing with a least squares solution.
+
+After generating the initial positions, observe that they (the TPs) are now shown in the Project Navigator, under a new Include record near the top labeled `Auto-generated Initial Coordinates.'  Each of these `auto-generated' POSG records is depicted with a little gear image to remind the user they are automatically determined and were not part of the user's problem definition.  These will be overwritten each time the user calculates an adjustment.  These records are not editable (except for their station label), and they cannot be copy-pasted elsewhere into your project.  You may delete them, since they will just be auto-generated again the next time you calculate an adjustment.
+
+Though doing so now is not advised unless this example has been previously executed successfully at least once, auto-generated POSG records may be permanently added to a project; do so by running Project $\to$ Calculate Adjustment, opening the final positions table via View $\to$ Final Positions, selecting an auto-generated point, then right clicking to access and select the Add to project as Float option.  Doing this will make the gear icon disappear and the POSG record become persistent, moving the POSG into a new Include record (and file on disk) \verb+initial_coordinates.lsa+.  Thereafter, the file will be used as input to the solver and will not be overwritten when calculating an adjustment.
+
+Now that we have initial positions estimated for the TPs, the TPs show up in our map, as do the GPS vectors to the control points.  Note that auto-generated positions are depicted with `?' on their markers. (If the adjustment was already calculated in order to permanently add the auto-generated POSG records to the project, the Initial radio button below the map may need to be re-selected to display the initial auto-generated positions with their `?' symbols.)
+
+Take a few moments to experiment with the map controls.  Panning and zooming can be done with mouse actions (click-and-drag, and scroll, respectively) or by using the navigation controls overlaid on the map.  (If you prefer, you can instead use the arrow keys on your keyboard to pan, and +/- to zoom.)  Note the little `home' button in those controls; it will redraw the map to include everything in our network.
+
+Zoom into the cluster of TPs on the map.  Note that when you select an item in the map (by clicking on it), it also becomes selected in the Project Navigator.  Conversely, when you select a record in the Project Navigator, it becomes selected (highlighted) in the map.  This coupling of the interfaces is intended to help users visualize their measurement network and troubleshoot blunders or other errors.
+
+Since our network appears to be sane, let's proceed with an adjustment.  First, we will disable reliability metrics. Reliability metrics are turned on by default but are not the focus of this example. They are the primary focus of \verb+example02+. To disable reliability metrics, first open the Configuration Menu by selecting the menu action Project $\to$ Configure\ldots and under the Solver Options box, select the \verb+no+ button next to Calculate External Reliability. Press \verb+OK+ at the bottom of the Configuration Menu to accept the changes and close the window. Use the menu action Project $\to$ Calculate Adjustment (or F5).  Save when prompted.
+
+Wow!  Lots of things just happened in the \textsf{salsa} interface!  Reference Figure \ref{fig:ex01gpsadjust}.  Just below the Project Navigator we see some summary information (processing time, degrees of freedom, etc.) and two important tests: the convergence test, and the Chi-squared test.  The convergence test shows that convergence was achieved, in 2 iterations, and the test indicates PASS.  However, the Chi-squared test does not pass with the default confidence level of 1-sigma. The significance of this result will be discussed momentarily, for now let's proceed to investigate other components of the \textsf{salsa} interface.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{example01/gpsadjust}
+\end{center}
+\caption{The Salsa interface after running the GPS-only adjustment.}
+\label{fig:ex01gpsadjust}
+\end{figure}
+
+Below these convergence and Chi-squared test summaries we see a Measurement Residuals table, which by default lists each measurement in descending order of standard residual magnitude.  Note that DXYZ vectors are listed in this table by individual components (X, Y, Z). If any measurement standard residual exceeds the statistical test threshold as defined in appendix \ref{appendices:RedStdResComp}, the standard residual value is rendered in red text; no measurements in this example exceed the threshold. 
+
+Now is a good time to again mention that reliability metrics are not calculated in this example. Because of this, a few of of the features in the \textsf{salsa} interface are disabled. First, the ``Max Ext Mag (m):'' heading is disabled. Next, the two rightmost columns of the Measurement Residuals table should be ignored. Lastly, the three rightmost columns in the Point Confidence Regions table as well as the checkbox labeled ``Rectangles'' in the mapping window should also be ignored. See \verb+example02+ for in-depth coverage of reliability metrics and their uses.
+
+To the right of the Measurement Residuals table we see the Point Confidence Regions table.  This table lists all points in the network in descending order of their 3-D confidence region major axis length (the user can choose to sort by other columns).  Thus, points with the largest uncertainty are listed first.
+
+In the status window at the bottom of the interface we see some output from the CLI applications that prepared the data (\textsf{lsapreprocessor}), executed the adjustment (\textsf{lsasolver}) and extracted results (\textsf{lsapost}).  Since this adjustment executed appropriately, there isn't too much of interest in here, but know that this output exists and is a good place to look for issues if the adjustment is not successful.
+
+Finally, we note that the map has changed.  The map now shows the least squares problem output, not the input (observe the Initial and Adjusted radio buttons below the map which allow the user to switch between the two states.)  Our TPs are now rendered with error ellipses depicting their 2-D confidence regions.  The scale of the ellipses is shown below the map and can be adjusted by manipulating the slider.
+
+So how did the adjustment go? The solution converged, no measurements were flagged as blunders and our point confidence regions are all sub-cm. However, given the high APV value of 4.401 raised a failure alert for the Chi-squared test, this should not be deemed a success. Generally, when the Chi-squared test fails this should be taken to mean that the data are discrepant with the model parameters. This can be attributed to blunders in the data or having overly optimistic sigmas that are small in value. Given that no blunders were raised in the measurement residuals table, the latter explanation seems a likely candidate.
+
+Let's account for this by utilizing a variance scaling (VSCA) modifier. In the project navigator, select the UNCR record and proceed to click on Record $\to$ Insert $\to$ VSCA. Edit the label and Scale Factor values of the new VSCA record to GPS and 2.000 respectively. Multi-select all of the DXYZ records by clicking on the first DXYZ record, then press Shift + Left click on the last DXYZ record. Go to the Scaling dropdown box in the Record Editor and select GPS from the dropdown menu. Take a moment to observe that the Scale value for each of the DXYZ records is now 2.000.
+
+Calculating a new adjustment will drop the APV to a more reasonable value of 2.200. Unfortunately, this still does not pass the Chi-squared test. At this point, we could go back to our VSCA record and increase its value further; instead, let's try an alternate method of boosting the variance scaling of the DXYZ records. Find and click on the \\\verb+gpsMeasurements.lsa+ Include record. In the Record Editor, click on the Scaling dropdown box and select Value, then set the number next to the dropdown box to be equal to 2.000. Upon hitting the Enter key, the user will observe that the scale values of our DXYZ records are now equal to 4.000. Setting a scale value (either by entering the value directly or through a VSCA record) on the parent Include record will propagate to each of the child records. However, since each child DXYZ record also utilizes the GPS VSCA modifier, the scale for those DXYZ records is the product of their VSCA modifier and the scale of the parent Include record. Calculating a new adjustment now yields a Chi-squared value of 1.100, which passes the test.
+
+\subsection{Add TP Conventional Network}
+We will now add the conventional observations between the TPs.  These observations include direction sets, zenith angles, and distances.  Again, keying these data manually would be very tedious, so please take advantage of the prepared files provided with SALSA. In the Project Navigator, select our last Include record \\\verb+gpsMeasurements.lsa+ (so that the next include will be inserted at this same level in the hierarchy).  Then use menu action Import $\to$ Include from LSA\ldots  and when prompted, select the file \verb+conventional.lsa+.  Figure \ref{fig:ex01treewithtp} shows the Project Navigator once that file is included and expanded.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{example01/treewithtp}
+\end{center}
+\caption{Portion of the Salsa Project Navigator after adding conventional observations to the temporary points.}
+\label{fig:ex01treewithtp}
+\end{figure}
+
+Take a few minutes to review the records we just inserted.  Select the different record types and review their attributes in the Record Editor.  Observe the organization of these records; instrument heights and uncertainty models are specified near the top, then the observations are specified by type within their own included file \verb+conventional_TP.lsa+: direction sets, zenith angles, and distances.  This is just one example of a project's organization; some users may prefer to group observations by setup instead.  SALSA is not order-dependent, giving the user flexibility to organize their project however they choose.  For example, the instrument heights could be specified \emph{after} the observations, and the solution will not be impacted.
+
+Let's look specifically at instrument heights.  Select the first HGHT record, with label HGHT\_TP1.  The Record Editor shows just five attributes: Enabled, Label, Height, Sigma, and the General Notes field.  This record is enabled, and we could disable it by unchecking it in the Project Navigator or the Record Editor.  It has the label HGHT\_TP1 which is obviously a reference to the station name TP1.  Note, however, that this label can be any text that the user finds helpful that can uniquely identify this height and sigma value.  For example, if TP1 was set up and observed twice, once by Jack, and once by Sue, we will have two different instrument heights and sigmas for TP1, and we would create two HGHT records, perhaps one with label HGHT\_TP1-Jack and one with HGHT\_TP1-Sue (or morning and afternoon - whatever works!).  Further description can be kept in the General Notes field for later reference.
+
+Now that we see that a height record is just an arbitrary label and a value, skip down to the first ZANG (zenith angle) observation, and let's see how these height records are referenced.  Figure \ref{fig:ex01zangrecord} shows the Record Editor with the first ZANG record selected.  Observe that this zenith angle is observed at station TP1 and is observing the zenith angle to TP2.  The Record Editor shows ``Height From:'' and there is a dropdown list of choices.  The currently-selected height record is the one we looked at moments ago, with label HGHT\_TP1, and we see that the value is shown next to it, 1.6160 meters.  Look at the other options.  We see the other height records available, and we see the choice ``Value.''  If we choose Value, the 1.6160 entry becomes editable, and we can type in a numeric value applicable to this individual ZANG observation.
+
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{example01/zangrecord}
+\end{center}
+\caption{Record Editor showing the attributes of a ZANG (zenith angle) record.}
+\label{fig:ex01zangrecord}
+\end{figure}
+
+
+The point we hope the reader takes from this close look at these height and ZANG records is this:  \textsf{salsa} provides the flexibility to key in these values directly, but a smarter scheme is to define these attributes (height of instrument, uncertainty model) with descriptive labels, and then specify those `modifiers' by name in the individual measurement records.  This way, the user only needs to make an edit in one place (the referenced HGHT or UNCR record) to update all the measurements referencing that modifier. At this point, proceed to calculate an adjustment. The APV still passes for our updated network with an APV value of 1.042.
+
+
+\subsection{Add Conventional Observations to Target}
+
+Finally, let's add the conventional observations to the inaccessible target, which is the subject of this survey after all.  These observations are provided in the file \verb+conventional_tgtPole.lsa+, so select the Include record in our project tree \\\verb+conventional_TP.lsa+ (located as a child record in the \verb+conventional.lsa+ Include record), then  use menu action Import $\to$ Include from LSA\ldots and when prompted, select the file \verb+conventional_tgtPole.lsa+. Expand it in the Project Navigator and observe that there are three groups of observations, this time organized by measurement type. The observation sets include direction sets, zenith angles, and distances to a new-to-this-project site named POLE.  Note that these observations reference the same height (HGHT) records and uncertainty models (UNCR) that we defined inside the TP-only file.
+
+Proceed with an adjustment (F5). Similar to the GPS only adjustment we can observe that the convergence test passes with sub cm confidence intervals. However, the Chi-squared test now fails with a value of 6.595 and there are now two ZANG records highlighted red in the Measurement Residuals table. Our first diagnosing tool that should be utilized for probing discrepant data is the measurement residuals table. Sort the rows by the \textbar Std\textbar\ column. At the top two entries the outlying ZANG data records can be observed. Upon closer inspection the user may notice that two of the top three entries are ZANG measurements with POLE serving as the To point.
+
+With the prevalence of ZANG records at the top of our Measurement Residuals table, it seems prudent to investigate these measurement types further. From the menu select Record $\to$ Find/Filter (or Ctrl+F). The Filter row will contain a dropdown box with a default value of 'All Records'. Click on the box and scroll until you find an option labeled ZANG. Once found, click on the option to leave only ZANG records and their associated parent Include records. Scrolling through the individual sigmas, it can be observed that many have reported sigmas as low as 1 arc second. Exit out of the Filtered view by clicking the x in the upper right hand corner of the Find/Filter box. Find the UNCR records under the \verb+conventional.lsa+ Include record and select the `UNCR\_ZANG` uncertainty modifier. Navigate to the Sigma row in the Record Editor and modify the sigma value to be 3.0 soa.
+
+Calculating an adjustment will lower the APV to a more reasonable value of 3.030, but the Chi-squared test still fails. At this point, we will introduce another useful diagnostic tool, the Histogram Dialog box. Select View $\to$ Histogram to observe the Histogram Dialog box present in Figure \ref{fig:ex01Histogram}. The histogram utility displays all of the measurement residuals in one plot while allowing the user to switch on or off measurement types or files from the residuals view as well. On the tail ends of the histogram, we can observe that two ZANG measurements still appear to be outliers. Clicking on these two ZANG measurements on the two tail ends reveal that both of the measurements have POLE serving as the To station...
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{example01/histogram}
+\end{center}
+\caption{Measurement histogram with APV value of 3.015}
+\label{fig:ex01Histogram}
+\end{figure}
+
+Go ahead and close out of the histogram. Navigate to the Zenith Angles section of the \verb+conventional_tgtPole.lsa+ Include record and create a new UNCR record by selecting the menu option Record $\to$ Insert $\to$ UNCR. Assign its label a value of `UNCR\_ZANG\_POLE`; its From Centering Error a value of 1 mm; its To centering error a value of 1 cm and its Sigma a value of 10.0 soa. Multi select all of the ZANG measurements under \verb+conventional_tgtPole.lsa+ and select `UCNR\_ZANG\_POLE` from the Uncertainty dropdown box. Calculate an adjustment to observe a new APV value of 2.300. Though the Chi-squared test has not passed yet, the POLE ZANG measurements are no longer at the top of our measurement residuals table. Opening up the Histogram again, the user can also verify that the ZANG measurements are no longer present at the two end tails. The POLE DIST measurements now appear at the top of the measurement residuals table.
+
+Upon selecting either of the DIST measurements in the \verb+conventional_tgtPole.lsa+ Include record, it can be seen that both measurements contain a reference to the `UNCR\_DIST\_RED` uncertainty modifier. Navigate to the Uncertainty Modifiers section under the \verb+conventional.lsa+ Include record and select the `UNCR\_DIST\_RED` uncertainty modifier. To verify that this modifier is only associated with the POLE DIST measurements, right click `UNCR\_DIST\_RED` and select Select Referencing from the menu. The desired measurements (and only the desired measurements) are highlighted appropriately. Select the `UNCR\_DIST\_RED` uncertainty modifier and modify its sigma value to be 3 cm. Recalculating an adjustment yields a passing value of 1.082.
+
+\subsection{Review and Summary}
+
+Zoom in on the map to the small network of TPs and our target POLE. Note the relative sizes of the error ellipses; it is reasonable that the uncertainty in POLE is larger than for our TPs which benefited from GPS vectors. Our Point Confidence Regions table shows that the uncertainty in POLE's final position estimate is at the cm level, at 1-sigma confidence level. The current choice of confidence level is displayed at the top of the Point Confidence table and can be changed in the Configuration Menu. Figure \ref{fig:ex01final} shows the map view at this stage.   
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{example01/final}
+\end{center}
+\caption{Map showing TP and Target adjusted coordinates and confidence ellipses.}
+\label{fig:ex01final}
+\end{figure}
+
+Before leaving this example, let's take note of three output files that have been generated each time we have run an adjustment.  All should exist in the \verb+example01+ folder containing our project.
+
+The first is the log file produced by \textsf{lsasolver}, named \verb+example01.out+.  Since this example problem ran well for us, and we were able to troubleshoot a few discrepant measurements using the \textsf{salsa} GUI, we really didn't find ourselves needing to dig into the log file for this example.  However, the reader is encouraged to scan through this log file, relying on the explanation in Section \ref{sec:howtoreadoutfile} as a guide.
+
+The second is \verb+example01.pts+ which is a simple text file containing all the points involved in this adjustment.  This file can be opened via the menu action View $\to$ Final Positions and is intended to give the user a quick look at the output in tabular format.
+
+The third is a comma-separated values file named \verb+example01.csv+.  This file also contains the adjusted coordinates but in a format easily opened using your favorite spreadsheet program.
+
+
+\section{Example 2: Redundancy and Reliability}
+
+Example 1 illustrates some of the indicators SALSA uses to help the user recognize that a problem exists (e.g., the failing Chi-squared test and elevated APV), and how these indicators can help the user isolate the problem (e.g., by flagging measurements with high residuals). This example illustrates additional important indicators of the solution quality: the \emph{redundancy} and \emph{reliability} metrics. Redundancy is critically important in a geodetic least squares problem, and thus the user should ensure the network contains sufficient redundancy in order to have confidence in the final result. The confidence is mainly expressed through reliability metrics, which will be the focus of this example. 
+
+In essence, reliability metrics inform the user of the network's susceptibility to blunders. This is done through three metrics: local reliability (also known as redundancy), internal reliability, and external reliability. The first half of this example will inform the user of the causes and indicators in SALSA of low redundancy. The second half will focus on the external reliability metric to show the impact of low redundancy on affected points in the network.
+
+Please reference Appendix \ref{chap:solverout} titled ``Understanding the Solver Output'' for a brief explanation of redundancy and reliability metrics and references therein for further reading. Reference Appendix \ref{appendices:RedStdResComp}, ``Reliability and Standard Residuals,'' for a comprehensive treatment of these Reliability metrics.
+
+To execute this example, copy the \verb+example02+ folder from the SALSA installation directory (i.e., \verb+C:\Program Files\SALSA\examples\example02+) onto your desktop or other convenient location.  Start \textsf{salsa} and open the project file \verb+redundancy.proj+ (Project $\to$ Open LSA\ldots).  For the first part of this example, make sure \textsf{salsa} is \emph{not} configured to compute external reliability:
+\begin{itemize}
+  \item Project $\to$ Configure\ldots
+  \begin{itemize}
+    \item Calculate External Reliability = No
+    %\item External Reliability Warning (m) = 0.5
+    %\item External Reliability Error (m) = 1.0
+  \end{itemize}
+\end{itemize}
+
+Then run the adjustment (F5). Figure \ref{fig:ex02firstrun} shows the \textsf{salsa} interface after the adjustment, and Figure \ref{fig:ex02initialmap} provides a zoomed-in view of the network design within the map view. 
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{example02/after_first_solution}
+\end{center}
+\caption{\textsf{salsa} interface for redundancy project, after adjustment.}
+\label{fig:ex02firstrun}
+\end{figure}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{example02/initial_map}
+	\end{center}
+	\caption{The redundancy project survey network.}
+	\label{fig:ex02initialmap}
+\end{figure}
+
+There are three fixed points to the east, and a single estimated target to the west. The target is estimated using the classic ``three-point intersection'' methodology: azimuths from each of the fixed points intersect at the target to determine horizontal position, and zenith angles from the fixed points determine the height component. Direction sets or horizontal angles could have used instead of azimuths, but azimuths are easier to show in this example.
+
+This solution looks fine: The adjustment converged, the Chi-squared test passed, and no standard residuals are flagged as likely blunders.
+
+What happens if the three-point intersection is reduced to a two-point intersection? To find out, select and disable the AZIM measurement record from TP03 to TGT1 and re-run the adjustment (F5). Note the solver still achieves convergence, the Chi-squared test passes with an APV near 1.0, and there are no high residuals. However, the two remaining azimuths to TGT1 show redundancy values very close to zero (0.001). In addition, the Int Rel column for these two measurements show values of approximately 1257 and 1413 SOA respectively. This means that any error in the measurement smaller than 1257 or 1413 SOA will be undetectable. Why this is a cause for concern will be shown later through external reliability. Save the output files \verb+.out+, \verb+.csv+, or \verb+.pts+ for reference later in this example.
+
+Even though the solver successfully converges on a solution and the Chi-squared test passes, the redundancy metric indicates a major problem in the survey. Lacking redundancy means that any error in the measurements goes directly into the solution \emph{without any obvious indication to the user!}. 
+
+To demonstrate this problem, select the AZIM record from TP02 to TGT1 and change the minutes value of the angle from 10' to 19' (simulating a user blunder). Then run the adjustment. Figure \ref{fig:ex02witherror} shows the state of the \textsf{salsa} interface at this point.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{example02/blunder_introduction}
+\end{center}
+\caption{Introducing a 9' blunder in the AZIM TP02 to TGT1 record (19' vs 10').}
+\label{fig:ex02witherror}
+\end{figure}
+
+If the low redundancy metric is ignored, the solution appears satisfactory: it converges with no high residuals and a passing Chi-squared test. However, the final adjusted position of TGT1 is now over three meters shifted to the west due to this blunder. The shift in solution is observable by comparing the XYZ Final Adjusted Position for TGT1 in the \verb+.out+ output file from before and after the blunder error is introduced.  Take note: ignoring low redundancy in the network leaves you susceptible to measurement blunders with no obvious indication that an error has occurred.
+
+Leaving the blunder error in place and re-activating the third azimuth record (from TP03 to TGT1), re-run the adjustment. Now the Chi-squared test blows up with an APV value of 718, a clear indication something is wrong. The Chi-squared test indicates whether the post-fit residuals (i.e. the difference between the observed and expected measurements) are aligned with the prescribed uncertainties of the measurements, so having 9 arc-minutes of error in one of the post-fit residuals relative to the expected 10 arc-seconds uncertainty produces a very high APV. However, as this example illustrates, errors in measurements that lack adequate redundancy do not yield high residuals and thus do not inflate the APV or cause the Chi-squared test to indicate a problem.  The user must understand that some redundancy is required for every measurement in the network in order to have full confidence in the final solution.
+
+How much redundancy is required to achieve confidence in the solution?  This can be a difficult question to answer.  First of all, there is no single ideal minimum threshold that is appropriate for all geodetic survey problems.  Second of all, how can the surveyor know how poor redundancy in a given measurement actually affects their confidence in the final adjusted coordinates?  Fortunately, SALSA includes reliability metrics which may help answer these questions by mapping and quantifying the impact of low measurement redundancy into terms the user understands: final adjusted coordinates. Reliability metrics provide an intuitive and visual descriptor, called a ``reliability rectangle,'' which shows a zone wherein the solution cannot be verified based on elevated standard residuals alone. If the size of the rectangle exceeds the user's tolerance for unchecked errors, then the user knows they must add additional measurements to the network.  A deep dive into the mathematical basis behind reliability metrics can be found in appendix \ref{appendices:RedStdResComp}, ``Reliability and Standard Residuals.''
+
+Reliability metrics are normally enabled by default. However, reliability calculations were turned off by at the beginning of this example and will have to be manually re-enabled.  Go ahead and enable reliability calculations, and adjust the warning and error thresholds as follows:
+\begin{itemize}
+  \item Project $\to$ Configure\ldots
+  \begin{itemize}
+    \item Calculate External Reliability = Yes
+    \item External Reliability Warning (m) = 0.5
+    \item External Reliability Error (m) = 1.0
+  \end{itemize}
+\end{itemize}
+
+In the Tree View, locate and disable the third azimuth record (TP03 to TGT1) again. Recalculate the adjustment.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{example02/with_reliability}
+\end{center}
+\caption{Output with reliability metrics included}
+\label{fig:ex02withReliability}
+\end{figure}
+
+Recall that earlier, even with the 9' blunder, there was nothing obvious in the \textsf{salsa} output to draw our attention to any problem.  Now, looking at Figure \ref{fig:ex02withReliability}, immediate changes are noticeable. First, the Ext Rel (external reliability) column header in the Measurement residuals table is highlighted red and the column has been filled with meaningful values instead of dashes, unlike before. Within the table, the user can see the two AZIM measurements are flagged with values that are 7.919 and 8.444 meters respectively. Above the Measurement Residuals table, the text ``Max Ext Mag (m): 8.4440 $>$ 1.0000'' is also highlighted red. This value represents the maximum external reliability value for all measurements and indicates whether that value constitutes an error (red) or a warning (orange) based on the user-configurable thresholds we edited moments ago.  In addition, the Point Confidence table now displays three additional numbers beyond the ellipse values: 3D maj RR, 2D maj RR, and Vertical RR. These values represent the 3D and 2D major axes of the reliability rectangle as well as the vertical component of the reliability rectangle.
+
+What does all of this mean? Because the maximum external reliability magnitude calculated is 8.444 meters, any error in a measurement (i.e., blunder) that affects the estimated position by less than 8.444 meters is undetectable. In other words, the solution exists in a zone (reliability rectangle) indicating how much the solution could change due to a blunder \emph{without registering elevated measurement residuals.}
+
+To highlight the scale of the reliability rectangle for this example, Figure \ref{fig:ex02rectangle} shows the reliability rectangle enabled in the mapping window. Note the reliability rectangle is enabled by selecting the corresponding checkbox in the mapping window. The rectangle is cyan by default; however, the user has the ability to change the color, line style, and line width in the menu Preferences $\to$ Map Preferences...
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{example02/rectangle}
+\end{center}
+\caption{Reliability rectangle with one AZIM record disabled (2-point intersection).  Note the scale of the map shows the rectangle is several meters in size.}
+\label{fig:ex02rectangle}
+\end{figure}
+
+\newpage
+
+At first inspection, it may appear that the point confidence regions (ellipses) were disabled, but in fact, the TGT1 ellipse is so small in comparison to the reliability rectangle that it is invisible. While the survey result exhibits adequate precision (i.e., sub-meter error ellipse), the lack of redundancy yields a reliability rectangle that highlights the susceptibility of the survey result to a single undetectable error.
+
+Now, re-enable the third AZIM measurement and recalculate the adjustment. The reliability results change drastically. The ``Max Ext Mag(m):'' value has dropped to 0.3227 meters; the survey design is now capable of detecting a multi-meter error as has been introduced in our AZIM record from TP02 to TGT1.  The residuals and Chi-squared test are able to quickly show that a blunder has been committed. Diagnosing the problem is now similar to what was done in \verb+example01+.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{example02/with_redundancy}
+\end{center}
+\caption{Reliability rectangle with AZIM record re-enabled (3-point intersection).  Note the scale of the map shows the rectangle is sub-meter.}
+\label{fig:ex02redundrectangle}
+\end{figure}
+
+For completeness, and to satisfy our desire to resolve the blunder in this survey, correct the blunder in the AZIM record (TP02 to TGT1), restoring the minutes field from 19 back to 10.  Re-run the adjustment.  All tests should pass, and both the point confidence region and reliability rectangle should be sub-meter, as shown in Figure \ref{fig:ex02resolved}.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{example02/resolved}
+\end{center}
+\caption{Adjustment result with blunder resolved.  Note the ellipse and rectangle show the precision and reliability, respectively, are sub-meter.}
+\label{fig:ex02resolved}
+\end{figure}
+
+In summary, just as the point confidence regions and ellipses help quantify and visualize the precision achieved through the survey and adjustment, the reliability metrics and rectangles help quantify and visualize the sensitivity of those results to a single undetectable error.  In order to assert confidence in a survey result, the surveyor must ensure that the survey design includes sufficient redundancy to meet both the precision and reliability goals as demanded by their application.
+
+\newpage
+
+\section{Example 3: 1D Adjustment (Leveling) Workflow}
+A commonly encountered problem in survey is the need to run an adjustment on a leveling line.  These adjustments are special since they typically are devoid of any measurements which could be used to determine the horizontal position of a point. (Note: Project data for this example were constructed from \cite{ngsSlopeSurvey}). Consider the following project initially consisting of one fixed point and two points fixed in latitude and longitude. Since we will only be incorporating leveling data, it is important that our unknown points be fixed in latitude and longitude so that the problem is not underdetermined. Create POSG records utilizing the information in Table \ref{tab:POSGleveling} below.
+
+\begin{table}[htb]
+\caption{POSG Record Values}
+\vspace{-0.4 cm}
+\label{tab:POSGleveling}
+\begin{center}
+\resizebox{\textwidth}{!}
+{\begin{tabular}{ccccc}
+	\hline
+	\textbf{Point} &\textbf{Status} &\textbf{Lat (N)} &\textbf{Lon (W)} &\textbf{Orthometric Hgt(m)} \\
+	\hline
+	AUSTIN CE & Fixed & 30 16 48.06083 & 97 44 16.33828 & 160.1613 \\
+	N2277258 & Lat/Lon Fixed & 30 16 48.03800 & 97 43 48.14953 & 0.0000 \\
+	A 1521 & Lat/Lon Fixed & 30 16 49.57966 & 97 43 0.43960 & 0.0000 \\
+	\hline
+\end{tabular}}
+\end{center}
+\end{table}
+
+We will now incorporate the set of HDIF measurements from our fixed station to the stations whose heights we want to estimate. Locate the \verb+example\example03+ subdirectory and copy its contents into the current project folder. Utilizing the Import $\to$ Include from LSA... menu action, go ahead and select the file \verb+loop1.lsa+. At this point, go ahead and expand the records under the \verb+loop1.lsa+ Include record. The \verb+hdiffsAB.lsa+ contains HDIF records starting at AUSTIN CE and going to N2277258, while the \verb+hdiffsBA.lsa+ Include record contains HDIF records working in the opposite direction. 
+
+At this point, the user may have noticed that in each .lsa record that only two points have latitude and longitude information associated with them. The rest only have HDIF records. Normally, this would cause the problem to be underdetermined. However, SALSA is fully capable of handling 1-D leveling lines. As a demonstration, go ahead and disable the \verb+hdiffsBA.lsa+ Include and A 1521 POSG records. Hit the Home key in the Map widget to refresh the view, then select the menu action Project $\to$ Generate Initial Positions and when prompted select Save. 
+
+The user can now observe the appearance of the temporary leveling points between AUSTIN CE and N2277258 in Figure \ref{Fig:AprioriLeveling}. Zooming in on the map it can be seen that the temporary points are chained together based on the set of HDIF records they are associated with. Further inspection in the Auto-Generated Initial Coordinates shows that SALSA has made an initial estimate of the Latitude and Longitude for these temporary points and fixed those two values as well. SALSA has a special treatment for 1-D leveling lines. As the temporary points can not be estimated by most of the a priori algorithms, if SALSA detects a collection of points joined together by HDIF records, it will estimate their latitudes and longitudes by evenly spacing the points between the estimated endpoints. Once those estimates are obtained, their latitude and longitudes will be fixed so that the solver can compute unique solutions for these points in 3D space. The estimation of these values serves mostly as a sanity check so that the user can ensure the leveling line is appropriate. For more detailed information on how leveling lines are drawn, refer to the Leveling Loop Formation and Side Shot Handling discussions of section \ref{sec:apriorisection}.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=0.50\textheight]{oneDLevelingAPriori.png}
+	\end{center}
+	\caption{Leveling line generated from HDIF record set.}
+	\label{Fig:AprioriLeveling}
+\end{figure}
+
+Now let's return to the crux of the exercise and solve for the unknown heights of our sites. Re-enable the \verb+hdiffsBA.lsa+ and A 1521 records, then choose the menu action Import $\to$ Include from LSA... and select \verb+loop2.lsa+ when prompted. The reported sigmas on our HDIF records trend more optimistic than conservative. This will be accounted for by creating a UNCR record with label hdifUNCR and sigma value of 0.0001 m. Once the UNCR record is created, multi select all HDIF records and choose hdifUNCR from the Uncertainty dropdown box. Select the menu action Project $\to$ Calculate Adjustment and save when prompted. The reported orthometric heights (recorded in Table \ref{tab:FinalHeightValues} below) can be observed by choosing the action View $\to$ Final Positions. With no a priori knowledge of our heights, the solver was able to provide an estimate utilizing a collection of HDIF records.
+
+\begin{table}[H]
+\caption{Final Height Values}
+\label{tab:FinalHeightValues}
+\begin{center}
+\begin{tabular}{|cc|}
+	\hline
+	\textbf{Point} &\textbf{Orthometric Hgt(m)}\\
+	\hline
+	N2277258 & 178.3720 \\
+	A 1521 & 177.5100 \\
+	\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Example 4: 2D Adjustment (Horizontal) Workflow}
+
+Sometimes it is desirable to perform a 2D adjustment, in which the only measurements present are those which constrain the horizontal positions.  These adjustments are special since they typically are devoid of any measurements which could be used to determine the height of a point.  In this section we briefly discuss how to perform horizontal adjustments in \textsf{salsa}.
+
+If there are already POSG or POSC records for all points in the horizontal only project, the user may proceed to mark them all as constrained in height or fixed.  Note that these settings may be toggled with multiple POSG and POSC records selected. %  If apriori positions need to be generate, the user should proceed with the following steps:
+
+\subsection{Example}
+
+Consider the following project consisting of two locations, A and B, in which A is fixed and B is constrained and the geoid is specified to be None.  This network is depicted in Figure \ref{Fig:Hor_ex1}.
+
+\begin{table}
+\centering
+\begin{tabular}{|ccccc|}\hline
+\textbf{Point}&\textbf{Status}&\textbf{Lat}&\textbf{Lon (W)}&\textbf{Hgt}\\
+A&Fixed&0&0&0\\
+B&Height Constrained&0&-1&0\\\hline
+\textbf{Meas}&\textbf{From}&\textbf{To}&\textbf{Value}&\textbf{Uncr}\\
+AZIM&A&B&89$^o$ 59' 59''&10''\\
+AZIM&A&B&90$^o$  0'  1''&10''\\
+DIST&A&B&111.1783 km&1 km\\\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{Hor_ex1.png}
+\label{Fig:Hor_ex1}
+\caption{A simple horizontal example with two points and two AZIM records.  Note that point B must be constrained in the height since there are no measurements which would allow \textsf{salsa} to determine the height.}
+\end{figure}
+
+The point B must be constrained in height for the problem not to be underdetermined.  In \textsf{GeoLab}, this constraining was automatically done for the user, converting points to status 001 instead of 000.  However, \textsf{salsa} does not automatically change the settings so the user is responsible for this step.
+
+The adjustment depicted will execute in \textsf{salsa}, yielding the results displayed in Table \ref{Table:Hor_ex0}.  The results are consistent with the adjustment results one would obtain from \textsf{GeoLab}.
+
+\begin{table}
+\centering
+\label{Table:Hor_ex0}
+\begin{tabular}{|ccc|}\hline
+\textbf{Program}&\textbf{B Final Latitude (N,dms)}&\textbf{B Final Longitude (E,dms)}\\\hline
+\textsf{salsa}&0$^o$ 0' 0''&0$^o$ 59' 55.4795''\\
+\textsf{GeoLab}&0$^o$ 0' 0''&0$^o$ 59' 55.47950''\\\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+

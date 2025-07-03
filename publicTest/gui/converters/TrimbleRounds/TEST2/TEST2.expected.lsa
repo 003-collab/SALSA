@@ -1,0 +1,20 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Trimble Rounds Converter converter from /home/rmilburn/projects/lsa/publicTestOutput/gui/converters/TrimbleRounds/TEST2/TEST2.jxl on 12:46:07 May 29, 2020
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_T6 1.59835 m 0.00000 m
+# Raw height 1.467 m extracted from SXNotch method
+HGHT HGHT#1_T3 1.62949 m 0.00000 m
+# Raw height 1.498 m extracted from SXNotch method
+HGHT HGHT#2_T3 2.13500 m 0.00000 m
+# Raw height 2.135 m extracted from TrueHeight method
+HGHT HGHT#1_T5 2.13500 m 0.00000 m
+# Raw height 2.135 m extracted from TrueHeight method
+HGHT HGHT#2_T6 2.13500 m 0.00000 m
+# Raw height 2.135 m extracted from TrueHeight method
+
+--include TEST2_T6.lsa
+--include TEST2_T3.lsa

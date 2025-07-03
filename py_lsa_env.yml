@@ -1,0 +1,18 @@
+name: py_lsa
+dependencies:
+- h5py=3.11.0 # Used by numerous scripts
+- hdf5=1.14.3 # SWAP version pinned
+- libiconv=1.16 # Used by doxygen
+- matplotlib=3.8.4 # Used in benchmark test parser
+- numpy=1.26.4 # Used in several scripts
+- openpyxl=3.0.10 # Used by h5XLSM
+- pandas=1.5.3 # Used by excel test driver
+- pyproj=3.6.1 # Used by h5pyProj.py
+- python=3.11.9 # SWAP version
+- python-dateutil=2.9.0post0 # Used in numerous scripts
+- sqlite=3.45.3 # Used in benchmark test parser
+- tk=8.6.13 # Used by h5XLSM
+- zlib=1.2.13 # Used for quazip build
+# Stick with specific version of pyproj for now. Check for
+# future updates that resolve comDD in southern hemisphere.
+# Check elif to_type=="Projected CRS" block in h5pyProj.py for more details

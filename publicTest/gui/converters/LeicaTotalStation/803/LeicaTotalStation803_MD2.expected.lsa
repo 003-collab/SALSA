@@ -1,0 +1,17 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v8.03 converter from /home/rmilburn/projects/lsa/test/converters/LeicaTotalStation/803/LeicaTotalStation803.log on 11:09:31 Apr 01, 2019
+
+#Leica System 1200 Sets of Angles, Version 8.03 Logfile
+#Instrument Type		: TS30 0.5" 
+#Instrument Serial No.	: 363912    
+#Sets of Angles Start	: 01.20.16, 12:07:58
+
+DGRP DGRP#3 MD2 UNCR UNCR#1_HDIR
+HDIR DGRP#3 MD3 0 0 0.0 DMS 5.0 soa HTO HGHT#1_MD3
+HDIR DGRP#3 8305 333 8 26.6 DMS 5.0 soa HTO HGHT#2_8305
+
+ZANG MD2 MD3 89 45 19.0 DMS 10.0 soa HFROM HGHT#1_MD2 HTO HGHT#1_MD3 UNCR UNCR#1_ZANG
+ZANG MD2 8305 90 26 45.0 DMS 10.0 soa HFROM HGHT#1_MD2 HTO HGHT#2_8305 UNCR UNCR#1_ZANG
+
+DIST MD2 MD3 61.85200 0.00100 m HFROM HGHT#1_MD2 HTO HGHT#1_MD3 UNCR UNCR#1_DIST_IR
+DIST MD2 8305 51.15600 0.00100 m HFROM HGHT#1_MD2 HTO HGHT#2_8305 UNCR UNCR#1_DIST_IR

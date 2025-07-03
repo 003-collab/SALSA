@@ -1,0 +1,1897 @@
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 8.03 Logfile
+------------------------------------------------------
+Instrument Type		: TS30 0.5" 
+Instrument Serial No.	: 363912    
+
+Store To Job		: DTEST           
+Sets of Angles Start	: 01.20.16, 11:41:55
+
+TPS Station		: 8305            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 0.2860000134
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   7   Number Of Points:   2
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       MD2 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.485  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       MD3 
+-------------------
+
+Mean of all Sets (Hz): 261.48185 
+
+Reflector Height:  1.472  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 7            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : MD3        
+Reduced Mean: 261.48186    Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : MD3        
+Reduced Mean: 261.48179    Hz Residuals: 0.00006   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : MD3        
+Reduced Mean: 261.48181    Hz Residuals: 0.00003   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : MD3        
+Reduced Mean: 261.48173    Hz Residuals: 0.00012   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : MD3        
+Reduced Mean: 261.48186    Hz Residuals: -0.00002  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : MD3        
+Reduced Mean: 261.48195    Hz Residuals: -0.00010  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 7            Point ID    : MD3        
+Reduced Mean: 261.48192    Hz Residuals: -0.00007  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   7   Number Of Points:   2
+
+Standard Deviation Of Single Measurement:     0.0000
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:       MD2
+-------------------
+
+Mean of all Sets (V): 89.3309
+
+Reflector Height: 1.485  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       MD3
+-------------------
+
+Mean of all Sets (V): 88.3917
+
+Reflector Height: 1.472  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : MD2       
+Mean Of Face I/II: 89.3309      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : MD2       
+Mean Of Face I/II: 89.3308      Residuals V: 0.00003   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : MD2       
+Mean Of Face I/II: 89.3309      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : MD2       
+Mean Of Face I/II: 89.3309      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : MD2       
+Mean Of Face I/II: 89.3309      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : MD2       
+Mean Of Face I/II: 89.3309      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 7            Point ID   : MD2       
+Mean Of Face I/II: 89.3308      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : MD3       
+Mean Of Face I/II: 88.3916      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 7            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   7    Number of Points:   2
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0000
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:        MD2
+--------------------
+
+Mean Distance Of All Sets:   51.157
+
+Reflector Height: 1.485  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:        MD3
+--------------------
+
+Mean Distance Of All Sets:   28.240
+
+Reflector Height: 1.472  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : MD2       
+Mean Of Face I And II: 51.158        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : MD2       
+Mean Of Face I And II: 51.157        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : MD2       
+Mean Of Face I And II: 51.158        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : MD2       
+Mean Of Face I And II: 51.157        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : MD2       
+Mean Of Face I And II: 51.157        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : MD2       
+Mean Of Face I And II: 51.157        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 7             Point ID : MD2       
+Mean Of Face I And II: 51.158        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 7             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 8.03 Logfile
+------------------------------------------------------
+Instrument Type		: TS30 0.5" 
+Instrument Serial No.	: 363912    
+
+Store To Job		: DTEST           
+Sets of Angles Start	: 01.20.16, 11:54:21
+
+TPS Station		: 8305            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 0.2860000134
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   6   Number Of Points:   2
+
+Standard Deviation Of Single Measurement:     0.0000
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       MD2 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.485  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       MD3 
+-------------------
+
+Mean of all Sets (Hz): 261.48185 
+
+Reflector Height:  1.472  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : MD2        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : MD3        
+Reduced Mean: 261.48185    Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : MD3        
+Reduced Mean: 261.48181    Hz Residuals: 0.00004   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : MD3        
+Reduced Mean: 261.48179    Hz Residuals: 0.00006   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : MD3        
+Reduced Mean: 261.48193    Hz Residuals: -0.00008  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : MD3        
+Reduced Mean: 261.48183    Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : MD3        
+Reduced Mean: 261.48189    Hz Residuals: -0.00004  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   6   Number Of Points:   2
+
+Standard Deviation Of Single Measurement:     0.0000
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:       MD2
+-------------------
+
+Mean of all Sets (V): 89.3308
+
+Reflector Height: 1.485  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       MD3
+-------------------
+
+Mean of all Sets (V): 88.3917
+
+Reflector Height: 1.472  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : MD2       
+Mean Of Face I/II: 89.3309      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : MD2       
+Mean Of Face I/II: 89.3308      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : MD2       
+Mean Of Face I/II: 89.3308      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : MD2       
+Mean Of Face I/II: 89.3309      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : MD2       
+Mean Of Face I/II: 89.3309      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : MD2       
+Mean Of Face I/II: 89.3308      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : MD3       
+Mean Of Face I/II: 88.3917      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   6    Number of Points:   2
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0000
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:        MD2
+--------------------
+
+Mean Distance Of All Sets:   51.156
+
+Reflector Height: 1.485  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:        MD3
+--------------------
+
+Mean Distance Of All Sets:   28.240
+
+Reflector Height: 1.472  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : MD2       
+Mean Of Face I And II: 51.157        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : MD2       
+Mean Of Face I And II: 51.157        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : MD2       
+Mean Of Face I And II: 51.157        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : MD2       
+Mean Of Face I And II: 51.156        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : MD2       
+Mean Of Face I And II: 51.156        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : MD2       
+Mean Of Face I And II: 51.156        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : MD3       
+Mean Of Face I And II: 28.240        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 8.03 Logfile
+------------------------------------------------------
+Instrument Type		: TS30 0.5" 
+Instrument Serial No.	: 363912    
+
+Store To Job		: DTEST           
+Sets of Angles Start	: 01.20.16, 12:07:58
+
+TPS Station		: MD2             
+Coordinates		: E=          -39.092	N=           32.994	H=      -----
+Instrument Height	: hi= 1.4850000143
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   6   Number Of Points:   2
+
+Standard Deviation Of Single Measurement:     0.0000
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       MD3 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.472  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      8305 
+-------------------
+
+Mean of all Sets (Hz): 333.08266 
+
+Reflector Height:  0.287  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : MD3        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : MD3        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : MD3        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : MD3        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : MD3        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : MD3        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : 8305       
+Reduced Mean: 333.08260    Hz Residuals: 0.00007   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : 8305       
+Reduced Mean: 333.08268    Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : 8305       
+Reduced Mean: 333.08272    Hz Residuals: -0.00005  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : 8305       
+Reduced Mean: 333.08274    Hz Residuals: -0.00008  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : 8305       
+Reduced Mean: 333.08264    Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : 8305       
+Reduced Mean: 333.08261    Hz Residuals: 0.00005   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   6   Number Of Points:   2
+
+Standard Deviation Of Single Measurement:     0.0000
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:       MD3
+-------------------
+
+Mean of all Sets (V): 89.4519
+
+Reflector Height: 1.472  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      8305
+-------------------
+
+Mean of all Sets (V): 90.2645
+
+Reflector Height: 0.287  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : MD3       
+Mean Of Face I/II: 89.4519      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : MD3       
+Mean Of Face I/II: 89.4519      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : MD3       
+Mean Of Face I/II: 89.4520      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : MD3       
+Mean Of Face I/II: 89.4519      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : MD3       
+Mean Of Face I/II: 89.4519      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : MD3       
+Mean Of Face I/II: 89.4520      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : 8305      
+Mean Of Face I/II: 90.2645      Residuals V: 0.00003   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : 8305      
+Mean Of Face I/II: 90.2645      Residuals V: 0.00003   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : 8305      
+Mean Of Face I/II: 90.2645      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : 8305      
+Mean Of Face I/II: 90.2646      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : 8305      
+Mean Of Face I/II: 90.2645      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : 8305      
+Mean Of Face I/II: 90.2645      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   6    Number of Points:   2
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0000
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:        MD3
+--------------------
+
+Mean Distance Of All Sets:   61.852
+
+Reflector Height: 1.472  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       8305
+--------------------
+
+Mean Distance Of All Sets:   51.156
+
+Reflector Height: 0.287  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : MD3       
+Mean Of Face I And II: 61.852        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : MD3       
+Mean Of Face I And II: 61.852        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : MD3       
+Mean Of Face I And II: 61.852        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : MD3       
+Mean Of Face I And II: 61.852        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : MD3       
+Mean Of Face I And II: 61.852        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : MD3       
+Mean Of Face I And II: 61.852        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : 8305      
+Mean Of Face I And II: 51.156        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : 8305      
+Mean Of Face I And II: 51.156        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : 8305      
+Mean Of Face I And II: 51.157        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : 8305      
+Mean Of Face I And II: 51.156        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : 8305      
+Mean Of Face I And II: 51.156        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : 8305      
+Mean Of Face I And II: 51.156        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 8.03 Logfile
+------------------------------------------------------
+Instrument Type		: TS30 0.5" 
+Instrument Serial No.	: 363912    
+
+Store To Job		: DTEST           
+Sets of Angles Start	: 01.20.16, 12:18:49
+
+TPS Station		: MD3             
+Coordinates		: E=          -14.948	N=          -23.950	H=      -----
+Instrument Height	: hi= 1.4720000029
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   6   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0000
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       MD1 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.565  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       MD2 
+-------------------
+
+Mean of all Sets (Hz): 247.04433 
+
+Reflector Height:  1.485  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      8305 
+-------------------
+
+Mean of all Sets (Hz): 302.01299 
+
+Reflector Height:  0.287  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : MD1        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : MD1        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : MD1        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : MD1        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : MD1        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : MD1        
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : MD2        
+Reduced Mean: 247.04446    Hz Residuals: -0.00013  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : MD2        
+Reduced Mean: 247.04429    Hz Residuals: 0.00004   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : MD2        
+Reduced Mean: 247.04430    Hz Residuals: 0.00003   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : MD2        
+Reduced Mean: 247.04432    Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : MD2        
+Reduced Mean: 247.04434    Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : MD2        
+Reduced Mean: 247.04428    Hz Residuals: 0.00005   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : 8305       
+Reduced Mean: 302.01301    Hz Residuals: -0.00002  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : 8305       
+Reduced Mean: 302.01297    Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : 8305       
+Reduced Mean: 302.01298    Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : 8305       
+Reduced Mean: 302.01299    Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 5            Point ID    : 8305       
+Reduced Mean: 302.01298    Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 6            Point ID    : 8305       
+Reduced Mean: 302.01298    Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   6   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:       MD1
+-------------------
+
+Mean of all Sets (V): 90.5543
+
+Reflector Height: 1.565  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       MD2
+-------------------
+
+Mean of all Sets (V): 90.1438
+
+Reflector Height: 1.485  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      8305
+-------------------
+
+Mean of all Sets (V): 91.2034
+
+Reflector Height: 0.287  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : MD1       
+Mean Of Face I/II: 90.5543      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : MD1       
+Mean Of Face I/II: 90.5544      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : MD1       
+Mean Of Face I/II: 90.5543      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : MD1       
+Mean Of Face I/II: 90.5543      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : MD1       
+Mean Of Face I/II: 90.5543      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : MD1       
+Mean Of Face I/II: 90.5543      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : MD2       
+Mean Of Face I/II: 90.1439      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : MD2       
+Mean Of Face I/II: 90.1438      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : MD2       
+Mean Of Face I/II: 90.1438      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : MD2       
+Mean Of Face I/II: 90.1439      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : MD2       
+Mean Of Face I/II: 90.1438      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : MD2       
+Mean Of Face I/II: 90.1438      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : 8305      
+Mean Of Face I/II: 91.2034      Residuals V: 0.00003   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : 8305      
+Mean Of Face I/II: 91.2035      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : 8305      
+Mean Of Face I/II: 91.2035      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : 8305      
+Mean Of Face I/II: 91.2035      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 5            Point ID   : 8305      
+Mean Of Face I/II: 91.2033      Residuals V: 0.00011   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 6            Point ID   : 8305      
+Mean Of Face I/II: 91.2034      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   6    Number of Points:   3
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0000
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:        MD1
+--------------------
+
+Mean Distance Of All Sets:   50.593
+
+Reflector Height: 1.565  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:        MD2
+--------------------
+
+Mean Distance Of All Sets:   61.852
+
+Reflector Height: 1.485  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       8305
+--------------------
+
+Mean Distance Of All Sets:   28.238
+
+Reflector Height: 0.287  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : MD1       
+Mean Of Face I And II: 50.593        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : MD1       
+Mean Of Face I And II: 50.593        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : MD1       
+Mean Of Face I And II: 50.593        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : MD1       
+Mean Of Face I And II: 50.593        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : MD1       
+Mean Of Face I And II: 50.593        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : MD1       
+Mean Of Face I And II: 50.593        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : MD2       
+Mean Of Face I And II: 61.852        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : MD2       
+Mean Of Face I And II: 61.852        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : MD2       
+Mean Of Face I And II: 61.852        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : MD2       
+Mean Of Face I And II: 61.852        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : MD2       
+Mean Of Face I And II: 61.852        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : MD2       
+Mean Of Face I And II: 61.852        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : 8305      
+Mean Of Face I And II: 28.238        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : 8305      
+Mean Of Face I And II: 28.238        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : 8305      
+Mean Of Face I And II: 28.238        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : 8305      
+Mean Of Face I And II: 28.238        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 5             Point ID : 8305      
+Mean Of Face I And II: 28.238        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 6             Point ID : 8305      
+Mean Of Face I And II: 28.238        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End

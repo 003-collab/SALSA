@@ -1,0 +1,27 @@
+Command to create patch: diff -ruN orig/ new/ > file.patch
+LSA         ./CMakeLists.txt                                                Do not check for Qt5WebKit, Qt5WebKitWidgets, Qt5DBus, and set MARBLE_NO_WEBKIT (Qt5WebKit no longer part of the default install and we don't use it, DBus is linux-only and we don't use it)
+LSA         src/CMakeLists.txt                                              Print additional status messages 
+LSA?        src/lib/astro/CMakeLists.txt                                    Install library files for Windows
+MARBLE      src/lib/marble/[various *.cpp, *.h files]                       Replace int (16-bit) with long long (64-bit) to resolve overflow issue for high zoom when dealing with radius values
+MARBLE      src/lib/marble/CMakeLists.txt                                   Install the RemoteIconLoader.h and FileManager.h header files (These are not installed by default, but are needed for kmlExport and the stale icon issue)
+LSA         src/lib/marble/PluginManager.cpp                                Squelch warning message for "Ignoring to load the following file since it doesn't look like a valid Marble plugin" (requested by Steve)
+LSA? (hack) src/lib/marble/PopupItem.cpp                                    Although we are not building with WebKit, still connect the webView signals as there are issues when they are not connected -- there may be a "better" solution
+MARBLE?     src/lib/marble/RemoteIconLoader.h                               Export the iconReady method for Windows (resolve stale icon issue)
+MARBLE?     src/lib/marble/ScanlineTextureMapperContext.cpp                 Check for a null pointer as this caused a segfault (Dustin discovered this while wildly clicking around the map)
+LSA         src/lib/plugins/positionprovider/CMakeLists.txt                 Do not build the qtpositioning plugin (as this causes a segfault?)
+MARBLE      src/lib/plugins/render/annotate/CMakeLists.txt                  Check for a null pointer before disconnecting the mouseMoveGeoPosition signal
+MARBLE?     src/lib/plugins/render/mapscale/MapScaleFloatItem.{cpp, h}      Fix the map scale widget to support high zoom
+LSA         src/lib/plugins/render/navigation/navigation.ui                 Update the map navigation widget to move the home button to the bottom
+LSA         src/lib/plugins/runner/CMakeLists.txt                           Do not build the cache plugin (causes segfault on linux?)
+LSA	    src/lib/marble/MarbleDirs.cpp				    Do not return hardcoded paths for the data and plugins folders. Return those set by SALSA.
+LSA	    MarbleMacros.cmake				    		    Do not try to install the QT plugins designer directory, only admins on Windows have permission to do that.
+MARBLE      src/lib/marble/FileManager.h                                    Export the saveFile method for Windows (kmlExport)
+Marble      src/lib/marble/MergedLayerDecorator.cpp                         Include QPainterPath - Addresses compiler error with Qt 5.15
+Marble      src/lib/marble/VisiblePlacemark.cpp                             Include QPainterPath - Addresses compiler error with Qt 5.15
+Marble	    src/plugins/render/satellites/SatellitesPlugin.cpp              Include QAction - Addresses compiler error with Qt 5.15
+Marble      src/lib/marble/StyleBuilder.cpp                                 Use the minimum between the Visual Category's default minZoom and the placemark's zoomLevel when deciding the final minimumZoomLevel for an Item.
+Marble      src/lib/marble/geodata/graphicsitem/GeoLineStringGraphicsItem.cpp Always honor the linestyle assigned to a GeoLineStringGraphicsItem.
+Marble      src/lib/marble/PlacemarkLayout.cpp                              Remove placemarks from all of m_placemarkCache
+Marble      src/lib/marble/MarbleInputHandler.cpp                           Hard code the cursor to always be a pointing finger, to resolve performance issues
+Marble      src/lib/marble/MarbleInputHandler.cpp                           Re-enable the dynamic cursors, and fix performance issues
+Marble      src/lib/marble/MarbleAbstractPresenter.cpp                      Make hitting the home button reset the maps rotation

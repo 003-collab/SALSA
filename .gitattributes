@@ -1,0 +1,2 @@
+data/geoid/*.und filter=lfs diff=lfs merge=lfs -text
+data/geoid/*.asc filter=lfs diff=lfs merge=lfs -text

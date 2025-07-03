@@ -1,0 +1,2711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JOBFile jobName="SX10" version="6.11" product="Trimble General Survey" productVersion="19.10" productDBVersion="1900-7" controllerSerialNumber="DAD193500329" TimeStamp="2020-03-12T05:10:25"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.trimble.com/schema/JobXML/6_1 http://www.trimble.com/schema/JobXML/6_1/JobXMLSchema-6.11.xsd">
+    <FieldBook>
+
+        <UnitsRecord ID="00000002" TimeStamp="2020-03-12T05:10:25">
+            <DistanceUnits>Metres</DistanceUnits>
+            <HeightUnits>Metres</HeightUnits>
+            <AngleUnits>DMSDegrees</AngleUnits>
+            <AzimuthFormat>Azimuth</AzimuthFormat>
+            <LatitudeLongitudeUnits>DMSDegrees</LatitudeLongitudeUnits>
+            <CoordinateOrder>North-East-Elevation</CoordinateOrder>
+            <TemperatureUnits>Celsius</TemperatureUnits>
+            <PressureUnits>MilliBar</PressureUnits>
+            <GradeUnits>Percentage</GradeUnits>
+            <AreaUnits>SquareMetres</AreaUnits>
+            <VolumeUnits>CubicMetres</VolumeUnits>
+            <StationingFormat>1+000.0</StationingFormat>
+            <StationIndexIncrement/>
+            <DistanceDisplayDPs>3</DistanceDisplayDPs>
+            <CoordinateDisplayDPs>3</CoordinateDisplayDPs>
+            <AreaDisplayDPs>3</AreaDisplayDPs>
+            <VolumeDisplayDPs>3</VolumeDisplayDPs>
+            <AngleDisplayDPs>0</AngleDisplayDPs>
+            <LaserVADisplay>Inclination</LaserVADisplay>
+            <TimeFormat>Local</TimeFormat>
+        </UnitsRecord>
+
+        <FeatureCodingRecord ID="00000003" TimeStamp="2020-03-12T05:10:25">
+            <LibraryName/>
+            <SourceFilename/>
+            <AttributeCheckSum>0</AttributeCheckSum>
+            <AttributesStored>false</AttributesStored>
+        </FeatureCodingRecord>
+
+        <CorrectionsRecord ID="00000004" TimeStamp="2020-03-12T05:10:25">
+            <SouthAzimuth>false</SouthAzimuth>
+            <GridOrientation>IncreasingNorthEast</GridOrientation>
+            <MagneticDeclination>0</MagneticDeclination>
+            <Distances>GroundDistance</Distances>
+            <ApplySeaLevelCorrection>false</ApplySeaLevelCorrection>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+        </CorrectionsRecord>
+
+        <EllipsoidRecord ID="00000006" TimeStamp="2020-03-12T05:10:25">
+            <EarthRadius/>
+            <Flattening/>
+        </EllipsoidRecord>
+
+        <ProjectionRecord ID="00000007" TimeStamp="2020-03-12T05:10:25">
+            <Projection>
+                <Type>ScaleOnly</Type>
+                <Scale>1</Scale>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight/>
+            </LocalSite>
+        </ProjectionRecord>
+
+        <DatumRecord ID="00000008" TimeStamp="2020-03-12T05:10:25">
+            <Type>NoDatum</Type>
+        </DatumRecord>
+
+        <HorizontalAdjustmentRecord ID="00000009" TimeStamp="2020-03-12T05:10:25">
+            <Type>NoAdjustment</Type>
+        </HorizontalAdjustmentRecord>
+
+        <VerticalAdjustmentRecord ID="0000000a" TimeStamp="2020-03-12T05:10:25">
+            <Type>NoAdjustment</Type>
+        </VerticalAdjustmentRecord>
+
+        <CoordinateSystemRecord ID="0000000b" TimeStamp="2020-03-12T05:10:25">
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+        </CoordinateSystemRecord>
+
+        <JobPropertiesRecord ID="0000000c" TimeStamp="2020-03-12T05:10:25">
+            <Reference/>
+            <Description/>
+            <Operator/>
+            <JobNote/>
+            <TectonicPlate>Unknown</TectonicPlate>
+            <ApplyJobPointNameRange>false</ApplyJobPointNameRange>
+            <MinimumJobPointName/>
+            <MaximumJobPointName/>
+        </JobPropertiesRecord>
+
+        <LinkedFilesRecord ID="0000000e" TimeStamp="2020-03-12T05:10:25"/>
+
+        <ActiveMapFilesRecord ID="0000000f" TimeStamp="2020-03-12T05:10:25"/>
+
+        <CorrectionsRecord ID="00000010" TimeStamp="2020-03-12T05:10:25">
+            <SouthAzimuth>false</SouthAzimuth>
+            <GridOrientation>IncreasingNorthEast</GridOrientation>
+            <MagneticDeclination>0</MagneticDeclination>
+            <Distances>GroundDistance</Distances>
+            <ApplySeaLevelCorrection>true</ApplySeaLevelCorrection>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+        </CorrectionsRecord>
+
+        <EllipsoidRecord ID="00000011" TimeStamp="2020-03-12T05:10:25">
+            <EarthRadius>6378137</EarthRadius>
+            <Flattening>0.00335281067183</Flattening>
+        </EllipsoidRecord>
+
+        <ProjectionRecord ID="00000012" TimeStamp="2020-03-12T05:10:25">
+            <Projection>
+                <Type>NoProjection</Type>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight>100</ProjectLocationHeight>
+            </LocalSite>
+        </ProjectionRecord>
+
+        <CoordinateSystemRecord ID="00000013" TimeStamp="2020-03-12T05:10:25">
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+        </CoordinateSystemRecord>
+
+        <CorrectionsRecord ID="00000027" TimeStamp="2020-03-12T05:10:43">
+            <SouthAzimuth>false</SouthAzimuth>
+            <GridOrientation>IncreasingNorthEast</GridOrientation>
+            <MagneticDeclination>0</MagneticDeclination>
+            <Distances>GroundDistance</Distances>
+            <ApplySeaLevelCorrection>false</ApplySeaLevelCorrection>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+        </CorrectionsRecord>
+
+        <EllipsoidRecord ID="00000028" TimeStamp="2020-03-12T05:10:43">
+            <EarthRadius/>
+            <Flattening/>
+        </EllipsoidRecord>
+
+        <ProjectionRecord ID="00000029" TimeStamp="2020-03-12T05:10:43">
+            <Projection>
+                <Type>ScaleOnly</Type>
+                <Scale>1</Scale>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight/>
+            </LocalSite>
+        </ProjectionRecord>
+
+        <CoordinateSystemRecord ID="0000002a" TimeStamp="2020-03-12T05:10:43">
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+        </CoordinateSystemRecord>
+
+        <TimeZoneRecord ID="0000002b" TimeStamp="2020-03-12T05:10:50">
+            <ZoneName>Pacific Daylight Time</ZoneName>
+            <HoursToUTC>7</HoursToUTC>
+        </TimeZoneRecord>
+
+        <InstrumentTiltCompensatorStatusRecord ID="0000002c" TimeStamp="2020-03-12T05:10:50">
+            <Enabled>true</Enabled>
+        </InstrumentTiltCompensatorStatusRecord>
+
+        <CameraDesignRecord ID="0000002d" TimeStamp="2020-03-12T05:19:43">
+            <Type>Camera: Tele</Type>
+            <HeightPixels>1944</HeightPixels>
+            <WidthPixels>2592</WidthPixels>
+            <PixelSize>0.0000014</PixelSize>
+            <LensModel>Rectilinear</LensModel>
+            <NominalFocalLength>0</NominalFocalLength>
+        </CameraDesignRecord>
+
+        <CameraRecord2 ID="0000002e" TimeStamp="2020-03-12T05:19:43">
+            <CameraDesignID>0000002d</CameraDesignID>
+            <CameraPosition>5</CameraPosition>
+            <Optics>
+                <IdealAngularMagnification>1</IdealAngularMagnification>
+                <AngleSymmetricDistortion>
+                    <Order3>-3.776508</Order3>
+                    <Order5>-7.083984</Order5>
+                    <Order7>-14.589517</Order7>
+                    <Order9>0</Order9>
+                </AngleSymmetricDistortion>
+                <AngleDecenteringDistortion>
+                    <Column>0</Column>
+                    <Row>0</Row>
+                </AngleDecenteringDistortion>
+            </Optics>
+            <Geometry>
+                <PerspectiveCenterPixels>
+                    <PrincipalPointColumn>-1296</PrincipalPointColumn>
+                    <PrincipalPointRow>-972</PrincipalPointRow>
+                    <PrincipalDistance>-56868.38313116</PrincipalDistance>
+                </PerspectiveCenterPixels>
+                <VectorOffset>
+                    <X>0.00021136723533</X>
+                    <Y>-0.07929</Y>
+                    <Z>-0.00005315551583</Z>
+                </VectorOffset>
+                <BiVectorAngle>
+                    <XX>1.208385982475</XX>
+                    <YY>1.2094278001758</YY>
+                    <ZZ>-1.2086453287246</ZZ>
+                </BiVectorAngle>
+            </Geometry>
+        </CameraRecord2>
+
+        <ImageRecord ID="0000002f" TimeStamp="2020-03-12T05:19:43">
+            <StationID/>
+            <BackBearingID/>
+            <CameraID>0000002e</CameraID>
+            <PointRecordID/>
+            <PanoramaID/>
+            <FileName/>
+            <FileNameModified>SX10 Files\IMG00001.JPG</FileNameModified>
+            <HorizontalAngle>355.75364621498</HorizontalAngle>
+            <VerticalAngle>76.078329634875</VerticalAngle>
+            <Width>640</Width>
+            <Height>480</Height>
+            <SourceX>1027</SourceX>
+            <SourceY>718</SourceY>
+            <SourceWidth>640</SourceWidth>
+            <SourceHeight>480</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-5.7666591526892</XX>
+                <YY>-0.19523103733028</YY>
+                <ZZ>-1.749049221928</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <CameraDesignRecord ID="00000030" TimeStamp="2020-03-12T05:21:48">
+            <Type>Camera: Tele</Type>
+            <HeightPixels>1944</HeightPixels>
+            <WidthPixels>2592</WidthPixels>
+            <PixelSize>0.0000014</PixelSize>
+            <LensModel>Rectilinear</LensModel>
+            <NominalFocalLength>0</NominalFocalLength>
+        </CameraDesignRecord>
+
+        <CameraRecord2 ID="00000031" TimeStamp="2020-03-12T05:21:48">
+            <CameraDesignID>00000030</CameraDesignID>
+            <CameraPosition>5</CameraPosition>
+            <Optics>
+                <IdealAngularMagnification>1</IdealAngularMagnification>
+                <AngleSymmetricDistortion>
+                    <Order3>-3.776508</Order3>
+                    <Order5>-7.083984</Order5>
+                    <Order7>-14.589517</Order7>
+                    <Order9>0</Order9>
+                </AngleSymmetricDistortion>
+                <AngleDecenteringDistortion>
+                    <Column>0</Column>
+                    <Row>0</Row>
+                </AngleDecenteringDistortion>
+            </Optics>
+            <Geometry>
+                <PerspectiveCenterPixels>
+                    <PrincipalPointColumn>-1296</PrincipalPointColumn>
+                    <PrincipalPointRow>-972</PrincipalPointRow>
+                    <PrincipalDistance>-56869.220144256</PrincipalDistance>
+                </PerspectiveCenterPixels>
+                <VectorOffset>
+                    <X>0.00021136723533</X>
+                    <Y>-0.07929</Y>
+                    <Z>-0.00005315551583</Z>
+                </VectorOffset>
+                <BiVectorAngle>
+                    <XX>1.2083867654276</XX>
+                    <YY>1.2094281835087</YY>
+                    <ZZ>-1.2086452262891</ZZ>
+                </BiVectorAngle>
+            </Geometry>
+        </CameraRecord2>
+
+        <ImageRecord ID="00000032" TimeStamp="2020-03-12T05:21:48">
+            <StationID/>
+            <BackBearingID/>
+            <CameraID>00000031</CameraID>
+            <PointRecordID/>
+            <PanoramaID/>
+            <FileName>SX10 Files\IMG00002.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>18.728503368928</HorizontalAngle>
+            <VerticalAngle>86.606979692011</VerticalAngle>
+            <Width>640</Width>
+            <Height>480</Height>
+            <SourceX>1027</SourceX>
+            <SourceY>719</SourceY>
+            <SourceWidth>640</SourceWidth>
+            <SourceHeight>480</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.05856940099972</XX>
+                <YY>-0.01041182693727</YY>
+                <ZZ>-0.32678392877774</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <InstrumentRecord ID="00000034" TimeStamp="2020-03-12T05:23:40">
+            <Type>TrimbleSX10</Type>
+            <RefractiveIndex>269.89888962766</RefractiveIndex>
+            <CarrierWavelength>78.08621711754</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>0</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>3</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00000000134722</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00000000134722</VerticalAnglePrecision>
+            <EDMPrecision>0.001</EDMPrecision>
+            <EDMppm>1.5</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>SX10</Model>
+            <Serial>30415684</Serial>
+            <FirmwareVersion>S2.2.25</FirmwareVersion>
+            <UserDefinedName>TRIMBLE-SX10-30415684</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient/>
+        </InstrumentRecord>
+
+        <PointRecord ID="0000003b" TimeStamp="2020-03-12T05:25:11">
+            <Name>TEST</Name>
+            <Code/>
+            <Method>Coordinates</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Grid>
+                <North>1000</North>
+                <East>1000</East>
+                <Elevation>500</Elevation>
+            </Grid>
+        </PointRecord>
+
+        <AtmosphereRecord ID="0000003f" TimeStamp="2020-03-12T05:29:44">
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+            <PPM>-0.77208404992319</PPM>
+            <ApplyEarthCurvatureCorrection>true</ApplyEarthCurvatureCorrection>
+            <ApplyRefractionCorrection>true</ApplyRefractionCorrection>
+            <RefractionCoefficient>0.142</RefractionCoefficient>
+            <PressureInputMethod>ReadFromInstrument</PressureInputMethod>
+            <ApplyPPMToRawDistances>true</ApplyPPMToRawDistances>
+        </AtmosphereRecord>
+
+        <StationRecord ID="00000040" TimeStamp="2020-03-12T05:29:44">
+            <StationName>TEST</StationName>
+            <TheodoliteHeight>1.6315011112037</TheodoliteHeight>
+            <RawTheodoliteHeight>
+                <MeasurementMethod>SXNotch</MeasurementMethod>
+                <MeasuredHeight>1.5</MeasuredHeight>
+                <HorizontalOffset>0.1398</HorizontalOffset>
+                <VerticalOffset>0.13803</VerticalOffset>
+            </RawTheodoliteHeight>
+            <InstrumentID>00000034</InstrumentID>
+            <AtmosphereID>0000003f</AtmosphereID>
+            <NumberOfBacksightMeasurements>1</NumberOfBacksightMeasurements>
+            <NumberOfBacksightPoints>1</NumberOfBacksightPoints>
+            <ScaleFactor>1</ScaleFactor>
+            <ScaleType>Fixed</ScaleType>
+            <ScaleFactorStandardError/>
+            <StationType>StationSetup</StationType>
+        </StationRecord>
+
+        <PointRecord ID="00000041" TimeStamp="2020-03-12T05:29:44">
+            <Name>T4R</Name>
+            <Code/>
+            <Method>AzimuthOnly</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <SourcePoint>TEST</SourcePoint>
+            <Azimuth>0</Azimuth>
+            <AzimuthType>Grid</AzimuthType>
+        </PointRecord>
+
+        <BackBearingRecord ID="00000044" TimeStamp="2020-03-12T05:29:44">
+            <StationRecordID>00000040</StationRecordID>
+            <Station>TEST</Station>
+            <BackSight>T4R</BackSight>
+            <Face1HorizontalCircle>0</Face1HorizontalCircle>
+            <Face2HorizontalCircle>180.00171037717</Face2HorizontalCircle>
+            <OrientationCorrection>-0.00085518858594</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundsRecord ID="00000056" TimeStamp="2020-03-12T05:29:44"/>
+
+        <StartRoundRecord ID="00000057" TimeStamp="2020-03-12T05:29:44">
+            <Round>1</Round>
+        </StartRoundRecord>
+
+        <TargetRecord ID="00000045" TimeStamp="2020-03-12T05:29:44">
+            <PrismType>R10_360Prism</PrismType>
+            <PrismConstant>0.002</PrismConstant>
+            <TargetHeight>2.135</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>2.135</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+            <RemoteTargetID>None</RemoteTargetID>
+        </TargetRecord>
+
+        <PointRecord ID="00000046" TimeStamp="2020-03-12T05:29:44">
+            <Name>T4R</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>0</HorizontalCircle>
+                <VerticalCircle>89.020432138833</VerticalCircle>
+                <EDMDistance>46.634889140465</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00106995235</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.02000689523</RawVerticalCircle>
+                <RawEDMDistance>46.6349</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>00000044</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1046.6300349004</North>
+                <East>1000</East>
+                <Elevation>500.2939441003</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="0000004a" TimeStamp="2020-03-12T05:31:15">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>315.07869438787</HorizontalCircle>
+                <VerticalCircle>89.490528906897</VerticalCircle>
+                <EDMDistance>76.880482084403</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.001115320735</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.49039476353</RawVerticalCircle>
+                <RawEDMDistance>76.88049</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>00000044</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1054.4365442989</North>
+                <East>945.71278528725</East>
+                <Elevation>500.18052416673</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="0000004e" TimeStamp="2020-03-12T05:31:30">
+            <Name>T4R</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>180.00171037717</HorizontalCircle>
+                <VerticalCircle>270.9767505461</VerticalCircle>
+                <EDMDistance>46.635339163643</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.001069953025</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.97717456272</RawVerticalCircle>
+                <RawEDMDistance>46.63535</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>00000044</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1046.6305240129</North>
+                <East>1000</East>
+                <Elevation>500.29165890834</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000052" TimeStamp="2020-03-12T05:31:37">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>135.08055749564</HorizontalCircle>
+                <VerticalCircle>270.50612906918</VerticalCircle>
+                <EDMDistance>76.881272098674</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00111532192</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.50626233126</RawVerticalCircle>
+                <RawEDMDistance>76.88128</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>00000044</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1054.4372765386</North>
+                <East>945.71234448202</East>
+                <Elevation>500.1760468303</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <EndRoundRecord ID="00000058" TimeStamp="2020-03-12T05:31:41"/>
+
+        <BackBearingRecord ID="00000059" TimeStamp="2020-03-12T05:32:13">
+            <StationRecordID>00000040</StationRecordID>
+            <Station>TEST</Station>
+            <BackSight>T4R</BackSight>
+            <Face1HorizontalCircle>0</Face1HorizontalCircle>
+            <Face2HorizontalCircle>180.00167080167</Face2HorizontalCircle>
+            <OrientationCorrection>-0.00083540083557</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundRecord ID="0000006a" TimeStamp="2020-03-12T05:31:48">
+            <Round>2</Round>
+        </StartRoundRecord>
+
+        <PointRecord ID="0000005a" TimeStamp="2020-03-12T05:31:48">
+            <Name>T4R</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>0</HorizontalCircle>
+                <VerticalCircle>89.020509940675</VerticalCircle>
+                <EDMDistance>46.635179141106</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.001069952785</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.020084733488</RawVerticalCircle>
+                <RawEDMDistance>46.63519</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>00000059</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1046.6303259412</North>
+                <East>1000</East>
+                <Elevation>500.29388574068</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="0000005e" TimeStamp="2020-03-12T05:31:54">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>315.07883004614</HorizontalCircle>
+                <VerticalCircle>89.490658750762</VerticalCircle>
+                <EDMDistance>76.880412084959</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00111532063</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.49052464146</RawVerticalCircle>
+                <RawEDMDistance>76.88042</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>00000059</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1054.436624368</North>
+                <East>945.71296250838</East>
+                <Elevation>500.18034931946</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000062" TimeStamp="2020-03-12T05:32:02">
+            <Name>T4R</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>180.00167080167</HorizontalCircle>
+                <VerticalCircle>270.97673669287</VerticalCircle>
+                <EDMDistance>46.635479163756</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.001069953235</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.9771607022</RawVerticalCircle>
+                <RawEDMDistance>46.63549</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>00000059</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1046.6306641848</North>
+                <East>1000</East>
+                <Elevation>500.29165002118</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000066" TimeStamp="2020-03-12T05:32:09">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>135.08068857626</HorizontalCircle>
+                <VerticalCircle>270.50614204265</VerticalCircle>
+                <EDMDistance>76.881022098619</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.001115321545</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.50627530857</RawVerticalCircle>
+                <RawEDMDistance>76.88103</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>00000059</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1054.4372611125</North>
+                <East>945.71268325868</East>
+                <Elevation>500.17606202724</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <EndRoundRecord ID="0000006b" TimeStamp="2020-03-12T05:32:13"/>
+
+        <BackBearingRecord ID="0000006c" TimeStamp="2020-03-12T05:36:19">
+            <StationRecordID>00000040</StationRecordID>
+            <Station>TEST</Station>
+            <BackSight>T4R</BackSight>
+            <Face1HorizontalCircle>0</Face1HorizontalCircle>
+            <Face2HorizontalCircle>180.00160375515</Face2HorizontalCircle>
+            <OrientationCorrection>-0.00080187757729</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <StartRoundRecord ID="0000007d" TimeStamp="2020-03-12T05:32:20">
+            <Round>3</Round>
+        </StartRoundRecord>
+
+        <PointRecord ID="0000006d" TimeStamp="2020-03-12T05:32:20">
+            <Name>T4R</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>0</HorizontalCircle>
+                <VerticalCircle>89.020524100064</VerticalCircle>
+                <EDMDistance>46.634929141222</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00106995241</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.020098896743</RawVerticalCircle>
+                <RawEDMDistance>46.63494</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1046.6300761752</North>
+                <East>1000</East>
+                <Elevation>500.2938699419</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000071" TimeStamp="2020-03-12T05:32:26">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>315.07889500281</HorizontalCircle>
+                <VerticalCircle>89.490584019431</VerticalCircle>
+                <EDMDistance>76.880662084639</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.001115321005</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>89.49044989089</RawVerticalCircle>
+                <RawEDMDistance>76.88067</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1054.4368622946</North>
+                <East>945.71284832777</East>
+                <Elevation>500.18045181904</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000075" TimeStamp="2020-03-12T05:32:34">
+            <Name>T4R</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>180.00160375515</HorizontalCircle>
+                <VerticalCircle>270.976650093</VerticalCircle>
+                <EDMDistance>46.635639164468</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.001069953475</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.97707406329</RawVerticalCircle>
+                <RawEDMDistance>46.63565</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1046.6308253639</North>
+                <East>1000</East>
+                <Elevation>500.29158226934</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000079" TimeStamp="2020-03-12T05:32:41">
+            <Name>T5</Name>
+            <Code/>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+
+            <Circle>
+                <HorizontalCircle>135.08056471453</HorizontalCircle>
+                <VerticalCircle>270.50607589748</VerticalCircle>
+                <EDMDistance>76.8812020989</EDMDistance>
+                <Face>Face2</Face>
+                <HorizontalCircleStandardError>0.00027788453064</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027788453064</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.001115321815</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+                <RawVerticalCircle>270.50620914568</RawVerticalCircle>
+                <RawEDMDistance>76.88121</RawEDMDistance>
+            </Circle>
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1054.4373352856</North>
+                <East>945.71250162527</East>
+                <Elevation>500.17597486483</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <EndRoundRecord ID="0000007e" TimeStamp="2020-03-12T05:36:19"/>
+
+        <EndRoundsRecord ID="0000007f" TimeStamp="2020-03-12T05:36:19"/>
+
+        <PointRecord ID="00000080" TimeStamp="2020-03-12T05:36:19">
+            <Name>T4R</Name>
+            <Code/>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>0</HorizontalCircle>
+                <VerticalCircle>89.021888141263</VerticalCircle>
+                <EDMDistance>46.635242485785</EDMDistance>
+                <HorizontalCircleStandardError>0</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00004817583766</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00029991139228</EDMDistanceStandardError>
+                <NumberOfHorizontalAngles>3</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>3</NumberOfVerticalAngles>
+                <NumberOfDistances>6</NumberOfDistances>
+            </MTA>
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1046.6304084436</North>
+                <East>1000</East>
+                <Elevation>500.29276516987</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000084" TimeStamp="2020-03-12T05:36:19">
+            <Name>T5</Name>
+            <Code/>
+            <Method>MeanTurnedAngle</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+            <Deleted>false</Deleted>
+
+            <MTA>
+                <HorizontalCircle>315.07887421488</HorizontalCircle>
+                <VerticalCircle>89.492237444627</VerticalCircle>
+                <EDMDistance>76.88084209171</EDMDistance>
+                <HorizontalCircleStandardError>0.000089621836</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00003257792601</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00037250474851</EDMDistanceStandardError>
+                <NumberOfHorizontalAngles>3</NumberOfHorizontalAngles>
+                <NumberOfVerticalAngles>3</NumberOfVerticalAngles>
+                <NumberOfDistances>6</NumberOfDistances>
+            </MTA>
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <TargetID>00000045</TargetID>
+            <Pressure>1020</Pressure>
+            <Temperature>21.111111111111</Temperature>
+
+            <ComputedGrid>
+                <North>1054.4369840053</North>
+                <East>945.71268755881</East>
+                <Elevation>500.1782348475</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <RoundsMeanTurnedAngleResiduals ID="00000088" TimeStamp="2020-03-12T05:36:19">
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>00000046</ObservationID>
+                <PointName>T4R</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.0014566376456</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00035333333334</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>0000004a</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>-0.00017982700734</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00170898819944</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00036</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>0000004e</ObservationID>
+                <PointName>T4R</PointName>
+                <HorizontalAngleResidual>-0.00000000000003</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00136190440635</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00009666666666</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>1</Round>
+                <ObservationID>00000052</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>-0.00002709640463</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00163391701378</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00042999999999</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000005a</ObservationID>
+                <PointName>T4R</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00137879938722</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00006333333334</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>0000005e</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>-0.0000441687371</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.0015791102694</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00043000000001</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>00000062</ObservationID>
+                <PointName>T4R</PointName>
+                <HorizontalAngleResidual>-0.00000000000003</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00137576492458</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00023666666667</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>2</Round>
+                <ObservationID>00000066</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0.00014355971399</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00162093970088</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00018</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>3</Round>
+                <ObservationID>0000006d</ObservationID>
+                <PointName>T4R</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00136463613255</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00031333333334</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>3</Round>
+                <ObservationID>00000071</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0.00002078793696</HorizontalAngleResidual>
+                <VerticalAngleResidual>-0.00165386084026</VerticalAngleResidual>
+                <SlopeDistanceResidual>-0.00018</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>3</Round>
+                <ObservationID>00000075</ObservationID>
+                <PointName>T4R</PointName>
+                <HorizontalAngleResidual>0</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00146240383454</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00039666666667</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+            <MeanTurnedAngleResiduals>
+                <Round>3</Round>
+                <ObservationID>00000079</ObservationID>
+                <PointName>T5</PointName>
+                <HorizontalAngleResidual>0.00008674449817</HorizontalAngleResidual>
+                <VerticalAngleResidual>0.00168710259444</VerticalAngleResidual>
+                <SlopeDistanceResidual>0.00036</SlopeDistanceResidual>
+            </MeanTurnedAngleResiduals>
+        </RoundsMeanTurnedAngleResiduals>
+
+        <CameraDesignRecord ID="00000096" TimeStamp="2020-03-12T05:44:42">
+            <Type>Camera: Tele</Type>
+            <HeightPixels>1944</HeightPixels>
+            <WidthPixels>2592</WidthPixels>
+            <PixelSize>0.0000014</PixelSize>
+            <LensModel>Rectilinear</LensModel>
+            <NominalFocalLength>0</NominalFocalLength>
+        </CameraDesignRecord>
+
+        <CameraRecord2 ID="00000097" TimeStamp="2020-03-12T05:44:42">
+            <CameraDesignID>00000096</CameraDesignID>
+            <CameraPosition>5</CameraPosition>
+            <Optics>
+                <IdealAngularMagnification>1</IdealAngularMagnification>
+                <AngleSymmetricDistortion>
+                    <Order3>-3.776508</Order3>
+                    <Order5>-7.083984</Order5>
+                    <Order7>-14.589517</Order7>
+                    <Order9>0</Order9>
+                </AngleSymmetricDistortion>
+                <AngleDecenteringDistortion>
+                    <Column>0</Column>
+                    <Row>0</Row>
+                </AngleDecenteringDistortion>
+            </Optics>
+            <Geometry>
+                <PerspectiveCenterPixels>
+                    <PrincipalPointColumn>-1296</PrincipalPointColumn>
+                    <PrincipalPointRow>-972</PrincipalPointRow>
+                    <PrincipalDistance>-56948.063676473</PrincipalDistance>
+                </PerspectiveCenterPixels>
+                <VectorOffset>
+                    <X>0.00021136723533</X>
+                    <Y>-0.07929</Y>
+                    <Z>-0.00005315551583</Z>
+                </VectorOffset>
+                <BiVectorAngle>
+                    <XX>1.2083919378977</XX>
+                    <YY>1.2094307338975</YY>
+                    <ZZ>-1.2086445316046</ZZ>
+                </BiVectorAngle>
+            </Geometry>
+        </CameraRecord2>
+
+        <ImageRecord ID="00000098" TimeStamp="2020-03-12T05:44:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>00000097</CameraID>
+            <PointRecordID>00000084</PointRecordID>
+            <PanoramaID/>
+            <FileName>SX10 Files\IMG00003.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>3.6991948742473</HorizontalAngle>
+            <VerticalAngle>91.519096895801</VerticalAngle>
+            <Width>1296</Width>
+            <Height>968</Height>
+            <SourceX>698</SourceX>
+            <SourceY>474</SourceY>
+            <SourceWidth>1296</SourceWidth>
+            <SourceHeight>972</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.02648172739842</XX>
+                <YY>0.00105510987979</YY>
+                <ZZ>-0.0645561885829</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <CameraDesignRecord ID="00000099" TimeStamp="2020-03-12T05:44:55">
+            <Type>Camera: Tele</Type>
+            <HeightPixels>1944</HeightPixels>
+            <WidthPixels>2592</WidthPixels>
+            <PixelSize>0.0000014</PixelSize>
+            <LensModel>Rectilinear</LensModel>
+            <NominalFocalLength>0</NominalFocalLength>
+        </CameraDesignRecord>
+
+        <CameraRecord2 ID="0000009a" TimeStamp="2020-03-12T05:44:55">
+            <CameraDesignID>00000099</CameraDesignID>
+            <CameraPosition>5</CameraPosition>
+            <Optics>
+                <IdealAngularMagnification>1</IdealAngularMagnification>
+                <AngleSymmetricDistortion>
+                    <Order3>-3.776508</Order3>
+                    <Order5>-7.083984</Order5>
+                    <Order7>-14.589517</Order7>
+                    <Order9>0</Order9>
+                </AngleSymmetricDistortion>
+                <AngleDecenteringDistortion>
+                    <Column>0</Column>
+                    <Row>0</Row>
+                </AngleDecenteringDistortion>
+            </Optics>
+            <Geometry>
+                <PerspectiveCenterPixels>
+                    <PrincipalPointColumn>-1296</PrincipalPointColumn>
+                    <PrincipalPointRow>-972</PrincipalPointRow>
+                    <PrincipalDistance>-56948.399457534</PrincipalDistance>
+                </PerspectiveCenterPixels>
+                <VectorOffset>
+                    <X>0.00021136723533</X>
+                    <Y>-0.07929</Y>
+                    <Z>-0.00005315551583</Z>
+                </VectorOffset>
+                <BiVectorAngle>
+                    <XX>1.2083927464744</XX>
+                    <YY>1.2094311352996</YY>
+                    <ZZ>-1.2086444202909</ZZ>
+                </BiVectorAngle>
+            </Geometry>
+        </CameraRecord2>
+
+        <ImageRecord ID="0000009b" TimeStamp="2020-03-12T05:44:55">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009a</CameraID>
+            <PointRecordID>00000084</PointRecordID>
+            <PanoramaID/>
+            <FileName>SX10 Files\IMG00004.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>3.6992465625903</HorizontalAngle>
+            <VerticalAngle>91.519059515242</VerticalAngle>
+            <Width>1296</Width>
+            <Height>968</Height>
+            <SourceX>698</SourceX>
+            <SourceY>474</SourceY>
+            <SourceWidth>1296</SourceWidth>
+            <SourceHeight>972</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.02647851193486</XX>
+                <YY>0.00105521940475</YY>
+                <ZZ>-0.06455868314472</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ScanningRecord ID="0000009c" TimeStamp="2020-03-12T05:50:55">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <Type>ScanFullDome</Type>
+            <FileName>SX10 Files\SdeDatabase.rwi\SdeDatabase_Station1_Scan1.rwcx</FileName>
+            <Name>Scan 1</Name>
+            <NumberOfPoints>37301</NumberOfPoints>
+            <HorizontalStep>0.05729577951308</HorizontalStep>
+            <VerticalStep>0.05729577951308</VerticalStep>
+            <PPM>-0.77208404992319</PPM>
+            <TiltChange>0.00016011783915</TiltChange>
+            <Deleted>true</Deleted>
+            <TiltChangeWarningGiven>false</TiltChangeWarningGiven>
+        </ScanningRecord>
+
+        <CameraDesignRecord ID="0000009d" TimeStamp="2020-03-12T06:00:42">
+            <Type>Camera: Overview</Type>
+            <HeightPixels>1944</HeightPixels>
+            <WidthPixels>2592</WidthPixels>
+            <PixelSize>0.0000014</PixelSize>
+            <LensModel>FTheta</LensModel>
+            <NominalFocalLength>0</NominalFocalLength>
+        </CameraDesignRecord>
+
+        <CameraRecord2 ID="0000009e" TimeStamp="2020-03-12T06:00:42">
+            <CameraDesignID>0000009d</CameraDesignID>
+            <CameraPosition>4</CameraPosition>
+            <Optics>
+                <IdealAngularMagnification>1</IdealAngularMagnification>
+                <AngleSymmetricDistortion>
+                    <Order3>0.02818718109357</Order3>
+                    <Order5>0.04079763781654</Order5>
+                    <Order7>0.04325889656764</Order7>
+                    <Order9>0</Order9>
+                </AngleSymmetricDistortion>
+                <AngleDecenteringDistortion>
+                    <Column>0.00000432423562</Column>
+                    <Row>-0.00016945383346</Row>
+                </AngleDecenteringDistortion>
+            </Optics>
+            <Geometry>
+                <PerspectiveCenterPixels>
+                    <PrincipalPointColumn>-1296</PrincipalPointColumn>
+                    <PrincipalPointRow>-972</PrincipalPointRow>
+                    <PrincipalDistance>-2605.1588975364</PrincipalDistance>
+                </PerspectiveCenterPixels>
+                <VectorOffset>
+                    <X>0.033</X>
+                    <Y>0.06866</Y>
+                    <Z>-0.04201</Z>
+                </VectorOffset>
+                <BiVectorAngle>
+                    <XX>1.206249753885</XX>
+                    <YY>1.210969828743</YY>
+                    <ZZ>-1.2161274659959</ZZ>
+                </BiVectorAngle>
+            </Geometry>
+        </CameraRecord2>
+
+        <PanoramaRecord ID="0000009f" TimeStamp="2020-03-12T06:00:42">
+            <ScanID>000000c8</ScanID>
+            <FrameType>ScanFullDome</FrameType>
+            <AtDistance>112.987</AtDistance>
+            <Overlap>10</Overlap>
+            <Resolution>0</Resolution>
+            <FixedExposure>false</FixedExposure>
+            <NumberOfImages>40</NumberOfImages>
+        </PanoramaRecord>
+
+        <ImageRecord ID="000000a0" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125830403.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>355.68459441072</HorizontalAngle>
+            <VerticalAngle>114.18397417905</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>5.7622969922751</XX>
+                <YY>0.21438981052289</YY>
+                <ZZ>-1.0128462459623</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a1" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125835835.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>355.68456593486</HorizontalAngle>
+            <VerticalAngle>77.353976177831</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-5.7240217775237</XX>
+                <YY>-0.22052883723348</YY>
+                <ZZ>-1.9466189854514</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a2" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125838954.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>355.68452409179</HorizontalAngle>
+            <VerticalAngle>40.523979467887</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-5.394611279158</XX>
+                <YY>-0.20490725866464</YY>
+                <ZZ>-0.44187714612127</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a3" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125841957.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>355.73516376264</HorizontalAngle>
+            <VerticalAngle>3.6927101143643</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-4.7676234849282</XX>
+                <YY>-0.18471483466551</YY>
+                <ZZ>-0.19608159784601</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a4" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125845844.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>43.293633332656</HorizontalAngle>
+            <VerticalAngle>114.18397637493</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.40157537059817</XX>
+                <YY>0.15965694253041</YY>
+                <ZZ>-0.74420632636916</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a5" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125849832.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>43.293699210293</HorizontalAngle>
+            <VerticalAngle>77.353991475182</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.21020945896677</XX>
+                <YY>-0.08316793907702</YY>
+                <ZZ>-0.75246271950265</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a6" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125852889.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>43.2936578257</HorizontalAngle>
+            <VerticalAngle>40.523960162565</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.82116236737138</XX>
+                <YY>-0.32553298135907</YY>
+                <ZZ>-0.70703893969452</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a7" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125855891.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>43.357353309639</HorizontalAngle>
+            <VerticalAngle>3.694258724524</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>1.4288704034469</XX>
+                <YY>-0.56486870812905</YY>
+                <ZZ>-0.60285111897488</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a8" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125859779.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>90.902723993409</HorizontalAngle>
+            <VerticalAngle>114.18397402454</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.32895182216054</XX>
+                <YY>0.3345269861615</YY>
+                <ZZ>-1.5608302564395</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000a9" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125903769.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>90.902856649489</HorizontalAngle>
+            <VerticalAngle>77.353848366632</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.17246758483231</XX>
+                <YY>-0.17488872926785</YY>
+                <ZZ>-1.5794936201323</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000aa" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125906904.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>90.902766638418</HorizontalAngle>
+            <VerticalAngle>40.524032018476</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.67059231081261</XX>
+                <YY>-0.68079524414549</YY>
+                <ZZ>-1.4778982122165</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000ab" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125909024.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>90.957655138453</HorizontalAngle>
+            <VerticalAngle>3.6957080537131</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>1.1555255571473</XX>
+                <YY>-1.1711818863074</YY>
+                <ZZ>-1.2494812652018</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000ac" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125913911.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>138.51183162347</HorizontalAngle>
+            <VerticalAngle>114.18397385362</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.19235903191638</XX>
+                <YY>0.50836933329442</YY>
+                <ZZ>-2.3728366516923</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000ad" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125917885.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>138.51185080671</HorizontalAngle>
+            <VerticalAngle>77.35396169012</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.10109498636979</XX>
+                <YY>-0.26650226231411</YY>
+                <ZZ>-2.4052537988976</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000ae" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125920828.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>138.51194960514</HorizontalAngle>
+            <VerticalAngle>40.524048997265</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.38944187531891</XX>
+                <YY>-1.027666255692</YY>
+                <ZZ>-2.2304544491507</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000af" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125923824.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>138.54345012812</HorizontalAngle>
+            <VerticalAngle>3.6963341821586</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.6577103428265</XX>
+                <YY>-1.7331857612659</YY>
+                <ZZ>-1.8487953507375</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b0" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125927716.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>186.12102072226</HorizontalAngle>
+            <VerticalAngle>114.18397022516</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.0364195085879</XX>
+                <YY>0.67990150672187</YY>
+                <ZZ>-3.1738510093528</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b1" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125931808.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>186.1209179563</HorizontalAngle>
+            <VerticalAngle>77.35404861585</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.0190855097757</XX>
+                <YY>-0.35772647948665</YY>
+                <ZZ>-3.227953291851</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b2" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125934555.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>186.12097117156</HorizontalAngle>
+            <VerticalAngle>40.524021650032</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.07239897543236</XX>
+                <YY>-1.3549579398687</YY>
+                <ZZ>-2.9406420560875</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b3" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125936492.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>186.12627977386</HorizontalAngle>
+            <VerticalAngle>3.6955425448167</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.11739595684927</XX>
+                <YY>-2.200425315017</YY>
+                <ZZ>-2.34706657942</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b4" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125940471.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>233.72993743067</HorizontalAngle>
+            <VerticalAngle>114.18397194139</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.42809994549722</XX>
+                <YY>0.84504621829455</YY>
+                <ZZ>-3.9448015253748</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b5" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125945777.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>233.73009230381</HorizontalAngle>
+            <VerticalAngle>77.353596447866</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.22692957260572</XX>
+                <YY>-0.44796515228994</YY>
+                <ZZ>-4.0421279280453</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b6" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125948028.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>233.73010136838</HorizontalAngle>
+            <VerticalAngle>40.523983748392</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.82693596200527</XX>
+                <YY>-1.6323798842672</YY>
+                <ZZ>-3.5427502296119</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b7" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125951023.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>233.72578484383</HorizontalAngle>
+            <VerticalAngle>3.6939667361188</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-1.2486363728624</XX>
+                <YY>-2.4645371506335</YY>
+                <ZZ>-2.6287244360455</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b8" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125955948.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>281.33921303887</HorizontalAngle>
+            <VerticalAngle>114.18397655505</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>1.2031267041326</XX>
+                <YY>0.98553128765717</YY>
+                <ZZ>-4.6012879424285</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000b9" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_125959445.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>281.33917357575</HorizontalAngle>
+            <VerticalAngle>77.353937750734</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.65212904707466</XX>
+                <YY>-0.53454211045913</YY>
+                <ZZ>-4.8223413731185</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000ba" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130003626.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>281.33919745442</HorizontalAngle>
+            <VerticalAngle>40.524031150321</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-2.137366979145</XX>
+                <YY>-1.7515404788831</YY>
+                <ZZ>-3.8011001941535</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000bb" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130006622.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>281.34976117983</HorizontalAngle>
+            <VerticalAngle>3.6924337343884</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-2.7807858550429</XX>
+                <YY>-2.2795576053405</YY>
+                <ZZ>-2.4312226834989</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000bc" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130009465.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>328.94829092819</HorizontalAngle>
+            <VerticalAngle>114.18397264594</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>3.3716349397645</XX>
+                <YY>0.93525226303793</YY>
+                <ZZ>-4.3717110488826</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000bd" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130014635.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>328.94826510953</HorizontalAngle>
+            <VerticalAngle>77.353970959401</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-2.100083056593</XX>
+                <YY>-0.58483929978162</YY>
+                <ZZ>-5.2655824008085</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000be" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130017691.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>328.94834186198</HorizontalAngle>
+            <VerticalAngle>40.523972649946</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-4.3924450254191</XX>
+                <YY>-1.2213257218428</YY>
+                <ZZ>-2.6489283455055</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000bf" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130020689.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>328.98486419115</HorizontalAngle>
+            <VerticalAngle>3.6922144567804</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-4.3529248203939</XX>
+                <YY>-1.2129606274854</YY>
+                <ZZ>-1.2930934246038</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000c0" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130024218.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>175.68472579153</HorizontalAngle>
+            <VerticalAngle>229.18311874947</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>true</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.10997907394149</XX>
+                <YY>2.9178828065265</YY>
+                <ZZ>-1.0856830359249</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000c1" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130029916.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>223.29322066004</HorizontalAngle>
+            <VerticalAngle>229.18311767916</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>true</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>1.1851619273926</XX>
+                <YY>2.986287661833</YY>
+                <ZZ>-1.1111389731687</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000c2" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130033282.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>270.90238729975</HorizontalAngle>
+            <VerticalAngle>229.18312035031</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>true</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>2.5125754075778</XX>
+                <YY>2.473372282359</YY>
+                <ZZ>-0.92035772595977</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000c3" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130038024.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>318.51152168366</HorizontalAngle>
+            <VerticalAngle>229.18312248508</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>true</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>3.5285975621706</XX>
+                <YY>1.3365848969822</YY>
+                <ZZ>-0.4975597917186</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000c4" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130043830.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>6.120642508459</HorizontalAngle>
+            <VerticalAngle>229.1831167643</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>true</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-2.4262910345284</XX>
+                <YY>0.12959011588584</YY>
+                <ZZ>-0.04792884596489</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000c5" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130048772.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>53.729739991911</HorizontalAngle>
+            <VerticalAngle>229.18311555674</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>true</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-2.2071555896762</XX>
+                <YY>1.1178845329627</YY>
+                <ZZ>-0.41563847800435</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000c6" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130053776.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>101.33872459183</HorizontalAngle>
+            <VerticalAngle>229.18311800899</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>true</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-1.6419963334459</XX>
+                <YY>2.0037429748895</YY>
+                <ZZ>-0.74537413442115</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ImageRecord ID="000000c7" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>0000009e</CameraID>
+            <PointRecordID/>
+            <PanoramaID>0000009f</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_130058834.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>148.94798807093</HorizontalAngle>
+            <VerticalAngle>229.18312049259</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>true</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>-0.74452997074557</XX>
+                <YY>2.6796920383949</YY>
+                <ZZ>-0.99701741582782</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ScanningRecord ID="000000c8" TimeStamp="2020-03-12T06:00:42">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <Type>ScanFullDome</Type>
+            <FileName>SX10 Files\SdeDatabase.rwi\SdeDatabase_Station2_Scan2.rwcx</FileName>
+            <Name>Scan 2</Name>
+            <NumberOfPoints>4680893</NumberOfPoints>
+            <HorizontalStep>0.05729577951308</HorizontalStep>
+            <VerticalStep>0.05729577951308</VerticalStep>
+            <PPM>-0.77208404992319</PPM>
+            <TiltChange>0.00089953707435</TiltChange>
+            <Deleted>false</Deleted>
+            <TiltChangeWarningGiven>false</TiltChangeWarningGiven>
+        </ScanningRecord>
+
+        <CameraDesignRecord ID="000000c9" TimeStamp="2020-03-12T06:20:33">
+            <Type>Camera: Overview</Type>
+            <HeightPixels>1944</HeightPixels>
+            <WidthPixels>2592</WidthPixels>
+            <PixelSize>0.0000014</PixelSize>
+            <LensModel>FTheta</LensModel>
+            <NominalFocalLength>0</NominalFocalLength>
+        </CameraDesignRecord>
+
+        <CameraRecord2 ID="000000ca" TimeStamp="2020-03-12T06:20:33">
+            <CameraDesignID>000000c9</CameraDesignID>
+            <CameraPosition>4</CameraPosition>
+            <Optics>
+                <IdealAngularMagnification>1</IdealAngularMagnification>
+                <AngleSymmetricDistortion>
+                    <Order3>0.02818718109357</Order3>
+                    <Order5>0.04079763781654</Order5>
+                    <Order7>0.04325889656764</Order7>
+                    <Order9>0</Order9>
+                </AngleSymmetricDistortion>
+                <AngleDecenteringDistortion>
+                    <Column>0.00000432423562</Column>
+                    <Row>-0.00016945383346</Row>
+                </AngleDecenteringDistortion>
+            </Optics>
+            <Geometry>
+                <PerspectiveCenterPixels>
+                    <PrincipalPointColumn>-1296</PrincipalPointColumn>
+                    <PrincipalPointRow>-972</PrincipalPointRow>
+                    <PrincipalDistance>-2605.2556475364</PrincipalDistance>
+                </PerspectiveCenterPixels>
+                <VectorOffset>
+                    <X>0.033</X>
+                    <Y>0.06866</Y>
+                    <Z>-0.04201</Z>
+                </VectorOffset>
+                <BiVectorAngle>
+                    <XX>1.2062576226317</XX>
+                    <YY>1.210962253227</YY>
+                    <ZZ>-1.2161378387671</ZZ>
+                </BiVectorAngle>
+            </Geometry>
+        </CameraRecord2>
+
+        <PanoramaRecord ID="000000cb" TimeStamp="2020-03-12T06:20:33">
+            <ScanID>000000cd</ScanID>
+            <FrameType>ScanRectangle</FrameType>
+            <AtDistance>172.725</AtDistance>
+            <Overlap>10</Overlap>
+            <Resolution>0</Resolution>
+            <FixedExposure>false</FixedExposure>
+            <NumberOfImages>1</NumberOfImages>
+        </PanoramaRecord>
+
+        <ImageRecord ID="000000cc" TimeStamp="2020-03-12T06:20:33">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <CameraID>000000ca</CameraID>
+            <PointRecordID/>
+            <PanoramaID>000000cb</PanoramaID>
+            <FileName>SX10 Files\OverviewCamera_37992_20200312_132053910.JPG</FileName>
+            <FileNameModified/>
+            <HorizontalAngle>22.224468338777</HorizontalAngle>
+            <VerticalAngle>78.529302523472</VerticalAngle>
+            <Width>2592</Width>
+            <Height>1944</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2592</SourceWidth>
+            <SourceHeight>1944</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+            <TelescopeOffset>
+                <X>0</X>
+                <Y>0</Y>
+                <Z>0</Z>
+            </TelescopeOffset>
+            <TelescopeAngle>
+                <XX>0.19775442046477</XX>
+                <YY>-0.03865941578698</YY>
+                <ZZ>-0.38657736929675</ZZ>
+            </TelescopeAngle>
+        </ImageRecord>
+
+        <ScanningRecord ID="000000cd" TimeStamp="2020-03-12T06:20:33">
+            <StationID>00000040</StationID>
+            <BackBearingID>0000006c</BackBearingID>
+            <Type>ScanRectangle</Type>
+            <FileName>SX10 Files\SdeDatabase.rwi\SdeDatabase_Station3_Scan3.rwcx</FileName>
+            <Name>Scan 3</Name>
+            <NumberOfPoints>35784</NumberOfPoints>
+            <HorizontalStep>0.00716197243914</HorizontalStep>
+            <VerticalStep>0.00716197243914</VerticalStep>
+            <PPM>-0.77208404992319</PPM>
+            <TiltChange>0.00237183610468</TiltChange>
+            <Deleted>false</Deleted>
+            <TiltChangeWarningGiven>true</TiltChangeWarningGiven>
+        </ScanningRecord>
+    </FieldBook>
+
+    <Reductions>
+
+        <Point>
+            <ID>0000003b</ID>
+            <Name>TEST</Name>
+            <Code/>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+
+            <Grid>
+                <North>1000</North>
+                <East>1000</East>
+                <Elevation>500</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000080</ID>
+            <Name>T4R</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+
+            <Grid>
+                <North>1046.6304084436</North>
+                <East>1000</East>
+                <Elevation>500.29276516987</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000084</ID>
+            <Name>T5</Name>
+            <Code/>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>MTA</Classification>
+
+            <Grid>
+                <North>1054.4369840053</North>
+                <East>945.71268755881</East>
+                <Elevation>500.1782348475</Elevation>
+            </Grid>
+        </Point>
+    </Reductions>
+
+    <Environment>
+
+        <DisplaySettings>
+            <DistanceUnits>Metres</DistanceUnits>
+            <HeightUnits>Metres</HeightUnits>
+            <AngleUnits>DMSDegrees</AngleUnits>
+            <AzimuthFormat>Azimuth</AzimuthFormat>
+            <LatitudeLongitudeUnits>DMSDegrees</LatitudeLongitudeUnits>
+            <CoordinateOrder>North-East-Elevation</CoordinateOrder>
+            <TemperatureUnits>Celsius</TemperatureUnits>
+            <PressureUnits>MilliBar</PressureUnits>
+            <GradeUnits>Percentage</GradeUnits>
+            <AreaUnits>SquareMetres</AreaUnits>
+            <VolumeUnits>CubicMetres</VolumeUnits>
+            <StationingFormat>1+000.0</StationingFormat>
+            <StationIndexIncrement/>
+            <DistanceDisplayDPs>3</DistanceDisplayDPs>
+            <CoordinateDisplayDPs>3</CoordinateDisplayDPs>
+            <AreaDisplayDPs>3</AreaDisplayDPs>
+            <VolumeDisplayDPs>3</VolumeDisplayDPs>
+            <AngleDisplayDPs>0</AngleDisplayDPs>
+            <LaserVADisplay>Inclination</LaserVADisplay>
+            <TimeFormat>Local</TimeFormat>
+        </DisplaySettings>
+
+        <CoordinateSystem>
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+            <Ellipsoid>
+                <EarthRadius/>
+                <Flattening/>
+            </Ellipsoid>
+            <Projection>
+                <Type>ScaleOnly</Type>
+                <Scale>1</Scale>
+                <SouthAzimuth>false</SouthAzimuth>
+                <GridOrientation>IncreasingNorthEast</GridOrientation>
+                <ApplySeaLevelCorrection>false</ApplySeaLevelCorrection>
+                <MagneticDeclination>0</MagneticDeclination>
+                <Distances>GroundDistance</Distances>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight/>
+            </LocalSite>
+            <Datum>
+                <Type>NoDatum</Type>
+            </Datum>
+            <HorizontalAdjustment>
+                <Type>NoAdjustment</Type>
+            </HorizontalAdjustment>
+            <VerticalAdjustment>
+                <Type>NoAdjustment</Type>
+            </VerticalAdjustment>
+            <CombinedScaleFactor>
+                <Location>
+                    <Latitude/>
+                    <Longitude/>
+                    <Height/>
+                </Location>
+                <Scale>1</Scale>
+            </CombinedScaleFactor>
+            <TectonicPlate>
+                <Name>Unknown</Name>
+            </TectonicPlate>
+        </CoordinateSystem>
+
+        <JobProperties>
+            <Reference/>
+            <Description/>
+            <Operator/>
+            <JobNote/>
+            <TectonicPlate>Unknown</TectonicPlate>
+            <ApplyJobPointNameRange>false</ApplyJobPointNameRange>
+            <MinimumJobPointName/>
+            <MaximumJobPointName/>
+        </JobProperties>
+
+        <JobSettings>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+            <Averaging>Weighted</Averaging>
+            <UseAttributesOfBaseCode>true</UseAttributesOfBaseCode>
+        </JobSettings>
+
+        <TimeZone>
+            <ZoneName>Pacific Daylight Time</ZoneName>
+            <HoursToUTC>7</HoursToUTC>
+        </TimeZone>
+    </Environment>
+</JOBFile>

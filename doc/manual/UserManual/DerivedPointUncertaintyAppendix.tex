@@ -1,0 +1,64 @@
+\chapter{Derived Point Uncertainty Computation} \label{appendices:DerPtUncMapping}
+
+Derived points in a SALSA project are computed after the adjustment process via two possible methods: 
+\begin{enumerate}
+	\item Computing the mean of two or more adjusted, fixed, or previously computed derived points - see section \ref{sect:MEAN}
+	\item Applying an East-North-Up offset vector from an adjusted, fixed, or previously computed derived point - see section \ref{sect:ENUO}
+\end{enumerate}
+
+These derived points can be employed in the Station Inverse dialog box, which is intended to provide the user with various metrics that relate the states of two user-selected stations.  However, in order to have appropriate uncertainty values for these metrics when one or both stations are derived points, the derived point covariance values and associated cross covariance values relative to all other points (including other derived points) must be computed.  
+
+\section*{Computing Full Formal Covariance For Mean Derived Points}
+
+To compute the covariance and cross covariance values associated with a mean derived point, first the partial derivative matrix is computed, which contains the partial derivatives of the augmented covariance containing the mean derived point with respect to the original full state covariance.  The partial derivative matrix contains the identity matrix for the original states with respect to the original states (all 1's along the diagonal).  All partial derivative values of the derived point with respect to the points employed in the mean calculation are $1/n_{\text{mean}}$ for each position component, where $n_{\text{mean}}$ is the total number points employed in the mean calculation.  All other partials derivative values are zero. 
+
+The original full state covariance is then mapped to the new augmented covariance containing the mean derived point by pre- and post-multiplying by the partial derivative matrix:
+\begin{equation}\label{eq:CovMapping}
+\text{Cov}_{\text{New}} = P \; \text{Cov}_{\text{Original}} \; P^T
+\end{equation}
+where $P$ is the partial derivative matrix. If multiple derived points are specified, the mapped covariance for each individual derived point serves as the original covariance for the next calculated derived point (and thus the derived points are always processed in the appropriate order based on how they are defined).
+
+If any fixed points (which are not contained in the original full covariance) are used to compute a mean derived point, the covariance is expanded by 3 columns and 3 rows, all containing zeros.  This new augmented ``input'' covariance is then used in equation \ref{eq:CovMapping} above, with the final covariance containing only the original full covariance (no fixed points) and the new mean derived point covariance values.  Because all covariance values associated with these fixed points are zero, this step is only employed to simplify the required bookkeeping of the states.
+
+After mapping the covariance, it is possible to inflate the uncertainty of the new mean point by adding $\sigma_{\text{extra}}^2$ to all three diagonal components of the mean derived point covariance.  This uncertainty inflation may be desired if the user feels there is unmodeled error in the points used to compute the mean derived point.
+	
+\section*{Computing Full Formal Covariance For ENU Offset Derived Points}
+
+To compute the covariance and cross covariance values associated with a ENU offset derived point, the same analytical partials approach is employed as for the mean derived point covariance calculation. However, there are a few extra steps involved.
+
+First the user-provided 1-$\sigma$ values are used to form the offset vector covariance:
+\begin{equation}
+\text{Cov}_{\text{off}}^{\text{ENU}} = \left[ \begin{array}{ccc} 
+\sigma_{\text{E}}^2 & 0 & 0 \\
+0 & \sigma_{\text{N}}^2 & 0 \\
+0 & 0 & \sigma_{\text{U}}^2 \\
+\end{array} \right]
+\end{equation}
+
+The $\text{Cov}_{\text{off}}^{\text{ENU}}$ matrix is then rotated into the ECEF XYZ frame:
+\begin{equation}
+\begin{split}
+\text{Cov}_{\text{off}}^{\text{XYZ}} &= \mathbf{R}_{\text{ENU2ECEF}} \; \text{Cov}_{\text{off}}^{\text{ENU}} \; \mathbf{R}_{\text{ENU2ECEF}}^T,\\
+\mathbf{R}_{\text{ENU2ECEF}}&=\left[\begin{array}{ccc}-\sin\lambda_0&-\cos\lambda_0\sin\phi_0&\cos\lambda_0\cos\phi_0\\\cos\lambda_0&-\sin\lambda_0\sin\phi_0&\sin\lambda_0\cos\phi_0\\0&\cos\phi_0&\sin\phi_0\end{array}\right].
+\end{split}
+\end{equation}
+where $\phi_0$ and $\lambda_0$ are the geodetic latitude and longitude values of the ``from'' position. 
+
+For ENU offset derived points that originate at fixed points, $\text{Cov}_{\text{off}}^{\text{XYZ}}$ is the final derived point covariance and all cross covariance terms are zero. Thus the final modified covariance including the ENU derived point is
+\begin{equation}
+\text{Cov}_{\text{New}} = \left[ \begin{array}{cc} 
+\text{Cov}_{\text{Original}} & 0 \\ 0 & \text{Cov}_{\text{off}}^{\text{XYZ}}
+\end{array} \right]
+\end{equation}
+
+For ENU offset derived points that originate at adjusted or other derived points, the bottom right 3x3 sub-matrix of an augmented ``input'' matrix is set equal to $\text{Cov}_{\text{off}}^{\text{XYZ}}$:
+\begin{equation}
+\text{Cov}_{\text{AugIn}} = \left[ \begin{array}{cc} 
+\text{Cov}_{\text{Original}} & 0 \\ 0 & \text{Cov}_{\text{off}}^{\text{XYZ}}
+\end{array} \right]
+\end{equation}
+
+The matrix $\text{Cov}_{\text{AugIn}}$ is then mapped using a partial derivative matrix $P$.  Within that partials matrix, all diagonal entries for the original state with respect to the original state are 1's (identity); all partials of derived point components with respect to the ``from'' point associated components are 1; and all partials of the derived point with respect to the offset vector are 1 (a 3x3 identity matrix in the bottom right 3x3 sub-matrix of the partials matrix).  Finally, the partial derivative matrix is applied to the input augmented covariance $\text{Cov}_{\text{AugIn}}$:
+\begin{equation}\label{eq:CovMapping2}
+\text{Cov}_{\text{New}} = P \; \text{Cov}_{\text{AugIn}} \; P^T
+\end{equation}

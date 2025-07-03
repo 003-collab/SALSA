@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?include "cpack_variables.wxi"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+    RequiredVersion="3.6.3303.0">
+
+    <Product Id="$(var.CPACK_WIX_PRODUCT_GUID)"
+        Name="$(var.CPACK_PACKAGE_NAME)"
+        Language="1033"
+        Version="$(var.CPACK_PACKAGE_VERSION)"
+        Manufacturer="$(var.CPACK_PACKAGE_VENDOR)"
+        UpgradeCode="$(var.CPACK_WIX_UPGRADE_GUID)">
+
+        <Package InstallerVersion="405" Compressed="yes"/>
+
+        <Media Id="1" Cabinet="media1.cab" EmbedCab="yes"/>
+
+        <MajorUpgrade
+            Schedule="afterInstallInitialize"
+            AllowSameVersionUpgrades="yes"
+            DowngradeErrorMessage="A later version of [ProductName] is already installed. Setup will now exit."/>
+			
+		<DirectoryRef Id="TARGETDIR">
+			<Merge Id="VC140_CRT" Language="1033" SourceFile="C:\Program Files (x86)\Common Files\Merge Modules\Microsoft_VC140_CRT_x64.msm" DiskId="1" />
+		</DirectoryRef>
+
+        <WixVariable Id="WixUILicenseRtf" Value="$(var.CPACK_WIX_LICENSE_RTF)"/>
+        <Property Id="WIXUI_INSTALLDIR" Value="INSTALL_ROOT"/>
+
+        <?ifdef CPACK_WIX_PRODUCT_ICON?>
+        <Property Id="ARPPRODUCTICON">ProductIcon.ico</Property>
+        <Icon Id="ProductIcon.ico" SourceFile="$(var.CPACK_WIX_PRODUCT_ICON)"/>
+        <?endif?>
+
+        <?ifdef CPACK_WIX_UI_BANNER?>
+        <WixVariable Id="WixUIBannerBmp" Value="$(var.CPACK_WIX_UI_BANNER)"/>
+        <?endif?>
+
+        <?ifdef CPACK_WIX_UI_DIALOG?>
+        <WixVariable Id="WixUIDialogBmp" Value="$(var.CPACK_WIX_UI_DIALOG)"/>
+        <?endif?>
+
+		<!-- create directories for program menu and desktop and place inside TARGETDIR since we're not leverage CMake to generate these -->
+		<DirectoryRef Id="TARGETDIR">
+			<Directory Id="ProgramMenuFolder">
+				<Directory Id="PROGRAM_MENU_FOLDER" Name="SALSA"/>
+			</Directory>
+			<Directory Id="DesktopFolder" Name="Desktop"/>
+		</DirectoryRef>
+
+        <FeatureRef Id="ProductFeature">
+			<MergeRef Id="VC140_CRT" />
+			
+			<Component Id="SetEnvironmentVariables" Guid="{12345678-1234-1234-1234-123456789012}" Directory="CM_DP_bin" KeyPath="yes" >
+				<Environment Action="set" Id="SetPathToInstallFolderToSystemPath" Name="PATH" System="yes" Value="[CM_DP_bin]" Permanent="no" Part="last" />
+                                <Environment Id="CondaDLLSearch" Action="set" Part="all" Name="CONDA_DLL_SEARCH_MODIFICATION_ENABLE" Permanent="no" System="yes" Value="1" />
+                                <Environment Id="ProjLib" Action="create" Name="PROJ_LIB" System="yes" Permanent="no" Value="[CM_DP_bin]..\python\Library\share\proj" />
+			</Component>
+			
+			<Component Id="SetFileAssociation" Guid="{12345678-1234-1234-1234-123456789013}" Directory="CM_DP_bin" KeyPath="yes" >
+				<Condition>SETFILEASSOCIATION</Condition>
+				<ProgId Id="SALSA.lsafile" Description="SALSA LSA file">
+					<Extension Id="lsa" ContentType="application/salsa">
+						<Verb Id="open" Command="Open" TargetFile="CM_FP_bin.salsa.exe" Argument='"%1"' />
+					</Extension>
+				</ProgId>
+				<ProgId Id="SALSA.projfile" Description="SALSA PROJ file">
+					<Extension Id="proj" ContentType="application/salsa">
+						<Verb Id="open" Command="Open" TargetFile="CM_FP_bin.salsa.exe" Argument='"%1"' />
+					</Extension>
+				</ProgId>
+			</Component>
+			
+			<!-- these shortcuts must be in the same feature as the target executable, apparently the Directory property must be set instead of placing in DirectoryRef or Directory since DirectoryRef
+				cannot go into FeatureRef and ComponentRef cannot contain any child elements...
+			-->
+			<Component Id="CM_SHORTCUT" Directory="PROGRAM_MENU_FOLDER" Guid="*">
+				<Condition>SETCREATESHORTCUTS</Condition>
+				<Shortcut Id="CM_SP_bin.salsa.exe" Name="SALSA" Target="[#CM_FP_bin.salsa.exe]" WorkingDirectory="CM_DP_bin"/>
+				<Shortcut Id="UNINSTALL" Name="Uninstall SALSA" Description="Uninstalls SALSA" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]"/>
+				<RemoveFolder Id="CM_REMOVE_PROGRAM_MENU_FOLDER" On="uninstall"/>
+				<RegistryValue Root="HKCU" Key="Software\Applied Research Laboratories\SALSA" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+			</Component>
+			
+			<Component Id="CM_DESKTOP_SHORTCUT" Directory="DesktopFolder" Guid="*">
+				<Condition>SETCREATESHORTCUTS</Condition>
+				<Shortcut Id="CM_DSP_bin.salsa.exe" Name="SALSA" Target="[#CM_FP_bin.salsa.exe]" WorkingDirectory="CM_DP_bin"/>
+				<RegistryValue Root="HKCU" Key="Software\Applied Research Laboratories\SALSA" Name="installed_desktop" Type="integer" Value="1" KeyPath="yes"/>
+			</Component>
+
+		</FeatureRef>
+
+
+		<!--
+        <UIRef Id="$(var.CPACK_WIX_UI_REF)" />
+		-->
+		
+		<UI Id="WixUI_InstallDir">
+            <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+            <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" />
+            <TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+
+            <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+            <Property Id="WixUI_Mode" Value="InstallDir" />
+			
+			<!-- These are used in Conditions for shortcut and file association. I guess they are global even placed here. -->
+			<Property Id="SETFILEASSOCIATION" Value="1" />
+			<Property Id="SETCREATESHORTCUTS" Value="1" />
+
+            <DialogRef Id="BrowseDlg" />
+            <DialogRef Id="DiskCostDlg" />
+            <DialogRef Id="ErrorDlg" />
+            <DialogRef Id="FatalError" />
+            <DialogRef Id="FilesInUse" />
+            <DialogRef Id="MsiRMFilesInUse" />
+            <DialogRef Id="PrepareDlg" />
+            <DialogRef Id="ProgressDlg" />
+            <DialogRef Id="ResumeDlg" />
+            <DialogRef Id="UserExit" />
+			
+			<!-- Copied source for InstallDirDlg to base a custom dialog -->
+			<Dialog Id="CustomInstallDirDlg" Width="370" Height="270" Title="!(loc.InstallDirDlg_Title)">
+				<Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="!(loc.WixUINext)" />
+				<Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="!(loc.WixUIBack)" />
+				<Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Cancel="yes" Text="!(loc.WixUICancel)">
+					<Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+				</Control>
+
+				<Control Id="Description" Type="Text" X="25" Y="23" Width="280" Height="15" Transparent="yes" NoPrefix="yes" Text="!(loc.InstallDirDlgDescription)" />
+				<Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="!(loc.InstallDirDlgTitle)" />
+				<Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="44" TabSkip="no" Text="!(loc.InstallDirDlgBannerBitmap)" />
+				<Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="0" />
+				<Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" />
+
+				<Control Id="FolderLabel" Type="Text" X="20" Y="60" Width="290" Height="30" NoPrefix="yes" Text="!(loc.InstallDirDlgFolderLabel)" />
+				<Control Id="Folder" Type="PathEdit" X="20" Y="100" Width="320" Height="18" Property="WIXUI_INSTALLDIR" Indirect="yes" />
+				<Control Id="ChangeFolder" Type="PushButton" X="20" Y="120" Width="56" Height="17" Text="!(loc.InstallDirDlgChange)" />
+
+				<Control Id="FileAssociationCheckBox" Type="CheckBox" X="20" Y="180" Width="290" Height="17" Property="SETFILEASSOCIATION" CheckBoxValue="1" Text="Add .lsa and .proj File Associations" />
+				<Control Id="CreateShortcutCheckBox" Type="CheckBox" X="20" Y="160" Width="290" Height="17" Property="SETCREATESHORTCUTS" CheckBoxValue="1" Text="Create Start Menu and Desktop shortcuts" />
+			</Dialog>
+
+            <Publish Dialog="BrowseDlg" Control="OK" Event="DoAction" Value="WixUIValidatePath" Order="3">1</Publish>
+            <Publish Dialog="BrowseDlg" Control="OK" Event="SpawnDialog" Value="InvalidDirDlg" Order="4"><![CDATA[WIXUI_INSTALLDIR_VALID<>"1"]]></Publish>
+
+            <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+
+			<!-- Next goes to InstallDirDlg instead of LicenceAgreementDlg -->
+            <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="CustomInstallDirDlg">NOT Installed</Publish>
+            <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">Installed AND PATCH</Publish>
+
+			<!-- No longer used
+            <Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+            <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="CustomInstallDirDlg">LicenseAccepted = "1"</Publish>
+			-->
+
+			<!-- Back goes to WelcomeDlg instead of LicenceAgreementDlg -->
+            <Publish Dialog="CustomInstallDirDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+						
+            <Publish Dialog="CustomInstallDirDlg" Control="Next" Event="SetTargetPath" Value="[WIXUI_INSTALLDIR]" Order="1">1</Publish>
+            <Publish Dialog="CustomInstallDirDlg" Control="Next" Event="DoAction" Value="WixUIValidatePath" Order="2">NOT WIXUI_DONTVALIDATEPATH</Publish>
+            <Publish Dialog="CustomInstallDirDlg" Control="Next" Event="SpawnDialog" Value="InvalidDirDlg" Order="3"><![CDATA[NOT WIXUI_DONTVALIDATEPATH AND WIXUI_INSTALLDIR_VALID<>"1"]]></Publish>
+            <Publish Dialog="CustomInstallDirDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg" Order="4">WIXUI_DONTVALIDATEPATH OR WIXUI_INSTALLDIR_VALID="1"</Publish>
+            <Publish Dialog="CustomInstallDirDlg" Control="ChangeFolder" Property="_BrowseProperty" Value="[WIXUI_INSTALLDIR]" Order="1">1</Publish>
+            <Publish Dialog="CustomInstallDirDlg" Control="ChangeFolder" Event="SpawnDialog" Value="BrowseDlg" Order="2">1</Publish>
+            
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="CustomInstallDirDlg" Order="1">NOT Installed</Publish>
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg" Order="2">Installed AND NOT PATCH</Publish>
+            <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="2">Installed AND PATCH</Publish>
+
+            <Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+
+            <Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+            <Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+            <Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+
+            <Property Id="ARPNOMODIFY" Value="1" />
+        </UI>
+
+        <UIRef Id="WixUI_Common" />
+
+		<CustomAction Id='SALSAInstallAction' FileKey="CM_FP_python.python.exe" ExeCommand='&quot;[#CM_FP_scripts.msi.SALSAInstallAction.py]&quot;' Impersonate='no' Execute='deferred' Return='asyncNoWait'/>
+		<CustomAction Id='SALSAUninstallAction' FileKey="CM_FP_python.python.exe" ExeCommand='&quot;[#CM_FP_scripts.msi.SALSAUninstallAction.py]&quot;' Impersonate='no' Execute='deferred' Return='asyncNoWait'/>
+		
+		<InstallExecuteSequence>
+				<Custom Action='SALSAInstallAction' Before='InstallFinalize'>NOT Installed OR PATCH</Custom>
+				<Custom Action='SALSAUninstallAction' Before='RemoveFiles'>REMOVE~="ALL"</Custom>
+		</InstallExecuteSequence>
+		
+        <?include "properties.wxi"?>
+    </Product>
+</Wix>

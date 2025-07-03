@@ -1,0 +1,54 @@
+\chapter{Solver command-line reference}
+\label{chap:solverref}
+
+\begin{Snippet}
+lsasolver, Ver. 0.5.0 9/22/15, Run 2015/10/08 at 11:32:53
+Usage: lsasolver [option] ...
+ Program lsasolver will read an input file and ...
+ Input is on the command line, or of the same format in a file (see --file below);
+ lines in that file which begin with '#' are ignored. Accepted options are 
+ shown below, followed by a description, with default value, if any, in ().
+
+# File I/O:
+ --file <name>       Name of file containing more options [#-EOL = comment]
+ --out <name>        Name of output file ()
+ --outpath <path>    Path for output file ()
+ --input <name>      Name of input file(s) ()
+ --inpath <path>     Path for input file ()
+
+# Program control:
+ --apquit            Quit after computing a priori positions (don't)
+
+# Algorithm [*overwrite DAT file input; default if no DAT input]:
+ --niter <n>         Limit on the number of iterations (default 15) [*] (-1)
+ --conv <frac>       Convergence criterion (default 1.0e-08) [*] (0.00)
+ --2D                Solve a true 2D problem (ignore Z) (don't)
+ --noAPV             Leave covariance in relative units (default F) [*] (don't)
+ --APV               Scale covariance to physical units (default T) [*] (don't)
+ --alpha <prob>      Significance level of Chi-squared test [0<prob<1] (0.050)
+ --SOA               Express angle equations in seconds-of-arc (don't)
+ --allowCOM          Allow a priori computation to return center-of-mass solution
+ --statsAll          Output chi squared and data snooping at every iteration
+ --calcExtRelVect    Calculate external reliability values
+
+# Geoid:
+ --geoidfile <name>  Name of geoid file ()
+ --geoidpath <path>  Path for geoid file ()
+ --interpolation <method> Geoid interpolation method [bicubic,bilinear] (bicubic)
+
+# Output:
+ --eqnout <file>     Output observation equations to this file ()
+ --bin <file>        Output results for GUI to file in CSV format ()
+ --csv <file>        Output final positions and errors to CSV format file ()
+ --extr <"str">      Extraction string (EXTR tag TYP label[s]) [repeat] ()
+ --westLon           Output west longitude (don't)
+ --datout <file>     Output a complete DAT file after adjustment ()
+ --progress          Output to stdout summary information, incl. at each iteration
+
+# Help:
+ --validate          Read input and test its validity, then quit (don't)
+ --verbose           Print extended output information (don't)
+ --debug             Print debug output at level 0 [debug<n> for level n=1-7] (-1)
+ --timing            Print timing information (don't)
+ --help              Print this and quit (don't)
+\end{Snippet}

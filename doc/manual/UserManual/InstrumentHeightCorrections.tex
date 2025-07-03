@@ -1,0 +1,164 @@
+\chapter{Instrument Height Uncertainty Corrections}
+\label{chap:InstrHghtCorrections}
+Generally, in geodetic survey measurements, the instrument employed in a measurement isn't placed directly on the point being surveyed but is placed on a tripod which positions the instrument over the point at some convenient working height. The surveyor takes care to plumb the instrument over the point to minimize any lateral offsets and to measure the height offset that is introduced by the tripod. These actions (centering the instrument and measuring the height offset) typically cannot be achieved without some error. Centering errors, affecting the horizontal plane of the instrument, are handled by \textsf{salsa} through the UNCR (uncertainty) record as described in Chapter \ref{chap:UNCRcorrections}. The uncertainty in the measurement of an instrument height is the subject of this chapter.
+
+For convenience, table \ref{tab:InstrHGHTcorrections} shows which measurments have ``To'' and ``From'' instrument heights as well as which measurements are affected by the uncertainty of the instrument height. Since instrument height uncertainties are a vertical correction, not every measurement type is affected even if it has a ``To'' or ``From'' height specified. In general, an instrument is placed at the ``From'' station and the target is at the ``To'' station. The one exception to this generality is the HANG measurement type, where the instrument is at the ``At'' station and the targets are at the ``To'' and ``From'' stations.
+\begin{table}[!htbp]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|c|c|}\hline
+\tiny{\textbf{Record Type}}&\tiny{\textbf{Height From}}&\tiny{\textbf{Height To}}&\tiny{\textbf{Height Uncertainty}}\\\hline
+\tiny{\textbf{AZIM}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\\\hline
+\tiny{\textbf{DGRP}}&&&\\\hline
+\tiny{\textbf{DIST}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{DXYZ}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{HANG}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\\\hline
+\tiny{\textbf{HDIF}}&&&\\\hline
+\tiny{\textbf{VANG}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}\\\hline
+\tiny{\textbf{ZANG}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}&\tiny{\textbf{X}}\\\hline
+\end{tabular}
+\caption{Table indicating which instrument height uncertainties are applicable to each record type.}
+\label{tab:InstrHGHTcorrections}
+\end{table}
+\section{Instrument Height Uncertainties}
+Note that instrument height uncertainties in \textsf{salsa} are treated as vertical errors. In summary, only these four measurment types are affected: DIST, DXYZ, VANG and ZANG.
+
+\subsection{DIST: Distance Measurement}
+The error applied to DIST measurement records due to instrument height uncertainty takes the following form:
+\begin{equation}
+\sigma_{\text{DIST,Instr HGHT}}^2=(\sigma_{\text{Height From}}\sin(\alpha))^2+(\sigma_{\text{Height To}}\sin(\alpha))^2.
+\end{equation}
+
+Where $\alpha$ is calculated the same as in chapter \ref{chap:UNCRcorrections}. The expression for $\alpha$ is repeated here for convenience:
+
+\begin{equation}
+    \alpha=\arctan(\frac{| \Delta U |}{\sqrt{\Delta E^2 + \Delta N^2}})
+\end{equation}
+
+Where $\Delta E$, $\Delta N$, and $\Delta U$ are the component differences between the ``From'' and ``To'' points in the ENU reference frame.
+
+\subsection{DXYZ: 3-D XYZ Coordinate Difference}
+The error applied to DXYZ measurement records due to instrument height uncertainty is more complicated than for DIST records. First, define the error vector in the ENU frame:
+\begin{equation}\label{eq:heightENU} %\label{eq:ResCov}   
+    \text{HeightFrom/ToENU} = \left[ \begin{array}{ccc} 0 & 0 & \sigma_{\text{Height From/To}} \\ \end{array} \right]
+\end{equation}
+
+Then, take the outer product of this vector with itself to get the measurement covariance in the ENU frame:
+\begin{equation}\label{eq:heightXYZ} %\label{eq:ResCov}   
+    \text{Cov}_{\text{DXYZ,Instr HGHT,ENU}} =\left[ \begin{array}{c} 0 \\ 0 \\ \sigma_{\text{H}} \\ \end{array} \right] \left[ \begin{array}{ccc} 0 & 0 & \sigma_{\text{H}} \\ \end{array} \right] = \left[ \begin{array}{ccc} 0 & 0 & 0\\ 0 & 0 & 0\\ 0 & 0 & \sigma_{\text{H}}^2 \\ \end{array} \right]
+\end{equation}
+
+The, rotate the result into the XYZ reference frame:
+
+\begin{equation}\label{eq:dxyzHeightErr} %\label{eq:ResCov}   
+    \text{Cov}_{\text{DXYZ,Instr HGHT, XYZ}} = \sigma_{\text{H}}^2 \text{R}_{ENU2XYZ} \left[ \begin{array}{ccc} 
+                                                                                0 & 0 & 0 \\
+                                                                                0 & 0 & 0 \\
+                                                                                0 & 0 & 1 \\
+                                                                            \end{array} \right] \text{R}_{ENU2XYZ}^{T}
+\end{equation}
+
+The total measurement covariance for both the ``From'' and ``To'' stations is:
+
+\begin{equation}\label{eq:totalDXYZHeightCov} %\label{eq:ResCov}   
+    \text{Cov}_{\text{DXYZ,Instr HGHT Total},XYZ} = \text{Cov}_{\text{DXYZ,Instr HGHT From},XYZ} + \text{Cov}_{\text{DXYZ,Instr HGHT To},XYZ}
+\end{equation}
+
+Where the measurement covariances for each station are defined by \ref{eq:dxyzHeightErr}.
+
+\subsection{VANG: Vertical Angle}
+The error applied to VANG measurement records due to instrument height uncertainty takes the following form where $\text{S}$ is the slant distance, $\text{d}$ is the horizontal distance between the two points, and $\text{H}$ is the vertical distance between the two points:
+\begin{eqnarray}\label{eq:varianceVANG}
+\sigma_{\text{VANG,Instr HGHT}}^2=\left(\f{\f{H}{\text{S}} - \f{H-\sigma_{H_{From}}}{\sqrt{d^2 + (H-\sigma_{H_{From}})^2}}}{\cos(\text{VANG}_{\text{To,From}})}\right)^2&\\\nonumber
++\left(\f{\f{H}{\text{S}} - \f{H-\sigma_{H_{To}}}{\sqrt{d^2 + (H-\sigma_{H_{To}})^2}}}{\cos(\text{VANG}_{\text{To,From}})}\right)^2
+\end{eqnarray}
+
+This result may be found geometrically via figure \ref{Fig:VANG_instr_hght}.
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (0,3);
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (3,0);
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (3,0);
+\draw[straight,color=black,line width=0.25mm] (0,0) -- (2,2);
+\draw[straight,color=blue,line width=0.25mm] (0,0.5) -- (2,2);
+\draw[dashed,color=blue,line width=0.25mm] (0,0.5) -- (2,2.5);
+
+\draw[dashed,color=black,line width=0.25mm] (2,2) -- (2,0);
+\draw[dashed,color=blue,line width=0.25mm] (2,2.5) -- (2,0.5);
+\draw[dashed,color=blue,line width=0.25mm] (0,0.5) -- (2,0.5);
+\draw[dashed,color=blue,line width=0.25mm] (0,0.5) -- (2,0.5);
+
+
+
+\draw[straight,color=blue,line width=0.15mm] (0.2,1.6) -- (0.7,1.1);
+\draw[straight,color=blue,line width=0.15mm] (-0.2,0.75) -- (0.3,0.65);
+
+\draw (1,-0.45) node{{\color{black}{\tiny{$\text{d}$}}}};
+\draw (1.1,0.8) node{{\color{black}{\tiny{$\text{S}$}}}};
+
+
+\draw (0.35,0.17) node{{\color{black}{\tiny{$\theta$}}}};
+\draw (-0.6,0.75) node{{\color{blue}{\tiny{$\theta - \sigma_{\theta}$}}}};
+\draw (0.2,1.7) node{{\color{blue}{\tiny{$\sigma_{\theta}$}}}};
+
+\draw (2.4,0.25) node{{\color{black}{\tiny{$\sigma_{H}$}}}};
+\draw (2.7,1.25) node{{\color{black}{\tiny{$H - \sigma_{H}$}}}};
+\draw (2.4,2.25) node{{\color{black}{\tiny{$\sigma_{H}$}}}};
+\draw (3.55,1) node{{\color{black}{\tiny{$H$}}}};
+
+\draw[straight,color=black,line width=0.15mm] (0, -0.1) -- (0, -0.3);
+\draw[straight,color=black,line width=0.15mm] (2, -0.1) -- (2, -0.3);
+\draw[straight,color=black,line width=0.15mm] (0, -0.2) -- (2, -0.2);
+
+
+\draw[straight,color=black,line width=0.15mm] (2.1,0.5) -- (2.3,0.5);
+\draw[straight,color=black,line width=0.15mm] (2.1,2) -- (2.3,2);
+\draw[straight,color=black,line width=0.15mm] (2.1,2.5) -- (2.3,2.5);
+\draw[straight,color=black,line width=0.15mm] (2.2,0) -- (2.2,2.5);
+
+\draw[straight,color=black,line width=0.15mm] (3.3,0) -- (3.5,0);
+\draw[straight,color=black,line width=0.15mm] (3.3,2) -- (3.5,2);
+\draw[straight,color=black,line width=0.15mm] (3.4,0) -- (3.4,2);
+\end{tikzpicture}
+\caption{The geometry depicting the effect of instrument height uncertainty at the ``From'' station, $\sigma_{H_{from}}$, on the measured Vangle, $\theta$.  A similar argument holds for the ``To'' station.}
+\label{Fig:VANG_instr_hght}
+\end{figure}
+
+From this diagram one can derive the previously given equation for the measurement variance. First, establish some basic identities:
+
+\begin{equation}\label{eq:sin} %\label{eq:ResCov}   
+    \sin\theta = \f{H}{S}; \sin\left(\theta-\sigma_{\theta_{From}}\right) = \f{H-\sigma_{H_{From}}}{S*}
+\end{equation}
+
+Where:
+\begin{equation}\label{eq:s_sPrime} %\label{eq:ResCov}   
+    S = \sqrt{d^2 + H^2}; S* = \sqrt{d^2 + (H-\sigma_{H_{From}})^2}
+\end{equation}
+
+Next using basic trigonometric identities:
+\begin{equation}\label{eq:sin_start} %\label{eq:ResCov} 
+    \sin\left(\theta-\sigma_{\theta_{From}}\right) = \f{H-\sigma_{H_{From}}}{S*}
+\end{equation}
+\begin{equation}
+    \sin\theta\cos\sigma_{\theta_{From}} - \cos\theta\sin\sigma_{\theta_{From}} = \f{H-\sigma_{H_{From}}}{S*}
+\end{equation}
+
+And following the small angle assumption:
+\begin{equation}\label{eq:small_angle_assumption} %\label{eq:ResCov} 
+    \sin\theta - \cos\theta\sigma_{\theta_{From}} = \f{H-\sigma_{H_{From}}}{S*}
+\end{equation}
+\begin{equation}
+    \f{H}{S} - \cos\theta\sigma_{\theta_{From}} = \f{H-\sigma_{H_{From}}}{S*}
+\end{equation}
+\begin{equation}
+    \cos\theta\sigma_{\theta_{From}} = \f{H}{S} - \f{H-\sigma_{H_{From}}}{S*}
+\end{equation}
+\begin{equation}
+    \sigma_{\theta_{From}} = \f{\f{H}{S}- \f{H-\sigma_{H_{From}}}{S*}}{\cos\theta}
+\end{equation}
+
+The derivation for $\sigma_{\theta_{To}}$ is analagous. Therefore, to achieve the variance equation \ref{eq:varianceVANG}, square both the ``From'' and ``To'' results and add them together.
+
+
+\subsection{ZANG: Zenith Angle}
+The error applied to ZANG measurement records due to instrument height uncertainty takes the same form as for the VANG measurement records. The only difference is $\cos$ becomes $\sin$.

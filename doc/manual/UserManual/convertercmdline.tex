@@ -1,0 +1,28 @@
+\chapter{IOB-to-LSA command-line reference}
+
+\begin{Snippet}
+iobconverter, Ver. 1.0.0, Run 2016/01/29 at 09:42:38
+Usage: iob2lsa [option] ...
+ Program iobconverter will read an .iob file and convert it
+and included files (if any) to .lsa files. Input is on the command line.
+Accepted options are shown below, followed by a description,
+with default value, if any, in ().
+
+# File I/O:
+ --lsa <name>      Name of output .lsa file ()
+ --iob <name>      Name of input .iob file(s) ()
+ --lsapath <path>  Path for output .lsa file ()
+ --iobpath <path>  Path for input .iob file ()
+
+# File I/O:
+ --warn <name>     Name of output .wrn file ()
+ --warnpath <path> Path for output .wrn file ()
+ --project         Add include record for lsa option file (don't)
+ --projdir <path>  .lsa files created within this directory ()
+
+# Help:
+ --validate        Read input and test its validity, then quit (don't)
+ --verbose         Print extended output information (don't)
+ --debug           Print debug output at level 0 [debug<n> for level n=1-7] (-1)
+ --help            Print this and quit (don't)
+\end{Snippet}

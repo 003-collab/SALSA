@@ -1,0 +1,582 @@
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.61 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617475   
+
+Store To Job		: 091018          
+Sets of Angles Start	: 09.10.18, 10:26:49
+
+TPS Station		: _PED            
+Coordinates		: E=         5000.000	N=         5000.000	H=      -----
+Instrument Height	: hi= 0.2860000134
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   4   Number Of Points:   4
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+Point ID:CK_A20_747 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.558  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       BL3 
+-------------------
+
+Mean of all Sets (Hz): 317.21249 
+
+Reflector Height:  1.479  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:  BL2_7475 
+-------------------
+
+Mean of all Sets (Hz): 148.25225 
+
+Reflector Height:  1.449  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:BL1_2_7475 
+-------------------
+
+Mean of all Sets (Hz): 145.46553 
+
+Reflector Height:  1.379  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : CK_A20_7475 
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : CK_A20_7475 
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : CK_A20_7475 
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : CK_A20_7475 
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : BL3        
+Reduced Mean: 317.21247    Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : BL3        
+Reduced Mean: 317.21230    Hz Residuals: 0.00020   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : BL3        
+Reduced Mean: 317.21253    Hz Residuals: -0.00004  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : BL3        
+Reduced Mean: 317.21267    Hz Residuals: -0.00018  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : BL2_7475   
+Reduced Mean: 148.25231    Hz Residuals: -0.00006  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : BL2_7475   
+Reduced Mean: 148.25182    Hz Residuals: 0.00043   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : BL2_7475   
+Reduced Mean: 148.25240    Hz Residuals: -0.00015  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : BL2_7475   
+Reduced Mean: 148.25246    Hz Residuals: -0.00021  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : BL1_2_7475 
+Reduced Mean: 145.46550    Hz Residuals: 0.00004   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : BL1_2_7475 
+Reduced Mean: 145.46544    Hz Residuals: 0.00010   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 3            Point ID    : BL1_2_7475 
+Reduced Mean: 145.46554    Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 4            Point ID    : BL1_2_7475 
+Reduced Mean: 145.46566    Hz Residuals: -0.00013  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   4   Number Of Points:   4
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:CK_A20_747
+-------------------
+
+Mean of all Sets (V): 90.1051
+
+Reflector Height: 1.558  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       BL3
+-------------------
+
+Mean of all Sets (V): 90.1009
+
+Reflector Height: 1.479  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:  BL2_7475
+-------------------
+
+Mean of all Sets (V): 89.1752
+
+Reflector Height: 1.449  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:BL1_2_7475
+-------------------
+
+Mean of all Sets (V): 89.1828
+
+Reflector Height: 1.379  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : CK_A20_7475
+Mean Of Face I/II: 90.1054      Residuals V: -0.00027  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : CK_A20_7475
+Mean Of Face I/II: 90.1048      Residuals V: 0.00032   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : CK_A20_7475
+Mean Of Face I/II: 90.1053      Residuals V: -0.00018  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : CK_A20_7475
+Mean Of Face I/II: 90.1050      Residuals V: 0.00014   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : BL3       
+Mean Of Face I/II: 90.1006      Residuals V: 0.00030   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : BL3       
+Mean Of Face I/II: 90.1008      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : BL3       
+Mean Of Face I/II: 90.1010      Residuals V: -0.00011  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : BL3       
+Mean Of Face I/II: 90.1011      Residuals V: -0.00025  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : BL2_7475  
+Mean Of Face I/II: 89.1751      Residuals V: 0.00017   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : BL2_7475  
+Mean Of Face I/II: 89.1752      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : BL2_7475  
+Mean Of Face I/II: 89.1752      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : BL2_7475  
+Mean Of Face I/II: 89.1754      Residuals V: -0.00021  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : BL1_2_7475
+Mean Of Face I/II: 89.1828      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : BL1_2_7475
+Mean Of Face I/II: 89.1829      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 3            Point ID   : BL1_2_7475
+Mean Of Face I/II: 89.1827      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 4            Point ID   : BL1_2_7475
+Mean Of Face I/II: 89.1828      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   4    Number of Points:   4
+
+Standrad Deviation Of Single Distance:     0.0002
+Standard Deviation Of Mean Distance  :     0.0001
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID: CK_A20_7475
+--------------------
+
+Mean Distance Of All Sets:  518.504
+
+Reflector Height: 1.558  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:        BL3
+--------------------
+
+Mean Distance Of All Sets:  133.409
+
+Reflector Height: 1.479  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:   BL2_7475
+--------------------
+
+Mean Distance Of All Sets:  147.951
+
+Reflector Height: 1.449  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID: BL1_2_7475
+--------------------
+
+Mean Distance Of All Sets:  297.635
+
+Reflector Height: 1.379  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : CK_A20_747
+Mean Of Face I And II: 518.504       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : CK_A20_747
+Mean Of Face I And II: 518.504       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : CK_A20_747
+Mean Of Face I And II: 518.504       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : CK_A20_747
+Mean Of Face I And II: 518.504       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : BL3       
+Mean Of Face I And II: 133.409       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : BL3       
+Mean Of Face I And II: 133.409       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : BL3       
+Mean Of Face I And II: 133.409       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : BL3       
+Mean Of Face I And II: 133.409       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : BL2_7475  
+Mean Of Face I And II: 147.951       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : BL2_7475  
+Mean Of Face I And II: 147.951       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : BL2_7475  
+Mean Of Face I And II: 147.951       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : BL2_7475  
+Mean Of Face I And II: 147.951       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : BL1_2_7475
+Mean Of Face I And II: 297.635       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : BL1_2_7475
+Mean Of Face I And II: 297.635       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 3             Point ID : BL1_2_7475
+Mean Of Face I And II: 297.635       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 4             Point ID : BL1_2_7475
+Mean Of Face I And II: 297.635       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End

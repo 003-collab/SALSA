@@ -1,0 +1,12 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with TrimbleToLSA.py converter from 200226_SX10_FEET.asc on 13:34:03 May 29, 2020
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_MD3 1.392 ft 0.000 m
+HGHT HGHT#1_MD2 1.463 ft 0.000 m
+HGHT HGHT#1_8305 0.286 ft 0.000 m
+
+--include 200226_SX10_FEET_INST_MD3.rnd.lsa

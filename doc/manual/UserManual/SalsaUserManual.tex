@@ -1,0 +1,189 @@
+\documentclass[letterpaper,11pt]{book}
+\usepackage[left=2.8cm, right=2.8cm, top=3cm, bottom=3cm]{geometry}
+\usepackage[pdftex]{color,graphicx}
+\usepackage{fancyvrb}
+\usepackage{relsize}
+\usepackage{tabulary}
+\usepackage{amsmath}
+\usepackage[stable]{footmisc}
+\usepackage{bookman} % alternative to times font
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{dirtree}
+\usepackage{float}
+\usepackage{enumitem}  
+\usepackage{calc}  
+\usepackage{mdwlist}
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage[toc,page]{appendix}
+\usepackage{tikz}
+\usepackage{datetime}
+\usepackage{pdflscape}
+\thispagestyle{empty}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\tikzstyle{wavy}[1]=[decorate,decoration={snake,amplitude=#1}]
+\tikzstyle{straight}[1]=[decorate]
+\tikzstyle{loopy}[1]=[decorate,decoration={coil,aspect=1,amplitude=1.5mm}]%,aspect=1.3,amplitude=3
+\tikzset{>=stealth}
+\newcommand{\f}{\frac}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\rtc}[1]{\sqrt[c]{#1}} % Cholesky root
+
+%TODO: style consistency. Pick Project $\to$ Configure instead of \texttt{Project} ....
+%TODO: replace Constrained with Weighted in reference to POS records, update docs and gui accordingly
+
+% Tweak to ensure TOC chapter numbers have enough space for double-digit chapter numbers
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\l@chapter}{1.5em}{2em}{}{}
+\makeatother
+% and sections, subsections....
+% http://tex.stackexchange.com/questions/110253/what-the-first-argument-for-lsubsection-actually-is
+% \@dottedtocline{<level>}{<indent>}{<numwidth>}{<title>}{<page>}
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{1.5em}{3em}}
+\renewcommand{\l@subsection}{\@dottedtocline{2}{3.5em}{3.5em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{3}{7.4em}{4.5em}}
+\makeatother
+
+\usepackage[hidelinks]{hyperref} % This ensures that the page numbers printed match the actual page number as displayed in PDV viewers.
+\hypersetup{bookmarksnumbered} % turns on chapter/section numbering in bookmarks
+
+\graphicspath{{./}{figures/}}
+\bibliographystyle{ieeetr}
+
+\title{The Surveyor's Applications for Least Squares Adjustment (SALSA) User's Manual}
+\author{Survey and Precise Positioning Team \\ Space and Geophysics Laboratory \\ Applied Research Laboratories, The University of Texas at Austin}
+\date{\monthname[\the\month]{} \the\year{}} % e.g., "January 2019"
+
+\parindent   0.mm			% indent paragraph by this much
+\parskip     3.mm			% space between paragraphs
+
+\VerbatimFootnotes
+
+% The following lines define custom environments based on the fancyverb package.
+% Consult the reference http://www.ctan.org/tex-archive/macros/latex/contrib/fancyvrb/fancyvrb.pdf
+\DefineVerbatimEnvironment{Snippet}{Verbatim}{frame=single,framesep=2mm,fontsize=\relsize{-1}}
+\DefineVerbatimEnvironment{SnippetNoBox}{Verbatim}{fontsize=\relsize{-1}}
+
+\renewcommand{\tabcolsep}{0.6 cm}
+\renewcommand{\arraystretch}{1.5}
+
+% These allow us to reference the title, author, and date
+\makeatletter
+\let\inserttitle\@title
+\let\insertauthor\@author
+\let\insertdate\@date
+\makeatother
+
+% This section is to get the public release footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LO]{\textit{\rightmark}}
+\fancyhead[RE]{\textit{\leftmark}}
+\fancyhead[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot{}
+\rfoot{Approved for public release, NGA-U-2025-01219}
+\renewcommand{\footrulewidth}{0.3pt}
+
+\begin{document}
+
+
+% We're not going to use \maketitle
+% but instead build the title page ourselves so we can include a little picture:
+\pagenumbering{Roman} % invisible I, II etc. prevents hyperref conflict (warning msg)
+\begin{titlepage}
+    \thispagestyle{empty} % disables page numbering
+    \textcolor{white}{.} % A printed character seems necessary or the following vskip does nothing
+    \begin{center}
+    \vskip2cm
+    {\LARGE \inserttitle \\ }
+    \vskip1cm
+    \includegraphics[width=4cm]{salsa_icon}  
+    \vskip1cm
+    {\setstretch{1.5}
+        {\large \insertauthor \\ }
+    }
+    \vskip1cm
+    {\large \insertdate \\ }
+    \end{center}
+    % This prints the public release number on the title page
+    {\large Approved for public release by the National Geospatial-Intelligence Agency, \\ case NGA-U-2025-01219}
+\end{titlepage}
+
+\thispagestyle{empty} % suppress any page numbering on inside cover (page after title page)
+
+\frontmatter % sets page style accordingly, and numbering to i, ii, etc.
+\tableofcontents
+
+% Copyright and acknowledgements
+\include{copyright}
+
+\mainmatter % sets page numbering to 1, 2, etc.
+
+% Introduction
+\include{introduction}
+
+% Components and installation
+\include{components_and_installation}
+
+% How to use it
+\include{using_salsa}
+
+\include{understanding_solver}
+
+\include{examples}
+
+\include{corrections}
+
+\include{UNCRcorrections}
+
+\include{InstrumentHeightCorrections}
+
+
+\include{station_inverse}
+
+\include{customImportExport}
+
+
+
+\include{lsarecords}
+
+\include{lsafileformat}
+
+\include{datfileformat}
+
+\include{preprocessorcmdline}
+
+\include{solvercmdline}
+
+\include{convertercmdline}
+
+\include{lsapostcmdline}
+
+\clearpage
+%\backmatter % this command obliterates the automated numbering of the appendices, comment out
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{SalsaUserManual}
+
+\begin{appendices}
+
+\include{DerivedPointUncertaintyAppendix}
+\include{RedundancyStandardResidualsAppendix}
+\include{definitions}
+\include{converters}
+\include{solverout}
+\include{invConPar}
+\include{troubleshooting}
+\include{thirdparty}
+
+\end{appendices}
+
+\end{document}

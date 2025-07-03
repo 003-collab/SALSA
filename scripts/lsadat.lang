@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+RECOMMENDED USAGE WITH LSA: 
+This file is checked into the git repository in the lsa/scripts directory.  Recommended usage is to create a symbolic link that will allow gedit to find the version controlled copy of this file in your git repository.
+
+$cd $HOME/.local/share/gtksourceview-3.0/language-specs (location where gedit will look for this file)
+$ln -s $HOME/projects/lsa/scripts/lsadat.lang lsadat.lang (create the symlink back to this .lang file)
+-->   
+
+<!--
++
+ This file is part of GtkSourceView
+
+ Authors: Marco Barisione, Emanuele Aina
+ Copyright (C) 2005-2007 Marco Barisione <barisione@gmail.com>
+ Copyright (C) 2005-2007 Emanuele Aina
+
+ GtkSourceView is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+
+ GtkSourceView is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+-->
+<language id="lsadat" _name="lsadat" version="2.0" _section="Sources">
+    <metadata>
+      <property name="mimetypes">text/x-lsa;text/x-dat;text/x-out</property>
+      <property name="globs">*.lsa;*.proj</property>
+      <property name="line-comment-start">#</property>
+    </metadata>
+
+    <styles>
+        <style id="comment" _name="Comment" map-to="def:comment"/>
+        <style id="keyword" _name="Keyword" map-to="def:keyword"/>
+        <style id="type" _name="Data Type" map-to="def:type"/>
+    </styles>
+
+    <definitions>
+        <context id="lsadat">
+            <include>
+                <context id="line-comment" style-ref="comment" end-at-line-end="true" class="comment" class-disabled="no-spell-check">
+                    <start>#</start>
+                </context>
+
+                <context id="keywords" style-ref="keyword">
+                    <keyword>PLOH</keyword>
+                </context>
+
+                <context id="types" style-ref="type">
+	            <keyword>include</keyword>
+                <keyword>POSG</keyword>
+                <keyword>POSC</keyword>
+                <keyword>DXYZ</keyword>
+                <keyword>DIST</keyword>
+                <keyword>HANG</keyword>
+                <keyword>ZANG</keyword>
+                <keyword>VANG</keyword>
+                <keyword>AZIM</keyword>
+                <keyword>HDIF</keyword>
+                <keyword>DGRP</keyword>
+                <keyword>HDIR</keyword>
+                <keyword>UNCR</keyword>
+                <keyword>VSCA</keyword>
+                <keyword>HGHT</keyword>
+
+                <keyword>HFROM</keyword>
+                <keyword>HTO</keyword>
+                <keyword>UNCR</keyword>
+                <keyword>REFRACT</keyword>
+                <keyword>REDUCED</keyword>
+                <keyword>VSCA</keyword>
+                <keyword>CURV</keyword>
+                <keyword>CONV</keyword>
+                <keyword>AUTOGEN</keyword>
+                <keyword>TOPARENT</keyword>
+                <keyword>EXTR</keyword>
+                <keyword>MEAN</keyword>
+                <keyword>DENU</keyword>
+
+                </context>
+
+            </include>
+        </context>
+    </definitions>
+</language>

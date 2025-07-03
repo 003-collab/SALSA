@@ -1,0 +1,7 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with TrimbleToLSA.py converter from B412_Run1.asc on 10:14:48 Apr 17, 2020
+
+UNCR UNCR#1_HDIF [] m [] [] 0.00000 0.00000 m
+
+#--include Run1.pos.lsa
+--include Run1.lvl.lsa

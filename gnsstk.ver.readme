@@ -1,0 +1,11 @@
+The file gnsstk.ver is a one-line file (with no line feed!) containing the
+8-character git hash for the gnsstk version we wish to build against.
+This hash will typically be obtained in one of two ways:
+
+1. From within your gnsstk working copy, do:
+git rev-parse --short=8 HEAD
+
+or,
+
+2. Find and copy the 8-character hash from the GitLab web interface,
+https://sgl-git.arlut.utexas.edu/sgl-tks/gnsstk/

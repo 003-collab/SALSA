@@ -1,0 +1,70 @@
+
+
+set( MARBLE_FOUND FALSE )
+set( MARBLE_DEBUG_FOUND FALSE)
+message(STATUS "")
+
+if( DEFINED ENV{marble} )
+    message(STATUS "Searching for MARBLE location defined by environment variable: $ENV{marble}" )
+    set( MARBLE_INSTALL $ENV{marble} )
+else()
+    message(STATUS "Searching for default MARBLE location: $ENV{HOME}/.local/marble" )
+    set(MARBLE_INSTALL $ENV{HOME}/.local/marble)
+endif()
+
+if( UNIX )
+    set( MARBLE_INCLUDE_DIRS "${MARBLE_INSTALL}/include" )
+    set( MARBLE_LIBRARIES    "${MARBLE_INSTALL}/lib/libmarblewidget-qt5.so" )
+    set( MARBLE_LIBRARY_DIRS "${MARBLE_INSTALL}/lib" )
+    set( ASTRO_LIBRARIES     "${MARBLE_INSTALL}/lib/libastro.so" )
+    set( ASTRO_LIBRARY_DIRS  "${MARBLE_INSTALL}/lib" )
+    #Debug build
+    set( MARBLE_INCLUDE_DIRS_DEBUG "${MARBLE_INSTALL}_debug/include" )
+    set( MARBLE_LIBRARIES_DEBUG    "${MARBLE_INSTALL}_debug/lib/libmarblewidget-qt5.so")
+    set( MARBLE_LIBRARY_DIRS_DEBUG "${MARBLE_INSTALL}_debug" )
+    set( ASTRO_LIBRARIES_DEBUG     "${MARBLE_INSTALL}_debug/lib/astrod.lib" )
+    set( ASTRO_LIBRARY_DIRS_DEBUG  "${MARBLE_INSTALL}_debug" )
+elseif( WIN32 )
+    # Release build
+    set( MARBLE_INCLUDE_DIRS "${MARBLE_INSTALL}/include" )
+    set( MARBLE_LIBRARIES    "${MARBLE_INSTALL}/lib/marblewidget-qt5.lib" )
+    set( MARBLE_LIBRARY_DIRS "${MARBLE_INSTALL}" )
+    set( ASTRO_LIBRARIES     "${MARBLE_INSTALL}/lib/astro.lib" )
+    set( ASTRO_LIBRARY_DIRS  "${MARBLE_INSTALL}" )
+    #Debug build
+    set( MARBLE_INCLUDE_DIRS_DEBUG "${MARBLE_INSTALL}_debug/include" )
+    set( MARBLE_LIBRARIES_DEBUG    "${MARBLE_INSTALL}_debug/lib/marblewidget-qt5d.lib")
+    set( MARBLE_LIBRARY_DIRS_DEBUG "${MARBLE_INSTALL}_debug" )
+    set( ASTRO_LIBRARIES_DEBUG     "${MARBLE_INSTALL}_debug/lib/astrod.lib" )
+    set( ASTRO_LIBRARY_DIRS_DEBUG  "${MARBLE_INSTALL}_debug" )
+endif()
+
+message (STATUS "Searching for MARBLE_LIBRARIES at: ${MARBLE_LIBRARIES}")
+if(EXISTS ${MARBLE_LIBRARIES})
+    set( MARBLE_FOUND TRUE )
+endif()
+message(STATUS "MARBLE_FOUND: ${MARBLE_FOUND}")
+
+#message (STATUS "MARBLE_INCLUDE_DIRS: ${MARBLE_INCLUDE_DIRS}")
+#message (STATUS "MARBLE_LIBRARY_DIRS: ${MARBLE_LIBRARY_DIRS}")
+
+message (STATUS "Searching for MARBLE_LIBRARIES_DEBUG at: ${MARBLE_LIBRARIES_DEBUG}")
+if(EXISTS ${MARBLE_LIBRARIES_DEBUG})
+    set( MARBLE_DEBUG_FOUND TRUE )
+endif()
+message(STATUS "MARBLE_DEBUG_FOUND:  ${MARBLE_DEBUG_FOUND}")
+
+#message (STATUS "MARBLE_INCLUDE_DIRS_DEBUG: ${MARBLE_INCLUDE_DIRS_DEBUG}")
+#message (STATUS "MARBLE_LIBRARY_DIRS_DEBUG: ${MARBLE_LIBRARY_DIRS_DEBUG}")
+
+if(NOT MARBLE_FOUND)
+        message(WARNING "Could not find marble at ${MARBLE_LIBRARIES}.")
+        message(STATUS  "Verify marble is installed in one of these locations:")
+        message(STATUS  "    1) Location defined in marble env variable.")
+        message(STATUS  "       Example: $ export marble=$HOME/.local/marble/lib")
+    message(STATUS  "    2) Location specified by -DMARBLE_INSTALL parm passed to cmake.")
+        message(STATUS  "       Example: $ cmake -DMARBLE_INSTALL=$HOME/.local/marble/lib")
+    message(STATUS  "    3) Default marble install location of (linux) $HOME/.local/marble/ or (win32) $HOME/.local/marble")
+endif()
+
+return( )

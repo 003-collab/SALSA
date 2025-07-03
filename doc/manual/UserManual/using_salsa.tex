@@ -1,0 +1,216 @@
+\chapter{How to Use the salsa Interface}
+\label{chap:UsingSalsa}
+
+Recall that SALSA is a suite of applications and that the graphical user interface is called \textsf{salsa}.  This is the application that will be invoked when the user launches \textsf{salsa} from the Start menu using the cute chips-and-salsa icon, and it is the subject of this chapter.
+
+There are three paths we can take to get LSA information into the \textsf{salsa} interface:
+\begin{enumerate}
+\item We can create a new LSA project.
+\item We can open an existing LSA project.
+\item We can import a GeoLab IOB file as a new LSA project.
+\end{enumerate}
+
+
+Before we explore those paths, let us introduce the \textsf{salsa} interface and point out the main parts of the interface that we'll be referencing in the following sections.  Figure \ref{fig:salsa_GUI_intro} shows the \textsf{salsa} interface with an LSA project already loaded.  The upper-left quadrant of the interface is devoted to what we call the ``Project Navigator'' which is designed to help a user view and organize all the inputs going into the least squares solution.  Since this information may be distributed across several input files, this interface employs a ``tree'' style representation of the file hierarchy, allowing the user to quickly collapse and expand each file's content.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.99\textwidth]{salsa_GUI_intro-crop}
+\end{center}
+\caption{\textsf{salsa} GUI elements.}
+\label{fig:salsa_GUI_intro}
+\end{figure}
+
+To the right of the Project Navigator is the Record Editor.  This interface shows the details of the currently-selected record; these details can be edited directly in this interface.
+
+The area below the Project Navigator contains several output frames (they will be empty prior to running an adjustment).  These indicators and tables summarize the performance of the least squares adjustment and provide the user with important details when something goes wrong.  Example 1 of this user manual illustrates the utility of these indicators as a user diagnoses a problematic adjustment.
+
+At the bottom-left of the \textsf{salsa} interface is the Status Window.  The Status Window shows output from the CLI applications that run in the background as files are opened and parsed, and as the solver runs.   For example, this window will show the iteration count and convergence level while the solver executes.  Keep an eye out for orange text, which indicates some kind of warning, and red text, which indicates an error.
+
+The bottom-right quadrant of the \textsf{salsa} interface contains an interactive map of the survey network.  The map can render either the inputs to the LSA problem or the solution.  Example 1 of this user manual explains the map behavior in some detail and shows how the map can be helpful in understanding the LSA problem and interpreting LSA results.
+
+At the top of the \textsf{salsa} interface we have the Program Menu that is typical of most graphical programs.  We'll go into each menu item in later sections.
+
+Note that the user can adjust the relative size of each portion of the \textsf{salsa} interface, using the slider handles between them.  Also, the Record Editor and Map are `dockable' which means that in addition to being resizeable, they can be dragged off the \textsf{salsa} interface altogether to suit the user's screen size and preferences.  (A menu option View $\to$ Reset Windows will restore the docks to their default geometry.)
+
+Having introduced these main parts of the \textsf{salsa} interface, let's outline the three paths for building an LSA project\ldots
+
+\section{Creating a LSA Project}
+
+The first path we'll explain is the process of creating a new LSA project from scratch.  When first launched, the \textsf{salsa} interface is pretty plain, as shown in Figure \ref{fig:salsa_opening_screen}.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{salsa_opening_screen}
+\end{center}
+\caption{\textsf{salsa} interface on startup.}
+\label{fig:salsa_opening_screen}
+\end{figure}
+
+The process of creating a new project is trivial; go to \texttt{Project} $\to$ \texttt{New\ldots}.  That will yield a file selector dialogue allowing you to navigate to a directory of your choosing (optionally creating a new one if needed) and specifying the name of the new project file.  If you don't type an extension, \textsf{salsa} will use \verb+.proj+.  When the \verb+.proj+ file is created, the file \verb+default.cfg+ will be copied from the SALSA installation directory into the same folder containing the new \verb+.proj+ file and given the same name as the \verb+.proj+ file but preserving the \verb+.cfg+ extension.  For example, if a user creates the new LSA project called \verb+newproject.proj+, the default configuration file will be copied to that same location and given the name \verb+newproject.cfg+.
+
+When the new LSA project is created, the Project Navigator will show the name of this new top-level project file and its contents, which at first will be limited to a single comment indicating the date and time the project was created.  From this point, the user can start adding survey records or other files containing survey records.  Reference Example 1 of this user manual for a complete illustration of this path.
+
+% Do we really want to walk through examples at this point?  I don't think so - that will be slow and tedius.
+% We just want to explain the paths at this point.
+
+\section{Opening an Existing LSA Project}
+\label{section:OpeningProject}
+
+An existing project can be opened via the menu option \texttt{Project} $\to$ \texttt{Open LSA\ldots}.  This will present a file browser prompting the user to identify an existing \verb+.proj+ or \verb+.lsa+ file to load.  Any existing content in the \textsf{salsa} interface will be cleared, and this file will be treated as the top-level project file.  If a SALSA configuration file by the same name (but with \verb+.cfg+ extension) does not already exist at this location, it will be copied from the SALSA installation directory.
+
+When a \verb+.proj+ or \verb+.lsa+ file is opened, all records in the file are parsed and displayed in the Project Navigator.  This includes any included files and their records (and their included files, etc.).
+
+As those lsa-formatted files are opened and parsed, any problems will be reported in the Status Window at the bottom of the \textsf{salsa} interface.
+
+Note that \emph{opening} an LSA project file (\verb+.proj+ or \verb+.lsa+) is not the same as \emph{including} an LSA file within an existing project.  Example 1 of this user manual involves the inclusion of \verb+.lsa+ files into an existing project. 
+
+\section{Importing a GeoLab IOB Project}
+
+\textsf{salsa} also provides support for loading an LSA project from GeoLab \verb+*.iob+ format.  This action is initiated via the menu option \texttt{Project} $\to$ \texttt{Open Geolab Project\ldots} which will prompt the user to select the top-level GeoLab project (likely named \verb+*.iob+) and will then perform the following actions:
+\begin{enumerate}
+\item \textsf{salsa} will set the new LSA project directory to the location of the specified \verb+*.iob+ project file.
+\item \textsf{salsa} will convert the top-level \verb+*.iob+ file into LSA format, giving it the extension \verb+.proj+.
+\item \verb+default.cfg+ is copied into the project directory just as is done when a new LSA project is created.
+\item Any files that were included (\verb+#INCLUDE+) in the imported \verb+*.iob+ file will also be converted into \verb+.lsa+ format, yielding a project structure in LSA format that should closely match the original IOB organization.
+\end{enumerate}
+
+\section{Dropping Data in the Project Navigator}
+As an alternative to opening files as described in section \ref{section:OpeningProject}, users can also drag files from outside of \textsf{salsa} and drop them into the Project Navigator to include them in the current project.  Conveniently, if a file is not already a \textsf{.lsa} or \textsf{.proj} file, \textsf{salsa} will attempt to determine the file's type and use the appropriate built-in file converter to include it into the current project.  Avoid dropping files which would already be included as a child of another file being dropped.
+
+\textsf{salsa} can also open a dropped file as the top-level project if there is not one already open. In the case that more than one file is dropped on an empty Project Navigator, the user will be prompted to create a new \textsf{.proj}.  This will become the top-level project for the files being dropped.
+
+Plain text can also be dragged and dropped onto the Project Navigator if there is already a project open.  This is especially useful when the user wants to take records from one project open in a text editor and duplicate them in a project open in \textsf{salsa}.  The records are added on a line-by-line basis.  If the line is not a file include (\textsf{-{}-include filename}) or does not begin with an appropriate record tag (e.g. \textsf{POSG}, \textsf{AZIM}, etc. See chapter \ref{chap:LsaFormat}), it will be added as a comment. When dropping an include as text (\textsf{-{}-include filename}), the file specified by \textsf{filename} must be in the currently opened top-level project's directory, or \textsf{filename} must contain the relative filepath (e.g. \textsf{-{}-include subDir/filename}).
+
+\section{Editing Records}
+When a record is selected in the Project Navigator, the Record Editor is populated with the information contained in that record, and many of the controls are user-editable.  The appearance of the Record Editor will vary based on the type of record selected, of course, because different record types contain different information.  The developers hope that these interfaces are sufficiently intuitive that we need not bloat this user manual with field-by-field explanations and screen shots for each record type.  That said, some records exhibit behavior that may not be obvious to all users, so we feel compelled to explain the design choices and program behavior in these cases.
+
+\section{Find/Filter Records}
+The user may find that they want to select only AZIM records in a large project. It would be tedious to scroll through all of the records and through all of the includes. This is where the Find/Filter widget comes in handy. To open this widget, click \verb+Record+$\rightarrow$\verb+Find/Filter...+ (or Ctrl+F) with a project already open.
+
+Notice that the Find/Filter widget has a Find row and a Filter row. Each of these sport their own text field, in which the user can specify their search terms. There can be multiple search terms simultaneously, each separated by a space. Terms surrounded by quotes are considered as one term, regardless of spaces within. The interpretation of the search terms can be manipulated by the 'exact match` checkboxes. When checked, the results will only include records which match exactly. For example, if the user searches for "TGT01", records which contain "TGT01" would be returned but not those containing "TGT011". Find and Filter both have ANY/ALL dropdowns, which are useful for specifying how multiple search terms should be handled. If the user selects ANY, then a given record is included if at least one of the search terms match. Conversely, the ALL option ensures that only records which match all search terms are included.
+
+The Filter option has another dropdown with a default value of 'All Records'. The options in the dropdown are simply a quick way to filter based on a record type or other common feature of a record (e.g. enabled or disabled).  The Find row of the widget provides an 'All' button. This button will select all records in the Project Navigator which match the search. The arrow buttons will singly select the next or previous record which matches the search. Finally, the warnings button will change the user's selection to the next record which has a warning.
+
+Note that the Filter and Find functionality can be used in conjunction: the Find feature will only select records which are available after the Filter has been applied.
+
+\section{Record Modifiers}
+
+There is a class of records that we call ``modifiers'' because they affect other records.  Thus, there are some design choices embodied in \textsf{salsa} that users should understand.  These ``modifier'' record types include the following:
+\begin{itemize}
+\item HGHT (Height of Instrument/Target)
+\item VSCA (Variance Scaling)
+\item UNCR (Uncertainty Model)
+\item DGRP (Direction Group)
+\end{itemize}
+
+
+In general, when the value of a modifier is changed, that change will immediately apply to any records referencing that modifier.  For example, suppose we create a height of instrument record (HGHT) for station TP02 for a set of morning total station observations, and we give it the label ``TP02-morn'' and the value of 1.550 m.  Measurement records collected with that configuration will specify TP02-morn for the corresponding height of instrument, and the value 1.550 m will be displayed in the record editor.  Reference Figure \ref{fig:modifiers_propagating}.  Suppose however that we realize 1.550 was the height measurement made for an afternoon observation set, and the morning height was actually 1.402.  We can correct the TP02-morn HGHT record to reflect that value; at this point the corrected value of 1.402 m will be effective for all measurements referencing the TP02-morn height record.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.88\textwidth]{modifiers_propagating-crop}
+\end{center}
+\caption{The numerical value for a modifier, such as height of instrument/target (HGHT), will immediately reflect any changes made to that modifier record.}
+\label{fig:modifiers_propagating}
+\end{figure}
+
+Similarly, changing a modifier label will immediately apply to all records referencing that label.  Working with the previous example, if we change the HGHT record label from ``TP02-morn'' to ``TP02-morning'' all records referencing ``TP02-morn'' will immediately be updated to reference ``TP02-morning.''
+
+Table \ref{tab:ModifierBeahvior} lists common edits one might make to a modifier record and the corresponding result of that edit.
+
+%\begin{table}[htb]
+\begin{table}[!htbp]
+\caption{Effects of Editing Modifier Records}
+\label{tab:ModifierBeahvior}
+\begin{center}
+\begin{tabular}{p{2.25 in}p{2.75 in}}
+\hline
+\textbf{Action} & \textbf{Result} \\
+\hline
+Alter the value of a modifier (HGHT, VSCA, UNCR) & The new value becomes effective in all records referencing this modifier. \\
+Alter the name/label of a modifier & All references in the project to the old label will be updated to reflect the new label. \\
+Delete a modifier (HGHT, VSCA, UNCR) & All references in the project to the deleted modifier will be removed, e.g., a reference to a HGHT record will become None and assume a value of zero. \\
+Delete a Direction Group (DGRP) & The Direction Group and all children (horizontal directions referencing the group) will be deleted. \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\section{Project Configuration}
+When a new LSA project is created, a default configuration file is copied from the \textsf{salsa} installation directory into the project directory.  This file is used by the solver to determine, among other things, the formatting of the output.  It is also used by the post-processor.  If the user wishes to change the way that output is formatted, for example, this default configuration may be altered by selecting the \texttt{Project} $\to$ \texttt{Configure\ldots} menu option.  This will display the Project Configuration panel.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{ConfigPanel}
+\end{center}
+\caption{Default configuration for a priori position generation, solver options, and output customization.}
+\label{fig:config_panel}
+\end{figure}
+
+The user may also change the default configuration that is used when converting instrumentation output into the LSA format.  To do this, press the Configure button from the Input File Conversion section of the Project Configuration panel.  This will bring up the LSA Converter Measurement Uncertainty Configuration panel.
+
+\subsection{Converter Configuration}
+\label{subsect:convert_config}
+Just as there is a configuration file that is used by the solver and post-processor to determine the format of the output of those programs, among other things, there is also a configuration file, \verb+converter.cfg+, that is used to determine the output of the instrument output-to-LSA converters.  This file determines the centering error values for UNCR records associated with particular measurement types for particular instrument types, as well as the sigma values to assign to different measurement types.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{ConverterConfigPanel}
+\end{center}
+\caption{Default configuration of UNCR records and measurement sigmas when converting instrument output to the .lsa format.}
+\label{fig:converter_config_panel}
+\end{figure}
+
+The default values for these UNCR records may be changed by changing the setup types for the FROM and TO stations of a particular measurement in the LSA Converter Measurement Uncertainty Configuration panel.  The hardware-dependent default sigmas and centering errors are defined in the following table.  The user is also able to enter their own centering errors by selecting the Custom setup option from the respective combobox.
+
+\begin{table}[!htbp]
+	\caption{Setup-dependent centering errors}
+	\label{tab:CenteringErrors}
+	\begin{center}
+		\begin{tabulary}{4.5 in}{LL}
+			\hline
+			\textbf{Setup Type} & \textbf{Centering Error (m)} \\
+			\hline
+			Forced Centering Plate & 0.0 \\
+			Range Pole & 0.004 \\
+			Tripod & 0.001 \\
+			Vertical Collimator & 0.0005 \\
+			\hline
+		\end{tabulary}
+	\end{center}
+\end{table}
+
+
+Similarly, the user may change the default sigmas assigned to particular measurement types by changing the sigma source from Defaults to Instrument, which uses the instrument-reported sigma values, or Custom, which allows the user to enter their own sigma values to assign.  The sigma defaults are defined in the following table.
+
+\begin{table}[!htbp]
+	\caption{Default Sigmas by Measurement Type}
+	\label{tab:DefaultSigmas}
+	\begin{center}
+		\begin{tabulary}{4.5 in}{LLL}
+			\hline
+			\textbf{Measurement Type} & \textbf{Technique} & \textbf{Sigma (m or soa)} \\
+			\hline
+			Differential Levels & Digital + Precise Rods & 0.0003 \\
+			Differential Levels & Digital + Standard Rods & 0.0006 \\
+			Differential Levels & Spirit + Standard Rods & 0.001 \\
+			Distances & Total Station Infrared & 0.001 \\
+			Distances & Total Station Red & 0.002 \\
+			Distances & Total Station No EDM & 0.003 \\
+			Horizontal Angles & Total Station & 5.0 \\
+			Vertical Angles & Total Station & 10.0 \\
+			Elevation Differences & Total Station & 0.01 \\
+			Instrument Height & Measuring Rod & 0.001 \\
+			Instrument Height & Measuring Tape & 0.001 \\
+			\hline
+		\end{tabulary}
+	\end{center}
+\end{table}
+
+
+The user may use this panel to set up their own defaults that will persist from project to project by pressing the Save As User Defaults button.  To save the configuration just for the open project, without modifying the user defaults, press the Save As Project Config button.  To restore the panel to the factory defaults, press the Load Factory Defaults button.  The Save As Project Config button should be pressed to generate the converter.cfg file prior to importing the instrument output files.
+
+
+

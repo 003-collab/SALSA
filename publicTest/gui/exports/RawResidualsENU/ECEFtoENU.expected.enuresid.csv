@@ -1,0 +1,4 @@
+Measurement Type, From Point, To Point, Tag, Raw Residual
+DXYZ.E, "from", "to", 9, 0.0400
+DXYZ.N, "from", "to", 9, 0.1000
+DXYZ.U, "from", "to", 9, 0.0100

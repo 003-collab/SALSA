@@ -1,0 +1,2303 @@
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.05 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1611820   
+
+Store To Job		: BIGGS           
+Sets of Angles Start	: 06.21.16, 13:15:28
+
+TPS Station		: TP01            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 1.4689999819
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:   6
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP02 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.497  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP03 
+-------------------
+
+Mean of all Sets (Hz): 320.05192 
+
+Reflector Height:  1.438  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       CT1 
+-------------------
+
+Mean of all Sets (Hz): 247.07488 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     POLE1 
+-------------------
+
+Mean of all Sets (Hz): 249.44491 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    BEACON 
+-------------------
+
+Mean of all Sets (Hz): 291.32534 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       WT1 
+-------------------
+
+Mean of all Sets (Hz): 292.15062 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP02       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP02       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP03       
+Reduced Mean: 320.05193    Hz Residuals: -0.00001  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP03       
+Reduced Mean: 320.05192    Hz Residuals: 0.00001   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : CT1        
+Reduced Mean: 247.07485    Hz Residuals: 0.00003   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : CT1        
+Reduced Mean: 247.07491    Hz Residuals: -0.00003  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : POLE1      
+Reduced Mean: 249.44499    Hz Residuals: -0.00008  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : POLE1      
+Reduced Mean: 249.44483    Hz Residuals: 0.00008   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : BEACON     
+Reduced Mean: 291.32531    Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : BEACON     
+Reduced Mean: 291.32536    Hz Residuals: -0.00002  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : WT1        
+Reduced Mean: 292.15066    Hz Residuals: -0.00004  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : WT1        
+Reduced Mean: 292.15058    Hz Residuals: 0.00004   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:   6
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      TP02
+-------------------
+
+Mean of all Sets (V): 90.0331
+
+Reflector Height: 1.497  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TP03
+-------------------
+
+Mean of all Sets (V): 90.1421
+
+Reflector Height: 1.438  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       CT1
+-------------------
+
+Mean of all Sets (V): 76.0405
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     POLE1
+-------------------
+
+Mean of all Sets (V): 78.5128
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    BEACON
+-------------------
+
+Mean of all Sets (V): 75.2903
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       WT1
+-------------------
+
+Mean of all Sets (V): 74.1627
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP02      
+Mean Of Face I/II: 90.0331      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP02      
+Mean Of Face I/II: 90.0331      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP03      
+Mean Of Face I/II: 90.1421      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP03      
+Mean Of Face I/II: 90.1422      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : CT1       
+Mean Of Face I/II: 76.0404      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : CT1       
+Mean Of Face I/II: 76.0406      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : POLE1     
+Mean Of Face I/II: 78.5129      Residuals V: -0.00009  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : POLE1     
+Mean Of Face I/II: 78.5127      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : BEACON    
+Mean Of Face I/II: 75.2904      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : BEACON    
+Mean Of Face I/II: 75.2903      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : WT1       
+Mean Of Face I/II: 74.1626      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : WT1       
+Mean Of Face I/II: 74.1627      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:   3
+
+Standrad Deviation Of Single Distance:     0.0047
+Standard Deviation Of Mean Distance  :     0.0033
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       TP02
+--------------------
+
+Mean Distance Of All Sets:  175.188
+
+Reflector Height: 1.497  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       TP03
+--------------------
+
+Mean Distance Of All Sets:  229.243
+
+Reflector Height: 1.438  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:        CT1
+--------------------
+
+Mean Distance Of All Sets:  189.349
+
+Reflector Height: 0.000  :Add.Constant: 0.000     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Unknown   :EDM Type: No EDM Typ
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP02      
+Mean Of Face I And II: 175.188       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP02      
+Mean Of Face I And II: 175.188       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP03      
+Mean Of Face I And II: 229.243       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP03      
+Mean Of Face I And II: 229.244       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : CT1       
+Mean Of Face I And II: 189.343       Residuals: 0.006     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : CT1       
+Mean Of Face I And II: 189.354       Residuals: -0.006    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : POLE1     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : POLE1     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : BEACON    
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : BEACON    
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : WT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : WT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.05 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1611820   
+
+Store To Job		: BIGGS           
+Sets of Angles Start	: 06.21.16, 13:48:25
+
+TPS Station		: TP02            
+Coordinates		: E=          136.983	N=          109.208	H=      -----
+Instrument Height	: hi= 1.4969999790
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:   6
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP01 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP03 
+-------------------
+
+Mean of all Sets (Hz): 90.14560  
+
+Reflector Height:  1.438  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:    BEACON 
+-------------------
+
+Mean of all Sets (Hz): 55.40529  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Averaging  EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       WT1 
+-------------------
+
+Mean of all Sets (Hz): 53.34110  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       CT1 
+-------------------
+
+Mean of all Sets (Hz): 34.28221  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     POLE1 
+-------------------
+
+Mean of all Sets (Hz): 31.51303  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP03       
+Reduced Mean: 90.14555     Hz Residuals: 0.00005   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP03       
+Reduced Mean: 90.14565     Hz Residuals: -0.00005  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : BEACON     
+Reduced Mean: 55.40515     Hz Residuals: 0.00015   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : BEACON     
+Reduced Mean: 55.40544     Hz Residuals: -0.00015  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : WT1        
+Reduced Mean: 53.34094     Hz Residuals: 0.00015   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : WT1        
+Reduced Mean: 53.34125     Hz Residuals: -0.00015  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : CT1        
+Reduced Mean: 34.28191     Hz Residuals: 0.00030   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : CT1        
+Reduced Mean: 34.28250     Hz Residuals: -0.00030  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : POLE1      
+Reduced Mean: 31.51276     Hz Residuals: 0.00027   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : POLE1      
+Reduced Mean: 31.51331     Hz Residuals: -0.00027  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:   6
+
+Standard Deviation Of Single Measurement:     0.0004
+Standard Deviation Of All Measurements  :     0.0003
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      TP01
+-------------------
+
+Mean of all Sets (V): 89.5939
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TP03
+-------------------
+
+Mean of all Sets (V): 90.1812
+
+Reflector Height: 1.438  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:    BEACON
+-------------------
+
+Mean of all Sets (V): 77.0025
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Averaging  EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       WT1
+-------------------
+
+Mean of all Sets (V): 77.0252
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       CT1
+-------------------
+
+Mean of all Sets (V): 81.1826
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     POLE1
+-------------------
+
+Mean of all Sets (V): 83.3839
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP01      
+Mean Of Face I/II: 89.5938      Residuals V: 0.00001   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP01      
+Mean Of Face I/II: 89.5939      Residuals V: -0.00001  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP03      
+Mean Of Face I/II: 90.1812      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP03      
+Mean Of Face I/II: 90.1812      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : BEACON    
+Mean Of Face I/II: 77.0031      Residuals V: -0.00062  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : BEACON    
+Mean Of Face I/II: 77.0019      Residuals V: 0.00062   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : WT1       
+Mean Of Face I/II: 77.0252      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : WT1       
+Mean Of Face I/II: 77.0252      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : CT1       
+Mean Of Face I/II: 81.1825      Residuals V: 0.00011   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : CT1       
+Mean Of Face I/II: 81.1827      Residuals V: -0.00011  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : POLE1     
+Mean Of Face I/II: 83.3839      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : POLE1     
+Mean Of Face I/II: 83.3839      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:   2
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0001
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       TP03
+--------------------
+
+Mean Distance Of All Sets:  147.087
+
+Reflector Height: 1.438  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:     BEACON
+--------------------
+
+Mean Distance Of All Sets:   24.488
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Averaging :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP01      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP01      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP03      
+Mean Of Face I And II: 147.087       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP03      
+Mean Of Face I And II: 147.087       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : BEACON    
+Mean Of Face I And II: 24.488        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : BEACON    
+Mean Of Face I And II: 24.488        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : WT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : WT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : CT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : CT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : POLE1     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : POLE1     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.05 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1611820   
+
+Store To Job		: BIGGS           
+Sets of Angles Start	: 06.21.16, 14:11:32
+
+TPS Station		: TP03            
+Coordinates		: E=          203.942	N=          240.167	H=      -----
+Instrument Height	: hi= 1.4379999638
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.05 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1611820   
+
+Store To Job		: BIGGS           
+Sets of Angles Start	: 06.21.16, 14:14:52
+
+TPS Station		: TP03            
+Coordinates		: E=          203.942	N=          240.167	H=      -----
+Instrument Height	: hi= 1.4379999638
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:   5
+
+Standard Deviation Of Single Measurement:     0.0003
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP01 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.719  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     POLE1 
+-------------------
+
+Mean of all Sets (Hz): 38.27328  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       CT1 
+-------------------
+
+Mean of all Sets (Hz): 45.03203  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:       WT1 
+-------------------
+
+Mean of all Sets (Hz): 43.40046  
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP02 
+-------------------
+
+Mean of all Sets (Hz): 310.09564 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : POLE1      
+Reduced Mean: 38.27371     Hz Residuals: -0.00044  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : POLE1      
+Reduced Mean: 38.27284     Hz Residuals: 0.00044   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : CT1        
+Reduced Mean: 45.03215     Hz Residuals: -0.00012  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : CT1        
+Reduced Mean: 45.03190     Hz Residuals: 0.00012   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : WT1        
+Reduced Mean: 43.40046     Hz Residuals: -0.00000  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : WT1        
+Reduced Mean: 43.40046     Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP02       
+Reduced Mean: 310.09573    Hz Residuals: -0.00009  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP02       
+Reduced Mean: 310.09555    Hz Residuals: 0.00009   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:   5
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      TP01
+-------------------
+
+Mean of all Sets (V): 89.4158
+
+Reflector Height: 1.719  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     POLE1
+-------------------
+
+Mean of all Sets (V): 82.2116
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       CT1
+-------------------
+
+Mean of all Sets (V): 79.2302
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:       WT1
+-------------------
+
+Mean of all Sets (V): 66.5906
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TP02
+-------------------
+
+Mean of all Sets (V): 89.4523
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP01      
+Mean Of Face I/II: 89.4157      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP01      
+Mean Of Face I/II: 89.4158      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : POLE1     
+Mean Of Face I/II: 82.2115      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : POLE1     
+Mean Of Face I/II: 82.2116      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : CT1       
+Mean Of Face I/II: 79.2304      Residuals V: -0.00014  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : CT1       
+Mean Of Face I/II: 79.2301      Residuals V: 0.00014   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : WT1       
+Mean Of Face I/II: 66.5905      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : WT1       
+Mean Of Face I/II: 66.5907      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP02      
+Mean Of Face I/II: 89.4523      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP02      
+Mean Of Face I/II: 89.4523      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:   1
+
+Standrad Deviation Of Single Distance:     0.0000
+Standard Deviation Of Mean Distance  :     0.0000
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       TP01
+--------------------
+
+Mean Distance Of All Sets:  229.244
+
+Reflector Height: 1.719  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP01      
+Mean Of Face I And II: 229.244       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP01      
+Mean Of Face I And II: 229.244       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : POLE1     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : POLE1     
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : CT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : CT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : WT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : WT1       
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.05 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1611820   
+
+Store To Job		: BIGGS           
+Sets of Angles Start	: 06.21.16, 14:23:28
+
+TPS Station		: TP03            
+Coordinates		: E=          203.942	N=          240.167	H=      -----
+Instrument Height	: hi= 1.4379999638
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:   7
+
+Standard Deviation Of Single Measurement:     0.0003
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP01 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.719  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP02 
+-------------------
+
+Mean of all Sets (Hz): 310.10099 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TWR1 
+-------------------
+
+Mean of all Sets (Hz): 102.50121 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TWR2 
+-------------------
+
+Mean of all Sets (Hz): 108.14449 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TWR3 
+-------------------
+
+Mean of all Sets (Hz): 113.43142 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TWR4 
+-------------------
+
+Mean of all Sets (Hz): 120.40274 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TWR5 
+-------------------
+
+Mean of all Sets (Hz): 105.42275 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP02       
+Reduced Mean: 310.10063    Hz Residuals: 0.00037   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP02       
+Reduced Mean: 310.10136    Hz Residuals: -0.00037  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TWR1       
+Reduced Mean: 102.50108    Hz Residuals: 0.00013   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TWR1       
+Reduced Mean: 102.50134    Hz Residuals: -0.00013  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TWR2       
+Reduced Mean: 108.14398    Hz Residuals: 0.00051   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TWR2       
+Reduced Mean: 108.14500    Hz Residuals: -0.00051  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TWR3       
+Reduced Mean: 113.43110    Hz Residuals: 0.00033   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TWR3       
+Reduced Mean: 113.43175    Hz Residuals: -0.00033  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TWR4       
+Reduced Mean: 120.40249    Hz Residuals: 0.00025   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TWR4       
+Reduced Mean: 120.40298    Hz Residuals: -0.00025  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TWR5       
+Reduced Mean: 105.42232    Hz Residuals: 0.00044   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TWR5       
+Reduced Mean: 105.42319    Hz Residuals: -0.00044  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:   7
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      TP01
+-------------------
+
+Mean of all Sets (V): 89.4160
+
+Reflector Height: 1.719  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TP02
+-------------------
+
+Mean of all Sets (V): 89.4530
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TWR1
+-------------------
+
+Mean of all Sets (V): 88.1611
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TWR2
+-------------------
+
+Mean of all Sets (V): 87.0856
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TWR3
+-------------------
+
+Mean of all Sets (V): 86.1913
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TWR4
+-------------------
+
+Mean of all Sets (V): 86.1306
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TWR5
+-------------------
+
+Mean of all Sets (V): 87.4057
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP01      
+Mean Of Face I/II: 89.4200      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP01      
+Mean Of Face I/II: 89.4159      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP02      
+Mean Of Face I/II: 89.4530      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP02      
+Mean Of Face I/II: 89.4529      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TWR1      
+Mean Of Face I/II: 88.1612      Residuals V: -0.00007  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TWR1      
+Mean Of Face I/II: 88.1610      Residuals V: 0.00007   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TWR2      
+Mean Of Face I/II: 87.0856      Residuals V: -0.00006  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TWR2      
+Mean Of Face I/II: 87.0855      Residuals V: 0.00006   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TWR3      
+Mean Of Face I/II: 86.1914      Residuals V: -0.00009  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TWR3      
+Mean Of Face I/II: 86.1912      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TWR4      
+Mean Of Face I/II: 86.1307      Residuals V: -0.00008  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TWR4      
+Mean Of Face I/II: 86.1306      Residuals V: 0.00008   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TWR5      
+Mean Of Face I/II: 87.4057      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TWR5      
+Mean Of Face I/II: 87.4058      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:   1
+
+Standrad Deviation Of Single Distance:     0.0004
+Standard Deviation Of Mean Distance  :     0.0003
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       TP01
+--------------------
+
+Mean Distance Of All Sets:  229.244
+
+Reflector Height: 1.719  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP01      
+Mean Of Face I And II: 229.244       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP01      
+Mean Of Face I And II: 229.244       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TWR1      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TWR1      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TWR2      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TWR2      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TWR3      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TWR3      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TWR4      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TWR4      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TWR5      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TWR5      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.05 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1611820   
+
+Store To Job		: BIGGS           
+Sets of Angles Start	: 06.21.16, 14:40:52
+
+TPS Station		: TP03            
+Coordinates		: E=          203.942	N=          240.167	H=      -----
+Instrument Height	: hi= 1.4379999638
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0004
+Standard Deviation Of All Measurements  :     0.0003
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP01 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.719  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TP02 
+-------------------
+
+Mean of all Sets (Hz): 310.10240 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      TWR6 
+-------------------
+
+Mean of all Sets (Hz): 129.36126 
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP01       
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TP02       
+Reduced Mean: 310.10231    Hz Residuals: 0.00009   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TP02       
+Reduced Mean: 310.10248    Hz Residuals: -0.00009  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : TWR6       
+Reduced Mean: 129.36174    Hz Residuals: -0.00048  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : TWR6       
+Reduced Mean: 129.36078    Hz Residuals: 0.00048   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:      TP01
+-------------------
+
+Mean of all Sets (V): 89.4200
+
+Reflector Height: 1.719  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TP02
+-------------------
+
+Mean of all Sets (V): 89.4627
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      TWR6
+-------------------
+
+Mean of all Sets (V): 86.0501
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP01      
+Mean Of Face I/II: 89.4160      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP01      
+Mean Of Face I/II: 89.4200      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TP02      
+Mean Of Face I/II: 89.4628      Residuals V: -0.00009  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TP02      
+Mean Of Face I/II: 89.4626      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : TWR6      
+Mean Of Face I/II: 86.0503      Residuals V: -0.00016  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : TWR6      
+Mean Of Face I/II: 86.0460      Residuals V: 0.00016   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:   1
+
+Standrad Deviation Of Single Distance:     0.0002
+Standard Deviation Of Mean Distance  :     0.0002
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:       TP01
+--------------------
+
+Mean Distance Of All Sets:  229.244
+
+Reflector Height: 1.719  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP01      
+Mean Of Face I And II: 229.243       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP01      
+Mean Of Face I And II: 229.244       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TP02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TP02      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : TWR6      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : TWR6      
+Mean Of Face I And II: -1.000        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End

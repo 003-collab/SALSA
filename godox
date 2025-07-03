@@ -1,0 +1,4 @@
+#!/bin/bash
+# run doxygen - must have graphviz installed
+rm -rf doc/doxygen
+doxygen Doxyfile

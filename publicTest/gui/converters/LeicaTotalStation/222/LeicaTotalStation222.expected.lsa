@@ -1,0 +1,14 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v2.22 converter from C:/Users/cawalker/projects/lsa/publicTestOutput/gui/converters/LeicaTotalStation/222/LeicaTotalStation222.log on 12:14:01 Aug 11, 2022
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_MAXTP05 1.57300 m 0.00000 m
+HGHT HGHT#1_TACANGD 1.15300 m 0.00000 m
+HGHT HGHT#1_MAXTP06 1.50900 m 0.00000 m
+HGHT HGHT#1_MAXTP04 1.62000 m 0.00000 m
+
+--include LeicaTotalStation222_MAXTP05.lsa
+--include LeicaTotalStation222_MAXTP06.lsa
+--include LeicaTotalStation222_MAXTP04.lsa

@@ -1,0 +1,7 @@
+Created by SALSA version [$SALSA_VERSION$]
+--include initial_coordinates.lsa
+POSG dummyPOS Fix 34 39 52.00000 N 120 27 0.00000 W 5.0000 m
+#New project created 2020-03-16 14:19:03
+--include ctrl_sites.lsa
+--include gpsMeasurements.lsa VSCA VALUE 2
+--include conventional.lsa

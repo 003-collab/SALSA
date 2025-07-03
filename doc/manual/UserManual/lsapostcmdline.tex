@@ -1,0 +1,52 @@
+\chapter{Postprocessor command-line reference}
+
+\begin{Snippet}
+lsapost, Ver. 2.1 1/21/16 rev, SALSA Ver. 1.0.0 Jan 29 2016 09:27:15,
+ Run 2016/01/29 at 09:44:28
+Usage: lsapost [option] ...
+ Program lsapost will read an input file and ...
+ Input is on the command line, or of the same format in a file (see --file below);
+ lines in that file which begin with '#' are ignored. Accepted options are 
+ shown below, followed by a description, with default value, if any, in ().
+
+# File I/O:
+ --file <name>       Name of file containing more options [#-EOL=comment][repeat]()
+ --log <name>        Name of output log file ()
+ --logpath <path>    Path for output log file ()
+ --bin <name>        Name of input file - required ()
+ --binpath <path>    Path for input file ()
+ --dat <name>        Name of input DAT file (ignore all but EXTR) ()
+ --datpath <path>    Path for input DAT file ()
+
+# Data input:
+ --extr <"str">      Extraction string (EXTR tag TYP label[s]) [repeat] ()
+ --comment <"str">   Comments added to the output, including pts file [repeat] ()
+
+# Geoid input:
+ --geoidfile <name>  Name of geoid file ()
+ --geoidfile2 <name> Name of second geoid file ()
+ --geoidpath <path>  Path for geoid file(s) ()
+ --interp <method>   Geoid interpolation method [bicubic or bilinear] (bicubic)
+ --interp2 <method>  Geoid interpolation method for second geoid (bicubic)
+
+# Data Output:
+ --ptsfile <name>    Write 'Points file' to this filename ()
+ --csvfile <name>    Write CSV file to this filename ()
+ --noAPV             Leave covariance in relative units (default F) (don't)
+
+# Output:
+ --dump              Dump the binary data to the log file (don't)
+ --westLon           Output west longitude (don't)
+ --linprec           Output linear precision (M) (3)
+ --angprecM          Output angular precision (SOA) for measurements (3)
+ --angprecP          Output angular precision (SOA) for positions (LLH) (9)
+ --warningExtRelVect Output warning threshold (M) for external reliability
+ --errorExtRelVect   Output error threshold (M) for external reliability
+ --confid            Confidence factor (for ptsfile), one of 1sig,90,95 (1sig)
+
+# Help:
+ --validate          Read input and test its validity, then quit (don't)
+ --verbose           Print extended output information (don't)
+ --debug             Print debug output at level 0 [debug<n> for level n=1-7] (-1)
+ --help              Print this and quit (don't)
+\end{Snippet}

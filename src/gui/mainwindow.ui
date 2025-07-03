@@ -1,0 +1,1925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>856</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SALSA</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="rightMargin">
+     <number>1</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QSplitter" name="centralSplitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QTreeView" name="treeView">
+          <property name="font">
+           <font>
+            <family>Courier 10 Pitch</family>
+            <pointsize>12</pointsize>
+            <kerning>false</kerning>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+          </property>
+          <property name="autoScroll">
+           <bool>false</bool>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::AllEditTriggers</set>
+          </property>
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::DragOnly</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectItems</enum>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="horizontalScrollMode">
+           <enum>QAbstractItemView::ScrollPerPixel</enum>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <attribute name="headerStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frameNumSelectedRecords">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="FindWidget" name="findFilterWidget" native="true">
+             <property name="baseSize">
+              <size>
+               <width>700</width>
+               <height>34</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelNumSelectedRecords">
+             <property name="layoutDirection">
+              <enum>Qt::RightToLeft</enum>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="labelRecordsSelected">
+             <property name="text">
+              <string> records selected </string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="frameOutput">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QProgressBar" name="progressBar">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="value">
+           <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frameOutputData">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="frameProcessingTime">
+             <property name="frameShape">
+              <enum>QFrame::Panel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="lineWidth">
+              <number>1</number>
+             </property>
+             <property name="midLineWidth">
+              <number>0</number>
+             </property>
+             <layout class="QFormLayout" name="formLayout">
+              <property name="horizontalSpacing">
+               <number>2</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>2</number>
+              </property>
+              <property name="leftMargin">
+               <number>4</number>
+              </property>
+              <property name="topMargin">
+               <number>4</number>
+              </property>
+              <property name="rightMargin">
+               <number>4</number>
+              </property>
+              <property name="bottomMargin">
+               <number>4</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="labelProcessingTime">
+                <property name="font">
+                 <font>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Processing Time (sec):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="valueProcessingTime">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="labelNumObs">
+                <property name="font">
+                 <font>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Num Observations:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="valueNumObs">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="labelNumUnknowns">
+                <property name="font">
+                 <font>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Num Unknowns:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="valueNumUnknowns">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="labelNumDOF">
+                <property name="font">
+                 <font>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Degrees of Freedom:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLabel" name="valueNumDOF">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="labelMaxExtMag">
+                <property name="text">
+                 <string>Max Ext Mag (m):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QLabel" name="valueMaxExtMag">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frameConvergence">
+             <property name="frameShape">
+              <enum>QFrame::Panel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <layout class="QFormLayout" name="formLayout_2">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="horizontalSpacing">
+               <number>2</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>2</number>
+              </property>
+              <property name="leftMargin">
+               <number>4</number>
+              </property>
+              <property name="topMargin">
+               <number>4</number>
+              </property>
+              <property name="rightMargin">
+               <number>4</number>
+              </property>
+              <property name="bottomMargin">
+               <number>4</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="labelConvergenceHeader">
+                <property name="font">
+                 <font>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Convergence Test:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="valueConvergenceHeader">
+                <property name="font">
+                 <font>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="labelLastUpdate">
+                <property name="font">
+                 <font>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Last Update RMS: </string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="valueLastUpdate">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="labelConvLimit">
+                <property name="text">
+                 <string>Conv Limit (m):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="valueConvLimit">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="labelIterations">
+                <property name="text">
+                 <string>Iterations: </string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="valueIterations">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="labelMaxIterations">
+                <property name="text">
+                 <string>Max Iterations:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLabel" name="valueMaxIterations">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frameChiSquared">
+             <property name="frameShape">
+              <enum>QFrame::Panel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <layout class="QFormLayout" name="formLayout_3">
+              <property name="horizontalSpacing">
+               <number>2</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>2</number>
+              </property>
+              <property name="leftMargin">
+               <number>4</number>
+              </property>
+              <property name="topMargin">
+               <number>4</number>
+              </property>
+              <property name="rightMargin">
+               <number>4</number>
+              </property>
+              <property name="bottomMargin">
+               <number>4</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="labelChiSqrHeader">
+                <property name="font">
+                 <font>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Chi-Squared Test: </string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="valueChiSqrHeader">
+                <property name="font">
+                 <font>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="labelAPV">
+                <property name="text">
+                 <string>Chi-Squared/nDOF (APV): </string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="valueAPV">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="labelChiSqr">
+                <property name="font">
+                 <font>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Test Limits : </string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="valueChiSqr">
+                <property name="text">
+                 <string>--</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>267</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frameOutputTables">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QSplitter" name="splitterOutputTables">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <widget class="QFrame" name="frameMeasurmentResiduals">
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="labelTopResiduals">
+                 <property name="font">
+                  <font>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Measurement Residuals (meters | seconds of arc)</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTableView" name="tableMeasurements">
+                 <property name="font">
+                  <font>
+                   <family>Courier 10 Pitch</family>
+                  </font>
+                 </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="selectionMode">
+                  <enum>QAbstractItemView::ExtendedSelection</enum>
+                 </property>
+                 <property name="selectionBehavior">
+                  <enum>QAbstractItemView::SelectRows</enum>
+                 </property>
+                 <property name="showGrid">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sortingEnabled">
+                  <bool>true</bool>
+                 </property>
+                 <attribute name="horizontalHeaderMinimumSectionSize">
+                  <number>10</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>100</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBoxFilterMeasOnSelected">
+                 <property name="text">
+                  <string>Filter on selected</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QFrame" name="framePointDisplacements">
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="labelPointConfRegions">
+                 <property name="font">
+                  <font>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Point Confidence Regions</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTableView" name="tablePoints">
+                 <property name="font">
+                  <font>
+                   <family>Courier 10 Pitch</family>
+                  </font>
+                 </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="selectionBehavior">
+                  <enum>QAbstractItemView::SelectRows</enum>
+                 </property>
+                 <property name="sortingEnabled">
+                  <bool>true</bool>
+                 </property>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>70</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                  <bool>true</bool>
+                 </attribute>
+                 <attribute name="horizontalHeaderStretchLastSection">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                </widget>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="checkBoxFilterPointsOnSelected">
+                 <property name="text">
+                  <string>Filter on selected</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QTextBrowser" name="statusWindow">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>400</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Courier 10 Pitch</family>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="openExternalLinks">
+        <bool>false</bool>
+       </property>
+       <property name="openLinks">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="FileMenu">
+    <property name="title">
+     <string>&amp;Project</string>
+    </property>
+    <widget class="QMenu" name="RecentMenu">
+     <property name="title">
+      <string>Open Recent SALSA Project...</string>
+     </property>
+     <addaction name="actionEmptyRecent"/>
+    </widget>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="RecentMenu"/>
+    <addaction name="actionImport_IOB"/>
+    <addaction name="actionReload"/>
+    <addaction name="actionConfigure"/>
+    <addaction name="actionClose"/>
+    <addaction name="separator"/>
+    <addaction name="actionNewGeoidFile"/>
+    <addaction name="actionGenerate_Initial_Positions"/>
+    <addaction name="actionCalculate_Adjustment"/>
+    <addaction name="actionAbort_Adjustment"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="RecordMenu">
+    <property name="title">
+     <string>&amp;Record</string>
+    </property>
+    <widget class="QMenu" name="menuInsert">
+     <property name="title">
+      <string>&amp;Insert</string>
+     </property>
+     <addaction name="actionInsertNEWInclude"/>
+     <addaction name="separator"/>
+     <addaction name="actionInsertComment"/>
+     <addaction name="actionInsertSeparator"/>
+     <addaction name="separator"/>
+     <addaction name="actionInsertPOSG"/>
+     <addaction name="actionInsertPOSC"/>
+     <addaction name="separator"/>
+     <addaction name="actionInsertDIST"/>
+     <addaction name="actionInsertDXYZ"/>
+     <addaction name="separator"/>
+     <addaction name="actionInsertHANG"/>
+     <addaction name="actionInsertAZIM"/>
+     <addaction name="actionInsertVANG"/>
+     <addaction name="actionInsertZANG"/>
+     <addaction name="separator"/>
+     <addaction name="actionInsertHDIF"/>
+     <addaction name="actionInsertHDIR"/>
+     <addaction name="actionInsertDGRP"/>
+     <addaction name="separator"/>
+     <addaction name="actionInsertHGHT"/>
+     <addaction name="actionInsertVSCA"/>
+     <addaction name="actionInsertUNCR"/>
+    </widget>
+    <widget class="QMenu" name="menuInsert_Derived_Position">
+     <property name="title">
+      <string>Insert Derived Position</string>
+     </property>
+     <addaction name="actionInsertMEAN"/>
+     <addaction name="actionInsertENUO"/>
+    </widget>
+    <addaction name="menuInsert"/>
+    <addaction name="menuInsert_Derived_Position"/>
+    <addaction name="separator"/>
+    <addaction name="actionCopy"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionDuplicate"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelect_Referencing"/>
+    <addaction name="actionEnable"/>
+    <addaction name="actionDisable"/>
+    <addaction name="separator"/>
+    <addaction name="actionMove_Up"/>
+    <addaction name="actionMove_Down"/>
+    <addaction name="separator"/>
+    <addaction name="actionExpand_All"/>
+    <addaction name="actionCollapse_All"/>
+    <addaction name="separator"/>
+    <addaction name="actionFind"/>
+    <addaction name="actionFilterPoint"/>
+    <addaction name="actionFind_Next"/>
+    <addaction name="actionFind_Previous"/>
+    <addaction name="actionFindNextWarning"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_Autogen"/>
+   </widget>
+   <widget class="QMenu" name="menuPreferences">
+    <property name="title">
+     <string>Pre&amp;ferences</string>
+    </property>
+    <addaction name="actionShow_Comments"/>
+    <addaction name="actionMapPreferences"/>
+    <addaction name="actionPreferences"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout_Salsa"/>
+    <addaction name="actionView_User_Manual"/>
+   </widget>
+   <widget class="QMenu" name="menuExport">
+    <property name="title">
+     <string>&amp;Export</string>
+    </property>
+    <addaction name="actionAdjustedLSA"/>
+    <addaction name="actionGeoidHeightsAPriori"/>
+    <addaction name="actionExportPointsXYZ"/>
+    <addaction name="actionExportPointsUTM"/>
+    <addaction name="actionExportSPC"/>
+    <addaction name="actionExportPointsNCAT"/>
+    <addaction name="actionExportSolnCov"/>
+    <addaction name="actionExportMeasResid"/>
+    <addaction name="actionExportMeasResidAsENU"/>
+    <addaction name="separator"/>
+    <addaction name="actionExportMap"/>
+    <addaction name="actionExport_KML"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuImport">
+    <property name="title">
+     <string>&amp;Import</string>
+    </property>
+    <addaction name="actionInsertLSAInclude"/>
+    <addaction name="actionInsertIOBInclude"/>
+    <addaction name="actionInsertSetsOfAnglesInclude"/>
+    <addaction name="actionInsertTrimbleGPSInclude"/>
+    <addaction name="actionInsertPPPInclude"/>
+    <addaction name="actionInsertOPUSInclude"/>
+    <addaction name="actionInsertGSIInclude"/>
+    <addaction name="actionInsertLeicaGNSSInclude"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionView_RecordEditor"/>
+    <addaction name="actionView_Map"/>
+    <addaction name="actionView_AdjustedPositions"/>
+    <addaction name="actionView_StationData"/>
+    <addaction name="actionView_Histogram"/>
+    <addaction name="separator"/>
+    <addaction name="actionRestore_Record_Editor"/>
+    <addaction name="separator"/>
+    <addaction name="actionView_Solver_Output"/>
+    <addaction name="actionView_Points_File"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="FileMenu"/>
+   <addaction name="RecordMenu"/>
+   <addaction name="menuImport"/>
+   <addaction name="menuExport"/>
+   <addaction name="menuView"/>
+   <addaction name="menuPreferences"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>&amp;Open SALSA Project ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionGeoLab_IOB">
+   <property name="text">
+    <string>GeoLab IOB</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionInsertPOSG">
+   <property name="text">
+    <string>POSG</string>
+   </property>
+   <property name="toolTip">
+    <string>Station Position (Geodetic)</string>
+   </property>
+  </action>
+  <action name="actionInsertPOSC">
+   <property name="text">
+    <string>POSC</string>
+   </property>
+   <property name="toolTip">
+    <string>Station Position (Cartesian)</string>
+   </property>
+  </action>
+  <action name="actionInsertDIST">
+   <property name="text">
+    <string>DIST</string>
+   </property>
+   <property name="toolTip">
+    <string>Distance measurement</string>
+   </property>
+  </action>
+  <action name="actionInsertDXYZ">
+   <property name="text">
+    <string>DXYZ</string>
+   </property>
+   <property name="toolTip">
+    <string>GNSS ECEF displacement vector</string>
+   </property>
+  </action>
+  <action name="actionInsertHANG">
+   <property name="text">
+    <string>HANG</string>
+   </property>
+   <property name="toolTip">
+    <string>Horizontal Angle measurement</string>
+   </property>
+  </action>
+  <action name="actionInsertAZIM">
+   <property name="text">
+    <string>AZIM</string>
+   </property>
+   <property name="toolTip">
+    <string>Azimuth measurement</string>
+   </property>
+  </action>
+  <action name="actionInsertVANG">
+   <property name="text">
+    <string>VANG</string>
+   </property>
+   <property name="toolTip">
+    <string>Vertical Angle measurement</string>
+   </property>
+  </action>
+  <action name="actionInsertZANG">
+   <property name="text">
+    <string>ZANG</string>
+   </property>
+   <property name="toolTip">
+    <string>Zenith Angle measurement</string>
+   </property>
+  </action>
+  <action name="actionInsertHDIF">
+   <property name="text">
+    <string>HDIF</string>
+   </property>
+   <property name="toolTip">
+    <string>Height Difference measurement</string>
+   </property>
+  </action>
+  <action name="actionInsertHDIR">
+   <property name="text">
+    <string>HDIR</string>
+   </property>
+   <property name="toolTip">
+    <string>Horizontal Direction measurement</string>
+   </property>
+  </action>
+  <action name="actionInsertDGRP">
+   <property name="text">
+    <string>DGRP</string>
+   </property>
+   <property name="toolTip">
+    <string>Horizontal Direction Group</string>
+   </property>
+  </action>
+  <action name="actionInsertHGHT">
+   <property name="text">
+    <string>HGHT</string>
+   </property>
+   <property name="toolTip">
+    <string>Height of Instrument / Target</string>
+   </property>
+  </action>
+  <action name="actionInsertVSCA">
+   <property name="text">
+    <string>VSCA</string>
+   </property>
+   <property name="toolTip">
+    <string>Variance Scaling Factor</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+V</string>
+   </property>
+  </action>
+  <action name="actionInsertUNCR">
+   <property name="text">
+    <string>UNCR</string>
+   </property>
+   <property name="toolTip">
+    <string>Uncertainty Model</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+U</string>
+   </property>
+  </action>
+  <action name="actionInsertComment">
+   <property name="text">
+    <string>Comment</string>
+   </property>
+   <property name="shortcut">
+    <string>F8</string>
+   </property>
+  </action>
+  <action name="actionInsertSeparator">
+   <property name="text">
+    <string>Separator</string>
+   </property>
+   <property name="shortcut">
+    <string>F9</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>De&amp;lete</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>&amp;New...</string>
+   </property>
+  </action>
+  <action name="actionImport_IOB">
+   <property name="text">
+    <string>Open &amp;GeoLab Project ...</string>
+   </property>
+  </action>
+  <action name="actionInsertNEWInclude">
+   <property name="text">
+    <string>&amp;New Include</string>
+   </property>
+  </action>
+  <action name="actionInsertLSAInclude">
+   <property name="text">
+    <string>Include from &amp;LSA...</string>
+   </property>
+   <property name="toolTip">
+    <string>Add LSA file as Include record</string>
+   </property>
+   <property name="shortcut">
+    <string>F6</string>
+   </property>
+  </action>
+  <action name="actionInsertIOBInclude">
+   <property name="text">
+    <string>Include from &amp;IOB...</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert GeoLab input file to LSA format and insert corresponding Include record</string>
+   </property>
+   <property name="shortcut">
+    <string>F7</string>
+   </property>
+  </action>
+  <action name="actionShow_Comments">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show &amp;Comments</string>
+   </property>
+  </action>
+  <action name="actionCalculate_Adjustment">
+   <property name="text">
+    <string>&amp;Calculate Adjustment</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionAbort_Adjustment">
+   <property name="text">
+    <string>&amp;Abort Adjustment</string>
+   </property>
+  </action>
+  <action name="actionRestore_Record_Editor">
+   <property name="text">
+    <string>Reset Windows</string>
+   </property>
+  </action>
+  <action name="actionEnable">
+   <property name="text">
+    <string>&amp;Enable</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+.</string>
+   </property>
+  </action>
+  <action name="actionDisable">
+   <property name="text">
+    <string>&amp;Disable</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+/</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionConfigure">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Configure...</string>
+   </property>
+  </action>
+  <action name="actionMove_Up">
+   <property name="text">
+    <string>Move Up</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Up</string>
+   </property>
+  </action>
+  <action name="actionMove_Down">
+   <property name="text">
+    <string>Move Down</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Down</string>
+   </property>
+  </action>
+  <action name="actionSelect_Referencing">
+   <property name="text">
+    <string>Select Referencing</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionAbout_Salsa">
+   <property name="text">
+    <string>About SALSA...</string>
+   </property>
+  </action>
+  <action name="actionView_Adjusted_Coordinates">
+   <property name="text">
+    <string>View Adjusted Coordinates</string>
+   </property>
+  </action>
+  <action name="actionAdjustedLSA">
+   <property name="text">
+    <string>Adjusted points in LSA format</string>
+   </property>
+  </action>
+  <action name="actionAPrioriLSA">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Pre-adjusted points in LSA format</string>
+   </property>
+  </action>
+  <action name="actionGeoidHeightsAdjusted">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Geoid heights at adjusted points</string>
+   </property>
+  </action>
+  <action name="actionGeoidHeightsAPriori">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Orthometric Heights at Pre-Adjusted Points</string>
+   </property>
+  </action>
+  <action name="actionAdjustedWithErrorEllipse">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Adjusted points with error ellipse</string>
+   </property>
+  </action>
+  <action name="actionCSV_file">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>CSV file</string>
+   </property>
+  </action>
+  <action name="actionGenerate_Initial_Positions">
+   <property name="text">
+    <string>Generate Initial Positions</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>User Preferences...</string>
+   </property>
+  </action>
+  <action name="actionReload">
+   <property name="text">
+    <string>Reload</string>
+   </property>
+  </action>
+  <action name="actionExportMap">
+   <property name="text">
+    <string>Export Map as Image</string>
+   </property>
+  </action>
+  <action name="actionView_User_Manual">
+   <property name="text">
+    <string>View User Manual</string>
+   </property>
+  </action>
+  <action name="actionMapPreferences">
+   <property name="text">
+    <string>Map Preferences...</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="text">
+    <string>Find/Filter...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionFind_Next">
+   <property name="text">
+    <string>Find Next</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionFind_Previous">
+   <property name="text">
+    <string>Find Previous</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionImport_SetsOfAnglesLog">
+   <property name="text">
+    <string>Import Sets of Angles log...</string>
+   </property>
+  </action>
+  <action name="actionInsertSetsOfAnglesInclude">
+   <property name="text">
+    <string>Include from Sets Of Angles output...</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert Sets of Angles output to LSA format and insert corresponding Include record</string>
+   </property>
+  </action>
+  <action name="actionExpand_All">
+   <property name="text">
+    <string>Expand All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
+  </action>
+  <action name="actionCollapse_All">
+   <property name="text">
+    <string>Collapse All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionInsertTrimbleGPSInclude">
+   <property name="text">
+    <string>Include from Trimble Data Exchange...</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert Trimble asc file to LSA format and insert corresponding Include record</string>
+   </property>
+  </action>
+  <action name="actionInsertPPPInclude">
+   <property name="text">
+    <string>Include from grape|merge output...</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert grape PPP data to LSA format and insert corresponding Include record</string>
+   </property>
+  </action>
+  <action name="actionInsertGSIInclude">
+   <property name="text">
+    <string>Include from Leica GSI Level ...</string>
+   </property>
+   <property name="toolTip">
+    <string>Supports BF and BFFB leveling methods</string>
+   </property>
+  </action>
+  <action name="actionFindNextWarning">
+   <property name="text">
+    <string>Find Next Warning</string>
+   </property>
+  </action>
+  <action name="actionInsertMEAN">
+   <property name="text">
+    <string>MEAN</string>
+   </property>
+  </action>
+  <action name="actionInsertENUO">
+   <property name="text">
+    <string>ENUO</string>
+   </property>
+  </action>
+  <action name="actionExportPointsXYZ">
+   <property name="text">
+    <string>Points in XYZ format</string>
+   </property>
+  </action>
+  <action name="actionNewGeoidFile">
+   <property name="text">
+    <string>Generate Custom Geoid</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste Below</string>
+   </property>
+   <property name="toolTip">
+    <string>Paste Below</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionView_RecordEditor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Record Editor</string>
+   </property>
+  </action>
+  <action name="actionView_Map">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Map</string>
+   </property>
+  </action>
+  <action name="actionView_AdjustedPositions">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Final Positions</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionDuplicate">
+   <property name="text">
+    <string>Duplicate</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionView_InitialPositions">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Initial Positions</string>
+   </property>
+  </action>
+  <action name="actionView_Solver_Output">
+   <property name="text">
+    <string>Solver Output</string>
+   </property>
+  </action>
+  <action name="actionView_StationData">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Station Inverse</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actionView_Histogram">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Histogram</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="actionView_Points_File">
+   <property name="text">
+    <string>.pts File</string>
+   </property>
+  </action>
+  <action name="actionExport_KML">
+   <property name="text">
+    <string>Export Map as KMZ</string>
+   </property>
+  </action>
+  <action name="actionProject1">
+   <property name="text">
+    <string>Project1</string>
+   </property>
+  </action>
+  <action name="actionEmptyRecent">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>No recent projects</string>
+   </property>
+  </action>
+  <action name="actionFilterPoint">
+   <property name="text">
+    <string>Filter Point</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="text">
+    <string>Save Project Directory As...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionExportSolnCov">
+   <property name="text">
+    <string>Solution Covariance Matrix</string>
+   </property>
+  </action>
+  <action name="actionExportMeasResid">
+   <property name="text">
+    <string>Measurement Residuals</string>
+   </property>
+  </action>
+  <action name="actionInsertOPUSInclude">
+   <property name="text">
+    <string>Include from OPUS output...</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert OPUS position data to LSA format and insert corresponding Include record</string>
+   </property>
+  </action>
+  <action name="actionInsertTrimbleRounds">
+   <property name="text">
+    <string>Include from Trimble Rounds/Topo Points...</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert Trimble jxl file to LSA format and insert corresponding Include record</string>
+   </property>
+  </action>
+  <action name="actionExportPointsUTM">
+   <property name="text">
+    <string>Points in UTM format</string>
+   </property>
+  </action>
+  <action name="actionExportPointsNCAT">
+   <property name="text">
+    <string>Points in NGS NCAT format</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="toolTip">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionAdd_Autogen">
+   <property name="text">
+    <string>Add to Project</string>
+   </property>
+   <property name="toolTip">
+    <string>Move Autogenerated Point(s) to this project's initial_coordinates.lsa</string>
+   </property>
+  </action>
+  <action name="actionExportSPC">
+   <property name="text">
+    <string>Export Projected Coordinates</string>
+   </property>
+  </action>
+  <action name="action_RawCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>|Raw|</string>
+   </property>
+   <property name="toolTip">
+    <string>Show |Raw|</string>
+   </property>
+  </action>
+  <action name="action_RelCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>|Rel|</string>
+   </property>
+   <property name="toolTip">
+    <string>Show |Rel|</string>
+   </property>
+  </action>
+  <action name="action_StdCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>|Std|</string>
+   </property>
+   <property name="toolTip">
+    <string>Show |Std|</string>
+   </property>
+  </action>
+  <action name="action_RedundancyCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Redundancy</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Redundancy</string>
+   </property>
+  </action>
+  <action name="action_Int_RelCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Int Rel</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Int Rel</string>
+   </property>
+  </action>
+  <action name="action_Ext_RelCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ext Rel</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Ext Rel</string>
+   </property>
+  </action>
+  <action name="action_PointCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Point</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Point</string>
+   </property>
+  </action>
+  <action name="action_3D_majCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>3D maj</string>
+   </property>
+   <property name="toolTip">
+    <string>Show 3D maj</string>
+   </property>
+  </action>
+  <action name="action_2D_majCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>2D maj</string>
+   </property>
+   <property name="toolTip">
+    <string>Show 2D maj</string>
+   </property>
+  </action>
+  <action name="action_VerticalCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Vertical</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Vertical</string>
+   </property>
+  </action>
+  <action name="action_3D_maj_RRCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>3D maj RR</string>
+   </property>
+   <property name="toolTip">
+    <string>Show 3D maj RR</string>
+   </property>
+  </action>
+  <action name="action_2D_maj_RRCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>2D maj RR</string>
+   </property>
+   <property name="toolTip">
+    <string>Show 2D maj RR</string>
+   </property>
+  </action>
+  <action name="action_Vertical_RRCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Vertical RR</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Vertical RR</string>
+   </property>
+  </action>
+  <action name="action_MeasCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Meas</string>
+   </property>
+   <property name="toolTip">
+    <string>Show Meas</string>
+   </property>
+  </action>
+  <action name="action_From_AtCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>From (At)</string>
+   </property>
+   <property name="toolTip">
+    <string>Show From (At)</string>
+   </property>
+  </action>
+  <action name="action_ToCol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>To</string>
+   </property>
+   <property name="toolTip">
+    <string>Show To</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionInsertLeicaGNSSInclude">
+   <property name="text">
+    <string>Include from Leica Geo Office...</string>
+   </property>
+   <property name="toolTip">
+    <string>Convert LGO asc file to LSA format and insert corresponding Include record</string>
+   </property>
+  </action>
+  <action name="actionExportMeasResidAsENU">
+   <property name="text">
+    <string>Measurement Residuals as ENU</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>FindWidget</class>
+   <extends>QWidget</extends>
+   <header>FindWidget.hpp</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tableMeasurements</tabstop>
+  <tabstop>statusWindow</tabstop>
+  <tabstop>treeView</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

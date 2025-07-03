@@ -1,0 +1,8 @@
+Created by SALSA version 1.14.0 -- Backward compatible to 1.1.0
+#New project created 2021-01-11 10:36:54
+POSG "AUSTIN CE" Fix 30 16 48.06083 N 97 44 16.33828 W 160.1613 m ortho
+POSG N2277258 Flt NE 30 16 48.03800 N 97 43 48.14953 W 0.0000 m ortho
+POSG "A 1521" Flt NE 30 16 49.57966 N 97 43 0.43960 W 0.0000 m ortho
+UNCR hdifUNCR 0.00010 m [] [] [] [] m
+--include loop1.lsa
+--include loop2.lsa

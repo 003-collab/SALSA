@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>mapIcons/floating.png</file>
+        <file>mapIcons/floating_highlighted.png</file>
+        <file>mapIcons/constrained.png</file>
+        <file>mapIcons/constrained_highlighted.png</file>
+        <file>mapIcons/derived.png</file>
+        <file>mapIcons/derived_highlighted.png</file>
+        <file>mapIcons/fixed_1.png</file>
+        <file>mapIcons/fixed_1_highlighted.png</file>
+        <file>mapIcons/fixed_2.png</file>
+        <file>mapIcons/fixed_2_highlighted.png</file>
+        <file>mapIcons/fixed_all.png</file>
+        <file>mapIcons/fixed_all_highlighted.png</file>
+        <file>mapIcons/fixedC_1.png</file>
+        <file>mapIcons/fixedC_1_highlighted.png</file>
+        <file>mapIcons/fixedC_2.png</file>
+        <file>mapIcons/fixedAC.png</file>
+        <file>mapIcons/apriori.png</file>
+        <file>mapIcons/apriori_highlighted.png</file>
+        <file>guiIcons/scale_bar.png</file>
+        <file>guiIcons/alertIcon.png</file>
+        <file>guiIcons/autogen.png</file>
+        <file>guiIcons/salsa_icon.png</file>
+        <file>guiIcons/dotsVertical.png</file>
+        <file>guiIcons/dotsHorizontal.png</file>
+        <file>guiIcons/hbars.png</file>
+        <file>guiIcons/vbars.png</file>
+        <file>guiIcons/xDismiss.png</file>
+        <file>guiIcons/branchClosed.png</file>
+        <file>guiIcons/branchOpen.png</file>
+        <file>mapIcons/fixedC_2_highlighted.png</file>
+        <file>mapIcons/fixedAC_highlighted.png</file>
+        <file>guiIcons/swap_icon.png</file>
+    </qresource>
+</RCC>

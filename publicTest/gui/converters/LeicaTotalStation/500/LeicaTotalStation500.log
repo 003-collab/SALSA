@@ -1,0 +1,897 @@
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.00 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617523   
+
+Store To Job		: ASTP            
+Sets of Angles Start	: 10.23.14, 12:49:42
+
+TPS Station		: SOUTH           
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 1.5700000525
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+Point ID:         P 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Unknown    EDM Type      : No EDM Typ      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:        S2 
+-------------------
+
+Mean of all Sets (Hz): 352.32386 
+
+Reflector Height:  1.611  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:        S1 
+-------------------
+
+Mean of all Sets (Hz): 5.22478   
+
+Reflector Height:  1.498  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : P          
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : P          
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : S2         
+Reduced Mean: 352.32419    Hz Residuals: -0.00033  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : S2         
+Reduced Mean: 352.32352    Hz Residuals: 0.00033   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : S1         
+Reduced Mean: 5.22496      Hz Residuals: -0.00018  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : S1         
+Reduced Mean: 5.22459      Hz Residuals: 0.00018   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0002
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:         P
+-------------------
+
+Mean of all Sets (V): 83.2233
+
+Reflector Height: 0.000  Add. Constant: 0.000      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Unknown    EDM Type      : No EDM Type     
+
+------------------------------------------------------------------------------------
+
+
+Point ID:        S2
+-------------------
+
+Mean of all Sets (V): 89.5047
+
+Reflector Height: 1.611  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:        S1
+-------------------
+
+Mean of all Sets (V): 89.4933
+
+Reflector Height: 1.498  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : P         
+Mean Of Face I/II: 83.2230      Residuals V: 0.00024   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : P         
+Mean Of Face I/II: 83.2235      Residuals V: -0.00024  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : S2        
+Mean Of Face I/II: 89.5046      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : S2        
+Mean Of Face I/II: 89.5047      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : S1        
+Mean Of Face I/II: 89.4933      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : S1        
+Mean Of Face I/II: 89.4933      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:   3
+
+Standrad Deviation Of Single Distance:     0.0009
+Standard Deviation Of Mean Distance  :     0.0007
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:          P
+--------------------
+
+Mean Distance Of All Sets:  471.685
+
+Reflector Height: 0.000  :Add.Constant: 0.000     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Unknown   :EDM Type: No EDM Typ
+
+----------------------------------------------------------------------------------
+
+
+Point ID:         S2
+--------------------
+
+Mean Distance Of All Sets:   92.783
+
+Reflector Height: 1.611  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:         S1
+--------------------
+
+Mean Distance Of All Sets:   52.364
+
+Reflector Height: 1.498  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : P         
+Mean Of Face I And II: 471.686       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : P         
+Mean Of Face I And II: 471.684       Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : S2        
+Mean Of Face I And II: 92.783        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : S2        
+Mean Of Face I And II: 92.783        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : S1        
+Mean Of Face I And II: 52.364        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : S1        
+Mean Of Face I And II: 52.364        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.00 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617523   
+
+Store To Job		: ASTP            
+Sets of Angles Start	: 10.23.14, 13:19:36
+
+TPS Station		: S1              
+Coordinates		: E=           35.065	N=          -38.890	H=      -----
+Instrument Height	: hi= 1.4980000257
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0006
+Standard Deviation Of All Measurements  :     0.0004
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     SOUTH 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  1.570  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:        S2 
+-------------------
+
+Mean of all Sets (Hz): 151.34487 
+
+Reflector Height:  1.611  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:         P 
+-------------------
+
+Mean of all Sets (Hz): 173.56336 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : SOUTH      
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : SOUTH      
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : S2         
+Reduced Mean: 151.34476    Hz Residuals: 0.00011   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : S2         
+Reduced Mean: 151.34499    Hz Residuals: -0.00011  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : P          
+Reduced Mean: 173.56403    Hz Residuals: -0.00067  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : P          
+Reduced Mean: 173.56268    Hz Residuals: 0.00067   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0003
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:     SOUTH
+-------------------
+
+Mean of all Sets (V): 90.1030
+
+Reflector Height: 1.570  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:        S2
+-------------------
+
+Mean of all Sets (V): 89.5250
+
+Reflector Height: 1.611  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:         P
+-------------------
+
+Mean of all Sets (V): 82.3459
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : SOUTH     
+Mean Of Face I/II: 90.1030      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : SOUTH     
+Mean Of Face I/II: 90.1031      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : S2        
+Mean Of Face I/II: 89.5254      Residuals V: -0.00036  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : S2        
+Mean Of Face I/II: 89.5247      Residuals V: 0.00036   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : P         
+Mean Of Face I/II: 82.3500      Residuals V: -0.00009  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : P         
+Mean Of Face I/II: 82.3458      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:   3
+
+Standrad Deviation Of Single Distance:     0.0051
+Standard Deviation Of Mean Distance  :     0.0036
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:      SOUTH
+--------------------
+
+Mean Distance Of All Sets:   52.364
+
+Reflector Height: 1.570  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:         S2
+--------------------
+
+Mean Distance Of All Sets:   43.317
+
+Reflector Height: 1.611  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:          P
+--------------------
+
+Mean Distance Of All Sets:  419.940
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : SOUTH     
+Mean Of Face I And II: 52.364        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : SOUTH     
+Mean Of Face I And II: 52.364        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : S2        
+Mean Of Face I And II: 43.317        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : S2        
+Mean Of Face I And II: 43.317        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : P         
+Mean Of Face I And II: 419.946       Residuals: -0.006    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : P         
+Mean Of Face I And II: 419.934       Residuals: 0.006     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.00 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617523   
+
+Store To Job		: ASTP            
+Sets of Angles Start	: 10.23.14, 13:42:35
+
+TPS Station		: S2              
+Coordinates		: E=           24.884	N=            3.214	H=      -----
+Instrument Height	: hi= 1.6109999418
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0000
+Standard Deviation Of All Measurements  :     0.0000
+
+--------------------------------------------------------------------------------
+
+
+Point ID:         P 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:        S1 
+-------------------
+
+Mean of all Sets (Hz): 155.07588 
+
+Reflector Height:  1.498  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:     SOUTH 
+-------------------
+
+Mean of all Sets (Hz): 170.42439 
+
+Reflector Height:  1.570  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  On     EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : P          
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : P          
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : S1         
+Reduced Mean: 155.07592    Hz Residuals: -0.00004  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : S1         
+Reduced Mean: 155.07584    Hz Residuals: 0.00004   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : SOUTH      
+Reduced Mean: 170.42440    Hz Residuals: -0.00002  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : SOUTH      
+Reduced Mean: 170.42437    Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:   3
+
+Standard Deviation Of Single Measurement:     0.0001
+Standard Deviation Of All Measurements  :     0.0001
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:         P
+-------------------
+
+Mean of all Sets (V): 81.4929
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:        S1
+-------------------
+
+Mean of all Sets (V): 90.0710
+
+Reflector Height: 1.498  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:     SOUTH
+-------------------
+
+Mean of all Sets (V): 90.0917
+
+Reflector Height: 1.570  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : On     EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : P         
+Mean Of Face I/II: 81.4930      Residuals V: -0.00010  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : P         
+Mean Of Face I/II: 81.4928      Residuals V: 0.00010   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : S1        
+Mean Of Face I/II: 90.0710      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : S1        
+Mean Of Face I/II: 90.0709      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : SOUTH     
+Mean Of Face I/II: 90.0918      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : SOUTH     
+Mean Of Face I/II: 90.0917      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:   3
+
+Standrad Deviation Of Single Distance:     0.0001
+Standard Deviation Of Mean Distance  :     0.0001
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:          P
+--------------------
+
+Mean Distance Of All Sets:  380.595
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:         S1
+--------------------
+
+Mean Distance Of All Sets:   43.318
+
+Reflector Height: 1.498  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:      SOUTH
+--------------------
+
+Mean Distance Of All Sets:   92.783
+
+Reflector Height: 1.570  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      :  On    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : P         
+Mean Of Face I And II: 380.595       Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : P         
+Mean Of Face I And II: 380.595       Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : S1        
+Mean Of Face I And II: 43.318        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : S1        
+Mean Of Face I And II: 43.318        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : SOUTH     
+Mean Of Face I And II: 92.783        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : SOUTH     
+Mean Of Face I And II: 92.783        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End

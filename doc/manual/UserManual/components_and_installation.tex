@@ -1,0 +1,99 @@
+\chapter{SALSA Components and Installation}
+\label{chap:components}
+``SALSA'' is a collection of programs that work together to enable users to execute the geodetic least squares adjustment process.  This chapter introduces these programs and provides a brief explanation of how they work together.  This chapter also explains how to install SALSA on your computer.
+
+\section{SALSA Components}
+
+A graphical user interface (GUI) called \textsf{salsa} is the primary interface to this software suite, and the authors' vision is that most users will only interact directly with this program.  That said, some users may find cases when it is convenient or even necessary to execute some of the other programs directly, using their command-line interfaces (CLIs).  Even if you have no intentions of running CLI applications, understanding a little bit about what each one does and how the salsa GUI interacts with them will be very helpful in understanding how the overall process works and equip you to troubleshoot when something fails.
+
+Figure \ref{fig:SalsaComponents} illustrates the SALSA programs and some of the files that represent interfaces between them.  Programs are represented as boxes with the program names in them (in Microsoft Windows these executable files will have \verb+.exe+ extensions), and files are represented as document icons (boxes with wavy lines forming their lower edge) with the three-letter extensions that are typically used in naming each of these file types.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Salsa_components}
+\end{center}
+\caption{Components of the SALSA suite.}
+\label{fig:SalsaComponents}
+\end{figure}
+
+As noted earlier, \textsf{salsa} is the main GUI program that will be the focus of most users' interactions.  The GUI writes to -- and reads from -- a project file (\verb+.proj+) that fully describes the least squares problem (either alone or by including references to other \verb+.lsa+ files).  The \verb+.proj+ and \verb+.lsa+ formats are identical; \verb+.proj+ is simply chosen as a convention to signify the main project file.  See Chapter \ref{chap:LsaFormat} for details on the \verb+.lsa+/\verb+.proj+ file format.  The emphasis of Chapter \ref{chap:UsingSalsa} is how to use \textsf{salsa} to build and manipulate the least squares project (i.e., the \verb+.lsa+ files).
+
+Once the least squares problem is set up, and the user initiates a solution, several CLI applications are executed in the background.  The first of these is \textsf{lsapreprocessor} (LSA pre-processor).  This application `flattens' the input \verb+.lsa+ files (which are relatively easy for a human to read and edit) into a single \verb+.dat+ file (which is more difficult for a human to read or edit but easy for a computer).  The main least squares solver application (\textsf{lsasolver}) is then called with the \verb+dat+ file as its input.  The solver produces two important output files: a binary file (\verb+.bin+) containing the LSA solution state, and a log file with a \verb+.out+ extension.
+
+The \verb+.bin+ file is not human-readable, and in fact is a custom format that only the \textsf{salsa} applications can read and write.  However, the application \textsf{lsapost} ingests the contents of the \verb+.bin+ file, along with information from the \verb+.dat+ and \verb+.out+ files, and creates a more user-accessible output file adhering to the Hierarchical Data Format (HDF) standard with a \verb+.h5+ extension.  Refer to Section \ref{sec:hdfview} for instructions on obtaining a viewer for this file.
+
+The \verb+.h5+ file has another important `audience' which is the GUI.  The \textsf{salsa} GUI reads output from the \verb+.h5+ file to provide feedback to the user and help him or her understand the results of the network adjustment.
+
+Finally, each time a \textsf{salsa} project is processed, Python scripts read the \verb+.h5+ file and create two additional output files: a comma-separated values file (\verb+.csv+), and a simple text file listing the adjusted coordinates (extension \verb+.pts+).  The \verb+.csv+ file can be opened in a spreadsheet program to support analyses outside of SALSA and/or for copying and pasting results into a publication, and the \verb+.pts+ file facilitates quick review of the adjusted coordinates each time a solution is generated.  Additional scripts may be developed and deployed to produce other reports using the \verb+.h5+ file as the source.
+
+To this point, we have been outlining a linear process that starts with the user working with the \textsf{salsa} interface to build and manipulate the project as captured in \verb+.lsa+ format.  Another important part of most users' workflows will be introducing measurement data that are stored in other formats.  At time of writing, many of our users have measurement data stored in the \verb+.iob+ format which is used by the program GeoLab.  Therefore SALSA includes a CLI application called \textsf{iob2lsa} that can be invoked from the \textsf{salsa} GUI to convert \verb+.iob+ files to \verb+.lsa+ format.  Several other converters are bundled with SALSA to provide direct conversion from vendors' instrument formats into \verb+.lsa+; see the appendix ``Conversion of Instrumentation Output'' for more information and a list of supported file types.
+
+\section{Installation}
+
+SALSA has been developed as a cross-platform application and is currently tested on Linux and Windows platforms.  However, since all of our users outside the development team use Microsoft Windows, we will limit the scope of this section to installing SALSA on Windows.
+
+We have built SALSA for Microsoft Windows 10 64-bit. While Salsa will likely install and run on other versions of the Windows 64-bit operating system without issue, the development team currently limits testing to Windows 10.  We have not compiled a list of ``minimum system requirements.''  Instead, we offer the following guidance.  Any computer that meets the specifications for Windows 10 64-bit should support SALSA just fine.  If, however, you are solving very large problems that take more than a few seconds of processing time, your experience will likely improve if you migrate to a more powerful machine.
+% TODO: see how much RAM is needed for a large problem and whether we should advise users on how much RAM they need
+
+Installation is very simple and follows the same pattern as other applications you've likely installed before.  This section is less of a ``how to'' and is more about what gets installed, where it goes, and why it may matter.
+
+The SALSA installer for Windows is provided as an \verb+.msi+ file.  We use the naming convention \verb+SALSA-<version>.msi+, e.g., \verb+SALSA-1.1.0.msi+.  Most users will simply wish to double-click the \verb+.msi+ file and accept default options to install the program suite.  This process will place the executables, related library files, and geoid data files into the Applications path (discussed below), will add \textsf{salsa} to the Windows Start menu, and will add a shortcut onto your desktop (which you are welcome to delete).
+
+The default paths for installed files are as shown in figure \ref{fig:InstallLocations}.  At time of writing it is necessary to preserve the relative path structure between the \verb+bin+ and \verb+data+ directories, which will be the default state unless you manually move some of these files.  For example, the \textsf{salsa} executable (\verb+salsa.exe+) will attempt to invoke the CLI applications (the other \verb+.exe+ files in the \verb+bin+ directory) on the assumption they exist alongside \verb+salsa.exe+.  Similarly, \textsf{salsa} will expect that the geoid files exist in the adjacent \verb+data+ directory, specifically \verb+../data/geoid/<geoid_file>+.
+
+
+\begin{figure}[!htbp]
+\dirtree{%
+.1 C:/ .
+.2 Program Files/ .
+.3 SALSA/ .
+.4 bin/ .
+.5 platforms/ .
+.5 iob2lsa.exe .
+.5 lsapost.exe .
+.5 lsapreprocessor.exe .
+.5 lsasolver.exe .
+.5 salsa.exe .
+.5 <lots of .dll files> .
+.4 data/ .
+.5 geoid/ .
+.6 egm1996\_2.5m.und .
+.6 egm2008\_2.5m.und .
+.5 marble/ .
+.5 default.cfg .
+.4 doc/ .
+.5 SalsaUserManual.pdf .
+.4 examples/ .
+.4 lib/ .
+.5 lsawrappers.dll .
+.4 plugins/ .
+.5 marble/ .
+.4 python/ .
+.5 python.exe .
+.5 <.dll files> .
+.5 <subdirectories> .
+.4 scripts/ .
+.5 converters/ .
+.6 wrappers/ .
+.7 <python lsa wrappers> .
+.6 converterlauncher.py .
+.6 LeicaTotalStation.py .
+.6 lsaconverter.py .
+.6 PPPToLSA.py .
+.6 TribmbleToLSA.py .
+}
+
+\caption{Default installed locations of key SALSA components.}
+\label{fig:InstallLocations}
+\end{figure}
+
+As noted above, the installer will place the SALSA executables, library files (\verb+.dll+), geoid files, documentation, and examples under the Applications folder.  One file not yet addressed is \verb+default.cfg+.  This file contains installation-level default options germane to SALSA operation.  This file will be copied into any new LSA project created on this computer.  Of course, a user may make changes to the copied file once it is referenced in their project; the important point we wish to make here is that any configuration options that should apply to all users, for all future LSA projects created on this computer, should be done by editing \verb+default.cfg+ in this installation directory.  Doing so will require the same privileges as whoever installed SALSA.
+
+\section{Obtaining HDFView}
+\label{sec:hdfview}
+
+Data files in SALSA are written to an HDF5 file format.  An advantage of these files is that they are easily readable with the proper HDF viewer.  We recommend using the viewer HDFView which may be obtained from The HDF Group website \cite{hdfview}.  To open an HDF5 data file which is generated by SALSA (typically, the file extension will be ``*.h5''), the user may simply double click on the file.  Alternatively the user may open HDFView and navigate to the file using File$\to$Open.
+
+\section{Program Removal}
+
+To remove SALSA, use the Windows Control Panel: Start $\to$ Control Panel $\to$ Programs $\to$ Uninstall a program, [right-click] SALSA $\to$ Uninstall.

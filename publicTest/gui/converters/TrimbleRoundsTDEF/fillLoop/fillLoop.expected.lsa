@@ -1,0 +1,48 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with TrimbleToLSA.py converter from fillLoop.asc on 14:42:01 May 29, 2020
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_filter 1.51190 m 0.00000 m
+HGHT HGHT#1_5 1.67000 m 0.00000 m
+HGHT HGHT#1_t 1.55700 m 0.00000 m
+HGHT HGHT#2_t 1.55200 m 0.00000 m
+HGHT HGHT#2_filter 1.61200 m 0.00000 m
+HGHT HGHT#1_u 1.58000 m 0.00000 m
+HGHT HGHT#2_u 1.57410 m 0.00000 m
+HGHT HGHT#3_t 1.55500 m 0.00000 m
+HGHT HGHT#1_v 1.59510 m 0.00000 m
+HGHT HGHT#2_v 1.59710 m 0.00000 m
+HGHT HGHT#3_u 1.58500 m 0.00000 m
+HGHT HGHT#1_w 1.57700 m 0.00000 m
+HGHT HGHT#2_w 1.57310 m 0.00000 m
+HGHT HGHT#3_v 1.60500 m 0.00000 m
+HGHT HGHT#1_x 1.61720 m 0.00000 m
+HGHT HGHT#2_x 1.61520 m 0.00000 m
+HGHT HGHT#3_w 1.58200 m 0.00000 m
+HGHT HGHT#1_y 1.62200 m 0.00000 m
+HGHT HGHT#2_y 1.61820 m 0.00000 m
+HGHT HGHT#3_x 1.62000 m 0.00000 m
+HGHT HGHT#3_filter 1.60310 m 0.00000 m
+HGHT HGHT#4_filter 1.60210 m 0.00000 m
+HGHT HGHT#3_y 1.61000 m 0.00000 m
+HGHT HGHT#2_5 1.56200 m 0.00000 m
+HGHT HGHT#4_u 1.59210 m 0.00000 m
+HGHT HGHT#4_t 1.43700 m 0.00000 m
+HGHT HGHT#1_sixtwo 1.61700 m 0.00000 m
+HGHT HGHT#4_x 1.64320 m 0.00000 m
+HGHT HGHT#1_hanna 1.64200 m 0.00000 m
+
+#--include fillLoop.pos.lsa
+--include fillLoop_filter.rnd.lsa
+--include fillLoop_t.rnd.lsa
+--include fillLoop_u.rnd.lsa
+--include fillLoop_v.rnd.lsa
+--include fillLoop_w.rnd.lsa
+--include fillLoop_x.rnd.lsa
+--include fillLoop_y.rnd.lsa
+--include fillLoop_filter.2.rnd.lsa
+--include fillLoop_u.2.rnd.lsa
+--include fillLoop_x.2.rnd.lsa

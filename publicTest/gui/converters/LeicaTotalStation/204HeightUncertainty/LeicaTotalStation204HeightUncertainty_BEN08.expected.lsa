@@ -1,0 +1,19 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v2.04 converter from C:/Users/cawalker/projects/lsa/publicTestOutput/gui/converters/LeicaTotalStation/204HeightUncertainty/LeicaTotalStation204HeightUncertainty.log on 20:45:05 Aug 31, 2022
+
+#TPS1100 Prog. Sets of Angles V 2.04
+#Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+#Program Start : 29/09/2011 at 08:35:06
+
+#TPS1100 Prog. Sets of Angles V 2.04
+#Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+#Program Start : 29/09/2011 at 08:35:06
+
+DGRP DGRP#2 BEN08 UNCR UNCR#1_HDIR
+HDIR DGRP#2 BEN09 0 0 0.0 DMS 5.0 soa
+HDIR DGRP#2 BEN10 0 44 11.0 DMS 5.0 soa
+HDIR DGRP#2 16 17 7 3.0 DMS 5.0 soa
+
+ZANG BEN08 BEN09 89 57 12.0 DMS 10.0 soa HFROM HGHT#1_BEN08 UNCR UNCR#1_ZANG
+ZANG BEN08 BEN10 89 58 34.0 DMS 10.0 soa HFROM HGHT#1_BEN08 UNCR UNCR#1_ZANG
+ZANG BEN08 16 77 9 53.0 DMS 10.0 soa HFROM HGHT#1_BEN08 UNCR UNCR#1_ZANG

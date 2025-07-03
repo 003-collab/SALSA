@@ -1,0 +1,12 @@
+Created by SALSA version 1.15.0 -- Backward compatible to 1.1.0
+
+HDIR DGRP_1 POLE 24 7 49.2 DMS 3.5 soa
+HDIR DGRP_2 POLE 245 23 31.0 DMS 3.0 soa
+HDIR DGRP_3 POLE 323 8 27.9 DMS 11.9 soa
+#─────────────────────────────── Zenith Angles ────────────────────────────────────────────
+ZANG TP1 POLE 85 58 43.0 DMS 1.0 soa HFROM HGHT_TP1 UNCR UNCR_ZANG
+ZANG TP2 POLE 80 56 8.0 DMS 2.2 soa HFROM HGHT_TP2 UNCR UNCR_ZANG
+ZANG TP3 POLE 71 12 8.0 DMS 4.1 soa HFROM HGHT_TP3 UNCR UNCR_ZANG
+#────────────────────────────────── Distances ────────────────────────────────────────
+DIST TP2 POLE 184.48500 0.00650 m HFROM HGHT_TP2 UNCR UNCR_DIST_RED
+DIST TP3 POLE 92.96000 0.00710 m HFROM HGHT_TP3 UNCR UNCR_DIST_RED

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgml xmlns="http://edu.kde.org/marble/dgml/2.0">
+  <document>
+    <head>
+      <name>Blank</name>
+      <target>earth</target>
+      <theme>blank</theme>
+      <icon pixmap="openstreetmap-preview.png"/>
+      <visible>true</visible>
+      <description><![CDATA[A Blank Map]]></description>
+      <zoom>
+        <minimum>   900  </minimum>
+        <maximum>  5140  </maximum>
+        <discrete> false </discrete>
+      </zoom>
+    </head>
+    <map bgcolor="#aaaaaa">
+      <canvas/>
+      <target/>
+    </map>
+    <settings>
+      <property name="coordinate-grid">
+        <value>true</value>
+        <available>true</available>
+      </property>
+      <property name="overviewmap">
+        <value>true</value>
+        <available>false</available>
+      </property>
+      <property name="compass">
+        <value>true</value>
+        <available>false</available>
+      </property>
+      <property name="scalebar">
+        <value>true</value>
+        <available>true</available>
+      </property>
+    </settings>
+    <legend>
+      <section name="coordinate-grid" checkable="true" connect="coordinate-grid" spacing="12">
+        <heading>Coordinate Grid</heading>
+      </section>
+    </legend>
+  </document>
+</dgml>

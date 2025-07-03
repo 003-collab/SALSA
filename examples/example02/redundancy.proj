@@ -1,0 +1,12 @@
+Created by SALSA version 1.16.0 -- Backward compatible to 1.16.0
+#──────────────── Control ─────────────────────────────────────────────────────
+--include ctrl_sites.lsa
+#──────────────── Approximations ─────────────────────────────────────────────────────
+--include targets.apx.lsa
+#──────────────── Obs to TGT1 ─────────────────────────────────────────────────────
+AZIM TP01 TGT1 N 285 4 50.2 DMS 10.0 SOA
+AZIM TP02 TGT1 N 275 10 25.0 DMS 10.0 SOA
+AZIM TP03 TGT1 N 262 38 35.2 DMS 10.0 SOA
+ZANG TP01 TGT1 88 55 25.0 DMS 10.0 SOA
+ZANG TP02 TGT1 89 21 48.0 DMS 10.0 SOA
+ZANG TP03 TGT1 89 7 1.0 DMS 10.0 SOA

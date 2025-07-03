@@ -1,0 +1,2889 @@
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.00 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617643   
+
+Store To Job		: ICE312          
+Sets of Angles Start	: 11.08.17, 10:59:56
+
+TPS Station		: JM09            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 1.638
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:  11
+
+Standard Deviation Of Single Measurement:     0.0017
+Standard Deviation Of All Measurements  :     0.0012
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV15 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV16 
+-------------------
+
+Mean of all Sets (Hz): 14.23069  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV17 
+-------------------
+
+Mean of all Sets (Hz): 23.23224  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      JM08 
+-------------------
+
+Mean of all Sets (Hz): 36.19038  
+
+Reflector Height:  1.678  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      JM07 
+-------------------
+
+Mean of all Sets (Hz): 46.03255  
+
+Reflector Height:  1.667  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Averaging  EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV18 
+-------------------
+
+Mean of all Sets (Hz): 96.24590  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV19 
+-------------------
+
+Mean of all Sets (Hz): 123.01493 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV20 
+-------------------
+
+Mean of all Sets (Hz): 155.01022 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV21 
+-------------------
+
+Mean of all Sets (Hz): 177.18576 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV22 
+-------------------
+
+Mean of all Sets (Hz): 240.16341 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV23 
+-------------------
+
+Mean of all Sets (Hz): 269.45069 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV15    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV15    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV16    
+Reduced Mean: 14.23009     Hz Residuals: 0.00060   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV16    
+Reduced Mean: 14.23129     Hz Residuals: -0.00060  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV17    
+Reduced Mean: 23.23178     Hz Residuals: 0.00046   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV17    
+Reduced Mean: 23.23270     Hz Residuals: -0.00046  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : JM08       
+Reduced Mean: 36.19036     Hz Residuals: 0.00002   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : JM08       
+Reduced Mean: 36.19040     Hz Residuals: -0.00002  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : JM07       
+Reduced Mean: 46.03266     Hz Residuals: -0.00011  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : JM07       
+Reduced Mean: 46.03244     Hz Residuals: 0.00011   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV18    
+Reduced Mean: 96.24385     Hz Residuals: 0.00205   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV18    
+Reduced Mean: 96.25196     Hz Residuals: -0.00205  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV19    
+Reduced Mean: 123.01376    Hz Residuals: 0.00117   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV19    
+Reduced Mean: 123.02010    Hz Residuals: -0.00117  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV20    
+Reduced Mean: 155.01034    Hz Residuals: -0.00012  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV20    
+Reduced Mean: 155.01010    Hz Residuals: 0.00012   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV21    
+Reduced Mean: 177.19089    Hz Residuals: -0.00113  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV21    
+Reduced Mean: 177.18464    Hz Residuals: 0.00113   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV22    
+Reduced Mean: 240.16533    Hz Residuals: -0.00191  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV22    
+Reduced Mean: 240.16150    Hz Residuals: 0.00191   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV23    
+Reduced Mean: 269.45263    Hz Residuals: -0.00194  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV23    
+Reduced Mean: 269.44475    Hz Residuals: 0.00194   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:  11
+
+Standard Deviation Of Single Measurement:     0.0009
+Standard Deviation Of All Measurements  :     0.0006
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:   ICELV15
+-------------------
+
+Mean of all Sets (V): 82.2824
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV16
+-------------------
+
+Mean of all Sets (V): 81.1335
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV17
+-------------------
+
+Mean of all Sets (V): 78.1431
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      JM08
+-------------------
+
+Mean of all Sets (V): 89.5219
+
+Reflector Height: 1.678  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      JM07
+-------------------
+
+Mean of all Sets (V): 90.0703
+
+Reflector Height: 1.667  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Averaging  EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV18
+-------------------
+
+Mean of all Sets (V): 66.2252
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV19
+-------------------
+
+Mean of all Sets (V): 60.5917
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV20
+-------------------
+
+Mean of all Sets (V): 61.3133
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV21
+-------------------
+
+Mean of all Sets (V): 66.3902
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV22
+-------------------
+
+Mean of all Sets (V): 69.1007
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV23
+-------------------
+
+Mean of all Sets (V): 73.4428
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV15   
+Mean Of Face I/II: 82.2822      Residuals V: 0.00014   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV15   
+Mean Of Face I/II: 82.2825      Residuals V: -0.00014  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV16   
+Mean Of Face I/II: 81.1337      Residuals V: -0.00019  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV16   
+Mean Of Face I/II: 81.1333      Residuals V: 0.00019   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV17   
+Mean Of Face I/II: 78.1431      Residuals V: -0.00000  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV17   
+Mean Of Face I/II: 78.1431      Residuals V: 0.00000   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : JM08      
+Mean Of Face I/II: 89.5219      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : JM08      
+Mean Of Face I/II: 89.5219      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : JM07      
+Mean Of Face I/II: 90.0704      Residuals V: -0.00009  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : JM07      
+Mean Of Face I/II: 90.0702      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV18   
+Mean Of Face I/II: 66.2246      Residuals V: 0.00057   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV18   
+Mean Of Face I/II: 66.2258      Residuals V: -0.00057  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV19   
+Mean Of Face I/II: 60.5902      Residuals V: 0.00148   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV19   
+Mean Of Face I/II: 60.5932      Residuals V: -0.00148  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV20   
+Mean Of Face I/II: 61.3123      Residuals V: 0.00102   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV20   
+Mean Of Face I/II: 61.3143      Residuals V: -0.00102  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV21   
+Mean Of Face I/II: 66.3856      Residuals V: 0.00064   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV21   
+Mean Of Face I/II: 66.3908      Residuals V: -0.00064  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV22   
+Mean Of Face I/II: 69.1007      Residuals V: 0.00003   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV22   
+Mean Of Face I/II: 69.1007      Residuals V: -0.00003  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV23   
+Mean Of Face I/II: 73.4431      Residuals V: -0.00038  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV23   
+Mean Of Face I/II: 73.4424      Residuals V: 0.00038   
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:  11
+
+Standrad Deviation Of Single Distance:     0.0063
+Standard Deviation Of Mean Distance  :     0.0044
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:    ICELV15
+--------------------
+
+Mean Distance Of All Sets:  166.128
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV16
+--------------------
+
+Mean Distance Of All Sets:  135.662
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV17
+--------------------
+
+Mean Distance Of All Sets:  102.223
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       JM08
+--------------------
+
+Mean Distance Of All Sets:   29.713
+
+Reflector Height: 1.678  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       JM07
+--------------------
+
+Mean Distance Of All Sets:   58.180
+
+Reflector Height: 1.667  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Averaging :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV18
+--------------------
+
+Mean Distance Of All Sets:   50.790
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV19
+--------------------
+
+Mean Distance Of All Sets:   41.880
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV20
+--------------------
+
+Mean Distance Of All Sets:   42.829
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV21
+--------------------
+
+Mean Distance Of All Sets:   51.451
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV22
+--------------------
+
+Mean Distance Of All Sets:   59.954
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV23
+--------------------
+
+Mean Distance Of All Sets:   77.911
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV15   
+Mean Of Face I And II: 166.129       Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV15   
+Mean Of Face I And II: 166.127       Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV16   
+Mean Of Face I And II: 135.672       Residuals: -0.010    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV16   
+Mean Of Face I And II: 135.653       Residuals: 0.010     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV17   
+Mean Of Face I And II: 102.225       Residuals: -0.002    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV17   
+Mean Of Face I And II: 102.222       Residuals: 0.002     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : JM08      
+Mean Of Face I And II: 29.714        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : JM08      
+Mean Of Face I And II: 29.713        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : JM07      
+Mean Of Face I And II: 58.180        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : JM07      
+Mean Of Face I And II: 58.180        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV18   
+Mean Of Face I And II: 50.786        Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV18   
+Mean Of Face I And II: 50.795        Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV19   
+Mean Of Face I And II: 41.874        Residuals: 0.007     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV19   
+Mean Of Face I And II: 41.887        Residuals: -0.007    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV20   
+Mean Of Face I And II: 42.824        Residuals: 0.005     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV20   
+Mean Of Face I And II: 42.834        Residuals: -0.005    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV21   
+Mean Of Face I And II: 51.447        Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV21   
+Mean Of Face I And II: 51.455        Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV22   
+Mean Of Face I And II: 59.956        Residuals: -0.002    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV22   
+Mean Of Face I And II: 59.952        Residuals: 0.002     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV23   
+Mean Of Face I And II: 77.915        Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV23   
+Mean Of Face I And II: 77.907        Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.00 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617643   
+
+Store To Job		: ICE312          
+Sets of Angles Start	: 11.08.17, 12:03:55
+
+TPS Station		: JM08            
+Coordinates		: E=            0.000	N=            0.000	H=      -----
+Instrument Height	: hi= 1.6779999733
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:  11
+
+Standard Deviation Of Single Measurement:     0.0009
+Standard Deviation Of All Measurements  :     0.0007
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV15 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV16 
+-------------------
+
+Mean of all Sets (Hz): 15.33565  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV17 
+-------------------
+
+Mean of all Sets (Hz): 25.11039  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      JM07 
+-------------------
+
+Mean of all Sets (Hz): 63.02583  
+
+Reflector Height:  1.667  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV18 
+-------------------
+
+Mean of all Sets (Hz): 142.37329 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV19 
+-------------------
+
+Mean of all Sets (Hz): 170.30005 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV20 
+-------------------
+
+Mean of all Sets (Hz): 188.47340 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV21 
+-------------------
+
+Mean of all Sets (Hz): 199.19315 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      JM09 
+-------------------
+
+Mean of all Sets (Hz): 223.26373 
+
+Reflector Height:  1.638  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV22 
+-------------------
+
+Mean of all Sets (Hz): 239.08043 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV23 
+-------------------
+
+Mean of all Sets (Hz): 262.23482 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV15    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV15    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV16    
+Reduced Mean: 15.33594     Hz Residuals: -0.00030  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV16    
+Reduced Mean: 15.33535     Hz Residuals: 0.00030   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV17    
+Reduced Mean: 25.10574     Hz Residuals: 0.00065   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV17    
+Reduced Mean: 25.11104     Hz Residuals: -0.00065  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : JM07       
+Reduced Mean: 63.02543     Hz Residuals: 0.00040   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : JM07       
+Reduced Mean: 63.03022     Hz Residuals: -0.00040  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV18    
+Reduced Mean: 142.37135    Hz Residuals: 0.00194   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV18    
+Reduced Mean: 142.37524    Hz Residuals: -0.00194  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV19    
+Reduced Mean: 170.29455    Hz Residuals: 0.00150   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV19    
+Reduced Mean: 170.30155    Hz Residuals: -0.00150  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV20    
+Reduced Mean: 188.47281    Hz Residuals: 0.00058   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV20    
+Reduced Mean: 188.47398    Hz Residuals: -0.00058  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV21    
+Reduced Mean: 199.19234    Hz Residuals: 0.00081   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV21    
+Reduced Mean: 199.19396    Hz Residuals: -0.00081  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : JM09       
+Reduced Mean: 223.26340    Hz Residuals: 0.00033   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : JM09       
+Reduced Mean: 223.26406    Hz Residuals: -0.00033  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV22    
+Reduced Mean: 239.08039    Hz Residuals: 0.00003   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV22    
+Reduced Mean: 239.08046    Hz Residuals: -0.00003  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV23    
+Reduced Mean: 262.23453    Hz Residuals: 0.00029   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV23    
+Reduced Mean: 262.23511    Hz Residuals: -0.00029  
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:  11
+
+Standard Deviation Of Single Measurement:     0.0003
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:   ICELV15
+-------------------
+
+Mean of all Sets (V): 81.1810
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV16
+-------------------
+
+Mean of all Sets (V): 79.0541
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV17
+-------------------
+
+Mean of all Sets (V): 73.4706
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      JM07
+-------------------
+
+Mean of all Sets (V): 90.2133
+
+Reflector Height: 1.667  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV18
+-------------------
+
+Mean of all Sets (V): 63.3646
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV19
+-------------------
+
+Mean of all Sets (V): 66.1014
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV20
+-------------------
+
+Mean of all Sets (V): 70.4147
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV21
+-------------------
+
+Mean of all Sets (V): 74.2352
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      JM09
+-------------------
+
+Mean of all Sets (V): 90.0728
+
+Reflector Height: 1.638  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV22
+-------------------
+
+Mean of all Sets (V): 75.4838
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV23
+-------------------
+
+Mean of all Sets (V): 77.1025
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV15   
+Mean Of Face I/II: 81.1812      Residuals V: -0.00019  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV15   
+Mean Of Face I/II: 81.1809      Residuals V: 0.00019   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV16   
+Mean Of Face I/II: 79.0541      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV16   
+Mean Of Face I/II: 79.0540      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV17   
+Mean Of Face I/II: 73.4710      Residuals V: -0.00034  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV17   
+Mean Of Face I/II: 73.4703      Residuals V: 0.00034   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : JM07      
+Mean Of Face I/II: 90.2132      Residuals V: 0.00013   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : JM07      
+Mean Of Face I/II: 90.2135      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV18   
+Mean Of Face I/II: 63.3642      Residuals V: 0.00036   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV18   
+Mean Of Face I/II: 63.3650      Residuals V: -0.00036  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV19   
+Mean Of Face I/II: 66.1012      Residuals V: 0.00017   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV19   
+Mean Of Face I/II: 66.1015      Residuals V: -0.00017  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV20   
+Mean Of Face I/II: 70.4143      Residuals V: 0.00044   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV20   
+Mean Of Face I/II: 70.4152      Residuals V: -0.00044  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV21   
+Mean Of Face I/II: 74.2350      Residuals V: 0.00011   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV21   
+Mean Of Face I/II: 74.2353      Residuals V: -0.00011  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : JM09      
+Mean Of Face I/II: 90.0726      Residuals V: 0.00020   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : JM09      
+Mean Of Face I/II: 90.0730      Residuals V: -0.00020  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV22   
+Mean Of Face I/II: 75.4836      Residuals V: 0.00018   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV22   
+Mean Of Face I/II: 75.4840      Residuals V: -0.00018  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV23   
+Mean Of Face I/II: 77.1024      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV23   
+Mean Of Face I/II: 77.1025      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:  11
+
+Standrad Deviation Of Single Distance:     0.0045
+Standard Deviation Of Mean Distance  :     0.0032
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:    ICELV15
+--------------------
+
+Mean Distance Of All Sets:  143.483
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV16
+--------------------
+
+Mean Distance Of All Sets:  109.031
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV17
+--------------------
+
+Mean Distance Of All Sets:   74.368
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       JM07
+--------------------
+
+Mean Distance Of All Sets:   29.330
+
+Reflector Height: 1.667  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV18
+--------------------
+
+Mean Distance Of All Sets:   45.643
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV19
+--------------------
+
+Mean Distance Of All Sets:   50.112
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV20
+--------------------
+
+Mean Distance Of All Sets:   61.573
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV21
+--------------------
+
+Mean Distance Of All Sets:   75.580
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       JM09
+--------------------
+
+Mean Distance Of All Sets:   29.713
+
+Reflector Height: 1.638  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV22
+--------------------
+
+Mean Distance Of All Sets:   86.711
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV23
+--------------------
+
+Mean Distance Of All Sets:   97.961
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV15   
+Mean Of Face I And II: 143.478       Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV15   
+Mean Of Face I And II: 143.487       Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV16   
+Mean Of Face I And II: 109.035       Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV16   
+Mean Of Face I And II: 109.027       Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV17   
+Mean Of Face I And II: 74.374        Residuals: -0.006    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV17   
+Mean Of Face I And II: 74.362        Residuals: 0.006     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : JM07      
+Mean Of Face I And II: 29.330        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : JM07      
+Mean Of Face I And II: 29.330        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV18   
+Mean Of Face I And II: 45.640        Residuals: 0.003     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV18   
+Mean Of Face I And II: 45.645        Residuals: -0.003    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV19   
+Mean Of Face I And II: 50.109        Residuals: 0.003     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV19   
+Mean Of Face I And II: 50.115        Residuals: -0.003    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV20   
+Mean Of Face I And II: 61.569        Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV20   
+Mean Of Face I And II: 61.578        Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV21   
+Mean Of Face I And II: 75.578        Residuals: 0.002     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV21   
+Mean Of Face I And II: 75.582        Residuals: -0.002    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : JM09      
+Mean Of Face I And II: 29.713        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : JM09      
+Mean Of Face I And II: 29.713        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV22   
+Mean Of Face I And II: 86.709        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV22   
+Mean Of Face I And II: 86.712        Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV23   
+Mean Of Face I And II: -1.000        Residuals: 98.961    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV23   
+Mean Of Face I And II: 97.961        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End
+                              Leica Logfile - Begin
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+------------------------------------------------------
+Leica System 1200 Sets of Angles, Version 5.00 Logfile
+------------------------------------------------------
+Instrument Type		: TS15 I 1" 
+Instrument Serial No.	: 1617643   
+
+Store To Job		: ICE312          
+Sets of Angles Start	: 11.08.17, 12:58:43
+
+TPS Station		: JM07            
+Coordinates		: E=           -0.004	N=           29.329	H=      -----
+Instrument Height	: hi= 1.6670000553
+--------------------------------------------------------------------------------
+Horizontal Set Results
+ 
+Number Of Sets:   2   Number Of Points:  11
+
+Standard Deviation Of Single Measurement:     0.0014
+Standard Deviation Of All Measurements  :     0.0010
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV18 
+-------------------
+
+Mean of all Sets (Hz): 0.00000   
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV19 
+-------------------
+
+Mean of all Sets (Hz): 15.57063  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV20 
+-------------------
+
+Mean of all Sets (Hz): 24.40419  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV21 
+-------------------
+
+Mean of all Sets (Hz): 29.49277  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      JM09 
+-------------------
+
+Mean of all Sets (Hz): 51.30252  
+
+Reflector Height:  1.638  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV22 
+-------------------
+
+Mean of all Sets (Hz): 58.28232  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:      JM08 
+-------------------
+
+Mean of all Sets (Hz): 61.22248  
+
+Reflector Height:  1.678  Add. Constant: 0.000      Reflector Type: Round Pris      
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Infrared D      
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV23 
+-------------------
+
+Mean of all Sets (Hz): 76.13079  
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV15 
+-------------------
+
+Mean of all Sets (Hz): 166.49283 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV16 
+-------------------
+
+Mean of all Sets (Hz): 179.58072 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+
+Point ID:   ICELV17 
+-------------------
+
+Mean of all Sets (Hz): 183.02026 
+
+Reflector Height:  0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      :  Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV18    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV18    
+Reduced Mean: 0.00000      Hz Residuals: 0.00000   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV19    
+Reduced Mean: 15.57077     Hz Residuals: -0.00015  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV19    
+Reduced Mean: 15.57048     Hz Residuals: 0.00015   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV20    
+Reduced Mean: 24.40453     Hz Residuals: -0.00034  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV20    
+Reduced Mean: 24.40385     Hz Residuals: 0.00034   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV21    
+Reduced Mean: 29.49339     Hz Residuals: -0.00062  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV21    
+Reduced Mean: 29.49215     Hz Residuals: 0.00062   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : JM09       
+Reduced Mean: 51.30423     Hz Residuals: -0.00171  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : JM09       
+Reduced Mean: 51.30081     Hz Residuals: 0.00171   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV22    
+Reduced Mean: 58.28265     Hz Residuals: -0.00033  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV22    
+Reduced Mean: 58.28199     Hz Residuals: 0.00033   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : JM08       
+Reduced Mean: 61.22421     Hz Residuals: -0.00174  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : JM08       
+Reduced Mean: 61.22074     Hz Residuals: 0.00174   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV23    
+Reduced Mean: 76.13095     Hz Residuals: -0.00016  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV23    
+Reduced Mean: 76.13063     Hz Residuals: 0.00016   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV15    
+Reduced Mean: 166.49499    Hz Residuals: -0.00216  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV15    
+Reduced Mean: 166.49067    Hz Residuals: 0.00216   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV16    
+Reduced Mean: 179.58277    Hz Residuals: -0.00205  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV16    
+Reduced Mean: 179.57467    Hz Residuals: 0.00205   
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 1            Point ID    : ICELV17    
+Reduced Mean: 183.02317    Hz Residuals: -0.00290  
+
+--------------------------------------------------------------------------------
+
+Hz Results Of Single Sets
+-------------------------
+
+Set         : 2            Point ID    : ICELV17    
+Reduced Mean: 183.01336    Hz Residuals: 0.00290   
+
+--------------------------------------------------------------------------------
+
+Vertical Set Results
+
+Number of Sets:   2   Number Of Points:  11
+
+Standard Deviation Of Single Measurement:     0.0003
+Standard Deviation Of All Measurements  :     0.0002
+
+--------------------------------------------------------------------------------
+
+
+
+Point ID:   ICELV18
+-------------------
+
+Mean of all Sets (V): 65.5519
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV19
+-------------------
+
+Mean of all Sets (V): 71.3535
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV20
+-------------------
+
+Mean of all Sets (V): 75.2450
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV21
+-------------------
+
+Mean of all Sets (V): 77.5733
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      JM09
+-------------------
+
+Mean of all Sets (V): 89.5254
+
+Reflector Height: 1.638  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV22
+-------------------
+
+Mean of all Sets (V): 79.1724
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:      JM08
+-------------------
+
+Mean of all Sets (V): 89.3818
+
+Reflector Height: 1.678  Add. Constant: 0.000      Reflector Type: Round Prism     
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Infrared Dist   
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV23
+-------------------
+
+Mean of all Sets (V): 79.5616
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV15
+-------------------
+
+Mean of all Sets (V): 80.3148
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV16
+-------------------
+
+Mean of all Sets (V): 76.5748
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+
+
+Point ID:   ICELV17
+-------------------
+
+Mean of all Sets (V): 67.5148
+
+Reflector Height: 0.000  Add. Constant: 0.034      Reflector Type: None            
+ATR Status      : Off    EDM Mode     : Standard   EDM Type      : Red Laser       
+
+------------------------------------------------------------------------------------
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV18   
+Mean Of Face I/II: 65.5514      Residuals V: 0.00048   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV18   
+Mean Of Face I/II: 65.5524      Residuals V: -0.00048  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV19   
+Mean Of Face I/II: 71.3534      Residuals V: 0.00013   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV19   
+Mean Of Face I/II: 71.3536      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV20   
+Mean Of Face I/II: 75.2449      Residuals V: 0.00013   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV20   
+Mean Of Face I/II: 75.2452      Residuals V: -0.00013  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV21   
+Mean Of Face I/II: 77.5730      Residuals V: 0.00025   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV21   
+Mean Of Face I/II: 77.5735      Residuals V: -0.00025  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : JM09      
+Mean Of Face I/II: 89.5254      Residuals V: 0.00002   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : JM09      
+Mean Of Face I/II: 89.5255      Residuals V: -0.00002  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV22   
+Mean Of Face I/II: 79.1722      Residuals V: 0.00018   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV22   
+Mean Of Face I/II: 79.1726      Residuals V: -0.00018  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : JM08      
+Mean Of Face I/II: 89.3818      Residuals V: -0.00004  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : JM08      
+Mean Of Face I/II: 89.3817      Residuals V: 0.00004   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV23   
+Mean Of Face I/II: 79.5617      Residuals V: -0.00005  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV23   
+Mean Of Face I/II: 79.5616      Residuals V: 0.00005   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV15   
+Mean Of Face I/II: 80.3149      Residuals V: -0.00009  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV15   
+Mean Of Face I/II: 80.3147      Residuals V: 0.00009   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV16   
+Mean Of Face I/II: 76.5750      Residuals V: -0.00015  
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV16   
+Mean Of Face I/II: 76.5747      Residuals V: 0.00015   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 1            Point ID   : ICELV17   
+Mean Of Face I/II: 67.5147      Residuals V: 0.00015   
+
+-------------------------------------------------------------------------------
+
+
+V Result Of Single Sets
+-----------------------
+
+Set              : 2            Point ID   : ICELV17   
+Mean Of Face I/II: 67.5150      Residuals V: -0.00015  
+
+-------------------------------------------------------------------------------
+
+
+
+Distance Results
+
+Number of Sets:   2    Number of Points:  11
+
+Standrad Deviation Of Single Distance:     0.0037
+Standard Deviation Of Mean Distance  :     0.0026
+
+----------------------------------------------------------------------------------
+
+
+
+Point ID:    ICELV18
+--------------------
+
+Mean Distance Of All Sets:   50.174
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV19
+--------------------
+
+Mean Distance Of All Sets:   64.709
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV20
+--------------------
+
+Mean Distance Of All Sets:   81.565
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV21
+--------------------
+
+Mean Distance Of All Sets:   98.326
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       JM09
+--------------------
+
+Mean Distance Of All Sets:   58.177
+
+Reflector Height: 1.638  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV22
+--------------------
+
+Mean Distance Of All Sets:  115.374
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:       JM08
+--------------------
+
+Mean Distance Of All Sets:   29.327
+
+Reflector Height: 1.678  :Add.Constant: 0.000     :Type    : Round Prism
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Infrared D
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV23
+--------------------
+
+Mean Distance Of All Sets:  125.509
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV15
+--------------------
+
+Mean Distance Of All Sets:  132.984
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV16
+--------------------
+
+Mean Distance Of All Sets:   92.262
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+
+Point ID:    ICELV17
+--------------------
+
+Mean Distance Of All Sets:   55.600
+
+Reflector Height: 0.000  :Add.Constant: 0.034     :Type    : None      
+ATR Status      : Off    :EDM Mode    : Standard  :EDM Type: Red Laser 
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV18   
+Mean Of Face I And II: 50.173        Residuals: 0.001     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV18   
+Mean Of Face I And II: 50.174        Residuals: -0.001    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV19   
+Mean Of Face I And II: 64.707        Residuals: 0.002     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV19   
+Mean Of Face I And II: 64.711        Residuals: -0.002    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV20   
+Mean Of Face I And II: 81.569        Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV20   
+Mean Of Face I And II: 81.561        Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV21   
+Mean Of Face I And II: 98.327        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV21   
+Mean Of Face I And II: 98.326        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : JM09      
+Mean Of Face I And II: 58.177        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : JM09      
+Mean Of Face I And II: 58.177        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV22   
+Mean Of Face I And II: 115.370       Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV22   
+Mean Of Face I And II: 115.378       Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : JM08      
+Mean Of Face I And II: 29.327        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : JM08      
+Mean Of Face I And II: 29.327        Residuals: -0.000    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV23   
+Mean Of Face I And II: 125.507       Residuals: 0.002     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV23   
+Mean Of Face I And II: 125.512       Residuals: -0.002    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV15   
+Mean Of Face I And II: 132.987       Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV15   
+Mean Of Face I And II: 132.980       Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV16   
+Mean Of Face I And II: 92.258        Residuals: 0.004     
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV16   
+Mean Of Face I And II: 92.267        Residuals: -0.004    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 1             Point ID : ICELV17   
+Mean Of Face I And II: -1.000        Residuals: 56.600    
+
+----------------------------------------------------------------------------------
+
+Distance Result Of Single Sets:
+--------------------------------
+ 
+Set                  : 2             Point ID : ICELV17   
+Mean Of Face I And II: 55.600        Residuals: 0.000     
+
+----------------------------------------------------------------------------------
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                              Leica Logfile - End

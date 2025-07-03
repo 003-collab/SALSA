@@ -1,0 +1,27 @@
+set(CPACK_PACKAGE_VERSION_MAJOR "1")
+set(CPACK_PACKAGE_VERSION_MINOR "17")
+set(CPACK_PACKAGE_VERSION_PATCH "0")
+set(CPACK_PACKAGE_RELEASE_TYPE "")
+set(CPACK_PACKAGE_NAME "SALSA")
+
+# Necessary for building packages on NIST machines
+set(CPACK_WIX_CANDLE_EXTRA_FLAGS "-fips")
+
+set( CPACK_PACKAGE_DESCRIPTION_SUMMARY "SALSA Description" )
+set( CPACK_WIX_TEMPLATE "${CMAKE_CURRENT_LIST_DIR}/wix_package/SALSA.WIX.template.in" )
+set( CPACK_WIX_PRODUCT_ICON "${CMAKE_CURRENT_LIST_DIR}/wix_package/salsa_icon.ico" )
+set( CPACK_PACKAGE_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/packages/${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}" )
+set( CPACK_PACKAGE_INSTALL_DIRECTORY "SALSA" )
+set( CPACK_WIX_UI_DIALOG "${CMAKE_CURRENT_LIST_DIR}/wix_package/dlgbmp.bmp" )
+set( CPACK_WIX_UI_BANNER "${CMAKE_CURRENT_LIST_DIR}/wix_package/bannrbmp.bmp" )
+set( CPACK_GENERATOR WIX )
+
+# set( CPACK_PACKAGE_DESCRIPTION_FILE "README.txt" )
+
+## shortcuts to be created in template so that they can be optional in the installer dialog
+# set(CPACK_PACKAGE_EXECUTABLES ${GUI_NAME} "SALSA")
+# set(CPACK_CREATE_DESKTOP_LINKS ${GUI_NAME} )
+
+set(CPACK_DEBIAN_PACKAGE_DEPENDS qtbase5-dev ) # don't forget about libhdf
+
+site_name(LOCAL_HOSTNAME)

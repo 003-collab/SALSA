@@ -1,0 +1,6 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with TrimbleToLSA.py converter from SIXTWO.asc on 10:11:51 Apr 17, 2020
+
+HDIF sixtwo hanna 16.77800 0.00088 m UNCR UNCR#1_HDIF
+HDIF hanna filter -9.76870 0.00072 m UNCR UNCR#1_HDIF
+HDIF filter sixtwo -7.00380 0.00082 m UNCR UNCR#1_HDIF

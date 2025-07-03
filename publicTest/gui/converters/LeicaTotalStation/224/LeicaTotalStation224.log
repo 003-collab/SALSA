@@ -1,0 +1,176 @@
+Leica VIP Sets of Angles V 2.24
+Instrument    : TM5100A, Serial 443330, TM5100A
+User Templ.   : User 4
+Meas. File    : FILE08.GSI
+Program Start : 03/06/2013 at 12:00
+
+Station       : 8305
+                E=              0.000m N=              0.000m
+                Elev.=              0.000m hi=              0.000m
+
+Horizontal set results:
+16 Sets measured with 2 points each.
+
+Standard deviation of any measurement           :          000'01.8"
+Standard deviation of mean from all measurements:          000'00.5"
+1.   Point No.: BOLT            
+                Mean direction :          000'00.0"
+                   Refl.Height :               0.000m
+                Add.const.     :               0.000m
+2.   Point No.: TWR             
+                Mean direction :         5845'25.8"
+                   Refl.Height :               0.000m
+                Add.const.     :               0.000m
+
+Results of single sets:
+
+1.   Point No.: BOLT            
+      Set   1 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set   2 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set   3 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set   4 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set   5 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set   6 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set   7 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set   8 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set   9 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set  10 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set  11 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set  12 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set  13 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set  14 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set  15 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+      Set  16 : Residual :          000'00.0" 
+                Average  :          000'00.0"
+2.   Point No.: TWR             
+      Set   1 : Residual :         -000'08.1" 
+                Average  :         5845'33.9"
+      Set   2 : Residual :          000'03.2" 
+                Average  :         5845'22.6"
+      Set   3 : Residual :         -000'00.9" 
+                Average  :         5845'26.7"
+      Set   4 : Residual :         -000'01.5" 
+                Average  :         5845'27.2"
+      Set   5 : Residual :         -000'00.5" 
+                Average  :         5845'26.3"
+      Set   6 : Residual :          000'01.0" 
+                Average  :         5845'24.8"
+      Set   7 : Residual :          000'01.3" 
+                Average  :         5845'24.4"
+      Set   8 : Residual :          000'01.5" 
+                Average  :         5845'24.3"
+      Set   9 : Residual :          000'01.2" 
+                Average  :         5845'24.5"
+      Set  10 : Residual :         -000'00.1" 
+                Average  :         5845'25.9"
+      Set  11 : Residual :          000'01.5" 
+                Average  :         5845'24.3"
+      Set  12 : Residual :          000'00.6" 
+                Average  :         5845'25.2"
+      Set  13 : Residual :          000'03.0" 
+                Average  :         5845'22.8"
+      Set  14 : Residual :         -000'00.5" 
+                Average  :         5845'26.3"
+      Set  15 : Residual :         -000'00.3" 
+                Average  :         5845'26.0"
+      Set  16 : Residual :         -000'01.4" 
+                Average  :         5845'27.1"
+
+Vertical set results:
+16 Sets measured with 2 points each.
+
+Standard deviation of any measurement           :          000'01.7"
+Standard deviation of mean from all measurements:          000'00.4"
+1.   Point No.: BOLT            
+                Mean direction :         8606'46.2"
+                   Refl.Height :               0.000m
+                Add.const.     :               0.000m
+2.   Point No.: TWR             
+                Mean direction :         8743'40.1"
+                   Refl.Height :               0.000m
+                Add.const.     :               0.000m
+
+Results of single sets:
+
+1.   Point No.: BOLT            
+      Set   1 : Residual :          000'03.4" 
+                Average  :         8606'42.7"
+      Set   2 : Residual :         -000'02.0" 
+                Average  :         8606'48.2"
+      Set   3 : Residual :          000'01.2" 
+                Average  :         8606'44.9"
+      Set   4 : Residual :         -000'01.0" 
+                Average  :         8606'47.1"
+      Set   5 : Residual :         -000'00.8" 
+                Average  :         8606'47.0"
+      Set   6 : Residual :         -000'01.4" 
+                Average  :         8606'47.6"
+      Set   7 : Residual :         -000'01.1" 
+                Average  :         8606'47.2"
+      Set   8 : Residual :         -000'00.3" 
+                Average  :         8606'46.5"
+      Set   9 : Residual :          000'03.1" 
+                Average  :         8606'43.0"
+      Set  10 : Residual :         -000'00.4" 
+                Average  :         8606'46.5"
+      Set  11 : Residual :          000'00.7" 
+                Average  :         8606'45.5"
+      Set  12 : Residual :         -000'00.4" 
+                Average  :         8606'46.6"
+      Set  13 : Residual :         -000'00.1" 
+                Average  :         8606'46.3"
+      Set  14 : Residual :         -000'01.5" 
+                Average  :         8606'47.7"
+      Set  15 : Residual :         -000'00.3" 
+                Average  :         8606'46.5"
+      Set  16 : Residual :          000'00.8" 
+                Average  :         8606'45.4"
+2.   Point No.: TWR             
+      Set   1 : Residual :          000'01.3" 
+                Average  :         8743'38.8"
+      Set   2 : Residual :          000'00.8" 
+                Average  :         8743'39.3"
+      Set   3 : Residual :          000'01.2" 
+                Average  :         8743'38.9"
+      Set   4 : Residual :          000'01.8" 
+                Average  :         8743'38.3"
+      Set   5 : Residual :         -000'00.6" 
+                Average  :         8743'40.7"
+      Set   6 : Residual :          000'01.8" 
+                Average  :         8743'38.3"
+      Set   7 : Residual :          000'00.7" 
+                Average  :         8743'39.4"
+      Set   8 : Residual :         -000'03.9" 
+                Average  :         8743'44.0"
+      Set   9 : Residual :          000'00.9" 
+                Average  :         8743'39.1"
+      Set  10 : Residual :          000'01.5" 
+                Average  :         8743'38.6"
+      Set  11 : Residual :         -000'00.2" 
+                Average  :         8743'40.3"
+      Set  12 : Residual :         -000'00.1" 
+                Average  :         8743'40.2"
+      Set  13 : Residual :         -000'04.5" 
+                Average  :         8743'44.5"
+      Set  14 : Residual :         -000'01.5" 
+                Average  :         8743'41.5"
+      Set  15 : Residual :         -000'00.4" 
+                Average  :         8743'40.5"
+      Set  16 : Residual :          000'01.2" 
+                Average  :         8743'38.9"
+

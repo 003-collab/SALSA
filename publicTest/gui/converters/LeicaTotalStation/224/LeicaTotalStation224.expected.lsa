@@ -1,0 +1,15 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v2.24 converter from /home/rmilburn/projects/lsa/test/converters/LeicaTotalStation/224/LeicaTotalStation224.log on 11:09:28 Apr 01, 2019
+#Leica VIP Sets of Angles V 2.24
+#Instrument    : TM5100A, Serial 443330, TM5100A
+#User Templ.   : User 4
+#Program Start : 03/06/2013 at 12:00
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+DGRP DGRP#1 8305 UNCR UNCR#1_HDIR
+HDIR DGRP#1 BOLT 0 0 0.0 DMS 5.0 soa
+HDIR DGRP#1 TWR 58 45 25.8 DMS 5.0 soa
+
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+ZANG 8305 BOLT 86 6 46.2 DMS 10.0 soa UNCR UNCR#1_ZANG
+ZANG 8305 TWR 87 43 40.1 DMS 10.0 soa UNCR UNCR#1_ZANG

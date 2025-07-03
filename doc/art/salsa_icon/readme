@@ -1,0 +1,22 @@
+Original image 216px-salsa-clip-art-916484.gif downloaded
+from cliparthut.com with the usage statement:
+"Free cliparts all used for FREE"
+
+I edited the colors using the Gimp, using burnt orange and white,
+the burnt orange color as specified by the UT web site, which is
+#BF5700.
+
+I created the SALSA text using the site http://cooltext.com/  This was
+using their "fun" font and again inserting the UT burnt orange color,
+tweaking a few things along the way.  Usage terms:
+You are welcome to use any of the generated graphics in any way, 
+shape, or form without asking permission.
+
+The gimp file (salsa.xcf) has two layers with transparency.  To produce
+the windows icon file (salsa_icon.ico), I merged visible layers, then
+used the export function to produce the ico file, deselecting compression.
+Then exit gimp without saving so as to preserve the 2-layer configuration
+in the source.
+
+To my understanding, any win7 or later computer should handle the 256x256
+file just fine and will down-scale when appropriate.

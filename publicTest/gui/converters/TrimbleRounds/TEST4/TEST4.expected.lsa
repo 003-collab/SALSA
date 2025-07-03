@@ -1,0 +1,26 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Trimble Rounds Converter converter from /home/rmilburn/projects/lsa/publicTestOutput/gui/converters/TrimbleRounds/TEST4/TEST4.jxl on 12:46:07 May 29, 2020
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_TEST 1.63150 m 0.00000 m
+# Raw height 1.5 m extracted from SXNotch method
+HGHT HGHT#1_T4R 2.13500 m 0.00000 m
+# Raw height 2.135 m extracted from TrueHeight method
+
+#Instrument Type			: TrimbleSX10
+#Instrument Serial No.		: 30415684
+#Instrument Firmware Ver.	: S2.2.25
+#Rounds Collection Start		: 2020/03/12 05:29:44
+
+DGRP DGRP#1 TEST UNCR UNCR#1_HDIR
+HDIR DGRP#1 T4R 0 0 3.0 DMS 5.0 soa HTO HGHT#1_T4R
+HDIR DGRP#1 T5 315 4 46.9 DMS 5.0 soa HTO HGHT#1_T4R
+
+ZANG TEST T4R 89 1 18.8 DMS 10.0 soa HFROM HGHT#1_TEST HTO HGHT#1_T4R UNCR UNCR#1_ZANG
+ZANG TEST T5 89 29 32.1 DMS 10.0 soa HFROM HGHT#1_TEST HTO HGHT#1_T4R UNCR UNCR#1_ZANG
+
+DIST TEST T4R 46.63524 0.00100 m HFROM HGHT#1_TEST HTO HGHT#1_T4R UNCR UNCR#1_DIST_IR
+DIST TEST T5 76.88084 0.00100 m HFROM HGHT#1_TEST HTO HGHT#1_T4R UNCR UNCR#1_DIST_IR

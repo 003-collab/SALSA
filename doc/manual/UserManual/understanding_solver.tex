@@ -1,0 +1,753 @@
+% TODO
+% condition number
+% divergence
+% minimal constraints
+% references
+% examples
+% bancroft citation
+
+
+\chapter{Understanding the Solver}
+\label{chap:UnderstandingSolver}
+
+This chapter describes the command line program \textsf{lsasolver} (``the solver'') that serves as the estimation engine of SALSA, what it does, and (briefly) how to understand the output. The solver was developed using \cite{ghilani} as the primary reference; this is an excellent reference and the user interested in more detail on the topics discussed here is referred there and to \cite{leick}.
+
+\section{What the solver does}
+The solver performs the fundamental task of using the input measurement and initial position data to find an optimal solution (adjustment) for the positions. In addition it finds an initial position for unknown sites, performs quality assurance and statistical tests on the data and the adjustment, and does geoid computations.
+
+The solver input data is contained in a flat text file (the ``DAT file,'' usually with extension \verb+.dat+) with its own format as documented in Chapter \ref{chap:datref}, ``The *.dat File Format Specification.'' The format is quite simple and consists of one complete position or measurement per line.
+
+\textsf{salsa} automatically uses the \textsf{lsapreprocessor} program to generate this file, and then passes it as input to the solver, behind the scenes, whenever it is directed to run a computation. However the file may be edited or even created in a text editor and then given as input to the solver being run on the command line.
+
+The solver begins by parsing the input DAT file and collecting positions and measurements. Any error in the DAT format yields an Error message in the solver output, indicating that a record (line) could not be parsed (but the solver does not abort).
+
+Each site must have a unique label, given either in the POS record for that site (containing an initial value for the site's position), or as it is used in one or more measurement records. Each site also has a type, which is one of the following.
+\begin{description}
+\item[Fixed] Generally some, but not all, sites are fixed (``control points''); these sites' coordinates are held fixed in the network adjustment.
+\item[Estimated] These sites' coordinates float and will be estimated in the adjustment.
+\item[Adjusted] These sites can serve as control points in the network, but their position will be adjusted in the estimation, using the given \emph{a priori} position as data; this option is often used for GNSS-determined point positions. POS records that are to be adjusted must have a non-zero covariance.
+\item[Unknown] Other sites lacking POS records but encountered in the network (i.e., because they are referenced by one or more measurements) will be initially ``unknown.''  Once initial coordinate estimates are generated (using methods described below), these points will be treated as Estimated.
+\end{description}
+
+
+The first task for the solver, after reading the input, is to compute initial estimates, or \emph{a priori} positions for all the unknown sites. (These positions are required because the least squares problem is non-linear and so must be iterated, which requires a starting value for all the positions; see Section 4.3 below.) The algorithm for doing this depends on what data are available that involve the unknown site. The solver tries to use each of ten different algorithms and all the measurements in the input to find each unknown site's \emph{a priori} positions. All the successful results for that site are then averaged to give the final \emph{a priori} position. The type indicator for the site is then changed from ``unknown'' to ``to be estimated.'' If an \emph{a priori} position for any site(s) cannot be found, then the solver must terminate with an error, since the adjustment cannot be performed. The ten \emph{a priori} algorithms are documented below in Section \ref{sec:apriorialgorithmsec}.
+
+The solver computes a weighted least squares solution to the adjustment problem using all of the measurement data, with measurement covariance, and perhaps with constraints. This is a full 3-dimensional computation in the WGS84 geodetic frame using Earth-Centered Earth-Fixed Cartesian coordinates (ECEF XYZ). Control sites with type ``to be adjusted'' are used to generate pseudo-data that allows the given position to be included in the estimation. Constraints may be applied prior to the estimation computation; that is, sites may be constrained to remain fixed in any combination of (one or two) components North, East and Vertical (see the POS record ``CONS'' documentation in the DAT file specification in Chapter \ref{chap:datref}).
+
+The least squares estimation yields not only an optimal estimate of the adjusted positions, but also (assuming degrees of freedom greater than zero, see Section \ref{sec:leastsquaressec}) an estimate of the uncertainty on these results. Statistical tests can be performed on the results to give an indication of the quality of the adjustment, which is determined by the quality and quantity of the data. These statistical tests can be used to determine if the relative weighting of data should be adjusted or if the data or control points contain blunders or improper initial uncertainty estimates.
+
+The solver presents all of this information in a human-readable flat text output file, including tables of residuals, statistics, and adjustments with their uncertainties and covariances.
+
+\section{Least squares}
+\label{sec:leastsquaressec}
+The estimation algorithm used by the solver is ``iterative linearized weighted least squares;'' this section attempts to explain all of that. Basic weighted least squares is described first, followed by the statistical results and tests that can be derived from it. Next the iterative solution of the full non-linear adjustment problem is described.
+
+\subsection{Basic least squares} \label{sect:BasicLeastSquares}
+The least squares method solves the linear algebra problem of several equations relating unknowns (the state vector) to measurements (the data vector). If a covariance matrix (measurement uncertainties) for the data is available, the solution can be weighted, which means varying degrees of importance are given to different data elements, potentially yielding a better solution.
+
+%Least squares requires that there be more data than there are unknowns in order for a solution and covariance to exist.
+When employing a least squares method, there must be the same amount or more data than there are unknowns for a solution to exist, and more data than there are unknowns for a covariance to exist. The number of degrees of freedom is
+\begin{equation}
+N(dof) = N(data) - N(unknowns)
+\end{equation}
+If the degrees of freedom is negative, the problem is under determined and there is no solution, if it is zero the problem is evenly determined and there is a solution but it is exact and residuals are all zero (statistics cannot be computed); all of the measurement noise is passed through to the solution. Least squares estimation methods are typically employed for over determined problems (i.e. the number of degrees of freedom is positive). More degrees of freedom generally yeilds a better solution because there is more input information (measurements) and noise in the solution is reduced (think of averaging). 
+%The normal operation of least squares is for over determined problems where the degrees of freedom is positive.
+
+In the case of the solver, the set of equations to be solved is simply the set that relates all of the measurements (angles, distances, 3-D deltas, heights, etc) to the coordinates of the sites involved in the measurement \cite{ghilani} \cite{leick}. These equations are written as a matrix equation relating the state X (a vector of all the coordinates of all the non-fixed site positions) to the data d (a vector of all the measurements). The matrix is called a ``partials matrix'' P (for a reason to be given below). Thus the matrix equation to be solved is
+\begin{equation}
+P \cdot X = d
+\end{equation}
+The solution to this problem is simply
+\begin{equation}
+\begin{split}
+Cov &= (P^T \cdot P)^{-1} \\
+X &= Cov \cdot P^T \cdot d
+\end{split}
+\end{equation}
+where Cov is the covariance of the solution X. A vector of data residuals is simply
+\begin{equation}
+R = d - \hat{d} = d - P \cdot \hat{X}
+\end{equation}
+These residuals are the difference of the measured data and the value that would be computed from the solution for the final adjusted positions. Generally if a residual is larger than the uncertainty in the data that was input to the problem, then either the measurement is bad or the uncertainty is too small.
+
+In weighted least squares, the equations are multiplied by a weighting matrix W (usually W is equal to the inverse of the measurement covariance matrix MCov) before the solution is formed, so then the result is
+\begin{equation}
+\begin{split}
+W &= (MCov)^{-1} \\
+Cov &= (P^T \cdot W \cdot P)^{-1} \\
+X &= Cov \cdot P^T  \cdot W \cdot d
+\end{split}
+\end{equation}
+The weighting has the effect of changing the relative strength of the data in the estimation; that is, data with a larger weight (smaller measurement variance) has a stronger influence in the determination of a solution. Note that the word ``relative'' is crucial in the previous sentence; in fact if the entire measurement covariance matrix $MCov$ is scaled, this same scale multiplies the resulting solution covariance $Cov$ but has no effect at all on the solution vector $X$.
+
+\subsection{Statistics: APV and Chi-squared}
+[Note this section and the next assume degrees of freedom greater than zero.]
+
+The fact that least squares is insensitive to the overall scale of the covariances (measurement and solution) would seem to imply that this overall scale must remain unknown. This is not the case; one of the marvelous things about least squares is that it yields not only a solution with (relative) covariance, but also an optimal estimate of the overall scale of the solution covariance. This scale is called the ``\emph{a posteriori} variance of unit weight'' or APV.
+
+The APV is the ratio of the overall scale of the solution and measurement covariances; it is computed using the RMS relative residual and the degrees of freedom. The full, properly scaled solution covariance is thus $APV \cdot Cov$. Ideally the APV should turn out to be 1. If the APV is ~1.0, the problem is weighted correctly and so the solution is optimal. If it is too large, then some or all of the measurement uncertainties are too large, and a somewhat sub-optimal solution has been produced. If it is too small, then the measurement uncertainties are too small (this is discussed further below).
+
+The APV and degrees of freedom are used in a statistical test of the correctness of the adjustment, the $\chi^2$ or Chi-squared test. The test statistic is equal to the APV multiplied by the degrees of freedom, and the test is to compare it to the value of the $\chi^2$ inverse cumulative distribution \cite{NIST} function (or just $\chi^2$ function). This is a well known special function in mathematics \cite{ghilani} \cite{abramowitz} \cite{NIST} that depends on both the degrees of freedom and a confidence level $\alpha$.
+
+The confidence level is a probability, so $0 \leq \alpha \leq 1$; usually $\alpha$ is expressed as a percentage. The statement of the Chi-squared test is ``if the test statistic is less that the Chi-squared function with n degrees of freedom and confidence $\alpha$, then the adjustment is optimal with confidence $\alpha$'' \cite{ghilani} \cite{leick}. (Note that the solver output shows the Chi-squared test with the the degrees of freedom divided out; it does this just to keep the numbers relatively small.)
+
+The test is basically to see if the solution lies within the tails of the Chi-squared function. This can be done at the upper tail ($\alpha$ is large, say 95\verb+%+) or the lower tail ($\alpha$ small, say 5\verb+%+). A ``two-sided test'' can also be performed, in which the confidence is split between the two tails and both tests are shown.
+
+\subsection{The problem is non-linear}
+\label{sec:nonlinsolver}
+The diligent reader may have noticed that in fact the measurement equations cannot be written as above, $P \cdot X = d$, because they are non-linear in the site coordinates. This is true; the adjustment problem is actually a non-linear one, $f(X) = d$, where the function $f(X)$ is non-linear, and so basic least squares does not apply. However non-linear problems can be still be solved with least squares; the procedure is to first linearize the problem, then iterate the basic least squares algorithm until it converges to a final solution.
+
+The non-linear equations are linearized by starting with an initial, or \emph{a priori}, solution (maybe just a guess). An initial state vector is \emph{required} for non-linear problems; it should be as accurate as possible (but many inaccuracies can be made up for by more iterations).
+
+Call this initial state $X_0$, and write the non-linear function as a Taylor expansion about this initial value, as follows.
+\begin{equation}
+f(X) = f(X_0) + \frac{\partial f}{\partial X}|_{X_0} \cdot \triangle X + O(\triangle X^2) = d
+\end{equation}
+Assume that the change in state $\triangle X$ is small, and so keep only the linear term in the expansion; then the equation $f(X) = d$ becomes
+\begin{equation}
+\frac{\partial f}{\partial X}|_{X_0} \cdot \triangle X = d - f(X_0)
+\end{equation}
+But this is now of the form of the basic least squares linear equation, with partials matrix $P = \frac{\partial f}{\partial X}|_{X_0}$ and new data vector $d - f(X_0)$. (This is why it is called the partials matrix, because it is a matrix of partial derivatives.)
+
+We can now solve for the change in state using ordinary weighted least squares. But because the change in state $\triangle X$ has been assumed to be small, we must iterate this process until it converges, meaning until the change in state is very small. Thus the final solution is obtained via an iterative, linearized, weighted least squares algorithm, as follows.
+\begin{enumerate}
+\item Obtain an \emph{a priori} solution $X_0$ for the unknown sites, along with data and measurement covariance, and set $i = 0$.
+\item Compute the partials matrix at $X = X_i$ and the data vector $d - f(X_i)$.
+\item Use weighted least squares to solve the linearized equation for the change in state, $\triangle X$.
+\item Test the size of $\triangle X$; if it is very small, quit with success. $X_i$ is the solution, with covariance $Cov = (P^T \cdot W \cdot P)^{-1}$.
+\item If the number of iterations becomes large, or if $\triangle X$ starts to grow, quit with failure.
+\item Replace $X_i$ with $X_{i+1} = X_i + \triangle X$, increment $i$ and go to step 2.
+\end{enumerate}
+
+There are many ways to implement and solve the least squares equation, some more stable and efficient that others. Simple matrix multiplication and inversion is not the best way. The solver provides the flexibility to use methods optimized for speed, or the most stable algorithm known, which involves Cholesky decomposition or matrix square roots and the Householder algorithm \cite{biermann}.
+
+\subsection{Constraints}
+The position of any site can be fixed via the keyword FIX of the POS record in the DAT file; this means the site is not adjusted. Alternatively, just one or two of the components (North, East, Vertical) may be fixed, and the other(s) left free to be adjusted, by using the keyword EST (to be estimated) and adding constraints in the POS record using the keyword CONS (cf.Chapter \ref{chap:datref}).
+
+Constraints actually strengthen the estimation, by adding information in the form of constraint equations. This is apparent in the degrees of freedom, which becomes, in the presence of constraints on some number of components,
+\begin{equation}
+N(dof) = N(data) - N(unknowns) + N(constraints)
+\end{equation}
+
+A constrained adjustment will yield not only a zero adjustment, of course, but also a zero uncertainty, for the constrained component(s). Thus in the Final tables of adjusted positions (see below), the sigma for the constrained component will read zero or extremely small, and the covariance matrix for the constrained position will be singular (the XYZ covariance will probably not have zeroes in it, but will in fact be singular).
+
+These constraints are implemented in a strictly rigorous way using matrix decomposition and projection. This has the effect of limiting the vector space of the least squares solution to the subspace in which the constraints are exactly satisfied. This is unlike other techniques for applying constraints that use ``overweighting'' or pseudo-data with zero covariance to force the least squares solution to hold components fixed \cite{ghilani}; these methods are inexact and run the risk of destabilizing the problem and even making it singular.
+
+%Minimal constraints are used to test for blunders in the data and the control points. They consist of a set of 3 constraints involving only two sites; one site is fixed and the azimuth and vertical angle between the first and second sites is also constrained. All other sites are allowed to move, i.e. set as ``to be estimated.'' This is a minimal set of constraints because it only prevents the network of positions from rotating an translating; all other possible adjustments, including overall scaling of the network, are allowed. A minimally constrained solution allows the maximum amount of adjustment to occur, so sites that might be control points are allowed to adjust. Thus blunders or large errors in the data and even the control points can be pointed out. The solver implements minimal constraints using a command line option (minCon).
+
+\section{A priori computations}
+\label{sec:apriorisection}
+The solver makes use of ten different algorithms that can possibly determine an initial or \emph{a priori} position for an unknown site. Each algorithm first attempts to find certain data in the measurement set that involve both the unknown site and other, known, sites. If these exist, the algorithm is applied to get an estimate for the unknown position. After attempting all the algorithms, the solver averages whatever results were obtained to find the best estimate of the unknown position. If the solver is not able to find an estimate, it must abort, as no linearized least squares solution can be found without an initial state (see above).
+
+\subsection{Preliminaries}
+In the following, U labels the unknown site, and A, B, C and D are known sites. The tags from the DAT file format (Chapter \ref{chap:datref}) are used for convenience, e.g. AZM for azimuth, HAN for horizontal angle, etc.; meanings should be clear. All the algorithms operate in the local level (North-East) plane; no attempt is made to determine the height of U other than as a simple average of the known sites' heights.
+
+The algorithms make use of a few facts and mathematical identities that will be mentioned here. First, azimuth (AZM) measurements are signed, meaning they can be positive or negative, because azimuth is defined as zero at North, and positive as it moves toward East. Horizontal angles (HAN) are signed too; they are defined as the difference of two azimuths. It follows that the order of the three sites in a HAN (From-At-To) matters.
+
+All of the measurement data can be used immediately in the computation except directions. Directions are not useful to the computation because they are biased azimuths, with a single unknown bias for each direction set. However the difference of directions within the same direction set yields a horizontal angle (with no bias), and HANs can be used. Thus a preliminary step in the \emph{a priori} computation is to form a non-redundant set of HANs from each direction set; this are discarded at the completion of the \emph{a priori} calculation.
+
+The following are identities \cite{ghilani}; of course all angles are valid modulo $2\pi$. These are used whenever needed by the solver to find data useful to the various algorithms.
+
+\hangindent=3cm
+HAN(UAB) = AZM(AB) - AZM(AU) \\ AZM(AB) = AZM(BA) + $\pi$ \\ HAN(UAB) + HAN(BAU) = $2 \cdot \pi$ \\ HAN(AUC) = HAN(AUB) + HAN(BUC)
+\hangafter=0
+
+\subsection{The \emph{a priori} Algorithms}
+\label{sec:apriorialgorithmsec}
+Here are the ten algorithms, in the order in which they are attempted. The last algorithm (Center of mass) is the fall-back; the solver uses it only if none of the others succeeded (but only if the user allows it with a command line option, see Chapter \ref{chap:solverref}).
+
+1. \textbf{Delta Addition.} Given POS A and 3-D delta DEL AU, simply add the delta to the position of A to get the position of U. This is very simple, but it is the most often used algorithm.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{APdiag1}
+\end{center}
+\caption{Delta Addition Algorithm}
+\label{fig:Delta Addition Algorithm}
+\end{figure}
+
+2. \textbf{Azimuth Vector Addition.} Given POS A, distance DIS AU and azimuth AZM AU, simply apply trigonometry and vector addition to get the position of U. Note that the azimuth is signed and always defined as zero at North, increasing toward East, so there is no ambiguity in quadrants.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{APdiag2}
+\end{center}
+\caption{Azimuth Vector Addition Algorithm}
+\label{fig:Azimuth Vector Addition Algorithm}
+\end{figure}
+%             N           U
+%             ^          /
+%             |         /                U(N) = A(N) + AU*cos(AZM(AU))
+%             |        /                 U(E) = A(E) + AU*sin(AZM(AU))
+%             |       / DIS AU
+%             |AZM AU/
+%             |     /
+%             |    /
+%             |   /
+%             |  /
+%             | /
+%             |/
+%             A----------------> E
+
+3. \textbf{Horizontal Angle Vector Addition.} Given POS A and B, DIS AU and horizontal angle HAN(BAU), simply apply trigonometry and vector addition to get the unknown site U. Note that HAN(BAU) is signed.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{APdiag3}
+\end{center}
+\caption{Horizontal Angle Vector Addition Algorithm}
+\label{fig:Horizontal Vector Addition Algorithm}
+\end{figure}
+%             N           U
+%             ^          /
+%             |         /           Note that a = HAN BAU but must worry about sign
+%             |        /                   U(N) = A(N) + AU*sin(a)
+%             |       /                    U(E) = A(E) + AU*cos(a)
+%             |   AU /
+%             |     /
+%             |    /
+%             |   /
+%             |  /
+%             | /
+%             |/ a
+%             A---------------------- B --> E
+
+4. \textbf{Triangulation.} Given POS A and B and a = HAN(UAB) and b = HAN(UBA), the triangle formed by A,B,U has two known angles (a,b) and a known side (AB) between them. The third angle is $c = \pi/2 - a - b$ by identity, and the law of sines will yield the other two sides (DIS AU and BU). Then take distance AU and azimuth AU and use algorithm 2, and do the same for B.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{APdiag4}
+\end{center}
+\caption{Triangulation Algorithm}
+\label{fig:Triangulation Algorithm}
+\end{figure}
+%             N           U
+%             ^          /c\             a+b+c=PI
+%             |         /   \            Note that a = |HAN UAB| but
+%             |        /     \                     b = |(2PI - HAN ABU)|
+%             |       /       \          (interior angles of a triangle always < Pi)
+%             |      /         \
+%             |     /           \
+%             |    /             \
+%             |   /               \
+%             |  /                 \
+%             | /                   \
+%             |/a                   b\
+%             A---------------------- B --> E
+
+5. \textbf{Two Azimuth Lines.} Given POS A and B and AZM(AU) and AZM(BU), two lines are defined that must meet at a point, which is U. Since A and B are known, DIS(AB) and AZM(AB) can be computed. Solve for U using simple algebra. Note that there are two different ways to collect the AZM(AU): (a) AZM(AU) is found in the measurements and (b) HAN(UAC) and AZM(AC) are found for some POS C (known or not), then HAN(UAC) = AZM(AC) - AZM(AU) (by identity) and therefore AZM(AU) can be computed.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{APdiag5}
+\end{center}
+\caption{Two Azimuth Lines Algorithm}
+\label{fig:Two Azimuth Lines Algorithm}
+\end{figure}
+%               ^          / \
+%               |         /   \
+%               |        /     \2pi-azBU|
+%               |       /       \       |
+%               |      /         \      |
+%               |     /           \     |
+%               |azAU/             \    |
+%               |   /               \   |
+%               |  /                 \  |
+%               | /                   \ |
+%               |/a                   b\|   AZM AB is ~Pi/2 here
+%               A---------------------- B --> E
+   
+6. \textbf{Resection.} Given known POS A, B and C, HAN(AUB) and HAN(BUC), solve for U. This is the 3-point Resection Problem. The algorithm makes use of the fact that for a given HAN(AUB), points A, B and U all lie on a circle. Thus the given data defines two circles that must meet at two points, B and U, and since B is known this uniquely determines U. The implementation must handle the case (called semi-singular) where one of the angles is zero; then the problem reduces to finding the intersection of a circle and a line (e.g. A,D,B,U in figure 4.6, where HAN(AUD) = 0). See figure 4.6, and also figure 4.7, which is a real example from the solver, with the two circles and their origins shown. Ref \cite{ghilani} section 15.5, and \cite{ligas}.
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{APdiag7}
+\end{center}
+\caption{Resection Algorithm}
+\label{fig:Resection Algorithm}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{APdiag6}
+\end{center}
+\caption{Example of Resection Computation (with circle origins included)}
+\label{fig:Example Resection Computation}
+\end{figure}
+%                           U-----------------------A---------------D
+%                          / \ HAN(AUB)            /
+%                         /   \                   /
+%                        /     \                 /
+%                       /       \               /
+%                      / HAN(BUC)\             /
+%                     /           \           /
+%                    /             \         /
+%                   /               \       /
+%                  /                 \     /
+%                 /                   \   /
+%                /                     \ /
+%               C-----------------------B
+%
+
+% TODO \cite{bancroft}
+7. \textbf{Ranging.} This algorithm is very similar to the GNSS pseudorange-only navigation solution, and its implementation is based on the Bancroft algebraic solution of GPS ranging. Given 2 or more points and the distances (ranges) from these points to the unknown point, a least squares solution can be formed yielding the position of the unknown. This is a 3-D algorithm; however in this application the positions typically all lie very nearly in a plane. To avoid the near singularity in the height that this produces, the data is transformed to the North-East plane before applying a 2-D algorithm. In every case the algorithm yields two different solutions, but internal consistency allows it to pick the correct one, with one exception. In the case of only 2 positions and distances, the consistency test does not apply, and some other, independent, information must be used to determine the correct solution.
+
+8. \textbf{Leveling Loop Formation.} Any points which remained unsolved after iterating through the previous methods will be inspected to see if they are part of a leveling loop. Iterating through the list of previously known / estimated points, a starting point is gathered. All possible loops with the starting point are formed by chaining together HDIF records using the From and To labels (for more information on HDIF records refer to chapter \ref{chap:LsaRecordGuide}). The loop is considered complete once a point is found whose label does not exist as a From point in the set of HDIF records. At this point a loop from the set is chosen which meets the prioritized conditions below
+
+\begin{enumerate}
+	\item The last To station in the chain must be known / estimated.
+	\item There are two or more HDIF records in the chain. This prevents the algorithm providing a loop that just connects two known points with no unknown points in the middle.
+	\item The loop's distance between the first point and last point is minimized.
+	\item If two or more loops have the same distance between their start and end points, the loop with the smallest set of HDIF records is chosen.
+\end{enumerate}
+
+Once a loop is chosen all temporary points are evenly spaced on the NE plane between the starting point and the end point. The latitude and longitude for those temporary points are fixed. This process is iterated over until no more points can be projected in this manner.
+
+9. \textbf{Side Shot Handling.} If there remain unknown points after checking for leveling loops, a check for side shots will be performed. This algorithm will search for the following conditions.
+
+\begin{enumerate}
+	\item A known / estimated point shares the same label as the From label for an HDIF record.
+	\item The To label for that HDIF record corresponds to an unknown point.
+\end{enumerate}
+
+If the conditions are met, then the unknown point will have its initial coordinates set equivalent to the known / estimated point. Additionally, its latitude and longitude will be fixed.
+
+10. \textbf{CenterOfMass.} This is the default fall-back; if nothing else can determine the unknown point, then the solver will compute the average of all the known positions (the centroid of the network) and use that for U. This may or may not cause the solver to diverge, depending on the problem, but it probably will lead to the solver requiring a large number of iterations.
+
+
+\section{How to read the solver output file}
+\label{sec:howtoreadoutfile}
+This section discusses, in some detail, what is in the solver output file, what is most important there, and how to determine what is wrong when an adjustment computation gives poor results or fails.
+
+\subsection{What is in the solver output file?}
+The solver output contains all the information of interest that was either input to, or is produced by the solver, and so it can be quite long. The output is written during the operation of the solver, and falls into 6 basic parts, as follows.
+
+\begin{itemize}
+\item Part 1. Input - echo and summarize input from both DAT file and command line
+\item Part 2. Compute \emph{a priori} positions, if needed
+\item Part 3. Load the geoid file and define constraints, if any
+\item Part 4. Build the LS problem and print the degrees of freedom, etc.
+\item Part 5. Results for each iteration (this is the largest part of the output: convergence test, data residuals and diagnostics at every iteration)
+\item Part 6. Final results - residuals, statistical tests, adjustments, and geoid calculations.
+\end{itemize}
+
+The input section includes all the data and positions, just as they are in the input. Any errors encountered in reading the DAT file are shown here as ``Error - DAT reader failed to parse line $>...<$''; however the solver will NOT quit. Note that the solver might terminate after part 2, either because it was unable to find all the \emph{a priori} positions, or because the user requested it from the command line.
+
+Part 4 is very brief and shows the number of degrees of freedom, the size of the state and data vectors, the number of constraints, and all the \emph{a priori} positions. The solver might terminate here if the problem is underdetermined or singular, because then there is no solution.
+
+Part 5 (once per iteration) first shows the convergence test, which indicates how the iteration is proceeding. This is followed by the RMS residuals and the APV. (The same information appears at the command line when the ``progress'' option is used.) Then (if the verbose option is on) the current adjustments with their uncertainties, and a table of all the data residuals, follow; the bulk of this information is not particularly interesting unless there is a problem.
+
+The final part is of most interest. It includes all the data residuals, with standard residuals (these are not in the per-iteration results), final RMS residuals, APV and the Chi-squared tests. Then the final adjustments are presented, both in ECEF XYZ and in Latitude, Longitude and Height. If a geoid file was input, the geoid is evaluated at all the sites as well.
+
+\subsection{What is important?}
+Some of the information in the solver output file is much more important than the rest, but this importance can depend on the outcome of the algorithm. The following is a list of things to look for, in order of importance; however note that there is nothing absolute or mandatory about this list - it is really just an informal attempt by the developer to tell the user what to look for, and in what order, in the solver output.
+
+\textbf{1. Errors.} Any fatal error (meaning the solver cannot go on) produces a line in the output that begins with the word ``Error''. Because the solver aborts, this message is probably near the bottom of the output file. These are critical, far more important than anything else in the output file. A normal solver output will not have any Error messages, but if the solver failed for any reason, there will be one. These can be as simple as ``Error - input file not found'' or as complex as ``Error - the problem is singular.'' (Failing to parse a record the DAT file is also an Error; these appear at the top of the output file and do not cause an abort.)
+
+[Note. If the user ever encounters a case where the solver fails, perhaps with ``Exception: ...'' and no Error message is found, please report this to the developers, and send along the DAT file.]
+
+\textbf{2. Warnings.} An error that is not fatal, but that is not expected and of concern, produces a line in the output that begins with the word ``Warning.'' Many solver runs will produce no Warnings. Some will point out problems that cause the user to make changes to the input and re-run the solver, but some may be ignored. These should at least be considered before going on; most are the result of problems or omissions in the input.
+
+Probably the most common are the Warnings about ``unused positions'' and ``unused data.'' If any site (POS record) is given in the input, but then that site is never used in the data, that site's name is listed as an unused position. Likewise if there is a data record that involves only fixed sites, it cannot be used in the estimation, and so it is an unused datum. Unused positions are innocuous, they are not used by the solver but are echoed in the final output, and some users don't mind having them in the output. Unused data, however, is probably an oversight, perhaps because the wrong sites are used, or some sites are mistakenly fixed.
+
+\textbf{3. Statistics.} In the absence of Errors and serious Warnings, next look at the post-fit residuals RMS and the APV. Search for the word ``Final'' or ``APV'' to find these values, which are below the final data residuals and before the final adjustments. An example from a solver run:
+
+\begin{Snippet}
+ RMS post-fit relative residual (Final) = 8.251e-01
+ Degrees of freedom = 50; Std dev of unit weight = 1.161; APV = 1.348 (Final)
+ RMS post-fit raw residual (angles) (Final) = 9.600e-05 rad = 1.980e+01 soa.
+ RMS post-fit raw residual (length) (Final) = 4.060e-03 m.
+ Upper Chi-squared test (0.950): 1.35 < 1.35 pass
+ Lower Chi-squared test (0.050): 0.70 < 1.35 pass
+ Two-sided Chi-squared test (0.025,0.975): 0.647 < 1.348 < 1.428 pass
+\end{Snippet}
+
+The example output shows the post-fit residual RMS (relative, angles, and lengths), the APV, and the Chi-squared (though actually the APV) test results. The post-fit residual RMS provides a sense of how well the newly estimated states fit the measurements; the relative residuals are the raw post-fit residuals scaled by the associated specified measurement uncertainty, and thus the RMS of the relative residuals provides an indication of the how well the provided measurement uncertainties match the actual noise of the measurements. 
+
+The ``Chi-squared test'' is actually a test of the APV value, because the solver outputs limits for this test equal to the $\chi^2$ limits for a particular confidence value, divided by the system degrees of freedom, and thus the limits have the same form as the APV value. The optimum value for the APV is 1.0, indicating the noise seen in the post-fit residuals matches well with the provided measurement uncertainties. If the APV is well over 1.0, the post-fit residuals variance greatly exceeds the provided measurement uncertainties, and vice versa for APV values well under 1.0. 
+
+\textbf{4. How to interpret the ``Chi-squared'' test.} If the solution fails the upper ``Chi-squared'' test (i.e. the APV is well over 1.0), the post-fit residuals distribution is much larger than the provided measurement uncertainties and the results should be analyzed for possible blunders (see below). If the user is confident there are unlikely any blunders and the APV still exceeds the upper test value, the overall scale of the uncertainties may be too low, and the user may want to increase some measurement uncertainties to move the APV closer to 1.0.
+
+Note that while the user can always make the APV exactly 1.0 by rescaling the entire measurement covariance matrix, this scaling has no effect on the solution (see section \ref{sect:BasicLeastSquares}). Rather than scaling the entire measurement covariance, the user may want to look for any subsets of the data that have larger noise than expected (as determined by considering relative or standard residuals), and scale up the provided measurement uncertainties for those particular measurements. Changing only a subset of the measurement uncertainties changes the relative weighting of the measurements in the least squares method, and thus the solution is impacted (and if done properly, improved).
+
+If the solution fails the lower ``Chi-squared'' test (i.e. the APV is well under 1.0), the post-fit residuals distribution is much smaller than the provided measurement uncertainties. In this case, the user may wish to look for any subsets of the data that have smaller noise than expected (as determined by considering relative or standard residuals), and scale down the provided measurement uncertainties for those particular measurements. The solution will be improved if the scaling is done properly. However, the risk of having a non-optimal solution when the APV is very small is lower as compared to when the APV is very large, so the user may wish to skip this scaling down step if time is tight. 
+
+Finally, to quote Ghilani (\cite{ghilani} p. 529): ``[the chi-squared test does not] reveal the exact problem in data when the test fails. The chi-sqared test should be viewed as a warning flag for an adjustment that requires further analysis''.
+
+\textbf{5. Blunders.} Now the user should look at the ``Data and residuals (Final)'' table, particularly to look for any potential remaining blunders. The table has in the right-most two columns the redundancy and the standard residual for each measurement, both of which are derived in appendix \ref{appendices:RedStdResComp}. In a nutshell, the redundancy is a number between 0 and 1 that indicates how susceptible the solution is to errors in that observation, and the standard residual is a further ``normalization'' of the relative residual involving the APV and the redundancy of the measurement. The redundancy indicates whether more observations are needed to safeguard against blunders in a particular observation. The standard residual provides an indication of whether the measurement is erroneous, unreasonable, or problematic (e.g. from a user blunder). The process of reviewing the standard residuals and removing or correcting any problematic observations is often called ``data snooping'' in the literature. 
+
+Any observations that exceed a threshold based on the tau distribution, as described in appendix \ref{appendices:RedStdResComp}, are marked with two asterisks: ``**''. For convenience, the three lines with the largest standard residuals are repeated in the subsequent table ``Largest 3 standard residuals''. The user may wish to check each of these marked observations for blunders, with a focus on the data and/or sites involved in that measurement. Note that one blunder can affect many other quantities in the adjustment (estimated states and post-fit residuals), so we strongly encourage the user to look for and correct only one blunder at a time, starting with the largest (likely associated with the largest standard residual). After fixing that largest blunder, re-run the adjustment and consider if there are any further blunders via another review of the standard residuals.
+
+\textbf{6. Adjustments.} Finally, consider the adjustment (or ``update'') state vector and final adjusted positions. All final positions (adjusted, fixed, and unused), along with their associated adjustment vector and formal covariance (for adjusted positions), are provided in three tables corresponding to three different coordinates: ``Final Adjusted Positions XYZ'' (for the positions in ECEF), ``Final Adjusted Positions LLH'' (for the positions in geodetic latitude, longitude, and height above the WGS-84 ellipsoid), and ``Final Adjusted Positions Astronomic'' (for the positions in astronomic coordinates, along with deflection and undulation values, which required a geoid file be loaded).
+
+\section{Solution Methods}
+There are many ways to solve the least squares problem. These methods can be slow or fast,
+robust or unstable \textemdash \ in many cases these properties depend on the nature of the problem.
+The system of equations for survey adjustments tends to be very large 
+and sparse; that is, there are many unknown states and mostly zero terms in 
+the problem. As a result, the system matrix tends to be large, and
+the computation time for traditional methods generally increases exponentially 
+with size.
+
+However, since the system matrix is generally sparse, a huge performance
+gain can be obtained by cleverly performing operations only on the 
+non-zero elements. \textsf{lsasolver} offers two different
+methods to obtain the solution, both of which leverage sparse matrix 
+strategies to minimize computation time.
+
+\subsection{Square Root Information Filter}
+The Square Root Information Filter (SRIF) uses the Householder method
+mentioned in Section \ref{sec:nonlinsolver} and is considered to be extremely robust \cite{biermann}.
+SRIF is notable in that the problem is not squared, the usual operation used 
+to project the data onto the column space of the system matrix. 
+In general, it is not desirable to square the problem since this 
+reduces the space of the numeric precision and can lead to instability 
+for poorly conditioned problems.
+
+Another key feature of the SRIF is that this method allows for
+easy determination of certain properties such as the presence and 
+location of a singularity, the condition number, and the presence of
+non-positive eigenvalues without needing to perform another 
+computationally expensive operation. However, this is not the fastest available method and the
+computation time can be long for large problems. Yet, this method will
+produce the most reliable answer and also provides the user with some
+additional information which may be helpful in diagnosing issues.
+
+\subsection{Conjugate Gradient Method}
+The Conjugate Gradient (CG) method is a departure from the traditional
+method of factoring the system matrix. Instead, the CG method reduces
+the system of equations to a multidimensional optimization problem. The quadratic
+form of the problem is represented as the following:
+\begin{equation}
+f(x) = \frac{1}{2}x^TAx - b^Tx
+\end{equation}
+This function represents a multidimensional quadratic which may have
+a minimum or maximum, depending on whether the system is positive- 
+or negative-definite. The critical point of this function occurs where
+its gradient is equal to zero:
+\begin{equation}
+(\nabla f)^T = \frac{1}{2}(A^T + A)x - b = 0
+\end{equation}
+It can be seen that if A is symmetric, this reduces to:
+\begin{equation}
+(\nabla f)^T = Ax - b
+\end{equation}
+Thus, a converging solution (i.e. one in which the residuals are minimized) to the problem $x$ can be determined by minimizing $f(x)$ if and
+only if A is symmetric and positive-definite. \\ \\
+The current implementation of this method squares the system matrix which
+reduces the precision of the solution relative to the SRIF formulation.
+The following is a representation of the weighted, squared problem:
+
+\begin{equation}
+\begin{split}
+Ax &= b \\
+& \Downarrow \\ 
+A^TWAx &= A^TWb
+\end{split}
+\end{equation}
+
+Since the problem was reduced from a factoring operation to an optimization
+process, the time per iteration of the non-linear problem is greatly reduced.
+
+Instead of building a custom CG implemenation for \textsf{lsasolver},
+the Eigen library is used to perform this operation \cite{eigenweb}. The 
+Eigen library also utilizes many optimizations depending on the
+type of matrix used and the matrix operation.
+
+\subsection{What is the best method?}
+The default behavior of \textsf{salsa} is to try to use the CG method (because it is very fast)
+ and fall back to the SRIF only if an error is detected. In general, the CG method will produce
+a solution that is equally useful (i.e. precise far beyond significant figures),
+but there may be some information lost if there are issues or the problem
+diverges.
+
+The user may specity which solver method(s) will be applied by \textsf{lsasolver}.  Under \textsf{salsa}'s project configuration options (\texttt{Project} $\to$ \texttt{Configure\ldots}), the user may choose one of three options under ``Performance optimization:''
+\begin{description}
+\item[Allow fast] With this option specified, \textsf{salsa} will invoke \textsf{lsasolver} with the command-line argument \verb+--forcefast+. If the fast (CG) method fails, \textsf{salsa} will try again, this time calling \textsf{lsasolver} with the \verb+--forcestable+ argument.  This process will typically be transparent to the user and is the recommended default behavior.
+\item[Force fast] With this option specified, \textsf{salsa} will invoke \textsf{lsasolver} with the command-line argument \verb+--forcefast+.  If that fails, an error message will be returned to the user.  This option may be appealing when the survey network is very large, and the delay in returning a result with the SRIF implementation is unacceptable.
+\item[Force stable] With this option specified, \textsf{salsa} will invoke \textsf{lsasolver} with the command-line argument \verb+--forcestable+.  This option may be appealing when the network is unstable, and the diagnostic output from the SRIF implementation is helpful in diagnosing the issue.  For example, if a position in the network lacks any measurement data to determine the point's height, the CG method may simply fail, whereas the SRIF method may be able to report that the problem is singular, at that specific point.
+\end{description}
+
+\section{Example 0: GPS Only}
+
+To help the user understand what outputs are displayed on the screen after calculating an adjustment, we will begin by considering a simple example which reduces to a two dimensional problem.  The purpose of this example is to explicitly show how the \textsf{salsa} outputs are computed.  To aide with visualizing this example, Figure \ref{fig:ex0} presents the final adjusted network that we will obtain.  To follow along, copy and paste the \verb+example00+ folder to your desktop.  Launch \textsf{salsa} and select Project $\ra$ Open LSA and select \verb+ex0.proj+ from inside of the \verb+example00+ folder.  Next, we will ensure that reliability calculations are enabled for this project. Reliability metrics are a helpful tool to diagnose the network's susceptibility to blunders and are are given in-depth coverage in example 2 and appendix \ref{appendices:RedStdResComp}. Reliability metrics are enabled by default so the user should not have to change any settings to perform these calculations. However, if reliability metrics are not enabled, the following instructions will allow the user to enable them. To enable reliability calculations, open the Configuration Menu by selecting the menu action Project $\to$ Configure\ldots and under the Solver Options box, select the \verb+yes+ button next to Calculate External Reliability. Press \verb+OK+ at the bottom of the Configuration Menu to accept the changes and close the window. To see the final adjusted result select Project $\ra$ Calculate Adjustment.  Interaction with the \textsf{salsa} interface will be covered in much greater detail in example 1 in chapter \ref{chap:examples}.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{example0/networkdesign.png}
+\end{center}
+\caption{Example 0 network.}
+\label{fig:ex0}
+\end{figure}
+
+We will place one control station (A) at $0^o$ latitude, $0^o$ longitude and $0$ m height.  We will place a second control station (B) about a meter away at $0^o$ latitude, $(-9\times10^{-6})^o$ W longitude and $0$ m height.  The control station coordinates are presented in Table \ref{tab:ex0_ctrl}
+
+\begin{table}[htb]
+\caption{Example $0$ Control Network}
+\label{tab:ex0_ctrl}
+\begin{center}
+\begin{tabular}{lrrr}
+\hline
+\textbf{Site} & \textbf{Latitude} & \textbf{Longitude} & \textbf{Height} \\
+\hline
+A & $0^o$ N & $0^o$ W & $0$ m \\
+B & $0^o$ N & $(-9\times10^{-6})^o$ W & $0$ m \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The GPS measurement data from control station (A) to the floating point (C) is entered into \textsf{salsa} in ECEF coordinates as ($0$ m, $1$ m, $1$ m).  The GPS measurement data from control station (B) to the floating point (C) is ($0$ m, $0$ m, $1$ m).  Associated with these measurements is an uncertainty which is entered as a covariance matrix.  For simplicity, we will choose both sets of measurements to have the same covariance matrix.  The GPS measurements and the measurement covariance matricies are presented in Table \ref{tab:ex0M}.
+
+\begin{table}[htb]
+\caption{Example $0$ Measurements}
+\label{tab:ex0M}
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+\textbf{From-To}&\textbf{$\mathbf{\Delta}$X(m)\hspace*{3mm}$\mathbf{\Delta}$Y(m)\hspace*{3mm}$\mathbf{\Delta}$Z(m)}&\textbf{Q$_{\textbf{XX}}$(m$^2$)}&\textbf{Q$_{\textbf{XY}}$(m$^2$)}&\textbf{Q$_{\textbf{XZ}}$(m$^2$)}\\
+&&\textbf{Q$_{\textbf{YY}}$(m$^2$)}&\textbf{Q$_{\textbf{YZ}}$(m$^2$)}&\textbf{Q$_{\textbf{ZZ}}$(m$^2$)}\\
+\hline
+A-C & $0$\hspace*{12mm}$1$\hspace*{12mm}$1$ &$10^{-12}$&$10^{-12}$&$10^{-12}$\\
+    &           &$10^{-6}$&$10^{-7}$&$10^{-6}$\\
+B-C & $0$\hspace*{12mm}$0$\hspace*{12mm}$1$ &$10^{-12}$&$10^{-12}$&$10^{-12}$\\
+    &           &$10^{-6}$&$10^{-7}$&$10^{-6}$\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+There are in principle six observation equations, one for each measurement.  However, to simplify the presentation we will neglect the observation equations corresponding to the X coordinate in the ECEF frame (U in the ENU frame).  This is valid because the displacements and covariances have been artificially chosen such that the neglected axis does not significantly influence the result for the other two axes.  Denoting the residuals by $R$, the observation equations for our effective 2D system are
+\begin{equation}
+\begin{array}{c}
+\text{R}_{\text{Y}_{\text{CA}}}=-\text{Y}_{\text{C}}+\left(\text{Y}_{\text{C}}+\Delta\text{Y}_{\text{CA}}\right)\\
+\text{R}_{\text{Z}_{\text{CA}}}=-\text{Z}_{\text{C}}+\left(\text{Z}_{\text{C}}+\Delta\text{Z}_{\text{CA}}\right)\\
+\text{R}_{\text{Y}_{\text{CB}}}=-\text{Y}_{\text{C}}+\left(\text{Y}_{\text{C}}+\Delta\text{Y}_{\text{CB}}\right)\\
+\text{R}_{\text{Z}_{\text{CB}}}=-\text{Z}_{\text{C}}+\left(\text{Z}_{\text{C}}+\Delta\text{Z}_{\text{CB}}\right)
+\end{array}\ra\mathop{\underbrace{\left[\begin{array}{c}\text{R}_{\text{Y}_{\text{CA}}}\\\text{R}_{\text{Z}_{\text{CA}}}\\\text{R}_{\text{Y}_{\text{CB}}}\\\text{R}_{\text{Z}_{\text{CB}}}\end{array}\right]}_{\ds{\mathbf{R}}}}=-\mathop{\underbrace{\left[\begin{array}{cc}1&0\\0&1\\1&0\\0&1\end{array}\right]}_{\ds{\mathbf{P}}}}\cdot\mathop{\underbrace{\left[\begin{array}{c}\text{Y}_{\text{C}}\\\text{Z}_{\text{C}}\end{array}\right]}_{\ds{\mathbf{X}}}}+\mathop{\underbrace{\left[\begin{array}{c}\text{Y}_{\text{A}}+\Delta\text{Y}_{\text{CA}}\\\text{Z}_{\text{A}}+\Delta\text{Z}_{\text{CA}}\\\text{Y}_{\text{B}}+\Delta\text{Y}_{\text{CB}}\\\text{Z}_{\text{B}}+\Delta\text{Z}_{\text{CB}}\end{array}\right]}_{\ds{\mathbf{d}}}}.
+\end{equation}
+We have rewritten the observation equations in matrix form by introducing the residual vector $(\mathbf{R})$, the partials matrix $(\mathbf{P})$, the state vector $(\mathbf{X})$ and the data vector $(\mathbf{d})$.
+
+The approach of least squares analysis allows us to find the most probable state vector $(\mathbf{X})$ by minimizing a constructed quantity which is a sum of residuals squared.  The quantity we minimize knows about the measurement uncertainties and uses those to weight the terms in the sum (i.e. minimize $\Sigma$(weight)$\text{R}^2$).  The weight matrix ($\mathbf{W}$) is given by the inverse of the measurement covariance matrix ($\mathbf{MCov}$)
+\begin{equation}
+\mathbf{W}=\mathbf{MCov}^{-1}=\left[\begin{array}{cccc}10^{-6}&10^{-7}&0&0\\10^{-7}&10^{-6}&0&0\\0&0&10^{-6}&10^{-7}\\0&0&10^{-7}&10^{-6}\end{array}\right]^{-1}\text{m}^{-2}=\left[\begin{array}{cccc}10^6&-10^5&0&0\\-10^5&10^6&0&0\\0&0&10^6&-10^5\\0&0&-10^5&10^6\end{array}\right]\text{m}^{-2}.
+\end{equation}
+The quantity to be minimized is
+\begin{equation}
+\mathbf{R}^T\cdot\mathbf{W}\cdot\mathbf{R}=(\mathbf{P}\cdot\mathbf{X}-\mathbf{d})^T\cdot\mathbf{W}\cdot(\mathbf{P}\cdot\mathbf{X}-\mathbf{d}).
+\end{equation}
+The superscript $T$ denotes the transpose operation.  To proceed with the minimization, the quantity is differentiated with respect to the state vector $\mathbf{X}$.  This results in the equation for the state vector introduced in the previous Chapter
+\begin{equation}
+\mathop{\underbrace{(\mathbf{P}^T\cdot\mathbf{W}\cdot\mathbf{P})}_{\ds{\mathbf{Cov}^{-1}}}}\cdot\mathbf{X}=\mathbf{P}^T\cdot\mathbf{W}\cdot\mathbf{d}\hspace*{8mm}\ra\hspace*{8mm}\mathbf{X}=\mathbf{Cov}\cdot\mathbf{P}^T\cdot\mathbf{W}\cdot\mathbf{d}.
+\end{equation}
+Note that the solution covariance ($\mathbf{Cov}$) is given by
+\begin{eqnarray}
+\mathbf{Cov}&=&(\mathbf{P}^T\cdot\mathbf{W}\cdot\mathbf{P})^{-1}\\
+&=&\left(\left[\begin{array}{cccc}1&0&1&0\\0&1&0&1\end{array}\right]\cdot\left[\begin{array}{cccc}10^6&-10^5&0&0\\-10^5&10^6&0&0\\0&0&10^6&-10^5\\0&0&-10^5&10^6\end{array}\right]\cdot\left[\begin{array}{cc}1&0\\0&1\\1&0\\0&1\end{array}\right]\right)^{-1}\text{m}^2\\
+&=&\left(2\times\left[\begin{array}{cc}10^6&-10^5\\-10^5&10^6\end{array}\right]\right)^{-1}\text{m}^2=5\times\left[\begin{array}{cc}10^{-7}&10^{-8}\\10^{-8}&10^{-7}\end{array}\right]\text{m}^2.
+\end{eqnarray}
+
+With our example we may explicitly write out the state vector
+\begin{equation}
+\begin{split}
+\mathbf{X}&=5\times\left[\begin{array}{cc}10^{-7}&10^{-8}\\10^{-8}&10^{-7}\end{array}\right]\cdot\left[\begin{array}{cccc}1&0&1&0\\0&1&0&1\end{array}\right]\cdot \left[\begin{array}{cccc}10^6&-10^5&0&0\\-10^5&10^6&0&0\\0&0&10^6&-10^5\\0&0&-10^5&10^6\end{array}\right]\cdot\left[\begin{array}{c}1\\1\\1\\1\end{array}\right]\text{m}\\
+&=\left[\begin{array}{c}1\\1\end{array}\right]\text{m}
+\end{split}
+\end{equation}
+The residuals are given by
+\begin{equation}
+\mathbf{R}=-\mathbf{P}\cdot\mathbf{X}+\mathbf{d}\approx-\left[\begin{array}{cc}1&0\\0&1\\1&0\\0&1\end{array}\right]\cdot\left[\begin{array}{c}1\\1\end{array}\right]\text{m}+\left[\begin{array}{c}1\\1\\1\\1\end{array}\right]\text{m}\stackrel{\text{(More precision kept)}}{\approx}\left[\begin{array}{c}-10^{-3}\\-10^{-9}\\10^{-3}\\-10^{-9}\end{array}\right]\text{m}.
+\end{equation}
+{\color{red}{\textbf{These values are reported under $|$Raw$|$ in the Measurement Residuals table.}}}\\
+In the rightmost column we have written the residuals found if one carries more digits of precision through the computation.
+
+Note that this entire process can be repeated until the adjustment size at an iteration is very small (i.e. $\Delta\mathbf{X}$ is below some limit in meters after rewriting $\mathbf{X}=\mathbf{X}_{\text{previous}}+\Delta\mathbf{X}$ and repeating the process to solve for $\Delta\mathbf{X}$).  The covergence value displayed under the heading ``Convergence Test'' is the root-mean-square (RMS) of the adjustment to each floating site coordinate ($\Delta\text{X}^{\text{RMS}}$).  For this simple example the convergence test immediately passes, though the convergence criteria may be modified under Project $\ra$ Configure\ldots if desired.
+
+We have just computed the residuals which populate the $|$Raw$|$ column of the Measurement Residuals table depicted in Figure \ref{fig:ex0gui}.  We will now present how to obtain the remaining outputs which appear in the Measurement Residuals table and the Point Confidence Regions table.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=1.0\textwidth]{example0/full.png}
+\end{center}
+\caption{\textsf{salsa} interface after calculating adjustment with example $0$ data.  This section describes how to compute the output quantities appearing in the output tables.}
+\label{fig:ex0gui}
+\end{figure}
+
+The next column in the Measurement Residuals table is the Relative Residual.  The intuition for this quantity is that it is the size of the residual for a given measurement divided by the measurement uncertainty (i.e. $\sim\text{R}_i$/uncertainty).  However, since the measurement covariance matrix ($\mathbf{MCov}$) contains off-diagonal terms we must be careful about how we define scaling by (1/uncertainty).  The notation of the ``square root'' of the covariance matrix will take the form of a Cholesky decomposition in which the measurement covariance matrix ($\mathbf{MCov}$) is given as the product of a lower triangular matrix ($\mathbf{L}$) and its transpose ($\mathbf{MCov}=\mathbf{L}\cdot\mathbf{L}^T$),
+\begin{equation}
+\begin{split}
+&\mathop{\underbrace{\left[\begin{array}{cccc}10^{-6}&10^{-7}&0&0\\10^{-7}&10^{-6}&0&0\\0&0&10^{-6}&10^{-7}\\0&0&10^{-7}&10^{-6}\end{array}\right]\text{m}^2}_{\ds{\mathbf{MCov}}}}\\
+&=\mathop{\underbrace{\left[\begin{array}{cccc}10^{-3}&0&0&0\\10^{-4}&10^{-3}&0&0\\0&0&10^{-3}&0\\0&0&10^{-4}&10^{-3}\end{array}\right]\text{m}}_{\ds{\mathbf{L}}}}\cdot\mathop{\underbrace{\left[\begin{array}{cccc}10^{-3}&10^{-4}&0&0\\0&10^{-3}&0&0\\0&0&10^{-3}&10^{-4}\\0&0&0&10^{-3}\end{array}\right]\text{m}}_{\ds{\mathbf{L}^T}}}
+\end{split}
+\end{equation}
+The notion of ``division'' is implemented by multiplying with the inverse matrix ($\mathbf{R}_{\text{Rel}}=\mathbf{L}^{-1}\cdot\mathbf{R}$)
+\begin{equation}
+\begin{split}
+\mathbf{R}_{\text{Rel}}&=\mathop{\underbrace{\left[\begin{array}{cccc}10^{-3}&0&0&0\\10^{-4}&10^{-3}&0&0\\0&0&10^{-3}&0\\0&0&10^{-4}&10^{-3}\end{array}\right]^{-1}\text{m}^{-1}}_{\ds{\mathbf{L}^{-1}}}}\cdot\mathop{\underbrace{\left[\begin{array}{c}-10^{-3}\\-10^{-9}\\10^{-3}\\-10^{-9}\end{array}\right]\text{m}}_{\ds{\mathbf{R}}}} \\
+&\stackrel{\text{(More precision kept)}}{\approx}\left[\begin{array}{c}-0.95\\0.095\\0.95\\-0.095\end{array}\right]
+\end{split}
+\end{equation}
+{\color{red}{\textbf{These values are reported under $|$Rel$|$ in the Measurement Residuals table.}}}\\
+We again have presented the final result if one keeps more digits of precision.  Note the relative residual has been defined such that it is dimensionless.
+
+Before computing the standard residual, we need to introduce the concept of a posteriori variance (APV).  Considerations relating to APV requires that we treat the full 3D nature of our problem since the number of observations is different which influences the root-mean-square that we will compute shortly.  APV is the $\chi^2$ value divided by the number of degrees of freedom.  Above the Measurements Residuals table the number of observation equations ($n_{\text{eq}}$) and the number of variables ($n_{\text{var}}$) are given, the difference between these two is displayed as the degrees of freedom ($n_{\text{dof}}=n_{\text{eq}}-n_{\text{var}}=6-3=3$).  The $\chi^2$ value depends on the RMS of the relative residuals
+\begin{equation}
+\begin{split}
+\text{R}_{\text{Rel}}^{\text{RMS}}&=\sqrt{\f{1}{n_{\text{eq}}}\left(\Sigma_{i=1}^{n_{\text{eq}}}\text{R}_{\text{Rel},i}^2\right)}\\
+&=\sqrt{\f{1}{6}\left[0+(0.95)^2+(0.095)^2+0+(0.95)^2+(0.095)^2\right]}=0.55.
+\end{split}
+\end{equation}
+Note that the $\text{X}_{\text{ECEF}}$ component contributes negligibly to the sum, but the presence of the two $\text{X}$ component observations changes the divisor under the square root.  The value of $\chi^2$ is given by square of the previously computed RMS times the number of equations ($\chi^2=(\text{R}_{\text{Rel}}^{\text{RMS}})^2\cdot n_{\text{eq}}$).  The APV is the $\chi^2$ per degree of freedom
+\begin{equation}
+\text{APV}=\f{\chi^2}{n_{\text{dof}}}=\left(\text{R}_{\text{Rel}}^{\text{RMS}}\right)^2\cdot\left(\f{n_{\text{eq}}}{n_{\text{dof}}}\right)=(0.55)^2\cdot\left(\f{6}{3}\right)=0.6.
+\end{equation}
+{\color{red}{\textbf{This value is reported as APV under the ``Chi-Squared Test'' heading.}}}\\
+
+The ``Chi-Squared Test'' heading will display ``PASS'' if the APV is within an interval indicated next to the ``Chi-Squared:'' text above the Point Confidence Regions table.  The interval that the APV must lie in is set by the number of degrees of freedom and the desired confidence level.  The values are determined by the $\chi^2$ percent point function (ppf).\footnote{Unfortunately, a nice analytical formula for the ppf does not exist.  However, many languages support computation of the ppf.  For instance, in Python one may use the command ``chi2.ppf(cf,ndof)'' after importing ``from scipy.stats import chi2''.}  The $\chi^2$ ppf is the inverse of the cumulative distribution function (cdf)
+\begin{equation}
+\text{ppf}_{\chi^2}(c_f,n_{\text{dof}})=\chi^2\text{ such that }\text{cdf}_{\chi^2}(\chi^2,n_{\text{dof}})=c_f,\text{ where }\text{cdf}_{\chi^2}(c_f,n_{\text{dof}})=\f{\gamma_{\text{inc}}\left(\f{n_{\text{dof}}}{2},\f{c_f}{2}\right)}{\Gamma\left(\f{n_{\text{dof}}}{2}\right)}.
+\end{equation}
+Here $c_f$ denotes a confidence factor dependence on the desired confidence level ($c$), $\Gamma$ denotes the usual Gamma function and $\gamma_{\text{inc}}$ denotes the lower incomplete Gamma function.  The APV lower bound is determined by evaluating the $\chi^2$ ppf with the confidence factor equal to $c_{f,\text{lower}}=(1-c)$ and dividing by $n_{\text{dof}}$.  Likewise, the APV upper bound is determined by letting $c_{f,\text{upper}}=c$ in ppf$_{\chi^2}$ and dividing by $n_{\text{dof}}$.  In our example, chi2.ppf(1-0.95,3)/3=0.117 (95\% probability to obtain an APV$\geq0.117$) and chi2.ppf(0.95,3)/3=2.605 (95\% probability to obtain an APV$\leq$2.605).  The .out file lists intervals for other values of $c_f$.  You can adjust the $c_f$ used for the interval displayed in the GUI under Project $\ra$ Configure\ldots
+
+The standard residuals are the relative residuals rescaled by the APV and the redundancy
+\begin{equation}
+\mathbf{R}_{\text{std}}=\left[\begin{array}{c}\text{R}_{\text{Rel},1}/\sqrt{\text{APV}\cdot\text{Rd}_1}\\\text{R}_{\text{Rel},2}/\sqrt{\text{APV}\cdot\text{Rd}_2}\\\text{R}_{\text{Rel},3}/\sqrt{\text{APV}\cdot\text{Rd}_3}\\\text{R}_{\text{Rel},4}/\sqrt{\text{APV}\cdot\text{Rd}_4}\end{array}\right]=\left[\begin{array}{c}-1.7\\0.17\\1.7\\-0.17\end{array}\right].
+\end{equation}
+{\color{red}{\textbf{These values are reported under $|$Std$|$ in the Measurement Residuals table.}}}\\
+When the standard residual exceeds a threshold based on a particular confidence value, as described in appendix \ref{appendices:RedStdResComp}, that measurement may be a blunder.
+
+The redundancy number for a particular observation is a measure of how well blunders can be detected and resolved within a set of observations.  A low redundancy may imply that there is not a sufficient number of observations to determine if a blunder is present. The effects of low redundancy can be explicitly defined using reliability metrics, which are shown in the remaining columns in the Measurement Residuals table. Considerable attention is given to reliability metrics and their uses in example 2. For a complete mathematical introduction to reliability metrics please reference appendix \ref{appendices:RedStdResComp}. 
+
+The redundancy number depends on the residual covariance matrix ($\mathbf{Q}_{\text{RR}}$) which is the difference of the measurement covariance matrix ($\mathbf{MCov}$) and the inverse of the weight matrix as estimated by the solution covariance matrix ($\mathbf{Cov}$)
+\begin{equation}
+\mathbf{W}^{-1}_{\text{estimated}}=\mathbf{P}\cdot(\mathbf{P}^T\cdot\mathbf{W}\cdot\mathbf{P})^{-1}\cdot\mathbf{P}^T=\mathbf{P}\cdot\mathbf{Cov}\cdot\mathbf{P}^T.
+\end{equation}
+The residual covariance matrix is therefore explicitly given as ($\mathbf{Q}_{\text{RR}}=\mathbf{MCov}-\mathbf{W}_{\text{estimated}}^{-1}$)
+\begin{equation}
+\begin{split}
+\mathbf{Q}_{\text{RR}} &= \mathop{\underbrace{\left[\begin{array}{cccc}10^{-6}&10^{-7}&0&0\\10^{-7}&10^{-6}&0&0\\0&0&10^{-6}&10^{-7}\\0&0&10^{-7}&10^{-6}\end{array}\right]\text{m}^2}_{\ds{\mathbf{MCov}}}}-\mathop{\underbrace{\left[\begin{array}{cc}1&0\\0&1\\1&0\\0&1\end{array}\right]}_{\ds{\mathbf{P}}}}\cdot\mathop{\underbrace{5\times\left[\begin{array}{cc}10^{-7}&10^{-8}\\10^{-8}&10^{-7}\end{array}\right]\text{m}^2}_{\ds{\mathbf{Cov}}}}\cdot\mathop{\underbrace{\left[\begin{array}{cccc}1&0&1&0\\0&1&0&1\end{array}\right]}_{\ds{\mathbf{P}^T}}} \\
+&= 5\times\left[\begin{array}{cccc}10^{-7}&10^{-8}&-10^{-7}&-10^{-8}\\10^{-8}&10^{-7}&-10^{-8}&-10^{-7}\\-10^{-7}&-10^{-8}&10^{-7}&10^{-8}\\-10^{-8}&-10^{-7}&10^{-8}&10^{-7}\end{array}\right]\text{m}^2.
+\end{split}
+\end{equation}
+The redundancy number for a particular observation is the residual covariance element for that measurement weighted by the appropriate weighting factor
+\begin{equation}
+\mathbf{Rd}=\left[\begin{array}{c}\text{Q}_{\text{RR},11}\cdot\text{W}_{11}\\\text{Q}_{\text{RR},22}\cdot\text{W}_{22}\\\text{Q}_{\text{RR},33}\cdot\text{W}_{33}\\\text{Q}_{\text{RR},44}\cdot\text{W}_{44}\end{array}\right]=5\times\left[\begin{array}{c}10^{-7}\cdot10^6\\10^{-7}\cdot10^6\\10^{-7}\cdot10^6\\10^{-7}\cdot10^6\end{array}\right]=\left[\begin{array}{c}0.5\\0.5\\0.5\\0.5\end{array}\right].
+\end{equation}
+{\color{red}{\textbf{These values are reported under Red'cy in the Measurement Residuals table.}}}\\
+
+The next column and second reliability metric after redundancy is the internal reliability. Internal reliability is essentially the minimum error that can be detected in a measurement due to redundancy. It is calculated in such a way that the units are the same as the measurement itself (generally meters or radians). For example, if a DXYZ measurement has an internal reliability value of 0.10, that means that the smallest error that can be detected in the DXYZ measurement is 0.10 meters. Any error smaller than that for this particular measurement will pass into the solution without being detectable!
+
+The internal reliability is calculated using two test statistics, $\alpha$ and $\beta$ which produce a non-centrality parameter $\delta_0$ (normally $\alpha = 0.01$ and $\beta = 0.05$ which produces $\delta_0 = 4.22068$). Internal reliability depends on the non-centrality parameter ($\delta_0$) multiplied by the square root of diagonal terms of the measurement covariance matrix (MCov) and divided by the square root of the redundancy vector.
+\begin{equation}
+\nabla \hat{Y}_i = \delta_0 \frac{\sqrt{\text{MCov}_\text{ii}}}{\sqrt{\text{Rd}_\text{i}}} = \delta_0 \left[\begin{array}{c}\sqrt{\text{MCov}_{11}}/\sqrt{\text{Rd}_\text{1}}\\\sqrt{\text{MCov}_{22}}/\sqrt{\text{Rd}_\text{2}}\\\sqrt{\text{MCov}_{33}}/\sqrt{\text{Rd}_\text{3}}\\\sqrt{\text{MCov}_{44}}/\sqrt{\text{Rd}_\text{4}}\end{array}\right] = 4.22068 \times \left[\begin{array}{c}\sqrt{10^{-6}}/\sqrt{0.5}\\\sqrt{10^{-6}}/\sqrt{0.5}\\\sqrt{10^{-6}}/\sqrt{0.5}\\\sqrt{10^{-6}}/\sqrt{0.5}\end{array}\right]=\left[\begin{array}{c}0.006\\0.006\\0.006\\0.006\end{array}\right]
+\end{equation}
+{\color{red}{\textbf{These values are reported under Int Rel in the Measurement Residuals table.}}}\\
+
+The last column in the measurement residuals table is the magnitude of the external reliability. This is calculated by mapping the internal reliability through the state update equations to give a vector for each measurement. The entire external reliability vector array is N(states) x M(Measurements). External reliability is explicitly defined in appendix \ref{appendices:RedStdResComp}. However, the calculations are complex and involve complex matrix math so are left out of this example. 
+
+The magnitude of the external reliability is calculated by taking the magnitude of each external reliability vector separately. The specific component values of the external reliability vector are given in the ENU frame and can be found in the solver *.out file. For a more comprehensive explanation of the terms in this *.out file reference the appendix section titled ``Understanding Solver Output''. This example has been reduced to two dimensions but obviously in three dimensions the $\mathbf{X}_{i,3}$ term would follow accordingly 
+\begin{equation}
+|\text{External Reliability}_i| = \sqrt{\mathbf{X}_{i,1}^2 + \mathbf{X}_{i,2}^2} = \left[\begin{array}{c}\sqrt{0.00298^2 + 0.00000^2}\\\sqrt{0.00298^2 + 0.00000^2}\\\sqrt{0.00298^2 + 0.00000^2}\\\sqrt{0.00298^2 + 0.00000^2}\end{array}\right]=\left[\begin{array}{c}0.003\\0.003\\0.003\\0.003\end{array}\right]
+\end{equation}
+
+{\color{red}{\textbf{These values are reported under Ext Rel in the Measurement Residuals table.}}}\\
+
+The first three parameters in the Point Confidence Regions table refer to error ellipsoids which surround each floating point in the adjustment. The latter three parameters refer to reliability rectangles which also surround each floating point and are discussed in example 2. The only floating point in our example is site C, since sites A and B are fixed control sites.  Therefore the only row with non-zero entries for our example is the row corresponding to site C.
+
+To construct the parameters of the error ellipse we must first transform the solution covariance matrix ($\mathbf{Cov}$) from the ECEF frame to the ENU frame.  The coordinate transformation from the ECEF frame to the ENU frame is given by
+\begin{equation} \label{eq:ECEF2ENU}
+\mathbf{X}_{\text{ENU}}=\mathbf{R}_{\text{ECEF2ENU}}\cdot\mathbf{X}_{\text{ECEF}},\hspace*{2mm}\mathbf{R}_{\text{ECEF2ENU}}=\left[\begin{array}{cccc}-\sin(\text{lon})&\cos(\text{lon})&0\\-\cos(\text{lon})\sin(\text{lat})&-\sin(\text{lon})\sin(\text{lat})&\cos(\text{lat})\\\cos(\text{lon})\cos(\text{lat})&\sin(\text{lon})\cos(\text{lat})&\sin(\text{lat})\end{array}\right].
+\end{equation}
+The solution covariance matrix transforms as
+\begin{equation}
+\mathbf{Cov}_{\text{ENU}}=\textbf{R}_{\text{ECEF2ENU}}\cdot\mathbf{Cov}_{\text{ECEF}}\cdot\mathbf{R}_{\text{ECEF2ENU}}^T.
+\end{equation}
+To use the formulae for our example, we need to determine the latitude and longitude of site C.  The longitude and height are approximately those of control site B ($-9\times10^{-6}$ $^o$ and $0$ m), while the latitude is given by $0.03^o$.  The ECEF frame to ENU frame rotation matrix in our example is explicitly given by
+\begin{equation}
+\mathbf{R}_{\text{ECEF2ENU}}=\left[\begin{array}{cccc}1.6\times10^{-7}&1&0\\-1.6\times10^{-7}&2.5\times10^{-14}&1\\1&-1.6\times10^{-7}&1.6\times10^{-7}\end{array}\right].
+\end{equation}
+The solution covariance matrix in the ENU frame is thus
+\begin{equation}
+\begin{split}
+\mathbf{Cov}_{\text{ENU}}&=\mathbf{R}_{\text{ECEF2ENU}}\cdot5\times\left[\begin{array}{ccc}10^{-12}&10^{-12}&10^{-12}\\10^{-12}&10^{-7}&10^{-8}\\10^{-12}&10^{-8}&10^{-7}\end{array}\right]\text{m}^2\cdot\mathbf{R}_{\text{ECEF2ENU}}^T\\
+&=5\times\left[\begin{array}{ccc}10^{-7}&10^{-8}&10^{-12}\\10^{-8}&10^{-7}&10^{-12}\\10^{-12}&10^{-12}&10^{-12}\end{array}\right]\text{m}^2.
+\end{split}
+\end{equation}
+
+There is both 2D and 3D error information in the Points Confidence Regions table.  We will start with the 2D error ellipse which is rendered on the map around each floating point.  The major and minor axes of the error ellipse form a rotated coordinate system with respect to the ENU coordinate system. The azimuth angle is defined as positive for clockwise rotations resulting in
+\begin{equation}
+\begin{split}
+\mathbf{X}_{\text{2Dellipse}}&=\mathbf{R}_{\text{EN2ellipse}}\cdot\mathbf{X}_{\text{EN}} \\
+\mathbf{Cov}_{\text{2Dellipse}}&=\mathbf{R}_{\text{EN2ellipse}}\cdot\mathbf{Cov}_{\text{EN}}\cdot\mathbf{R}_{\text{EN2ellipse}}^T\\
+\mathbf{R}_{\text{EN2ellipse}}&=\left[\begin{array}{cc}-\sin\left(\text{Az}\right)&-\cos\left(\text{Az}\right)\\\cos\left(\text{Az}\right)&-\sin\left(\text{Az}\right)\end{array}\right]
+\end{split}
+\end{equation}
+The diagonal components of the 2D error ellipse covariance matrix are given explicitly by
+\begin{equation}
+\begin{split}
+q_{11}&=q_{\text{EE}}\sin^2\left(\text{Az}\right)+2q_{\text{EN}}\sin\left(\text{Az}\right)\cos\left(\text{Az}\right)+q_{\text{NN}}\cos^2\left(\text{Az}\right)\\
+&=\f{1}{2}\left(q_{\text{EE}}+q_{\text{NN}}\right)-\f{1}{2}\left(q_{\text{EE}}-q_{\text{NN}}\right)\cos\left(2\text{Az}\right)+q_{\text{EN}}\sin\left(2\text{Az}\right)\\
+q_{22}&=q_{\text{EE}}\cos^2\left(\text{Az}\right)-2q_{\text{EN}}\sin\left(\text{Az}\right)\cos\left(\text{Az}\right)+q_{\text{NN}}\sin^2\left(\text{Az}\right)\\
+&=\f{1}{2}\left(q_{\text{EE}}+q_{\text{NN}}\right)+\f{1}{2}\left(q_{\text{EE}}-q_{\text{NN}}\right)\cos\left(2\text{Az}\right)-q_{\text{EN}}\sin\left(2\text{Az}\right)
+\end{split}
+\end{equation}
+We have used the trigonometric identities $2\cos^2(\theta)=1+\cos(2\theta)$, $2\sin^2(\theta)=1-\cos(2\theta)$ and $\sin(2\theta)=2\sin(\theta) \cos(\theta)$.  We have let elements of the covariance matricies be represented by $q$ in order to avoid confusion.
+
+The azimuth angle which extremizes the axis is given by
+\begin{equation}
+\f{dq_{11}}{d\text{Az}}=0\ra\tan(2\text{Az})=\f{2q_{\text{EN}}}{(q_{\text{NN}}-q_{\text{EE}})}\ra\text{Az}=\f{1}{2}\tan^{-1}\left(\f{2q_{\text{EN}}}{q_{\text{NN}}-q_{\text{EE}}}\right)\approx45^o.
+\end{equation}
+
+The larger of the two values $\left\{\sqrt{q_{11}},\sqrt{q_{22}}\right\}$ corresponds to the 2D major axis and the other corresponds to the 2D minor axis.  There is a scaling factor of $\sqrt{APV}$ and a confidence level scaling factor of $\sqrt{2F_{(1-c),2,n_{\text{dof}}}}$
+\begin{equation}
+\begin{split}
+\left[\begin{array}{c}\text{2D maj}\\\text{2D min}\end{array}\right]&=\left[\begin{array}{c}\text{max}\left\{\sqrt{q_{11}},\sqrt{q_{22}}\right\}\\\text{min}\left\{\sqrt{q_{11}},\sqrt{q_{22}}\right\}\end{array}\right]\cdot\sqrt{\text{APV}}\cdot\sqrt{2F_{(1-c),2,n_{\text{dof}}}}\\
+&=\left[\begin{array}{c}0.00074\\0.00067\end{array}\right]\text{m}\cdot0.77\cdot\sqrt{2\cdot9.55}=\left[\begin{array}{c}0.0025\\0.002\end{array}\right]\text{m}
+\end{split}
+\end{equation}
+{\color{red}{\textbf{These values are reported under the 2D maj column in the Points Confidence Regions table. The 2D minor value is not reported in the Point Confidence table but used in calculations throughout SALSA as well as being displayed graphically in the error ellipse itself.}}}\\
+
+For our example $F_{0.05,2,3}=9.55$, though other values of may be found in tables of the F-distribution.\footnote{To determine $F_{(1-c),d,n_{\text{dof}}}$ values in Python, use ``1/f.ppf(1-c,$n_{\text{dof}}$,$d$)'' after importing ``from scipy.stats import f''.}  An analogous calculation may be done for the three dimensional ENU covariance matrix, in which case the largest of $\left\{q_{11},q_{22},q_{33}\right\}$ would correspond to the 3D maj column in the Points Confidence Regions table.  We can summarize this more compactly in terms of eigenvalues
+\begin{equation}
+\left[\begin{array}{c}\text{3D maj}\\\text{2D maj}\\\text{2D min}\end{array}\right]=\left[\begin{array}{c}\text{sqrt of largest eigenvalue of }\mathbf{Cov}_{\text{ENU}}\\\text{sqrt of larger eigenvalue of }\mathbf{Cov}_{\text{EN}}\\\text{sqrt of smaller eigenvalue of }\mathbf{Cov}_{\text{EN}}\end{array}\right]\cdot\sqrt{\text{APV}}\cdot\left[\begin{array}{c}\sqrt{3\cdot F_{(1-c),3,n_{\text{dof}}}}\\\sqrt{2\cdot F_{(1-c),2,n_{\text{dof}}}}\\\sqrt{2\cdot F_{(1-c),2,n_{\text{dof}}}}\end{array}\right].
+\end{equation}
+
+Furthermore, the vertical line height is given as
+\begin{equation}
+\text{Vert}=\sqrt{q_{\text{UU}}}\cdot\sqrt{\text{APV}}\cdot\sqrt{F_{(1-c),1,n_{\text{dof}}}}.
+\end{equation}
+{\color{red}{\textbf{This value is under the Vertical column in the Points Confidence Regions table.}}}\\
+
+Note that the formulae presented in this section assume the default setting of ``Scale by APV''.  This can be disabled under Project $\ra$ Configure\ldots if desired, and then the appropriate formulae are those presented here without the APV factor.
+
+To the right of the three point confidence columns are three similiar columns devoted to reliability rectangles. These are calculated by rotating the external reliability vectors into the ENU frame and then making the largest vector the major axis of the rectangle. The minor axis is then scaled such that all other external reliability vectors fit within the rectangle. Appendix \ref{appendices:RedStdResComp} has an in-depth derivation of reliability rectangles.
+
+The relationships we have discussed have been summarized in Table \ref{tab:outputs} for future reference.
+
+\begin{table}[htb]
+\caption{Output Formulae}
+\label{tab:outputs}
+\begin{center}
+\begin{tabular}{lc}
+\hline
+\textbf{Quanitity}&\textbf{Formula}\\\hline
+State Vector&$\mathbf{X}=\mathbf{Cov}\cdot\mathbf{P}^T\cdot\mathbf{W}\cdot\mathbf{d}$\\
+Raw Residuals (``Raw'')&$\mathbf{R}=-\mathbf{P}\cdot\mathbf{X}+\mathbf{d}$\\
+Rel Residuals (``Rel'')&$\mathbf{R}_{\text{Rel}}=\mathbf{L}^{-1}\cdot\mathbf{R}$\\
+A Posteriori Variance (``APV'')&$\text{APV}=\left(\chi^2/n_{\text{dof}}\right)=\left(\text{R}_{\text{Rel}}^{\text{RMS}}\right)^2\cdot\f{n_{\text{eq}}}{n_{\text{dof}}}$\\
+Standard Residuals (``Std'')&$\text{R}_{\text{std},i}/\sqrt{\text{APV}\cdot\text{Rd}_i}$\\
+Redundancy (``Red'cy'')&$\text{Rd}_i=\text{Q}_{\text{RR},i}^{\text{Diag}}\cdot\text{W}_i^{\text{Diag}}$\\
+Internal Reliability (``Int Rel'')&$\nabla \hat{Y}_i = \delta_0 \frac{\sqrt{\text{MCov}_\text{ii}}}{\sqrt{\text{Rd}_\text{i}}}$\\
+External Reliability Mag (``Ext Rel'')&$|\text{External Reliability}_i| = \sqrt{\mathbf{X}_{i,1}^2 + \mathbf{X}_{i,2}^2 + \mathbf{X}_{i,3}^2}$\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+%\subsection{What's wrong?}
+%What to put here?
+%      Failed to run
+%         DAT file parser errors
+%         Not enough data
+%         singular
+%         diverged / failed to converge
+%      APV
+%         Weighting is wrong
+%      Blunders
+%         Largest Std residuals
+%         Largest adjustments
+
+%\subsection{Examples}

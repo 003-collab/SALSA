@@ -1,0 +1,23 @@
+\chapter{Preprocessor command-line reference}
+
+\begin{Snippet}
+lsapreprocessor, Ver. 1.0.0, Run 2016/01/29 at 09:40:47
+Usage: lsapreprocessor [option] ...
+ Program lsapreprocessor will read an input file and ...
+ Input is on the command line, or of the same format in a file (see --file below);
+ lines in that file which begin with '#' are ignored. Accepted options are 
+ shown below, followed by a description, with default value, if any, in ().
+
+# File I/O:
+ --file <name>    Name of file containing more options [#-EOL=comment] [repeat] ()
+ --out <name>     Name of output file ()
+ --outpath <path> Path for output file ()
+ --input <name>   Name of input file(s) ()
+ --inpath <path>  Path for input file ()
+
+# Help:
+ --validate       Read input and test its validity, then quit (don't)
+ --verbose        Print extended output information (don't)
+ --debug          Print debug output at level 0 [debug<n> for level n=1-7] (-1)
+ --help           Print this and quit (don't)
+\end{Snippet}

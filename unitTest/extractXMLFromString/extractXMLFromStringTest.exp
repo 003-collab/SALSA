@@ -1,0 +1,209 @@
+A:()  B:(<TXNS>)  C:(true)
+
+A^:()
+
+A:()  B:(<TXNS>)  C:(false)
+
+A^:()
+
+A:()  B:(<Othertag>)  C:(true)
+
+A^:()
+
+A:()  B:(<Othertag>)  C:(false)
+
+A^:()
+
+A:(skiboop)  B:(<TXNS>)  C:(true)
+
+A^:(skiboop)
+
+A:(skiboop)  B:(<TXNS>)  C:(false)
+
+A^:(skiboop)
+
+A:(skiboop)  B:(<Othertag>)  C:(true)
+
+A^:(skiboop)
+
+A:(skiboop)  B:(<Othertag>)  C:(false)
+
+A^:(skiboop)
+
+A:(lorem ipsum <TXNS>text notes!</TXNS> lorem ipsum)  B:(<TXNS>)  C:(true)
+text notes!
+A^:(lorem ipsum  lorem ipsum)
+
+A:(lorem ipsum <TXNS>text notes!</TXNS> lorem ipsum)  B:(<TXNS>)  C:(false)
+text notes!
+A^:(lorem ipsum <TXNS>text notes!</TXNS> lorem ipsum)
+
+A:(lorem ipsum <TXNS>text notes!</TXNS> lorem ipsum)  B:(<Othertag>)  C:(true)
+
+A^:(lorem ipsum <TXNS>text notes!</TXNS> lorem ipsum)
+
+A:(lorem ipsum <TXNS>text notes!</TXNS> lorem ipsum)  B:(<Othertag>)  C:(false)
+
+A^:(lorem ipsum <TXNS>text notes!</TXNS> lorem ipsum)
+
+A:(<TXNS>the only text</TXNS>)  B:(<TXNS>)  C:(true)
+the only text
+A^:()
+
+A:(<TXNS>the only text</TXNS>)  B:(<TXNS>)  C:(false)
+the only text
+A^:(<TXNS>the only text</TXNS>)
+
+A:(<TXNS>the only text</TXNS>)  B:(<Othertag>)  C:(true)
+
+A^:(<TXNS>the only text</TXNS>)
+
+A:(<TXNS>the only text</TXNS>)  B:(<Othertag>)  C:(false)
+
+A^:(<TXNS>the only text</TXNS>)
+
+A:(<TXNS>text on right</TXNS>lorem ipsum)  B:(<TXNS>)  C:(true)
+text on right
+A^:(lorem ipsum)
+
+A:(<TXNS>text on right</TXNS>lorem ipsum)  B:(<TXNS>)  C:(false)
+text on right
+A^:(<TXNS>text on right</TXNS>lorem ipsum)
+
+A:(<TXNS>text on right</TXNS>lorem ipsum)  B:(<Othertag>)  C:(true)
+
+A^:(<TXNS>text on right</TXNS>lorem ipsum)
+
+A:(<TXNS>text on right</TXNS>lorem ipsum)  B:(<Othertag>)  C:(false)
+
+A^:(<TXNS>text on right</TXNS>lorem ipsum)
+
+A:(lorem ipsum<TXNS>text on left</TXNS>)  B:(<TXNS>)  C:(true)
+text on left
+A^:(lorem ipsum)
+
+A:(lorem ipsum<TXNS>text on left</TXNS>)  B:(<TXNS>)  C:(false)
+text on left
+A^:(lorem ipsum<TXNS>text on left</TXNS>)
+
+A:(lorem ipsum<TXNS>text on left</TXNS>)  B:(<Othertag>)  C:(true)
+
+A^:(lorem ipsum<TXNS>text on left</TXNS>)
+
+A:(lorem ipsum<TXNS>text on left</TXNS>)  B:(<Othertag>)  C:(false)
+
+A^:(lorem ipsum<TXNS>text on left</TXNS>)
+
+A:(lorem ipsum<TXNS>new
+line</TXNS>lorem ipsum)  B:(<TXNS>)  C:(true)
+new
+line
+A^:(lorem ipsumlorem ipsum)
+
+A:(lorem ipsum<TXNS>new
+line</TXNS>lorem ipsum)  B:(<TXNS>)  C:(false)
+new
+line
+A^:(lorem ipsum<TXNS>new
+line</TXNS>lorem ipsum)
+
+A:(lorem ipsum<TXNS>new
+line</TXNS>lorem ipsum)  B:(<Othertag>)  C:(true)
+
+A^:(lorem ipsum<TXNS>new
+line</TXNS>lorem ipsum)
+
+A:(lorem ipsum<TXNS>new
+line</TXNS>lorem ipsum)  B:(<Othertag>)  C:(false)
+
+A^:(lorem ipsum<TXNS>new
+line</TXNS>lorem ipsum)
+
+A:(lorem ipsum<Othertag>othertag</Othertag>
+lorem ipsum)  B:(<TXNS>)  C:(true)
+
+A^:(lorem ipsum<Othertag>othertag</Othertag>
+lorem ipsum)
+
+A:(lorem ipsum<Othertag>othertag</Othertag>
+lorem ipsum)  B:(<TXNS>)  C:(false)
+
+A^:(lorem ipsum<Othertag>othertag</Othertag>
+lorem ipsum)
+
+A:(lorem ipsum<Othertag>othertag</Othertag>
+lorem ipsum)  B:(<Othertag>)  C:(true)
+othertag
+A^:(lorem ipsum
+lorem ipsum)
+
+A:(lorem ipsum<Othertag>othertag</Othertag>
+lorem ipsum)  B:(<Othertag>)  C:(false)
+othertag
+A^:(lorem ipsum<Othertag>othertag</Othertag>
+lorem ipsum)
+
+A:(<>emptytags</>lorem ipsum)  B:(<TXNS>)  C:(true)
+
+A^:(<>emptytags</>lorem ipsum)
+
+A:(<>emptytags</>lorem ipsum)  B:(<TXNS>)  C:(false)
+
+A^:(<>emptytags</>lorem ipsum)
+
+A:(<>emptytags</>lorem ipsum)  B:(<Othertag>)  C:(true)
+
+A^:(<>emptytags</>lorem ipsum)
+
+A:(<>emptytags</>lorem ipsum)  B:(<Othertag>)  C:(false)
+
+A^:(<>emptytags</>lorem ipsum)
+
+A:(<OpenTag>hello)  B:(<TXNS>)  C:(true)
+
+A^:(<OpenTag>hello)
+
+A:(<OpenTag>hello)  B:(<TXNS>)  C:(false)
+
+A^:(<OpenTag>hello)
+
+A:(<OpenTag>hello)  B:(<Othertag>)  C:(true)
+
+A^:(<OpenTag>hello)
+
+A:(<OpenTag>hello)  B:(<Othertag>)  C:(false)
+
+A^:(<OpenTag>hello)
+
+A:(hello</CloseTag>)  B:(<TXNS>)  C:(true)
+
+A^:(hello</CloseTag>)
+
+A:(hello</CloseTag>)  B:(<TXNS>)  C:(false)
+
+A^:(hello</CloseTag>)
+
+A:(hello</CloseTag>)  B:(<Othertag>)  C:(true)
+
+A^:(hello</CloseTag>)
+
+A:(hello</CloseTag>)  B:(<Othertag>)  C:(false)
+
+A^:(hello</CloseTag>)
+
+A:(left <TXNS><TXNS>center</TXNS></TXNS> right)  B:(<TXNS>)  C:(true)
+<TXNS>center</TXNS>
+A^:(left  right)
+
+A:(left <TXNS><TXNS>center</TXNS></TXNS> right)  B:(<TXNS>)  C:(false)
+<TXNS>center</TXNS>
+A^:(left <TXNS><TXNS>center</TXNS></TXNS> right)
+
+A:(left <TXNS><TXNS>center</TXNS></TXNS> right)  B:(<Othertag>)  C:(true)
+
+A^:(left <TXNS><TXNS>center</TXNS></TXNS> right)
+
+A:(left <TXNS><TXNS>center</TXNS></TXNS> right)  B:(<Othertag>)  C:(false)
+
+A^:(left <TXNS><TXNS>center</TXNS></TXNS> right)
+

@@ -1,0 +1,14 @@
+Created by SALSA version 1.17.0 -- Backward compatible to 1.16.0
+#New project created 2024-02-15 09:00:47
+POSC from Fix 6378137.0000 0.0000 0.0000 m
+POSC to Flt 6378137.0000 10.0000 0.0000 m
+DIST from to 9.95000 1.00000 m
+DIST from to 10.01000 1.00000 m
+AZIM from to N 88.0000 5.0 soa
+AZIM from to N 92.0000 5.0 soa
+HDIF from to -0.10000 5.00000 m
+HDIF from to 0.06000 5.00000 m
+DXYZ from to -0.03000 10.02000 0.10000 m ...
+         1.730e+07          3.460e+04          0.000e+00 ...
+                            6.910e+05          0.000e+00 ...
+                                               4.040e-02

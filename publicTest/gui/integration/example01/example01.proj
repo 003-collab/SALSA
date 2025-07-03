@@ -1,0 +1,5 @@
+Created by SALSA version 1.12.0 -- Backward compatible to 1.1.0
+#New project created 2020-03-16 14:19:03
+--include ctrl_sites.lsa
+--include gpsMeasurements.lsa VSCA VALUE 2
+--include conventional.lsa

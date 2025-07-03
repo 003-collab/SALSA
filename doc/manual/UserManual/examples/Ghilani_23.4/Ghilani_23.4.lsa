@@ -1,0 +1,22 @@
+
+# Control:
+POSG A FIX 41 18 26.048500 N 76 0 10.248600 W 372.2210 M
+
+# A priori positions for our unknown points:
+--include aprioris.lsa
+
+# Azimuth; otherwise our network can rotate in the horizontal plane
+AZIM A B 13 56 26.9000 DMS 0.0010 SOA REDUCED
+
+# Distance measurements
+--include distances.lsa
+
+# Horizontal angles
+--include hangles.lsa
+
+# Zenith angles
+--include zangles.lsa
+
+#HDIF A C -9.359000000 0.005000000 M REDUCED
+
+--include options.lsa

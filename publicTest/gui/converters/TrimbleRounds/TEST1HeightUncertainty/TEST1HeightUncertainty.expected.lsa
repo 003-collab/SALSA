@@ -1,0 +1,16 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Trimble Rounds Converter converter from C:/Users/cawalker/projects/lsa/publicTestOutput/gui/converters/TrimbleRounds/TEST1HeightUncertainty/TEST1HeightUncertainty.jxl on 20:51:12 Aug 31, 2022
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_MD3 1.39226 m 0.01000 m
+# Raw height 1.262 m extracted from SXNotch method
+HGHT HGHT#1_MD2 1.46283 m 0.01000 m
+# Raw height 1.308 m extracted from BottomNotch method
+HGHT HGHT#1_8305 0.28600 m 0.01000 m
+# Raw height 0.286 m extracted from TrueHeight method
+
+--include TEST1HeightUncertainty_MD3.lsa
+--include TEST1HeightUncertainty_MD3.2.lsa

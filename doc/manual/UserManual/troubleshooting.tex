@@ -1,0 +1,74 @@
+\chapter{Troubleshooting}
+
+\section*{Bad Allocation}
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{badalloc_longmessage}
+\end{center}
+\caption{Error message for bad allocation.}
+\label{fig:badalloc}
+\end{figure}
+
+
+A failure to allocate enough memory occurs in cases where \textsf{lsasolver} is unable to load the measurement data into RAM for processing.
+This generally occurs when the project is large and the machine has limited physical RAM or if the machine has already allocated much of its available RAM for other tasks.
+In some cases, it is possible to circumvent a memory limitation by increasing the amount of virtual memory available.
+The amount of virtual memory needed will of course depend on the size of the least squares project.  In the developers' experience to date, projects with up to several thousand degrees of freedom usually run fine on typical desktop systems with a few GB of RAM, whereas projects with tens of thousands of degrees of freedom may require something on the order of 10 GB of additional virtual memory or more.  If 10 GB proves insufficient, additional virtual memory can be added so long as hard drive space permits.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=1\textwidth]{vramsettings}
+\end{center}
+\caption{Dialog windows for setting virtual memory}
+\label{fig:pagefilesettings}
+\end{figure}
+
+On Windows systems, the virtual memory is maintained in 
+what is known as a \emph{paging file}.  A user with administrative privileges on a Windows 10 machine should be able to adjust the virtual memory by performing the following actions:
+
+\begin{enumerate}
+    \item Open Control Panel
+    \item Go to \emph{System}
+    \item Click on \emph{Advanced system settings} on the left pane
+    \item Click on the \emph{Advanced} tab on the dialog
+    \item Click on the \emph{Settings} button in the \emph{Performance} section
+    \item Click on the \emph{Advanced} tab on the dialog
+    \item Click on the \emph{Change} button
+    \item Specify a custom size for the paging file
+    \item Click on \emph{OK} in all dialogs to save settings and close
+\end{enumerate}
+
+\section*{Included file not found}
+
+\begin{figure}[!htbp]
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{unsupportedFilepath}
+	\end{center}
+	\caption{Error message from a bad filepath}
+	\label{fig:badpath}
+\end{figure}
+
+A user may see a message (similar to figure H.3) indicating a failure to open/include a file due to one or more potential reasons. First, the file may not exist.  Open up a file explorer and navigate to the directory containing the file in question, to ensure it does indeed exist. Second, if that file does indeed exist, the failure may be due to the existence of special characters in the file path.  SALSA does not support special characters (e.g. £, é, ß) when opening files, and it is suggested that such files be renamed or moved to a directory containing ASCII only characters.
+
+\section*{Solver Outputs and Points Files}
+
+After calculating an adjustment for the first time, the user may have trouble viewing the .csv/.pts files via actions in the View menu. If the SALSA installation is on a Windows machine which has never had to open a .csv or .pts file, the OS may not have an executable associated with these file types. To resolve this, try to:
+\begin{enumerate}
+    \item Navigate to the project directory with the File Explorer
+    \item Right click on the .pts/.csv file
+    \item Select \emph{Open with...}
+    \item A Windows menu (see \ref{fig:file_assoc}) should appear. Choose Notepad
+\end{enumerate}
+
+Following the above steps, any subsequent action to view the .pts file or Solver Output through the View menu should automatically open the file by launching Notepad. Notepad comes installed with the Windows OS and should be sufficient. Note that .csv files are more commonly opened with applications such as Microsoft Excel, which can be chosen instead of Notepad if installed on the user's machine.
+
+\begin{figure}[!htbp]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{file_assoc}
+\end{center}
+\caption{Windows file association dialog}
+\label{fig:file_assoc}
+\end{figure}
+
+%\end{description}

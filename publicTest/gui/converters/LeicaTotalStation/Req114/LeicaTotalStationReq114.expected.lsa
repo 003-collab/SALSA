@@ -1,0 +1,16 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v5.00 converter from C:/Users/cawalker/projects/lsa/publicTestOutput/gui/converters/LeicaTotalStation/Req114/LeicaTotalStationReq114.log on 12:14:07 Aug 11, 2022
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_NOEDM [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_RED [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_TP04 1.52200 m 0.00000 m
+HGHT HGHT#1_TP05 1.60900 m 0.00000 m
+HGHT HGHT#1_TP06 1.52400 m 0.00000 m
+
+--include LeicaTotalStationReq114_TP04.lsa
+--include LeicaTotalStationReq114_TP05.lsa
+--include LeicaTotalStationReq114_TP06.lsa

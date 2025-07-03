@@ -1,0 +1,21 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Leica Total Station v2.04 converter from /home/rmilburn/projects/lsa/test/converters/LeicaTotalStation/204/LeicaTotalStation204.log on 11:09:27 Apr 01, 2019
+
+#TPS1100 Prog. Sets of Angles V 2.04
+#Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+#Program Start : 29/09/2011 at 09:00:34
+
+#TPS1100 Prog. Sets of Angles V 2.04
+#Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+#Program Start : 29/09/2011 at 09:00:34
+
+DGRP DGRP#3 BEN10 UNCR UNCR#1_HDIR
+HDIR DGRP#3 14 0 0 0.0 DMS 5.0 soa
+HDIR DGRP#3 16 107 25 36.0 DMS 5.0 soa
+HDIR DGRP#3 BEN08 115 31 27.0 DMS 5.0 soa
+HDIR DGRP#3 BEN09 116 49 9.0 DMS 5.0 soa
+
+ZANG BEN10 14 88 46 9.0 DMS 10.0 soa HFROM HGHT#1_BEN10 UNCR UNCR#1_ZANG
+ZANG BEN10 16 83 33 58.0 DMS 10.0 soa HFROM HGHT#1_BEN10 UNCR UNCR#1_ZANG
+ZANG BEN10 BEN08 90 2 44.0 DMS 10.0 soa HFROM HGHT#1_BEN10 UNCR UNCR#1_ZANG
+ZANG BEN10 BEN09 90 1 18.0 DMS 10.0 soa HFROM HGHT#1_BEN10 UNCR UNCR#1_ZANG

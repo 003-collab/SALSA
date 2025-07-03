@@ -1,0 +1,575 @@
+\chapter{LSA Record Reference}
+\label{chap:LsaRecordGuide}
+
+It should be clear to the reader at this point in this text that \textsf{salsa} organizes the least squares problem as a collection of what we've been calling ``records,'' that these records may be organized hierarchically, that they may be edited via the Record Editor, and that they are saved with the \textsf{salsa} project in a special \verb+.lsa+ format (which is detailed in Chapter \ref{chap:LsaFormat}).  However, we have not yet introduced all of the record types which may be used in \textsf{salsa}, nor have we fully explained all the fields presented by the Record Editor for each record type.  The goal of this chapter is to provide a complete reference that explains each \textsf{salsa} record type in detail.
+
+
+Each of the following sections adheres to a consistent pattern: we introduce each record type by its few-letter abbreviation and its one-line description, we explain the fields that are presented in the Record Editor for the record type, and then we close with additional explanation as warranted.  The order of the following sections mirrors the order that record types are shown in \textsf{salsa}'s Record $\to$ Insert menu.
+
+
+%-----------------------------------------------
+% INCLUDE
+%-----------------------------------------------
+\newpage
+\section{INCLUDE - Additional .lsa file}
+
+A special record used to include additional \verb+.lsa+ files in the project.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Enabled:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[File:] Relative path to the file to include\textsuperscript{1,2}
+\item[Scaling:] Variance scaling to apply to all measurements in the included file\textsuperscript{3}
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item ``Including'' an \verb+.lsa+ file in a \textsf{salsa} project does not affect the file's location.  \textsf{salsa} will read from \emph{and write to} the file wherever it may be located.  Thus, to eliminate the possibility of making unintended changes to files outside of the current \textsf{salsa} project folder, we recommend copying these input files into the \textsf{salsa} project folder and them including them from there.
+\item Included files located in the project directory or a child of the project directory are stored with a relative path from the parent file to the included file.  Files located outside of the project directory are stored with an absolute path.
+\item Keep in mind the fact that variance scaling in \textsf{salsa} is cumulative, so the effective variance scaling for any record is the product of that individual record's scaling factor times its parent's scaling factor times that parent's scaling factor, etc. 
+\end{enumerate}
+
+
+%-----------------------------------------------
+% COMMENT
+%-----------------------------------------------
+\hrulefill
+\section{COMMENT - a comment}
+
+A comment.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Comment:}]
+\item[Comment:] Text of the comment
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Comments have no impact on the adjustment; they are supported to help users build a well-organized and well-documented LSA project.
+\item A separator bar (also available in the Record $\to$ Insert menu) is just a comment containing a bunch of `--' characters.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% POSG
+%-----------------------------------------------
+\newpage
+\section{POSG - Station Position (Geodetic)}
+
+An initial position estimate for a point, using Geodetic coordinates\textsuperscript{1}.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Covariance3:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[Label:] Unique string used to describe this point. 
+\item[Latitude, Longitude:] Geodetic latitude and longitude of the point.  These angles may be expressed in either degrees, minutes, and seconds of arc (DMS) or as decimal degrees by selecting the corresponding radio button.  Latitudes may be expressed as positive-North or positive South using the N/S selector, and likewise longitudes may be expressed as positive East or West using the E/W selector.
+\item[Height:] Height of the point, recorded as either `Ellipsoidal' or `Orthometric'. If the right-most dropdown box is set to `Ellipsoidal', then height is relative to the WGS 84 ellipsoid. If set to `Orthometric', then the height is relative to the geoid defined by the geoid file used in the project.
+\item[Type\textsuperscript{2}:] Type(s) of constraints applied to this point \\
+  \textbf{Floating:} free to adjust \\
+  \textbf{Constrained:} constrained by a covariance matrix \\
+  \textbf{Fixed:} Lat, Lon and ElHt are all fixed, point will not be adjusted
+\item[Covariance\textsuperscript{3}:] Upper triangular covariance matrix elements
+\item[Lat Fixed:] Latitude of the point is fixed and will not be adjusted
+\item[Lon Fixed:] Longitude of the point is fixed and will not be adjusted
+\item[ElHt Fixed:] Ellipsoid height of the point is fixed and will not be adjusted
+\item[Scaling:] Apply a scale factor to multiply the covariance 
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Note that all internal computations in \textsf{salsa} are executed in an ECEF Cartesian (XYZ) frame; \textsf{salsa} uses the WGS 84 ellipsoid parameters to compute the Cartesian coordinates for POSG records.
+
+\item The `Type' options for POSG (and POSC) records warrant some elaboration.  `Floating' means that the point is entirely free to move in the adjustment, barring any `fixed' components discussed momentarily; any covariance matrix content is ignored.  Most points in a typical survey will be Floating.  `Constrained' means that the point is an absolute ECEF coordinate estimate, complete with a covariance matrix characterizing the uncertainty in that estimate.  Constrained points will move as part of the least squares adjustment just like any other measurement.  `Fixed' means the point's coordinates are taken as known, and they are not allowed to move in the adjustment.  In terms of least squares theory, a fixed point's coordinates are not even included in the state vector which is the subject of the estimation.  `Lat/Lon/ElHt Fixed' technically does not `fix' the point's coordinates but imposes a constraint equation that prohibits movement in the specified direction(s).  The word `fixed' is used in the GUI with some reservation by the authors, but it is concise.
+
+\item Units of the covariance matrix elements are assumed to match the linear units specifying the ellipsoid height.  For example, if the ellipsoid height is expressed in meters, the covariance elements will be interpreted as $\mathrm{m}^2$.  Note that the covariance elements for a POSG record are expressed in a local north/east/up frame as indicated by the matrix element labels.
+
+\end{enumerate}
+
+
+%-----------------------------------------------
+% POSC
+%-----------------------------------------------
+\newpage
+\section{POSC - Station Position (Cartesian)}
+An initial position estimate for a point, using ECEF XYZ coordinates.
+\subsection*{Record Editor Fields}
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Covariance2:}]
+\item[Enabled:] When checked, the record will be used to calculate the network adjustment
+\item[Label:] Unique string used to describe this point
+\item[X,Y,Z:] ECEF X, Y, and Z coordinate estimates for this point
+\item[Type\textsuperscript{1}:] Type(s) of constraints applied to this point \\
+  \textbf{Floating:} free to adjust \\
+  \textbf{Constrained:} constrained by a covariance matrix \\
+  \textbf{Fixed:} Lat, Lon and ElHt are all fixed, point will not be adjusted
+\item[Covariance\textsuperscript{2}:] Upper triangular covariance matrix elements
+\item[Lat Fixed:] Latitude of the point is fixed and will not be adjusted
+\item[Lon Fixed:] Longitude of the point is fixed and will not be adjusted
+\item[ElHt Fixed:] Ellipsoid height of the point is fixed and will not be adjusted
+\item[Scaling:] Apply a scale factor to multiply the covariance 
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item The `Type' options for POSC (and POSG) records warrant some elaboration.  `Floating' means that the point is entirely free to move in the adjustment, barring any `fixed' components discussed momentarily; any covariance matrix content is ignored.  Most points in a typical survey will be Floating.  `Constrained' means that the point is an absolute ECEF coordinate estimate, complete with a covariance matrix characterizing the uncertainty in that estimate.  Constrained points will move as part of the least squares adjustment just like any other measurement.  `Fixed' means the point's coordinates are taken as known, and they are not allowed to move in the adjustment.  In terms of least squares theory, a fixed point's coordinates are not even included in the state vector which is the subject of the estimation.  `Lat/Lon/ElHt Fixed' technically does not `fix' the point's coordinates but imposes a constraint equation that prohibits movement in the specified direction(s).  The word `fixed' is used in the GUI with some reservation by the authors, but it is concise.
+\item Units of the covariance matrix elements are assumed to match those linear units specifying the ECEF XYZ coordinates.  For example, if the ECEF XYZ position is expressed in meters, the covariance elements will be interpreted as $\mathrm{m}^2$.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% DIST
+%-----------------------------------------------
+\newpage
+\section{DIST - Distance measurement}
+
+A slant distance measurement between two points.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Height From1:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[From:] Label for the point where the measurement vector originates
+\item[To:] Label for the point where the measurement vector terminates
+\item[Distance:] Distance measured between the From and To points
+\item[Sigma:] Measurement uncertainty
+\item[Height From\textsuperscript{1}:] Height of the instrument at the From point
+\item[Height To:] Height of the target at the To point
+\item[Uncertainty:] Uncertainty model to apply to this measurement
+\item[Scaling:] Scaling to apply to this measurement's covariance
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item If a distance measurement has already been corrected to account for heights of instrument and target (i.e., ``reduced mark-to-mark''), the Height From/To should be set to zero in \textsf{salsa}.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% DXYZ
+%-----------------------------------------------
+\newpage
+\section{DXYZ - Delta XYZ measurement}
+
+An ECEF XYZ vector measurement between two points.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Height From2:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[From:] Label for the point where the measurement vector originates
+\item[To:] Label for the point where the measurement vector terminates
+\item[Delta X,Y,Z:] X,Y,Z components of the vector measurement
+\item[Covariance\textsuperscript{1}:] Covariance matrix for the measurement
+\item[Height From\textsuperscript{2}:] Height of the instrument at the From point
+\item[Height To:] Height of the instrument at the To point
+\item[Uncertainty:] Uncertainty model to apply to this measurement
+\item[Scaling:] Scaling to apply to this measurement's covariance
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Units of the covariance matrix elements are assumed to match those linear units specifying the XYZ vector components.  For example, if the vector measurement is expressed in meters, the covariance elements will be interpreted as $\mathrm{m}^2$.
+\item If a vector measurement has already been corrected to account for instrument heights (i.e., ``reduced mark-to-mark''), the Height From/To should be set to zero in \textsf{salsa}.  Typically, GNSS processing software does account for instrument heights (as well as antenna effects) when computing the vector estimate.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% HANG
+%-----------------------------------------------
+\newpage
+\section{HANG - Horizontal Angle Measurement}
+
+A horizontal angle measured between two points.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Height From:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[From:] Label for the point where the angle originates
+\item[At:] Label for the point where the instrument is located
+\item[To:] Label for the point where the angle terminates
+\item[Angle\textsuperscript{1}:] Angle measured between the From and To points
+\item[Sigma:] Measurement uncertainty
+\item[Height From:] Height of the instrument at the From point
+\item[Height To:] Height of the instrument at the To point
+\item[Uncertainty:] Uncertainty model to apply to this measurement
+\item[Scaling:] Scaling to apply to this measurement's covariance
+\item[Reduced:] When checked, indicates measurement has been reduced to the Ellipsoid
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item The sign convention for horizontal angles is positive-clockwise.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% AZIM
+%-----------------------------------------------
+\newpage
+\section{AZIM - Azimuth Measurement}
+
+A horizontal angle measured\textsuperscript{1} from the North\textsuperscript{2} vector.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Refract Coeff:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[From:] Label for the point at which the azimuth was observed
+\item[To:] Label for the point that was the target of the azimuth observation
+\item[Angle:] Angle from true North to the To point\textsuperscript{2}
+\item[Sigma:] Measurement uncertainty
+\item[Height From:] Height of the instrument at the From point
+\item[Height To:] Height of the target at the To point
+\item[Uncertainty:] Uncertainty model to apply to this measurement
+\item[Scaling:] Scaling to apply to this measurement's covariance
+\item[Reduced:] When checked, indicates measurement has been reduced to the Ellipsoid
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Azimuth `measurements' are not, in practice, observed directly.  Rather, they are the product of other measurements and reductions typically including astronomic observations.  These estimates may be introduced into \textsf{salsa} as an AZIM record.  The sign convention for azimuths is positive-clockwise.
+\item The default convention for Azimuth records is that they are expressed as angles clockwise from North; this record provides an option to instead specify the angle clockwise from South.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% VANG
+%-----------------------------------------------
+\newpage
+\section{VANG - Vertical Angle Measurement}
+
+An angle measurement of a point relative to the horizontal plane\textsuperscript{1}.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Refract Coeff:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[From:] Label for the point at which the measurement is taken
+\item[To:] Label for the point where the angle terminates
+\item[Angle:] Angle measured from the horizontal plane to the To point
+\item[Sigma:] Measurement uncertainty
+\item[Height From:] Height of the instrument at the From point
+\item[Height To:] Height of the target at the To point
+\item[Uncertainty:] Uncertainty model to apply to this measurement
+\item[Refract Coeff:] Coefficient used for refraction correction\textsuperscript{2}
+\item[Scaling:] Scaling to apply to this measurement's covariance
+\item[Reduced:] When checked, indicates measurement has been reduced to the \\Ellipsoid\textsuperscript{3}
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Vertical and Zenith angles are complementary; a VANG record with observed angle $\alpha$ is exactly equivalent to a ZANG record with observed angle $90 - \alpha$.
+\item Empirical studies of terrestrial refraction, $k$, show that the frequently-used Gaussian refraction coefficient of $k=0.13$ is not suitable for describing refraction effects in the lower atmosphere (where surveying observations are taken) and that $k$ can vary from -4 to +16 over the course of a day \cite{Hirt}.  \textsf{salsa} users are advised to leave the refraction correction disabled (equivalent to $k=0$) in the absence of comprehensive atmospheric data concurrent with their observations.
+\item Typically, VANG/ZANG observations are not reduced to the Ellipsoid; they are made relative to the local gravity field and are influenced by any deflection of the vertical (DOV) at the instrument location.  Unless the user specifies that the measurement has already been reduced to the Ellipsoid, \textsf{salsa} will apply DOV corrections to the observation.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% ZANG
+%-----------------------------------------------
+\newpage
+\section{ZANG - Zenith Angle Measurement}
+
+An angle measurement of a point relative to vertical\textsuperscript{1}.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Refract Coeff:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[From:] Label for the point at which the measurement is taken
+\item[To:] Label for the point where the angle terminates
+\item[Angle:] Angle measured from the vertical axis to the To point
+\item[Sigma:] Measurement uncertainty
+\item[Height From:] Height of the instrument at the From point
+\item[Height To:] Height of the target at the To point
+\item[Uncertainty:] Uncertainty model to apply to this measurement
+\item[Refract Coeff:] Coefficient used for refraction correction\textsuperscript{2}
+\item[Scaling:] Scaling to apply to this measurement's covariance
+\item[Reduced:] When checked, indicates measurement has been reduced to the \\Ellipsoid\textsuperscript{3}
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Vertical and Zenith angles are complementary; a VANG record with observed angle $\alpha$ is exactly equivalent to a ZANG record with observed angle $90 - \alpha$.
+\item Empirical studies of terrestrial refraction, $k$, show that the frequently-used Gaussian refraction coefficient of $k=0.13$ is not suitable for describing refraction effects in the lower atmosphere (where surveying observations are taken) and that $k$ can vary from -4 to +16 over the course of a day \cite{Hirt}.  \textsf{salsa} users are advised to leave the refraction correction disabled (equivalent to $k=0$) in the absence of comprehensive atmospheric data concurrent with their observations.
+\item Typically, VANG/ZANG observations are not reduced to the Ellipsoid; they are made relative to the local gravity field and are influenced by any deflection of the vertical (DOV) at the instrument location.  Unless the user specifies that the measurement has already been reduced to the Ellipsoid, \textsf{salsa} will apply DOV corrections to the observation.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% HDIF
+%-----------------------------------------------
+\newpage
+\section{HDIF - Height Difference Measurement}
+
+A measure of the difference between two heights.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Refract Coeff:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[From:] Label for the point from which the height difference is referenced
+\item[To:] Label for the point referenced by the height difference
+\item[Height Diff:] Measured height difference between the From and To points
+\item[Sigma:] Measurement uncertainty
+\item[Uncertainty:] Uncertainty model to apply to this measurement
+\item[Refract Coeff:] Coefficient used for refraction correction\textsuperscript{1}
+\item[Scaling:] Scaling to apply to this measurement's covariance
+\item[Reduced:] When checked, indicates measurement has been reduced to the \\Ellipsoid\textsuperscript{2}
+\item[Curvature:] When checked, indicates that the curvature correction will be applied
+\item[OHC:] When checked, indicates that the orthometric height correction will be applied
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Empirical studies of terrestrial refraction, $k$, show that the frequently-used Gaussian refraction coefficient of $k=0.13$ is not suitable for describing refraction effects in the lower atmosphere (where surveying observations are taken) and that $k$ can vary from -4 to +16 over the course of a day \cite{Hirt}.  \textsf{salsa} users are advised to leave the refraction correction disabled (equivalent to $k=0$) in the absence of comprehensive atmospheric data concurrent with their observations.
+\item Typically, leveling measurements have not been reduced to the Ellipsoid prior to importing them in \textsf{salsa}; they are therefore orthometric height differences, and \textsf{salsa} will apply gravity corrections to these observations.  If the observation has already been reduced outside of \textsf{salsa} (thus it represents an ellipsoid height difference), this box should be checked so that \textsf{salsa} does not apply gravity corrections.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% HDIR
+%-----------------------------------------------
+\newpage
+\section{HDIR - Horizontal Direction Measurement}
+
+A measurement that defines a direction to a point\textsuperscript{1}.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Height To:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[To Point:] Label for the point to which this direction is measured
+\item[Dir Group:] Label for the Direction Group this direction belongs to
+\item[Angle:] The measured direction angle
+\item[Sigma:] Measurement uncertainty
+\item[Height To:] Height of the target at the To point
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Unlike azimuth observations (AZIM) which are relative to true North, horizontal direction records (HDIR) in \textsf{salsa} are relative to an arbitrary azimuth defined by the instrument (typically a total station).  As such, HDIR records are only meaningful when expressed as a group; see the Direction Group (DGRP) record introduced next.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% DGRP
+%-----------------------------------------------
+\newpage
+\section{DGRP - Direction Group}
+
+A group that comprises a set of horizontal direction measurements.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Uncertainty:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[Label:] Unique string used to describe this direction group
+\item[At Point:] Label for the point at which directions in this group were measured
+\item[Uncertainty:] Uncertainty model to apply to these measurements
+\item[Scaling:] Scaling to apply to these measurements' covariance
+\item[Reduced:] When checked, indicates measurement has been reduced to the Ellipsoid
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Reference the HDIR record discussed on the previous page.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% HGHT
+%-----------------------------------------------
+\newpage
+\section{HGHT - Height of Instrument/Target}
+
+A record used to capture instrument and target heights.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Enabled:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[Label:] Unique label used to identify this height record
+\item[Height:] The height of the instrument or target for this correction
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Like other `modifier' records in \textsf{salsa}, the HGHT record exists so that other \textsf{salsa} records can reference it.
+The purpose of the HGHT record is to capture the numeric height of instrument or target for a particular setup; then all observations
+taken with that setup -- assuming they have not already been reduced mark-to-mark -- should reference a common HGHT record.  This `best practice' keeps \textsf{salsa} projects clear and maintainable.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% VSCA
+%-----------------------------------------------
+\newpage
+\section{VSCA - Variance Scaling}
+
+A record used to provide additional scaling to the variance (sigma$^2$ or covariance) of a measurement.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Enabled:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[Label:] Unique label used to identify this record
+\item[Scaling:] Variance scaling to apply to the measurement
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Note that individual measurement records, as well as INCLUDE records, can be scaled directly by entering a numeric value.  The purpose of the VSCA record, like other `modifiers' in \textsf{salsa}, is to allow a user to create a descriptively-named record that can be referenced by other records.  For example, in a large project containing many files a user might create a VSCA record named ``GPS'' and another named ``Conventional'' and then reference the appropriate VSCA record in each INCLUDE record in the project.  This `best practice' simplifies any subsequent tuning of the relative variances among GPS and conventional observations.
+\item A VSCA record is also the only way to scale the entire project; the top-level project record (which in all other ways is identical to an INCLUDE record) does not support numeric variance scaling but can reference a VSCA record.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% UNCR
+%-----------------------------------------------
+\newpage
+\section{UNCR - Uncertainty Model}
+
+An uncertainty model describing sigma, ppm, and centering errors\textsuperscript{1}.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries From Cent Err:}]
+\item[Enabled:] When checked, the record will be included in the network adjustment
+\item[Label:] Unique label used to identify this record
+\item[At Cent Err:] Centering error to apply at the At point
+\item[From Cent Err:] Centering error to apply at the From point
+\item[To Cent Err:] Centering error to apply at the To point
+\item[PPM:] Parts per million error to apply to the measurement
+\item[Sigma:] Additional measurement uncertainty to apply
+\end{description}
+
+\subsection*{Notes}
+\begin{enumerate}
+\item Not all components of an uncertainty model (UNCR record) are applicable to all measurement types.  For example, a DXYZ record is impacted by From and To centering errors, but there is no `At' station.  \textsf{salsa} will apply the applicable components of an UNCR model to records that reference it.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% MEAN
+%-----------------------------------------------
+\newpage
+\section{MEAN - Position Derived from Mean of Positions} \label{sect:MEAN}
+
+A MEAN record specifies a derived position that is calculated as the mean of a group of points after the adjustment is completed.  A MEAN record can be edited in the Project Navigator and Record Editor.  The derived position that the MEAN record specifies will appear in the Point Confidence Regions table in the Salsa gui.  It will also appear in the .csv, .pts, and .h5 output files.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Positions:}]
+\item[Enabled:] When checked, the derived point will be calculated
+\item[Label:] Label assigned to the derived point specified by the MEAN record
+\item[Positions:] List\textsuperscript{(a)} of POSG and POSC record used in the mean calculation
+\end{description}
+
+\subsection*{Derived Position Calculation Details}
+
+The mean derived point is computed as an unweighted mean position of two or more adjusted, fixed, or previously computed derived points.  The mean derived point is calculated after the adjustment is completed.  For example, consider a structure that is surveyed at four corners, as depicted in Figure \ref{Fig:mean4Structure}.  For the mean derived point to correspond to the center of the building, the four corner points must be employed in the unweighted mean computation.  The computed formal uncertainty on the mean point does not account for the possible error introduced by a failure to symmetrically survey the structure.  However, it is possible to add uncertainty $\sigma_{\text{extra}}$ to all components of the mean point (i.e. $\sigma_{\text{extra}}^2$ is added to all three diagonal components of the mean derived point covariance) if the user feels there is unmodeled error in the points used to compute to mean derived point. The mapping of the formal covariance from the included points to the mean derived point is discussed in Appendix ``\nameref{appendices:DerPtUncMapping}''.
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}
+\draw (2,-0.5) node{{\color{black}{\tiny{\textbf{The simple mean of the input positions}}}}};
+
+\draw (2,4.2) node{{\color{black}{\tiny{\textbf{Four-Sided Structure}}}}};
+\draw[straight,color=black,line width=0.5mm,solid] (0,0) -- (0,4);
+\draw[straight,color=black,line width=0.5mm,solid] (0,4) -- (4,4);
+\draw[straight,color=black,line width=0.5mm,solid] (4,4) -- (4,0);
+\draw[straight,color=black,line width=0.5mm,solid] (4,0) -- (0,0);
+
+
+\draw (0,0) node{{\color{red}{$\bullet$}}};
+\draw (0,-0.2) node{{\color{red}{\tiny{\textbf{Position1}}}}};
+\draw (0,4) node{{\color{red}{$\bullet$}}};
+\draw (0,4.2) node{{\color{red}{\tiny{\textbf{Position2}}}}};
+\draw (4,4) node{{\color{red}{$\bullet$}}};
+\draw (4,4.2) node{{\color{red}{\tiny{\textbf{Position3}}}}};
+\draw (4,0) node{{\color{red}{$\bullet$}}};
+\draw (4,-0.2) node{{\color{red}{\tiny{\textbf{Position4}}}}};
+
+\draw (2,2) node{{\color{olive}{$\bullet$}}};
+\draw (2,1.7) node{{\color{olive}{\tiny{\textbf{Unweighted mean of the positions}}}}};
+\end{tikzpicture}~~~
+\begin{tikzpicture}
+\draw (2,-0.5) node{{\color{black}{\tiny{\textbf{Failure to survey symmetrically introduces errors}}}}};
+
+\draw (2,4.2) node{{\color{black}{\tiny{\textbf{Four-Sided Structure}}}}};
+\draw[straight,color=black,line width=0.5mm,solid] (0,0) -- (0,4);
+\draw[straight,color=black,line width=0.5mm,solid] (0,4) -- (4,4);
+\draw[straight,color=black,line width=0.5mm,solid] (4,4) -- (4,0);
+\draw[straight,color=black,line width=0.5mm,solid] (4,0) -- (0,0);
+
+
+\draw (0,0) node{{\color{red}{$\bullet$}}};
+\draw (0,-0.2) node{{\color{red}{\tiny{\textbf{Position1}}}}};
+\draw (0,4) node{{\color{red}{$\bullet$}}};
+\draw (0,4.2) node{{\color{red}{\tiny{\textbf{Position2}}}}};
+\draw (4,4) node{{\color{red}{$\bullet$}}};
+\draw (4,4.2) node{{\color{red}{\tiny{\textbf{Position3}}}}};
+
+\draw (1.333,2.667) node{{\color{olive}{$\bullet$}}};
+\draw (2,2.367) node{{\color{olive}{\tiny{\textbf{Unweighted mean of the positions}}}}};
+\end{tikzpicture}~~~
+\begin{tikzpicture}
+\draw (2,-0.5) node{{\color{black}{\tiny{\textbf{The mean is unweighted}}}}};
+
+\draw (2,4.3) node{{\color{black}{\tiny{\textbf{Four-Sided Structure}}}}};
+\draw[straight,color=black,line width=0.5mm,solid] (0,0) -- (0,4);
+\draw[straight,color=black,line width=0.5mm,solid] (0,4) -- (4,4);
+\draw[straight,color=black,line width=0.5mm,solid] (4,4) -- (4,0);
+\draw[straight,color=black,line width=0.5mm,solid] (4,0) -- (0,0);
+
+
+\draw (0,0) node{{\color{red}{$\bullet$}}};
+\draw (0,-0.3) node{{\color{red}{\tiny{\textbf{Position1}}}}};
+\draw[straight,color=blue,line width=0.5mm,dashed] (0,0) circle (0.15);
+\draw (3,4) node{{\color{red}{$\bullet$}}};
+\draw (3,3.7) node{{\color{red}{\tiny{\textbf{Position2}}}}};
+\draw[straight,color=blue,line width=0.5mm,dashed] (3,4) circle (1 and 0.1);
+\draw (1.5,2) node{{\color{olive}{$\bullet$}}};
+\draw (2,1.7) node{{\color{olive}{\tiny{\textbf{Unweighted mean of the positions}}}}};
+\end{tikzpicture}
+\caption{The unweighted mean will acquire errors if the object of interest is not surveyed symmetrically.  In the left diagram, the four corners of a structure are surveyed and the mean corresponds to the center of the structure.  In the middle diagram, one of the corners of the structure cannot be accessed for survey, and therefore the mean does not correspond to the center of the structure.  In the right diagram, the unweighted mean is not impacted by the blue uncertainty ellipses.}
+\label{Fig:mean4Structure}
+\end{figure}
+
+\subsection*{Notes}
+\begin{enumerate}[label=(\alph*)]
+\item In the .lsa file, the list is a space separated list of position labels.  Any position labels containing a space are enclosed in double quotes.
+\end{enumerate}
+
+
+%-----------------------------------------------
+% ENUO
+%-----------------------------------------------
+\newpage
+\section{ENUO - Position Derived from ENU Offset from Position} \label{sect:ENUO}
+
+A ENUO record specifies a derived position that is calculated as an East-North-Up offset from an adjusted, fixed, or previously computed derived point.  The ENUO derived point is calculated after the adjustment is completed.  A ENUO record can be edited in the Project Navigator and Record Editor.  The derived position that the ENUO record specifies will appear in the Point Confidence Regions table in the Salsa gui.  It will also appear in the .csv, .pts, and .h5 output files.
+
+\subsection*{Record Editor Fields}
+
+\begin{description}[leftmargin=!,labelwidth=\widthof{\bfseries Positions:}]
+\item[Enabled:] When checked, the derived point will be calculated
+\item[From:] Label for the adjusted position that defines the origin of the ENU offset
+\item[To:] Label assigned to the derived point specified by the ENUO record
+\item[Delta E,N,U:] East, North, Up offsets
+\item[Sigma E,N,U:] East, North, Up offset uncertainties
+\end{description}
+
+\subsection*{Derived Position Calculation Details}
+
+To apply the provided ENU offset vector to the ``from'' point specified and thus obtain the derived point, the ENU offset vector is rotated from the ENU frame to the ECEF XYZ frame and then added to the ECEF XYZ ``from'' point position:
+\begin{equation}
+\left[\begin{array}{c}X_f\\Y_f\\Z_f\end{array}\right] = \left[\begin{array}{c}X_0\\Y_0\\Z_0\end{array}\right] + \left[\begin{array}{ccc}-\sin\lambda_0&-\cos\lambda_0\sin\phi_0&\cos\lambda_0\cos\phi_0\\\cos\lambda_0&-\sin\lambda_0\sin\phi_0&\sin\lambda_0\cos\phi_0\\0&\cos\phi_0&\sin\phi_0\end{array}\right] \left[\begin{array}{c}\Delta E\\\Delta N\\\Delta U\end{array}\right]
+\end{equation}
+where $\{X_0,Y_0,Z_0\}$ are the ECEF XYZ coordinates of the ``from'' position and $\{\phi_0,\lambda_0\}$ are the corresponding latitude and longitude values.  The mapping of the formal covariance for the ENUO derived point is discussed in Appendix ``\nameref{appendices:DerPtUncMapping}''.
+
+\newpage \ 

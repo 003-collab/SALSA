@@ -1,0 +1,21 @@
+Created by SALSA version 1.16.0 -- Backward compatible to 1.16.0
+
+#──────────────────────── Uncertainty Modifiers ─────────────────────────────────────────
+UNCR UNCR_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR_ZANG 3.0 soa [] [] 0.00100 0.00100 m
+UNCR UNCR_DIST_IR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR_DIST_RED 3.000 cm [] [] 0.00100 0.00100 m
+#──────────────────────── HGHT Modifiers ──────────────────────────────────────────────
+HGHT HGHT_TP1 1.61600 m 0.00000 m
+
+HGHT HGHT_TP2 1.57700 m 0.00000 m
+
+HGHT HGHT_TP3 1.61500 m 0.00000 m
+
+#──────────────────────── Direction Sets (TPs only) ─────────────────────────────────────────
+DGRP DGRP_1 TP1 UNCR UNCR_HDIR
+DGRP DGRP_2 TP2 UNCR UNCR_HDIR
+DGRP DGRP_3 TP3 UNCR UNCR_HDIR
+
+--include conventional_TP.lsa
+--include conventional_tgtPole.lsa

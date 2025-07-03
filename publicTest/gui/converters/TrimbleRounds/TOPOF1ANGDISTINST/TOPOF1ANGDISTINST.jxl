@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JOBFile jobName="TOPO F1 ANG-DIST" version="6.11" product="Trimble General Survey" productVersion="19.10" productDBVersion="1900-7" controllerSerialNumber="DAD193500329" TimeStamp="2020-05-07T11:51:31"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.trimble.com/schema/JobXML/6_1 http://www.trimble.com/schema/JobXML/6_1/JobXMLSchema-6.11.xsd">
+    <FieldBook>
+
+        <UnitsRecord ID="00000002" TimeStamp="2020-05-07T11:51:31">
+            <DistanceUnits>Metres</DistanceUnits>
+            <HeightUnits>Metres</HeightUnits>
+            <AngleUnits>DMSDegrees</AngleUnits>
+            <AzimuthFormat>Azimuth</AzimuthFormat>
+            <LatitudeLongitudeUnits>DMSDegrees</LatitudeLongitudeUnits>
+            <CoordinateOrder>North-East-Elevation</CoordinateOrder>
+            <TemperatureUnits>Celsius</TemperatureUnits>
+            <PressureUnits>MilliBar</PressureUnits>
+            <GradeUnits>Percentage</GradeUnits>
+            <AreaUnits>SquareMetres</AreaUnits>
+            <VolumeUnits>CubicMetres</VolumeUnits>
+            <StationingFormat>1+000.0</StationingFormat>
+            <StationIndexIncrement/>
+            <DistanceDisplayDPs>3</DistanceDisplayDPs>
+            <CoordinateDisplayDPs>3</CoordinateDisplayDPs>
+            <AreaDisplayDPs>3</AreaDisplayDPs>
+            <VolumeDisplayDPs>3</VolumeDisplayDPs>
+            <AngleDisplayDPs>0</AngleDisplayDPs>
+            <LaserVADisplay>Inclination</LaserVADisplay>
+            <TimeFormat>Local</TimeFormat>
+        </UnitsRecord>
+
+        <FeatureCodingRecord ID="00000003" TimeStamp="2020-05-07T11:51:31">
+            <LibraryName/>
+            <SourceFilename/>
+            <AttributeCheckSum>0</AttributeCheckSum>
+            <AttributesStored>false</AttributesStored>
+        </FeatureCodingRecord>
+
+        <CorrectionsRecord ID="00000004" TimeStamp="2020-05-07T11:51:31">
+            <SouthAzimuth>false</SouthAzimuth>
+            <GridOrientation>IncreasingNorthEast</GridOrientation>
+            <MagneticDeclination>0</MagneticDeclination>
+            <Distances>GroundDistance</Distances>
+            <ApplySeaLevelCorrection>false</ApplySeaLevelCorrection>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+        </CorrectionsRecord>
+
+        <EllipsoidRecord ID="00000006" TimeStamp="2020-05-07T11:51:31">
+            <EarthRadius/>
+            <Flattening/>
+        </EllipsoidRecord>
+
+        <ProjectionRecord ID="00000007" TimeStamp="2020-05-07T11:51:31">
+            <Projection>
+                <Type>ScaleOnly</Type>
+                <Scale>1</Scale>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight/>
+            </LocalSite>
+        </ProjectionRecord>
+
+        <DatumRecord ID="00000008" TimeStamp="2020-05-07T11:51:31">
+            <Type>NoDatum</Type>
+        </DatumRecord>
+
+        <HorizontalAdjustmentRecord ID="00000009" TimeStamp="2020-05-07T11:51:31">
+            <Type>NoAdjustment</Type>
+        </HorizontalAdjustmentRecord>
+
+        <VerticalAdjustmentRecord ID="0000000a" TimeStamp="2020-05-07T11:51:31">
+            <Type>NoAdjustment</Type>
+        </VerticalAdjustmentRecord>
+
+        <CoordinateSystemRecord ID="0000000b" TimeStamp="2020-05-07T11:51:31">
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+        </CoordinateSystemRecord>
+
+        <JobPropertiesRecord ID="0000000c" TimeStamp="2020-05-07T11:51:31">
+            <Reference/>
+            <Description/>
+            <Operator/>
+            <JobNote/>
+            <TectonicPlate>Unknown</TectonicPlate>
+            <ApplyJobPointNameRange>false</ApplyJobPointNameRange>
+            <MinimumJobPointName/>
+            <MaximumJobPointName/>
+        </JobPropertiesRecord>
+
+        <LinkedFilesRecord ID="0000000e" TimeStamp="2020-05-07T11:51:31"/>
+
+        <ActiveMapFilesRecord ID="0000000f" TimeStamp="2020-05-07T11:51:31"/>
+
+        <CorrectionsRecord ID="00000010" TimeStamp="2020-05-07T11:51:31">
+            <SouthAzimuth>false</SouthAzimuth>
+            <GridOrientation>IncreasingNorthEast</GridOrientation>
+            <MagneticDeclination>0</MagneticDeclination>
+            <Distances>GroundDistance</Distances>
+            <ApplySeaLevelCorrection>true</ApplySeaLevelCorrection>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+        </CorrectionsRecord>
+
+        <EllipsoidRecord ID="00000011" TimeStamp="2020-05-07T11:51:31">
+            <EarthRadius>6378137</EarthRadius>
+            <Flattening>0.00335281067183</Flattening>
+        </EllipsoidRecord>
+
+        <ProjectionRecord ID="00000012" TimeStamp="2020-05-07T11:51:31">
+            <Projection>
+                <Type>NoProjection</Type>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight>100</ProjectLocationHeight>
+            </LocalSite>
+        </ProjectionRecord>
+
+        <CoordinateSystemRecord ID="00000013" TimeStamp="2020-05-07T11:51:31">
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+        </CoordinateSystemRecord>
+
+        <CorrectionsRecord ID="00000027" TimeStamp="2020-05-07T11:51:57">
+            <SouthAzimuth>false</SouthAzimuth>
+            <GridOrientation>IncreasingNorthEast</GridOrientation>
+            <MagneticDeclination>0</MagneticDeclination>
+            <Distances>GroundDistance</Distances>
+            <ApplySeaLevelCorrection>false</ApplySeaLevelCorrection>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+        </CorrectionsRecord>
+
+        <EllipsoidRecord ID="00000028" TimeStamp="2020-05-07T11:51:57">
+            <EarthRadius/>
+            <Flattening/>
+        </EllipsoidRecord>
+
+        <ProjectionRecord ID="00000029" TimeStamp="2020-05-07T11:51:57">
+            <Projection>
+                <Type>ScaleOnly</Type>
+                <Scale>1</Scale>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight/>
+            </LocalSite>
+        </ProjectionRecord>
+
+        <CoordinateSystemRecord ID="0000002a" TimeStamp="2020-05-07T11:51:57">
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+        </CoordinateSystemRecord>
+
+        <FeatureCodingRecord ID="0000002b" TimeStamp="2020-05-07T11:52:12">
+            <LibraryName>NGAv2</LibraryName>
+            <SourceFilename>NGAv2.fxl</SourceFilename>
+            <AttributeCheckSum>0</AttributeCheckSum>
+            <AttributesStored>true</AttributesStored>
+        </FeatureCodingRecord>
+
+        <TimeZoneRecord ID="0000002c" TimeStamp="2020-05-07T11:52:16">
+            <ZoneName>Pacific Daylight Time</ZoneName>
+            <HoursToUTC>7</HoursToUTC>
+        </TimeZoneRecord>
+
+        <InstrumentTiltCompensatorStatusRecord ID="0000002d" TimeStamp="2020-05-07T11:52:16">
+            <Enabled>true</Enabled>
+        </InstrumentTiltCompensatorStatusRecord>
+
+        <InstrumentRecord ID="0000002f" TimeStamp="2020-05-07T11:52:22">
+            <Type>TrimbleVXandSSeries</Type>
+            <RefractiveIndex>273.64570458809</RefractiveIndex>
+            <CarrierWavelength>79.170232716506</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>2</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>5</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00027777777778</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00027777777778</VerticalAnglePrecision>
+            <EDMPrecision>0.002</EDMPrecision>
+            <EDMppm>2</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>S7 1 DR Plus</Model>
+            <Serial>37230215</Serial>
+            <FirmwareVersion>H2.6.12</FirmwareVersion>
+            <UserDefinedName>37230215</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient>293.682</AtmosphericCorrectionCoefficient>
+        </InstrumentRecord>
+
+        <PointRecord ID="00000036" TimeStamp="2020-05-07T11:53:33">
+            <Name>02</Name>
+            <Code>CP</Code>
+            <Method>Coordinates</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <Features>
+                <Feature Name="CP">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>NA</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>GRASS</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>1.5</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>VERT +NOTCH</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Grid>
+                <North>2000</North>
+                <East>2000</East>
+                <Elevation>100</Elevation>
+            </Grid>
+        </PointRecord>
+
+        <AtmosphereRecord ID="0000003a" TimeStamp="2020-05-07T11:54:53">
+            <Pressure>1011</Pressure>
+            <Temperature>27</Temperature>
+            <PPM>6.9753555080087</PPM>
+            <ApplyEarthCurvatureCorrection>true</ApplyEarthCurvatureCorrection>
+            <ApplyRefractionCorrection>true</ApplyRefractionCorrection>
+            <RefractionCoefficient>0.142</RefractionCoefficient>
+            <PressureInputMethod>KeyedIn</PressureInputMethod>
+            <ApplyPPMToRawDistances>true</ApplyPPMToRawDistances>
+        </AtmosphereRecord>
+
+        <StationRecord ID="0000003b" TimeStamp="2020-05-07T11:54:53">
+            <StationName>02</StationName>
+            <TheodoliteHeight>1.5</TheodoliteHeight>
+            <RawTheodoliteHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>1.5</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTheodoliteHeight>
+            <InstrumentID>0000002f</InstrumentID>
+            <AtmosphereID>0000003a</AtmosphereID>
+            <NumberOfBacksightMeasurements>1</NumberOfBacksightMeasurements>
+            <NumberOfBacksightPoints>1</NumberOfBacksightPoints>
+            <ScaleFactor>1</ScaleFactor>
+            <ScaleType>Fixed</ScaleType>
+            <ScaleFactorStandardError/>
+            <StationType>StationSetup</StationType>
+        </StationRecord>
+
+        <PointRecord ID="0000003c" TimeStamp="2020-05-07T11:54:53">
+            <Name>A</Name>
+            <Code>CP</Code>
+            <Method>AzimuthOnly</Method>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <Features>
+                <Feature Name="CP">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>WEST</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>BRICK CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+            <SourcePoint>02</SourcePoint>
+            <Azimuth>270</Azimuth>
+            <AzimuthType>Grid</AzimuthType>
+        </PointRecord>
+
+        <BackBearingRecord ID="0000003f" TimeStamp="2020-05-07T11:54:53">
+            <StationRecordID>0000003b</StationRecordID>
+            <Station>02</Station>
+            <BackSight>A</BackSight>
+            <Face1HorizontalCircle>270</Face1HorizontalCircle>
+            <Face2HorizontalCircle/>
+            <OrientationCorrection>0</OrientationCorrection>
+            <OrientationCorrectionStandardError/>
+        </BackBearingRecord>
+
+        <TargetRecord ID="00000040" TimeStamp="2020-05-07T11:54:53">
+            <PrismType>DRTarget</PrismType>
+            <PrismConstant>0</PrismConstant>
+            <TargetHeight>0</TargetHeight>
+            <RawTargetHeight>
+                <MeasurementMethod>TrueHeight</MeasurementMethod>
+                <MeasuredHeight>0</MeasuredHeight>
+                <HorizontalOffset>0</HorizontalOffset>
+                <VerticalOffset>0</VerticalOffset>
+            </RawTargetHeight>
+        </TargetRecord>
+
+        <PointRecord ID="00000041" TimeStamp="2020-05-07T11:54:53">
+            <Name>A</Name>
+            <Code>CP</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Deleted>false</Deleted>
+            <Features>
+                <Feature Name="CP">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>WEST</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>BRICK CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Circle>
+                <HorizontalCircle>270</HorizontalCircle>
+                <VerticalCircle>95.5845576</VerticalCircle>
+                <EDMDistance>11.29315</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.0020225863</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>0000003b</StationID>
+            <BackBearingID>0000003f</BackBearingID>
+            <TargetID>00000040</TargetID>
+            <Pressure>1011</Pressure>
+            <Temperature>27</Temperature>
+
+            <ComputedGrid>
+                <North>2000</North>
+                <East>1988.7603718447</East>
+                <Elevation>100.40101179871</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <PointRecord ID="00000045" TimeStamp="2020-05-07T11:55:25">
+            <Name>D</Name>
+            <Code>OBS</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <Features>
+                <Feature Name="OBS">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>WEST</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>BRICK CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Height Above Ground</Name>
+                        <Value>NA</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Circle>
+                <HorizontalCircle>270</HorizontalCircle>
+                <VerticalCircle>95.5845576</VerticalCircle>
+                <EDMDistance>11.294</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.002022588</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>0000003b</StationID>
+            <BackBearingID>0000003f</BackBearingID>
+            <TargetID>00000040</TargetID>
+            <Pressure>1011</Pressure>
+            <Temperature>27</Temperature>
+
+            <ComputedGrid>
+                <North>2000</North>
+                <East>1988.7595258731</East>
+                <Elevation>100.40092908196</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <CameraRecord ID="00000049" TimeStamp="2020-05-07T11:55:47">
+            <X0>0.00008125741009</X0>
+            <Y0>0.00007635878419</Y0>
+            <CK>-0.02314255677776</CK>
+            <Kappa>-0.52459105168067</Kappa>
+            <Phi>0.05117363364967</Phi>
+            <Omega>-0.04567420795619</Omega>
+            <S0>0.08060476390017</S0>
+            <C0>0.03901581520492</C0>
+            <Z0>26.430933156053</Z0>
+            <I>0</I>
+            <K1>153</K1>
+            <P1>0</P1>
+            <P2>0</P2>
+            <PixelSizeX>0.0000032</PixelSizeX>
+            <PixelSizeY>0.0000032</PixelSizeY>
+            <PixelCountX>2048</PixelCountX>
+            <PixelCountY>1536</PixelCountY>
+        </CameraRecord>
+
+        <ImageRecord ID="0000004a" TimeStamp="2020-05-07T11:55:47">
+            <StationID>0000003b</StationID>
+            <BackBearingID>0000003f</BackBearingID>
+            <CameraID>00000049</CameraID>
+            <PointRecordID>00000045</PointRecordID>
+            <PanoramaID/>
+            <FileName>TOPO F1 ANG-DIST Files\Original Files\D_Original.JPG</FileName>
+            <FileNameModified>TOPO F1 ANG-DIST Files\D.JPG</FileNameModified>
+            <HorizontalAngle>269.9999748</HorizontalAngle>
+            <VerticalAngle>95.584599</VerticalAngle>
+            <Width>1024</Width>
+            <Height>768</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2048</SourceWidth>
+            <SourceHeight>1536</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+        </ImageRecord>
+
+        <PointRecord ID="0000004b" TimeStamp="2020-05-07T11:57:24">
+            <Name>E</Name>
+            <Code>OBS</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <Features>
+                <Feature Name="OBS">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>NW</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>SE TOP BRICK CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Height Above Ground</Name>
+                        <Value>NA</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Circle>
+                <HorizontalCircle>289.4466573</HorizontalCircle>
+                <VerticalCircle>88.8914331</VerticalCircle>
+                <EDMDistance>15.07601</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00203015202</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>0000003b</StationID>
+            <BackBearingID>0000003f</BackBearingID>
+            <TargetID>00000040</TargetID>
+            <Pressure>1011</Pressure>
+            <Temperature>27</Temperature>
+
+            <ComputedGrid>
+                <North>2005.0183380494</North>
+                <East>1985.7866102781</East>
+                <Elevation>101.79169190855</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <ImageRecord ID="0000004f" TimeStamp="2020-05-07T11:58:02">
+            <StationID>0000003b</StationID>
+            <BackBearingID>0000003f</BackBearingID>
+            <CameraID>00000049</CameraID>
+            <PointRecordID>0000004b</PointRecordID>
+            <PanoramaID/>
+            <FileName>TOPO F1 ANG-DIST Files\Original Files\E_Original.JPG</FileName>
+            <FileNameModified>TOPO F1 ANG-DIST Files\E.JPG</FileNameModified>
+            <HorizontalAngle>289.4465961</HorizontalAngle>
+            <VerticalAngle>88.8915249</VerticalAngle>
+            <Width>1024</Width>
+            <Height>768</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2048</SourceWidth>
+            <SourceHeight>1536</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+        </ImageRecord>
+
+        <PointRecord ID="00000050" TimeStamp="2020-05-07T11:58:29">
+            <Name>F</Name>
+            <Code>OBS</Code>
+            <Method>DirectReading</Method>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Deleted>false</Deleted>
+            <Features>
+                <Feature Name="OBS">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>NW</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>TOP SOUTH POLE</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Height Above Ground</Name>
+                        <Value>NA</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>TOP</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Circle>
+                <HorizontalCircle>301.9958955</HorizontalCircle>
+                <VerticalCircle>83.0584413</VerticalCircle>
+                <EDMDistance>11.05603</EDMDistance>
+                <Face>Face1</Face>
+                <HorizontalCircleStandardError>0.00027777777778</HorizontalCircleStandardError>
+                <VerticalCircleStandardError>0.00027777777778</VerticalCircleStandardError>
+                <EDMDistanceStandardError>0.00202211206</EDMDistanceStandardError>
+                <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            </Circle>
+            <StationID>0000003b</StationID>
+            <BackBearingID>0000003f</BackBearingID>
+            <TargetID>00000040</TargetID>
+            <Pressure>1011</Pressure>
+            <Temperature>27</Temperature>
+
+            <ComputedGrid>
+                <North>2005.8152311832</North>
+                <East>1990.6922010811</East>
+                <Elevation>102.83621488305</Elevation>
+            </ComputedGrid>
+        </PointRecord>
+
+        <ImageRecord ID="00000054" TimeStamp="2020-05-07T11:59:00">
+            <StationID>0000003b</StationID>
+            <BackBearingID>0000003f</BackBearingID>
+            <CameraID>00000049</CameraID>
+            <PointRecordID>00000050</PointRecordID>
+            <PanoramaID/>
+            <FileName>TOPO F1 ANG-DIST Files\Original Files\F_Original.JPG</FileName>
+            <FileNameModified>TOPO F1 ANG-DIST Files\F.JPG</FileNameModified>
+            <HorizontalAngle>301.9957974</HorizontalAngle>
+            <VerticalAngle>83.0584386</VerticalAngle>
+            <Width>1024</Width>
+            <Height>768</Height>
+            <SourceX>0</SourceX>
+            <SourceY>0</SourceY>
+            <SourceWidth>2048</SourceWidth>
+            <SourceHeight>1536</SourceHeight>
+            <ImageType>Normal</ImageType>
+            <Rotated180>false</Rotated180>
+        </ImageRecord>
+
+        <InstrumentRecord ID="00000056" TimeStamp="2020-05-07T11:59:59">
+            <Type>TrimbleVXandSSeries</Type>
+            <RefractiveIndex>273.64570458809</RefractiveIndex>
+            <CarrierWavelength>79.170232716506</CarrierWavelength>
+            <EDMMeasurementMode>Fine</EDMMeasurementMode>
+            <SetHorizontalCircleMode>SetToAzimuth</SetHorizontalCircleMode>
+            <Servo>HorizontalAndVerticalAngle</Servo>
+            <AnglesOnlyRate>2</AnglesOnlyRate>
+            <TurnToZero>false</TurnToZero>
+            <AverageMeasurements>5</AverageMeasurements>
+            <HorizontalAnglePrecision>0.00027777777778</HorizontalAnglePrecision>
+            <VerticalAnglePrecision>0.00027777777778</VerticalAnglePrecision>
+            <EDMPrecision>0.002</EDMPrecision>
+            <EDMppm>2</EDMppm>
+            <InstrumentPrecisionsSource>FromInstrument</InstrumentPrecisionsSource>
+            <CenteringError>0</CenteringError>
+            <BacksightCenteringError>0.003</BacksightCenteringError>
+            <Model>S7 1 DR Plus</Model>
+            <Serial>37230215</Serial>
+            <FirmwareVersion>H2.6.12</FirmwareVersion>
+            <UserDefinedName>37230215</UserDefinedName>
+            <InstrumentAppliedHorizontalCollimation>0</InstrumentAppliedHorizontalCollimation>
+            <InstrumentAppliedVerticalCollimation>0</InstrumentAppliedVerticalCollimation>
+            <TrunionAxisTiltCorrection>0</TrunionAxisTiltCorrection>
+            <InstrumentAppliedAutolockHorizontalCollimation>0</InstrumentAppliedAutolockHorizontalCollimation>
+            <InstrumentAppliedAutolockVerticalCollimation>0</InstrumentAppliedAutolockVerticalCollimation>
+            <InstrumentAppliedEDMConstant>0</InstrumentAppliedEDMConstant>
+            <AtmosphericCorrectionCoefficient>293.682</AtmosphericCorrectionCoefficient>
+        </InstrumentRecord>
+    </FieldBook>
+
+    <Reductions>
+
+        <Point>
+            <ID>00000036</ID>
+            <Name>02</Name>
+            <Code>CP</Code>
+            <SurveyMethod>KeyedIn</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Features>
+                <Feature Name="CP">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>NA</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>GRASS</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>1.5</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>VERT +NOTCH</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Grid>
+                <North>2000</North>
+                <East>2000</East>
+                <Elevation>100</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000041</ID>
+            <Name>A</Name>
+            <Code>CP</Code>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>BackSight</Classification>
+            <Features>
+                <Feature Name="CP">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>WEST</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>BRICK CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Grid>
+                <North>2000</North>
+                <East>1988.7603718447</East>
+                <Elevation>100.40101179871</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000045</ID>
+            <Name>D</Name>
+            <Code>OBS</Code>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Features>
+                <Feature Name="OBS">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>WEST</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>BRICK CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Height Above Ground</Name>
+                        <Value>NA</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Grid>
+                <North>2000</North>
+                <East>1988.7595258731</East>
+                <Elevation>100.40092908196</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>0000004b</ID>
+            <Name>E</Name>
+            <Code>OBS</Code>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Features>
+                <Feature Name="OBS">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>NW</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>SE TOP BRICK CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Height Above Ground</Name>
+                        <Value>NA</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>CORNER</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Grid>
+                <North>2005.0183380494</North>
+                <East>1985.7866102781</East>
+                <Elevation>101.79169190855</Elevation>
+            </Grid>
+        </Point>
+
+        <Point>
+            <ID>00000050</ID>
+            <Name>F</Name>
+            <Code>OBS</Code>
+            <SurveyMethod>Fix</SurveyMethod>
+            <Classification>Normal</Classification>
+            <Features>
+                <Feature Name="OBS">
+                    <Attribute>
+                        <Name>Photo</Name>
+                        <Value/>
+                        <Type>Photo</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Look Direction</Name>
+                        <Value>NW</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Field Notes</Name>
+                        <Value>TOP SOUTH POLE</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>Height Above Ground</Name>
+                        <Value>NA</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (meters)</Name>
+                        <Value>0.0</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI (feet)</Name>
+                        <Value/>
+                        <Type>Text</Type>
+                    </Attribute>
+                    <Attribute>
+                        <Name>HI Measured To</Name>
+                        <Value>TOP</Value>
+                        <Type>Text</Type>
+                    </Attribute>
+                </Feature>
+            </Features>
+
+            <Grid>
+                <North>2005.8152311832</North>
+                <East>1990.6922010811</East>
+                <Elevation>102.83621488305</Elevation>
+            </Grid>
+        </Point>
+    </Reductions>
+
+    <Environment>
+
+        <DisplaySettings>
+            <DistanceUnits>Metres</DistanceUnits>
+            <HeightUnits>Metres</HeightUnits>
+            <AngleUnits>DMSDegrees</AngleUnits>
+            <AzimuthFormat>Azimuth</AzimuthFormat>
+            <LatitudeLongitudeUnits>DMSDegrees</LatitudeLongitudeUnits>
+            <CoordinateOrder>North-East-Elevation</CoordinateOrder>
+            <TemperatureUnits>Celsius</TemperatureUnits>
+            <PressureUnits>MilliBar</PressureUnits>
+            <GradeUnits>Percentage</GradeUnits>
+            <AreaUnits>SquareMetres</AreaUnits>
+            <VolumeUnits>CubicMetres</VolumeUnits>
+            <StationingFormat>1+000.0</StationingFormat>
+            <StationIndexIncrement/>
+            <DistanceDisplayDPs>3</DistanceDisplayDPs>
+            <CoordinateDisplayDPs>3</CoordinateDisplayDPs>
+            <AreaDisplayDPs>3</AreaDisplayDPs>
+            <VolumeDisplayDPs>3</VolumeDisplayDPs>
+            <AngleDisplayDPs>0</AngleDisplayDPs>
+            <LaserVADisplay>Inclination</LaserVADisplay>
+            <TimeFormat>Local</TimeFormat>
+        </DisplaySettings>
+
+        <CoordinateSystem>
+            <SystemName/>
+            <ZoneName/>
+            <DatumName/>
+            <Ellipsoid>
+                <EarthRadius/>
+                <Flattening/>
+            </Ellipsoid>
+            <Projection>
+                <Type>ScaleOnly</Type>
+                <Scale>1</Scale>
+                <SouthAzimuth>false</SouthAzimuth>
+                <GridOrientation>IncreasingNorthEast</GridOrientation>
+                <ApplySeaLevelCorrection>false</ApplySeaLevelCorrection>
+                <MagneticDeclination>0</MagneticDeclination>
+                <Distances>GroundDistance</Distances>
+            </Projection>
+            <LocalSite>
+                <Type>Grid</Type>
+                <ProjectLocationLatitude/>
+                <ProjectLocationLongitude/>
+                <ProjectLocationHeight/>
+            </LocalSite>
+            <Datum>
+                <Type>NoDatum</Type>
+            </Datum>
+            <HorizontalAdjustment>
+                <Type>NoAdjustment</Type>
+            </HorizontalAdjustment>
+            <VerticalAdjustment>
+                <Type>NoAdjustment</Type>
+            </VerticalAdjustment>
+            <CombinedScaleFactor>
+                <Location>
+                    <Latitude/>
+                    <Longitude/>
+                    <Height/>
+                </Location>
+                <Scale>1</Scale>
+            </CombinedScaleFactor>
+            <TectonicPlate>
+                <Name>Unknown</Name>
+            </TectonicPlate>
+        </CoordinateSystem>
+
+        <JobProperties>
+            <Reference/>
+            <Description/>
+            <Operator/>
+            <JobNote/>
+            <TectonicPlate>Unknown</TectonicPlate>
+            <ApplyJobPointNameRange>false</ApplyJobPointNameRange>
+            <MinimumJobPointName/>
+            <MaximumJobPointName/>
+        </JobProperties>
+
+        <JobSettings>
+            <NeighbourhoodAdjustment>
+                <Applied>false</Applied>
+                <WeightExponent>0.5</WeightExponent>
+            </NeighbourhoodAdjustment>
+            <Averaging>Weighted</Averaging>
+            <UseAttributesOfBaseCode>true</UseAttributesOfBaseCode>
+        </JobSettings>
+
+        <AssociatedFiles>
+            <LinkedFiles/>
+            <ActiveMapFiles/>
+            <FeatureCodeLibrary>NGAv2.fxl</FeatureCodeLibrary>
+            <ExportedFiles/>
+            <DefinitionFiles/>
+        </AssociatedFiles>
+
+        <TimeZone>
+            <ZoneName>Pacific Daylight Time</ZoneName>
+            <HoursToUTC>7</HoursToUTC>
+        </TimeZone>
+    </Environment>
+</JOBFile>

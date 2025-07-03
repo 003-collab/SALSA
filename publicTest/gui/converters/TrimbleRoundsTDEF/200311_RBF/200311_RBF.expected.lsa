@@ -1,0 +1,18 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with TrimbleToLSA.py converter from 200311_RBF.asc on 13:49:54 May 29, 2020
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_DIST_IR [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_T6 1.38400 m 0.00000 m
+HGHT HGHT#1_TESTBS 2.00000 m 0.00000 m
+HGHT HGHT#1_T3 1.35800 m 0.00000 m
+HGHT HGHT#1_T6-D 1.38400 m 0.00000 m
+HGHT HGHT#1_T5 2.00000 m 0.00000 m
+HGHT HGHT#2_T6-D 1.53900 m 0.00000 m
+
+#--include 200311_RBF.pos.lsa
+--include 200311_RBF_T6.rnd.lsa
+--include 200311_RBF_T6-D.rnd.lsa
+--include 200311_RBF_T6-D.2.rnd.lsa

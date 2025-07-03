@@ -1,0 +1,616 @@
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 08:12:46
+
+Station Id    : BEN09
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.538m
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 08:12:46
+
+Station Id    : BEN09
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.538m
+
+Horizontal set results:
+2 Sets measured with 4 points each.
+
+Standard deviation of any measurement           :            0	00'04"
+Standard deviation of mean from all measurements:            0	00'03"
+1.   Point Id : BEN10           
+                Mean direction :            0	00'00"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : 14              
+                Mean direction :           57	52'37"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : 16              
+                Mean direction :          160	12'58"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+4.   Point Id : BEN08           
+                Mean direction :          177	57'48"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : BEN10           
+      Set   1 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+      Set   2 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+2.   Point Id : 14              
+      Set   1 : Residual :         -  0	00'06" 
+                Average  :           57	52'43"
+      Set   2 : Residual :            0	00'06" 
+                Average  :           57	52'31"
+3.   Point Id : 16              
+      Set   1 : Residual :         -  0	00'01" 
+                Average  :          160	12'59"
+      Set   2 : Residual :            0	00'01" 
+                Average  :          160	12'57"
+4.   Point Id : BEN08           
+      Set   1 : Residual :         -  0	00'03" 
+                Average  :          177	57'51"
+      Set   2 : Residual :            0	00'03" 
+                Average  :          177	57'44"
+
+Vertical set results:
+2 Sets measured with 4 points each.
+
+Standard deviation of any measurement           :            0	00'01"
+Standard deviation of mean from all measurements:            0	00'01"
+1.   Point Id : BEN10           
+                Mean direction :           90	02'02"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : 14              
+                Mean direction :           88	49'58"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : 16              
+                Mean direction :           76	50'30"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+4.   Point Id : BEN08           
+                Mean direction :           90	04'52"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : BEN10           
+      Set   1 : Residual :            0	00'00" 
+                Average  :           90	02'02"
+      Set   2 : Residual :         -  0	00'00" 
+                Average  :           90	02'02"
+2.   Point Id : 14              
+      Set   1 : Residual :            0	00'01" 
+                Average  :           88	49'57"
+      Set   2 : Residual :         -  0	00'01" 
+                Average  :           88	49'59"
+3.   Point Id : 16              
+      Set   1 : Residual :         -  0	00'02" 
+                Average  :           76	50'32"
+      Set   2 : Residual :            0	00'02" 
+                Average  :           76	50'28"
+4.   Point Id : BEN08           
+      Set   1 : Residual :         -  0	00'00" 
+                Average  :           90	04'52"
+      Set   2 : Residual :            0	00'00" 
+                Average  :           90	04'52"
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 08:35:06
+
+Station Id    : BEN08
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.612m
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 08:35:06
+
+Station Id    : BEN08
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.612m
+
+Horizontal set results:
+2 Sets measured with 3 points each.
+
+Standard deviation of any measurement           :            0	00'02"
+Standard deviation of mean from all measurements:            0	00'02"
+1.   Point Id : BEN09           
+                Mean direction :            0	00'00"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : BEN10           
+                Mean direction :            0	44'11"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : 16              
+                Mean direction :           17	07'03"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : BEN09           
+      Set   1 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+      Set   2 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+2.   Point Id : BEN10           
+      Set   1 : Residual :            0	00'03" 
+                Average  :            0	44'08"
+      Set   2 : Residual :         -  0	00'03" 
+                Average  :            0	44'14"
+3.   Point Id : 16              
+      Set   1 : Residual :            0	00'03" 
+                Average  :           17	07'00"
+      Set   2 : Residual :         -  0	00'03" 
+                Average  :           17	07'06"
+
+Vertical set results:
+2 Sets measured with 3 points each.
+
+Standard deviation of any measurement           :            0	00'02"
+Standard deviation of mean from all measurements:            0	00'01"
+1.   Point Id : BEN09           
+                Mean direction :           89	57'12"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : BEN10           
+                Mean direction :           89	58'34"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : 16              
+                Mean direction :           77	09'53"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : BEN09           
+      Set   1 : Residual :            0	00'00" 
+                Average  :           89	57'12"
+      Set   2 : Residual :         -  0	00'00" 
+                Average  :           89	57'12"
+2.   Point Id : BEN10           
+      Set   1 : Residual :            0	00'02" 
+                Average  :           89	58'31"
+      Set   2 : Residual :         -  0	00'02" 
+                Average  :           89	58'36"
+3.   Point Id : 16              
+      Set   1 : Residual :         -  0	00'01" 
+                Average  :           77	09'54"
+      Set   2 : Residual :            0	00'01" 
+                Average  :           77	09'53"
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 09:00:34
+
+Station Id    : BEN10
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.551m
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 09:00:34
+
+Station Id    : BEN10
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.551m
+
+Horizontal set results:
+2 Sets measured with 4 points each.
+
+Standard deviation of any measurement           :            0	00'05"
+Standard deviation of mean from all measurements:            0	00'03"
+1.   Point Id : 14              
+                Mean direction :            0	00'00"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : 16              
+                Mean direction :          107	25'36"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : BEN08           
+                Mean direction :          115	31'27"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+4.   Point Id : BEN09           
+                Mean direction :          116	49'09"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : 14              
+      Set   1 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+      Set   2 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+2.   Point Id : 16              
+      Set   1 : Residual :         -  0	00'05" 
+                Average  :          107	25'40"
+      Set   2 : Residual :            0	00'05" 
+                Average  :          107	25'31"
+3.   Point Id : BEN08           
+      Set   1 : Residual :         -  0	00'06" 
+                Average  :          115	31'33"
+      Set   2 : Residual :            0	00'06" 
+                Average  :          115	31'21"
+4.   Point Id : BEN09           
+      Set   1 : Residual :            0	00'01" 
+                Average  :          116	49'07"
+      Set   2 : Residual :         -  0	00'01" 
+                Average  :          116	49'10"
+
+Vertical set results:
+2 Sets measured with 4 points each.
+
+Standard deviation of any measurement           :            0	00'02"
+Standard deviation of mean from all measurements:            0	00'01"
+1.   Point Id : 14              
+                Mean direction :           88	46'09"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : 16              
+                Mean direction :           83	33'58"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : BEN08           
+                Mean direction :           90	02'44"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+4.   Point Id : BEN09           
+                Mean direction :           90	01'18"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : 14              
+      Set   1 : Residual :            0	00'00" 
+                Average  :           88	46'08"
+      Set   2 : Residual :         -  0	00'00" 
+                Average  :           88	46'09"
+2.   Point Id : 16              
+      Set   1 : Residual :         -  0	00'00" 
+                Average  :           83	33'59"
+      Set   2 : Residual :            0	00'00" 
+                Average  :           83	33'58"
+3.   Point Id : BEN08           
+      Set   1 : Residual :            0	00'03" 
+                Average  :           90	02'41"
+      Set   2 : Residual :         -  0	00'03" 
+                Average  :           90	02'47"
+4.   Point Id : BEN09           
+      Set   1 : Residual :            0	00'00" 
+                Average  :           90	01'18"
+      Set   2 : Residual :         -  0	00'00" 
+                Average  :           90	01'19"
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 10:24:48
+
+Station Id    : BEN13
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.611m
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 10:24:48
+
+Station Id    : BEN13
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.611m
+
+Horizontal set results:
+2 Sets measured with 3 points each.
+
+Standard deviation of any measurement           :            0	00'00"
+Standard deviation of mean from all measurements:            0	00'00"
+1.   Point Id : 14              
+                Mean direction :            0	00'00"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : BEN11           
+                Mean direction :           87	37'42"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : BEN12           
+                Mean direction :           88	22'27"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : 14              
+      Set   1 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+      Set   2 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+2.   Point Id : BEN11           
+      Set   1 : Residual :            0	00'00" 
+                Average  :           87	37'42"
+      Set   2 : Residual :         -  0	00'00" 
+                Average  :           87	37'42"
+3.   Point Id : BEN12           
+      Set   1 : Residual :            0	00'00" 
+                Average  :           88	22'26"
+      Set   2 : Residual :         -  0	00'00" 
+                Average  :           88	22'27"
+
+Vertical set results:
+2 Sets measured with 3 points each.
+
+Standard deviation of any measurement           :            0	00'00"
+Standard deviation of mean from all measurements:            0	00'00"
+1.   Point Id : 14              
+                Mean direction :           83	16'57"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : BEN11           
+                Mean direction :           89	55'08"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : BEN12           
+                Mean direction :           89	56'56"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : 14              
+      Set   1 : Residual :         -  0	00'01" 
+                Average  :           83	16'57"
+      Set   2 : Residual :            0	00'01" 
+                Average  :           83	16'56"
+2.   Point Id : BEN11           
+      Set   1 : Residual :            0	00'00" 
+                Average  :           89	55'08"
+      Set   2 : Residual :         -  0	00'00" 
+                Average  :           89	55'09"
+3.   Point Id : BEN12           
+      Set   1 : Residual :         -  0	00'00" 
+                Average  :           89	56'56"
+      Set   2 : Residual :            0	00'00" 
+                Average  :           89	56'55"
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 11:44:05
+
+Station Id    : BEN11
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.606m
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 11:44:06
+
+Station Id    : BEN11
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.606m
+
+Horizontal set results:
+2 Sets measured with 3 points each.
+
+Standard deviation of any measurement           :            0	00'01"
+Standard deviation of mean from all measurements:            0	00'01"
+1.   Point Id : BEN13           
+                Mean direction :            0	00'00"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : BEN12           
+                Mean direction :            1	05'09"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : 14              
+                Mean direction :           54	04'12"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : BEN13           
+      Set   1 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+      Set   2 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+2.   Point Id : BEN12           
+      Set   1 : Residual :         -  0	00'01" 
+                Average  :            1	05'11"
+      Set   2 : Residual :            0	00'01" 
+                Average  :            1	05'08"
+3.   Point Id : 14              
+      Set   1 : Residual :            0	00'00" 
+                Average  :           54	04'12"
+      Set   2 : Residual :         -  0	00'00" 
+                Average  :           54	04'12"
+
+Vertical set results:
+2 Sets measured with 3 points each.
+
+Standard deviation of any measurement           :            0	00'01"
+Standard deviation of mean from all measurements:            0	00'01"
+1.   Point Id : BEN13           
+                Mean direction :           90	05'56"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : BEN12           
+                Mean direction :           90	03'43"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : 14              
+                Mean direction :           84	35'40"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : BEN13           
+      Set   1 : Residual :            0	00'02" 
+                Average  :           90	05'54"
+      Set   2 : Residual :         -  0	00'02" 
+                Average  :           90	05'58"
+2.   Point Id : BEN12           
+      Set   1 : Residual :         -  0	00'00" 
+                Average  :           90	03'43"
+      Set   2 : Residual :            0	00'00" 
+                Average  :           90	03'42"
+3.   Point Id : 14              
+      Set   1 : Residual :         -  0	00'00" 
+                Average  :           84	35'40"
+      Set   2 : Residual :            0	00'00" 
+                Average  :           84	35'40"
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 12:00:58
+
+Station Id    : BEN12
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.591m
+
+TPS1100 Prog. Sets of Angles V 2.04
+Instrument    : TCRA1101plus, Serial 622078, TCRA1101plus
+Meas. File    : 267.GSI
+Program Start : 29/09/2011 at 12:00:58
+
+Station Id    : BEN12
+                E=              0.000m N=              0.000m
+                H=              0.000m hi=             1.591m
+
+Horizontal set results:
+2 Sets measured with 3 points each.
+
+Standard deviation of any measurement           :            0	00'04"
+Standard deviation of mean from all measurements:            0	00'03"
+1.   Point Id : BEN13           
+                Mean direction :            0	00'00"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : 14              
+                Mean direction :           67	56'50"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : BEN11           
+                Mean direction :          181	49'47"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : BEN13           
+      Set   1 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+      Set   2 : Residual :            0	00'00" 
+                Average  :            0	00'00"
+2.   Point Id : 14              
+      Set   1 : Residual :            0	00'05" 
+                Average  :           67	56'45"
+      Set   2 : Residual :         -  0	00'05" 
+                Average  :           67	56'54"
+3.   Point Id : BEN11           
+      Set   1 : Residual :         -  0	00'01" 
+                Average  :          181	49'49"
+      Set   2 : Residual :            0	00'01" 
+                Average  :          181	49'46"
+
+Vertical set results:
+2 Sets measured with 3 points each.
+
+Standard deviation of any measurement           :            0	00'01"
+Standard deviation of mean from all measurements:            0	00'01"
+1.   Point Id : BEN13           
+                Mean direction :           90	09'05"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+2.   Point Id : 14              
+                Mean direction :           83	48'45"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+3.   Point Id : BEN11           
+                Mean direction :           89	59'22"
+                Refl. Ht.      :               0.000m
+                Prism Type     :                   HP
+                Prism Constant :               0.004m
+
+Results of single sets:
+
+1.   Point Id : BEN13           
+      Set   1 : Residual :         -  0	00'02" 
+                Average  :           90	09'07"
+      Set   2 : Residual :            0	00'02" 
+                Average  :           90	09'04"
+2.   Point Id : 14              
+      Set   1 : Residual :         -  0	00'01" 
+                Average  :           83	48'46"
+      Set   2 : Residual :            0	00'01" 
+                Average  :           83	48'44"
+3.   Point Id : BEN11           
+      Set   1 : Residual :            0	00'01" 
+                Average  :           89	59'21"
+      Set   2 : Residual :         -  0	00'01" 
+                Average  :           89	59'22"
+

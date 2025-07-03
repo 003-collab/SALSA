@@ -1,0 +1,22 @@
+Created by SALSA version [$SALSA_VERSION$]
+# Converted with the Trimble Rounds Converter converter from /home/rmilburn/projects/lsa/publicTestOutput/gui/converters/TrimbleRounds/TOPOF1ANGONLY/TOPOF1ANGONLY.jxl on 12:46:08 May 29, 2020
+
+UNCR UNCR#1_HDIR [] m [] [] 0.00100 0.00100 m
+UNCR UNCR#1_ZANG [] m [] [] 0.00100 0.00100 m
+
+HGHT HGHT#1_01 1.50000 m 0.00000 m
+# Raw height 1.5 m extracted from TrueHeight method
+
+#Instrument Type			: TrimbleVXandSSeries
+#Instrument Serial No.		: 37230215
+#Instrument Firmware Ver.	: H2.6.12
+#Rounds Collection Start		: 2020/05/07 11:46:44
+
+DGRP DGRP#1 01 UNCR UNCR#1_HDIR
+HDIR DGRP#1 A 270 0 0.0 DMS 5.0 soa
+HDIR DGRP#1 B 289 27 47.1 DMS 5.0 soa
+HDIR DGRP#1 C 301 59 46.2 DMS 5.0 soa
+
+ZANG 01 A 95 34 30.7 DMS 10.0 soa HFROM HGHT#1_01 UNCR UNCR#1_ZANG
+ZANG 01 B 88 54 19.1 DMS 10.0 soa HFROM HGHT#1_01 UNCR UNCR#1_ZANG
+ZANG 01 C 83 3 30.8 DMS 10.0 soa HFROM HGHT#1_01 UNCR UNCR#1_ZANG
