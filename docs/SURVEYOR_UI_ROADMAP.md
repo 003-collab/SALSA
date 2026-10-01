@@ -16,13 +16,13 @@ The goal is to make SALSA more approachable for surveyors while preserving the e
 
 The standalone HTML/CSS/JavaScript prototype establishes the target visual language and basic interaction patterns. It is not a solver and does not load .lsa projects.
 
-### 2. Native Qt workspace bridge — in progress
+### 2. Native Qt workspace bridge — implemented, validation pending
 
-SurveyorWorkspace is a dockable Qt panel that attaches directly to the existing GuiModel and invokes the current adjustment workflow through a signal handled by MainWindow. This is the first native integration step; it deliberately does not duplicate or alter solver code.
+SurveyorWorkspace is a dockable Qt panel that attaches directly to the existing GuiModel and invokes the current adjustment workflow through a signal handled by MainWindow. This is the first native integration step; it deliberately does not duplicate or alter solver code. A successful compile and GUI runtime test are still required.
 
-### 3. Live survey summaries and network view
+### 3. Live survey summaries and network view — initial data views implemented
 
-Build typed read-only view models for point coordinates, observation records, and adjusted positions from SALSA's model/results. Add a network canvas using actual coordinates, with explicit CRS/unit labels and a fit-to-network command. Do not infer point types or units from display strings when structured record APIs are available.
+The native workspace now has Points, Observations, and Project records tabs. It walks the existing GuiModel tree and reads POSC/POSG coordinates and constraint state from typed records. Observation rows are sourced from measurement records; DIS records expose structured value and sigma, while other measurement types currently show their original LSA record text and referenced point labels. These are input/apriori values, not adjusted results. The actual coordinate network canvas, adjusted-position view, richer per-observation fields, and CRS/unit metadata remain to be implemented. Do not infer point types or units from display strings when structured record APIs are available.
 
 ### 4. Adjustment diagnostics
 
