@@ -37,6 +37,7 @@
 #include <vector>
 #include <map>
 #include <algorithm>
+#include <cmath>
 
 namespace
 {
@@ -77,7 +78,8 @@ protected:
             LSAType type = record->getRecType();
             if (type == LSAType::POSC) {
                 LSAPosC *p = static_cast<LSAPosC *>(record);
-                points[p->label] = QPointF(p->x, p->y);
+                if (std::isfinite(p->x) && std::isfinite(p->y))
+                    points[p->label] = QPointF(p->x, p->y);
             } else if (type == LSAType::DIST) {
                 LSADist *d = static_cast<LSADist *>(record);
                 links.emplace_back(d->From, d->To);
@@ -106,10 +108,13 @@ protected:
         };
 
         painter.setPen(QPen(palette().mid().color(), 1.2));
+        int drawableLinkCount = 0;
         for (const auto &link : links) {
             auto a = points.find(link.first), b = points.find(link.second);
-            if (a != points.end() && b != points.end())
+            if (a != points.end() && b != points.end()) {
                 painter.drawLine(screen(a->second), screen(b->second));
+                ++drawableLinkCount;
+            }
         }
         for (const auto &entry : points) {
             const QPointF p = screen(entry.second);
@@ -121,7 +126,7 @@ protected:
         }
         painter.setPen(palette().mid().color());
         painter.drawText(QRect(8, 6, width() - 16, 18), Qt::AlignLeft | Qt::AlignVCenter,
-                         tr("Initial POSC coordinates · %1 points · %2 distance links").arg(static_cast<int>(points.size())).arg(static_cast<int>(links.size())));
+                         tr("Initial POSC coordinates · %1 points · %2 drawable distance links").arg(static_cast<int>(points.size())).arg(drawableLinkCount));
     }
 
 private:
