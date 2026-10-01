@@ -246,6 +246,12 @@ SurveyorWorkspace::SurveyorWorkspace(GuiModel *model, QWidget *parent)
 
 void SurveyorWorkspace::setProjectModel(GuiModel *model)
 {
+    if (currentModel == model)
+    {
+        refreshWorkspaceData();
+        return;
+    }
+
     if (currentModel && currentModel != model)
         disconnect(currentModel, nullptr, this, nullptr);
 
