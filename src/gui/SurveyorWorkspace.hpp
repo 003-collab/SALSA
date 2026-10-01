@@ -30,6 +30,7 @@ signals:
 
 private:
     void populateRecordTables(GuiModel *model);
+    void refreshWorkspaceData();
 
     QTreeView *projectTree;
     QLabel *projectSummary;
@@ -37,6 +38,7 @@ private:
     QTableWidget *observationsTable;
     QTabWidget *dataTabs;
     QWidget *networkView;
+    GuiModel *currentModel = nullptr;
 };
 
 #endif // SALSA_SURVEYOR_WORKSPACE_HPP
