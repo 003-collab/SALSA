@@ -190,7 +190,7 @@ void SurveyorWorkspace::populateRecordTables(GuiModel *model)
         if (!record)
             continue;
 
-        const LSAType type = record->getRecType();
+        LSAType type = record->getRecType();
         if (type == LSAType::POSC || type == LSAType::POSG)
         {
             const int row = pointsTable->rowCount();
@@ -202,7 +202,7 @@ void SurveyorWorkspace::populateRecordTables(GuiModel *model)
 
             if (type == LSAType::POSC)
             {
-                const LSAPosC *point = static_cast<const LSAPosC *>(record);
+                LSAPosC *point = static_cast<LSAPosC *>(record);
                 label = QString::fromStdString(point->label);
                 coordinates = QStringLiteral("X %1, Y %2, Z %3")
                     .arg(numberText(point->x), numberText(point->y), numberText(point->z));
@@ -211,7 +211,7 @@ void SurveyorWorkspace::populateRecordTables(GuiModel *model)
             }
             else
             {
-                const LSAPosG *point = static_cast<const LSAPosG *>(record);
+                LSAPosG *point = static_cast<LSAPosG *>(record);
                 label = QString::fromStdString(point->label);
                 coordinates = QStringLiteral("Lat %1°, Lon %2°, H %3")
                     .arg(numberText(point->latDecDeg), numberText(point->lonDecDeg), numberText(point->height));
@@ -238,7 +238,7 @@ void SurveyorWorkspace::populateRecordTables(GuiModel *model)
 
             if (type == LSAType::DIST)
             {
-                const LSADist *distance = static_cast<const LSADist *>(record);
+                LSADist *distance = static_cast<LSADist *>(record);
                 value = numberText(distance->distance) + QStringLiteral(" ") + QString::fromStdString(distance->linUnits);
                 sigma = numberText(distance->sigma) + QStringLiteral(" ") + QString::fromStdString(distance->linUnits);
             }
