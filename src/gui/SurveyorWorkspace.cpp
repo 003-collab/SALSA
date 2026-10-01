@@ -206,7 +206,7 @@ void SurveyorWorkspace::populateRecordTables(GuiModel *model)
                 label = QString::fromStdString(point->label);
                 coordinates = QStringLiteral("X %1, Y %2, Z %3")
                     .arg(numberText(point->x), numberText(point->y), numberText(point->z));
-                constraint = point->isFixed() ? tr("Fixed") : QString::fromStdString(point->fixedState.asString());
+                constraint = point->fixedState == LSAFixedState::FIXED ? tr("Fixed") : QString::fromStdString(point->fixedState.asString());
                 units = QString::fromStdString(point->posUnits);
             }
             else
