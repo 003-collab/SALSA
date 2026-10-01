@@ -13,6 +13,8 @@
 class GuiModel;
 class QTreeView;
 class QLabel;
+class QTableWidget;
+class QTabWidget;
 
 class SurveyorWorkspace : public QDockWidget
 {
@@ -26,8 +28,13 @@ signals:
     void runAdjustmentRequested();
 
 private:
+    void populateRecordTables(GuiModel *model);
+
     QTreeView *projectTree;
     QLabel *projectSummary;
+    QTableWidget *pointsTable;
+    QTableWidget *observationsTable;
+    QTabWidget *dataTabs;
 };
 
 #endif // SALSA_SURVEYOR_WORKSPACE_HPP
