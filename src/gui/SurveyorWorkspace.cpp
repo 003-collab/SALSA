@@ -121,7 +121,7 @@ protected:
         }
         painter.setPen(palette().mid().color());
         painter.drawText(QRect(8, 6, width() - 16, 18), Qt::AlignLeft | Qt::AlignVCenter,
-                         tr("Initial POSC coordinates · %1 points · %2 distance links").arg(points.size()).arg(links.size()));
+                         tr("Initial POSC coordinates · %1 points · %2 distance links").arg(static_cast<int>(points.size())).arg(static_cast<int>(links.size())));
     }
 
 private:
