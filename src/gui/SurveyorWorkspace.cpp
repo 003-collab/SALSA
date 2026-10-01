@@ -19,6 +19,10 @@
 #include <QHeaderView>
 #include <QLabel>
 #include <QPushButton>
+#include <QPainter>
+#include <QPaintEvent>
+#include <QPointF>
+#include <QRectF>
 #include <QTreeView>
 #include <QTableWidget>
 #include <QTabWidget>
@@ -31,9 +35,99 @@
 #include <iomanip>
 #include <sstream>
 #include <vector>
+#include <map>
+#include <algorithm>
 
 namespace
 {
+class NetworkCanvas : public QWidget
+{
+public:
+    explicit NetworkCanvas(QWidget *parent = nullptr) : QWidget(parent) {
+        setMinimumSize(320, 240);
+        setAutoFillBackground(true);
+    }
+
+    void setProjectModel(GuiModel *model) { projectModel = model; update(); }
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter painter(this);
+        painter.setRenderHint(QPainter::Antialiasing, true);
+        painter.fillRect(rect(), palette().base());
+        painter.setPen(palette().text().color());
+        if (!projectModel) {
+            painter.drawText(rect(), Qt::AlignCenter, tr("Open a project to view its network"));
+            return;
+        }
+
+        std::map<std::string, QPointF> points;
+        std::vector<std::pair<std::string, std::string>> links;
+        std::vector<QModelIndex> pending;
+        for (int row = projectModel->rowCount() - 1; row >= 0; --row)
+            pending.push_back(projectModel->index(row, 0));
+        while (!pending.empty()) {
+            QModelIndex index = pending.back();
+            pending.pop_back();
+            for (int row = projectModel->rowCount(index) - 1; row >= 0; --row)
+                pending.push_back(projectModel->index(row, 0, index));
+            LSARecord *record = projectModel->getLSARecord(index);
+            if (!record) continue;
+            LSAType type = record->getRecType();
+            if (type == LSAType::POSC) {
+                LSAPosC *p = static_cast<LSAPosC *>(record);
+                points[p->label] = QPointF(p->x, p->y);
+            } else if (type == LSAType::DIST) {
+                LSADist *d = static_cast<LSADist *>(record);
+                links.emplace_back(d->From, d->To);
+            }
+        }
+
+        if (points.empty()) {
+            painter.drawText(rect(), Qt::AlignCenter, tr("No Cartesian POSC points available. Geodetic POSG plotting will be added with CRS-aware projection."));
+            return;
+        }
+
+        double minX = points.begin()->second.x(), maxX = minX;
+        double minY = points.begin()->second.y(), maxY = minY;
+        for (const auto &entry : points) {
+            minX = std::min(minX, entry.second.x()); maxX = std::max(maxX, entry.second.x());
+            minY = std::min(minY, entry.second.y()); maxY = std::max(maxY, entry.second.y());
+        }
+        const double spanX = std::max(1e-9, maxX - minX);
+        const double spanY = std::max(1e-9, maxY - minY);
+        const QRectF plot = QRectF(rect()).adjusted(36, 28, -36, -36);
+        const double scale = std::min(plot.width() / spanX, plot.height() / spanY);
+        const QPointF center((minX + maxX) / 2.0, (minY + maxY) / 2.0);
+        auto screen = [&](const QPointF &p) {
+            return QPointF(plot.center().x() + (p.x() - center.x()) * scale,
+                           plot.center().y() - (p.y() - center.y()) * scale);
+        };
+
+        painter.setPen(QPen(palette().mid().color(), 1.2));
+        for (const auto &link : links) {
+            auto a = points.find(link.first), b = points.find(link.second);
+            if (a != points.end() && b != points.end())
+                painter.drawLine(screen(a->second), screen(b->second));
+        }
+        for (const auto &entry : points) {
+            const QPointF p = screen(entry.second);
+            painter.setPen(QPen(QColor("#1767a8"), 1));
+            painter.setBrush(QColor("#d9ecfb"));
+            painter.drawEllipse(p, 4.5, 4.5);
+            painter.setPen(palette().text().color());
+            painter.drawText(p + QPointF(7, -7), QString::fromStdString(entry.first));
+        }
+        painter.setPen(palette().mid().color());
+        painter.drawText(QRect(8, 6, width() - 16, 18), Qt::AlignLeft | Qt::AlignVCenter,
+                         tr("Initial POSC coordinates · %1 points · %2 distance links").arg(points.size()).arg(links.size()));
+    }
+
+private:
+    GuiModel *projectModel = nullptr;
+};
+
 QString numberText(double value)
 {
     std::ostringstream stream;
@@ -66,7 +160,8 @@ SurveyorWorkspace::SurveyorWorkspace(GuiModel *model, QWidget *parent)
       projectSummary(new QLabel(this)),
       pointsTable(new QTableWidget(this)),
       observationsTable(new QTableWidget(this)),
-      dataTabs(new QTabWidget(this))
+      dataTabs(new QTabWidget(this)),
+      networkView(new NetworkCanvas(this))
 {
     setObjectName(QStringLiteral("surveyorWorkspaceDock"));
     setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea);
@@ -111,6 +206,7 @@ SurveyorWorkspace::SurveyorWorkspace(GuiModel *model, QWidget *parent)
     prepareTable(observationsTable, {tr("Type"), tr("From / At"), tr("To"), tr("Value"), tr("Sigma"), tr("Record")});
     observationsTable->setObjectName(QStringLiteral("surveyorObservationsTable"));
 
+    dataTabs->addTab(networkView, tr("Network"));
     dataTabs->addTab(pointsTable, tr("Points"));
     dataTabs->addTab(observationsTable, tr("Observations"));
     dataTabs->addTab(projectTree, tr("Project records"));
@@ -146,6 +242,7 @@ SurveyorWorkspace::SurveyorWorkspace(GuiModel *model, QWidget *parent)
 void SurveyorWorkspace::setProjectModel(GuiModel *model)
 {
     projectTree->setModel(model);
+    static_cast<NetworkCanvas *>(networkView)->setProjectModel(model);
     populateRecordTables(model);
 
     if (model)
