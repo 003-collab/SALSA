@@ -20,9 +20,21 @@ The standalone HTML/CSS/JavaScript prototype establishes the target visual langu
 
 SurveyorWorkspace is a dockable Qt panel that attaches directly to the existing GuiModel and invokes the current adjustment workflow through a signal handled by MainWindow. This is the first native integration step; it deliberately does not duplicate or alter solver code. A successful compile and GUI runtime test are still required.
 
-### 3. Live survey summaries and network view — initial data views implemented
+### 3. Live survey summaries and network view — initial implementation, validation pending
 
-The native workspace now has Points, Observations, and Project records tabs. It walks the existing GuiModel tree and reads POSC/POSG coordinates and constraint state from typed records. Observation rows are sourced from measurement records; DIS records expose structured value and sigma, while other measurement types currently show their original LSA record text and referenced point labels. These are input/apriori values, not adjusted results. The actual coordinate network canvas, adjusted-position view, richer per-observation fields, and CRS/unit metadata remain to be implemented. Do not infer point types or units from display strings when structured record APIs are available.
+The native workspace has Network, Points, Observations, and Project records tabs. It walks the existing GuiModel tree and reads POSC/POSG coordinates and constraint state from typed records. The initial network canvas plots POSC X/Y coordinates and draws DIS links where both referenced points are available; it labels the view as initial coordinates, fits all plotted points, and does not pretend to project POSG geodetic coordinates. Observation rows are sourced from measurement records; DIS records expose structured value and sigma, while other measurement types currently show their original LSA record text and referenced point labels. These are input/apriori values, not adjusted results. Selection linking, explicit CRS/unit handling, POSG projection, and adjusted-position rendering remain to be implemented. Do not infer point types or units from display strings when structured record APIs are available.
+
+### Existing sample projects for validation
+
+Use repository fixtures before beginning JXL support:
+
+- `examples/example00/ex0.proj` and its included `.lsa` records for project/include handling.
+- `examples/example01/` (`ctrl_sites.lsa`, `conventional.lsa`, `conventional_TP.lsa`, `gpsMeasurements.lsa`) for a mixed control/conventional/GNSS project.
+- `examples/example02/redundancy.proj` and its companion records for redundancy-oriented behavior.
+- `examples/example03/` (`loop1.lsa`, `loop2.lsa`, `hdiffsAB.lsa`, `hdiffsBA.lsa`, `hdiffsBC.lsa`, `hdiffsCB.lsa`) for height-difference records and directional variants.
+- `doc/manual/UserManual/examples/Ghilani_23.4/` for a documented textbook example split across record files.
+
+These are candidate fixtures identified in the repository; each must be opened and checked in the built GUI before being called a passing regression case.
 
 ### 4. Adjustment diagnostics
 
