@@ -15,6 +15,7 @@ class QTreeView;
 class QLabel;
 class QTableWidget;
 class QTabWidget;
+class QWidget;
 
 class SurveyorWorkspace : public QDockWidget
 {
@@ -35,6 +36,7 @@ private:
     QTableWidget *pointsTable;
     QTableWidget *observationsTable;
     QTabWidget *dataTabs;
+    QWidget *networkView;
 };
 
 #endif // SALSA_SURVEYOR_WORKSPACE_HPP
