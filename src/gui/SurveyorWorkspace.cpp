@@ -246,17 +246,44 @@ SurveyorWorkspace::SurveyorWorkspace(GuiModel *model, QWidget *parent)
 
 void SurveyorWorkspace::setProjectModel(GuiModel *model)
 {
+    if (currentModel && currentModel != model)
+        disconnect(currentModel, nullptr, this, nullptr);
+
+    currentModel = model;
     projectTree->setModel(model);
     static_cast<NetworkCanvas *>(networkView)->setProjectModel(model);
-    populateRecordTables(model);
 
     if (model)
+    {
+        // Refresh derived views when records are edited, inserted, removed, or
+        // the project model is rebuilt after loading/undo/redo.
+        connect(model, &QAbstractItemModel::dataChanged, this,
+                [this]() { refreshWorkspaceData(); });
+        connect(model, &QAbstractItemModel::rowsInserted, this,
+                [this]() { refreshWorkspaceData(); });
+        connect(model, &QAbstractItemModel::rowsRemoved, this,
+                [this]() { refreshWorkspaceData(); });
+        connect(model, &QAbstractItemModel::modelReset, this,
+                [this]() { refreshWorkspaceData(); });
+        connect(model, &QAbstractItemModel::layoutChanged, this,
+                [this]() { refreshWorkspaceData(); });
+        projectTree->expandToDepth(0);
+    }
+
+    refreshWorkspaceData();
+}
+
+void SurveyorWorkspace::refreshWorkspaceData()
+{
+    populateRecordTables(currentModel);
+    static_cast<NetworkCanvas *>(networkView)->setProjectModel(currentModel);
+
+    if (currentModel)
     {
         projectSummary->setText(tr("%1 points · %2 observations · %3 top-level records")
                                 .arg(pointsTable->rowCount())
                                 .arg(observationsTable->rowCount())
-                                .arg(model->rowCount()));
-        projectTree->expandToDepth(0);
+                                .arg(currentModel->rowCount()));
     }
     else
     {
