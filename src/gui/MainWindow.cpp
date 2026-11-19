@@ -99,6 +99,7 @@ MainWindow::MainWindow(QString lsaFile, QWidget *parent) : errorBox(NULL),
     QMainWindow(parent), ui(new Ui::MainWindow)
 {
     mapWidget = NULL;
+    surveyorWorkspace = nullptr;
 
     progressBarHasBeenShown = false;//for testing purposes only
 
@@ -134,6 +135,7 @@ MainWindow::MainWindow(QString lsaFile, QWidget *parent) : errorBox(NULL),
 
     mapWidget = new Mapping(modelIsSaved, this);
     setupMapWidget();
+    setupSurveyorWorkspace();
 
     // Configure suppression of gui updates by child widgets
     connect(recordEditor, SIGNAL(signalSuppressGuiUpdates(bool)), this, SLOT(setSuppressGuiUpdates(bool)) );
@@ -4276,11 +4278,31 @@ void MainWindow::setupGuiModel()
 
     guiModel->synchGuiModelToLSATree();
 
+    if (surveyorWorkspace)
+    {
+        surveyorWorkspace->setProjectModel(guiModel);
+    }
+
     connect(guiModel, SIGNAL(dataChanged(QModelIndex,QModelIndex, QVector<int>)), this, SLOT(handleDataChange(QModelIndex,QModelIndex,QVector<int>)));
     connect(guiModel, SIGNAL(pushWarning(QString)), this, SLOT(pushWarning(QString)));
     connect(guiModel, SIGNAL(pushError(QString)), this, SLOT(pushError(QString)));
     // Handle when something (e.g. a file) is dropped on the tree view
     connect(guiModel, &GuiModel::signalDataDroppedOnTree, this, &MainWindow::handleDataDroppedOnTree);
+}
+
+void MainWindow::setupSurveyorWorkspace()
+{
+    if (surveyorWorkspace)
+    {
+        return;
+    }
+
+    surveyorWorkspace = new SurveyorWorkspace(guiModel, this);
+    addDockWidget(Qt::RightDockWidgetArea, surveyorWorkspace);
+    ui->menuView->addAction(surveyorWorkspace->toggleViewAction());
+
+    connect(surveyorWorkspace, &SurveyorWorkspace::runAdjustmentRequested,
+            this, [this]() { calculateAdjustment(); });
 }
 
 void MainWindow::setupProgressBar()

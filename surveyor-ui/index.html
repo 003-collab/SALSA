@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SALSA Surveyor — Network Adjustment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="titlebar">
+      <div class="brand-mark" aria-hidden="true">S</div>
+      <div class="brand-copy"><strong>SALSA <span>Surveyor</span></strong><small>Geodetic network adjustment</small></div>
+      <div class="titlebar-project"><span class="status-dot"></span><span>Demo Project</span><span class="crumb-sep">/</span><span>Network Adjustment</span></div>
+      <div class="titlebar-actions"><button class="icon-button" aria-label="Help" title="Help">?</button><button class="avatar" aria-label="User">EC</button></div>
+    </header>
+
+    <nav class="ribbon" aria-label="Main tools">
+      <div class="ribbon-group"><button class="tool-button active" data-view="project"><span class="tool-glyph">▦</span><span>Project</span></button><button class="tool-button" data-view="points"><span class="tool-glyph">⊙</span><span>Points</span></button><button class="tool-button" data-view="observations"><span class="tool-glyph">⇄</span><span>Observations</span></button><button class="tool-button" data-view="results"><span class="tool-glyph">▤</span><span>Results</span></button></div>
+      <div class="ribbon-divider"></div>
+      <div class="ribbon-group"><button class="tool-button" id="open-project"><span class="tool-glyph">↥</span><span>Open data</span></button><button class="tool-button" id="export-report"><span class="tool-glyph">⇩</span><span>Export report</span></button></div>
+      <div class="ribbon-spacer"></div>
+      <div class="ribbon-note"><span class="mini-dot"></span> UI preview <span class="note-separator">•</span> sample data</div>
+    </nav>
+
+    <main class="workspace">
+      <aside class="project-panel panel">
+        <div class="panel-heading"><div><span class="eyebrow">WORKSPACE</span><h2>Project Explorer</h2></div><button class="subtle-icon" aria-label="More project options">···</button></div>
+        <div class="project-card"><div class="project-icon">⌖</div><div class="project-info"><strong>Demo Control Network</strong><small>Updated just now</small></div><span class="chevron">⌄</span></div>
+        <div class="tree">
+          <button class="tree-item selected" data-view="project"><span class="tree-icon">▧</span><span>Overview</span></button>
+          <button class="tree-item" data-view="points"><span class="tree-icon">⊙</span><span>Points</span><span class="count">8</span></button>
+          <button class="tree-item" data-view="observations"><span class="tree-icon">⇄</span><span>Observations</span><span class="count">12</span></button>
+          <button class="tree-item" data-view="results"><span class="tree-icon">▤</span><span>Adjustment results</span></button>
+          <div class="tree-section-label">PROJECT FILES</div>
+          <div class="file-item"><span class="file-icon">▤</span><span>network.salsa</span></div>
+          <div class="file-item muted"><span class="file-icon">＋</span><span>Add data source</span></div>
+        </div>
+        <div class="panel-bottom"><span class="sync-icon">✓</span><span>All changes saved</span></div>
+      </aside>
+
+      <section class="main-column">
+        <div class="page-header"><div><div class="breadcrumbs">PROJECT <span>/</span> NETWORK ADJUSTMENT</div><h1 id="page-title">Network adjustment</h1><p id="page-subtitle">Review your survey network, observations, and adjustment quality in one place.</p></div><div class="page-actions"><button class="button secondary" id="fit-network">⌗ <span>Fit network</span></button><button class="button primary" id="run-adjustment"><span class="play-icon">▶</span> Run adjustment</button></div></div>
+
+        <section class="metric-grid" aria-label="Network summary">
+          <article class="metric-card"><div class="metric-top"><span>NETWORK POINTS</span><span class="metric-icon blue">⊙</span></div><div class="metric-value">8</div><div class="metric-foot"><span class="metric-sub">6 adjusted</span><span class="tiny-tag">2 fixed</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>OBSERVATIONS</span><span class="metric-icon purple">⇄</span></div><div class="metric-value">12</div><div class="metric-foot"><span class="metric-sub">Distances & directions</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>REDUNDANCY</span><span class="metric-icon teal">⌘</span></div><div class="metric-value">1.8<span class="unit">×</span></div><div class="metric-foot"><span class="metric-sub">Network connectivity</span></div></article>
+          <article class="metric-card"><div class="metric-top"><span>LAST RUN</span><span class="metric-icon amber">◷</span></div><div class="metric-value compact" id="last-run-value">Not run</div><div class="metric-foot"><span class="metric-sub" id="run-status-text">Preview data only</span></div></article>
+        </section>
+
+        <div class="content-grid">
+          <section class="panel network-panel">
+            <div class="panel-heading network-heading"><div><span class="eyebrow">SPATIAL VIEW</span><h2>Network map</h2></div><div class="map-actions"><button class="subtle-icon" id="zoom-out" aria-label="Zoom out">−</button><button class="subtle-icon" id="zoom-in" aria-label="Zoom in">+</button><button class="subtle-icon" id="map-reset" aria-label="Reset map">⤢</button></div></div>
+            <div class="map-legend"><span><i class="legend-point fixed"></i>Fixed control</span><span><i class="legend-point adjusted"></i>Adjusted point</span><span><i class="legend-line"></i>Observation</span></div>
+            <div class="map-stage" id="map-stage">
+              <div class="map-grid"></div>
+              <svg id="network-svg" viewBox="0 0 720 400" role="img" aria-label="Illustrative survey network showing control points connected by observation lines">
+                <g class="network-lines">
+                  <line x1="105" y1="85" x2="270" y2="65"/><line x1="105" y1="85" x2="180" y2="190"/><line x1="270" y1="65" x2="390" y2="145"/><line x1="180" y1="190" x2="390" y2="145"/><line x1="180" y1="190" x2="300" y2="290"/><line x1="390" y1="145" x2="505" y2="225"/><line x1="300" y1="290" x2="505" y2="225"/><line x1="505" y1="225" x2="620" y2="115"/><line x1="390" y1="145" x2="620" y2="115"/><line x1="505" y1="225" x2="570" y2="330"/><line x1="300" y1="290" x2="570" y2="330"/><line x1="620" y1="115" x2="570" y2="330"/>
+                </g>
+                <g class="network-nodes">
+                  <g class="node fixed-node" data-point="CP01" transform="translate(105 85)"><circle r="10"/><text y="-18">CP01</text></g>
+                  <g class="node fixed-node" data-point="CP02" transform="translate(270 65)"><circle r="10"/><text y="-18">CP02</text></g>
+                  <g class="node adjusted-node" data-point="P103" transform="translate(180 190)"><circle r="8"/><text y="-17">P103</text></g>
+                  <g class="node adjusted-node" data-point="P104" transform="translate(390 145)"><circle r="8"/><text y="-17">P104</text></g>
+                  <g class="node adjusted-node" data-point="P105" transform="translate(300 290)"><circle r="8"/><text y="25">P105</text></g>
+                  <g class="node adjusted-node" data-point="P106" transform="translate(505 225)"><circle r="8"/><text y="-17">P106</text></g>
+                  <g class="node adjusted-node" data-point="P107" transform="translate(620 115)"><circle r="8"/><text y="-17">P107</text></g>
+                  <g class="node adjusted-node" data-point="P108" transform="translate(570 330)"><circle r="8"/><text y="25">P108</text></g>
+                </g>
+              </svg>
+              <div class="map-scale"><span class="scale-bar"></span><span>Illustrative geometry</span></div>
+              <div class="map-hint">Select a point to inspect its details</div>
+            </div>
+            <div class="map-footer"><span><span class="status-dot"></span> 8 points visible</span><span>Local grid preview <span class="footer-sep">•</span> Not to scale</span></div>
+          </section>
+
+          <section class="panel details-panel">
+            <div class="panel-heading"><div><span class="eyebrow">INSPECTOR</span><h2 id="inspector-title">Point details</h2></div><span class="detail-pill" id="selected-point-type">FIXED</span></div>
+            <div class="selected-point"><div class="point-symbol" id="selected-point-symbol">CP</div><div><h3 id="selected-point-name">CP01</h3><p id="selected-point-description">Horizontal and vertical control</p></div></div>
+            <div class="detail-table" id="point-details">
+              <div><span>Northing</span><strong>4,216,308.442 ft</strong></div><div><span>Easting</span><strong>1,548,220.105 ft</strong></div><div><span>Elevation</span><strong>812.430 ft</strong></div><div><span>Constraint</span><strong>Fixed XYZ</strong></div><div><span>Standard error</span><strong>—</strong></div>
+            </div>
+            <div class="inspector-note"><span class="info-icon">i</span><span>Values shown are illustrative sample data, not a computed adjustment.</span></div>
+            <button class="button full-width secondary" id="view-point">View point in table <span>↗</span></button>
+          </section>
+        </div>
+
+        <section class="panel data-panel">
+          <div class="data-header"><div class="data-tabs"><button class="data-tab active" data-table="points">Points <span>8</span></button><button class="data-tab" data-table="observations">Observations <span>12</span></button><button class="data-tab" data-table="checks">Quality checks</button></div><div class="table-tools"><div class="search-box"><span>⌕</span><input id="table-search" type="search" placeholder="Search points…" aria-label="Search table"></div><button class="button small secondary" id="filter-button">☷ Filters</button></div></div>
+          <div class="table-wrap"><table id="data-table"><thead><tr><th>Point ID</th><th>Type</th><th>Northing (ft)</th><th>Easting (ft)</th><th>Elevation (ft)</th><th>Status</th></tr></thead><tbody id="table-body"></tbody></table></div>
+          <div class="table-footer"><span id="table-summary">Showing 8 of 8 points</span><span>Sample values <span class="footer-sep">•</span> US survey feet</span></div>
+        </section>
+      </section>
+    </main>
+    <footer class="statusbar"><div><span class="status-dot"></span> Ready <span class="status-separator">|</span> Local preview</div><div>Coordinate units: US survey feet <span class="status-separator">|</span> SALSA engine: not connected</div></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
